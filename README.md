@@ -15,8 +15,8 @@
 
 **After**: One-command automated expert workflows
 ```bash
-/spec-workflow "Implement JWT user authentication system"
-# 30 minutes of automated execution, 95% quality gates, zero manual intervention
+/requirements-pilot "Implement JWT user authentication system"
+# 30 minutes of automated execution, 90% quality gates, zero manual intervention
 ```
 
 ## 🎯 Core Value Proposition
@@ -30,31 +30,30 @@ This repository provides a **meta-framework for Claude Code** that implements:
 
 ## 📋 Two Primary Usage Patterns
 
-### 1. 🏭 Sub-Agent Workflows (Automated Expert Teams)
+### 1. 🏭 Requirements-Driven Workflow (Automated Expert Teams)
 
-**Architecture**: Parallel specialist coordination with quality gates
+**Architecture**: Requirements-focused workflow with quality gates
 ```
-spec-generation → spec-executor → spec-validation → (≥95%?) → spec-testing
-     ↑                                              ↓ (<95%)
-     ←←←←←← Automatic optimization loop ←←←←←←
+requirements-generate → requirements-code → requirements-review → (≥90%?) → requirements-testing
+         ↑                                              ↓ (<90%)
+         ←←←←←← Automatic optimization loop ←←←←←←
 ```
 
 **Usage**:
 ```bash
 # Complete development workflow in one command
-/spec-workflow "Build user management system with RBAC"
+/requirements-pilot "Build user management system with RBAC"
 
 # Advanced multi-stage workflow
-First use spec-generation, then spec-executor, then spec-validation, 
-then if score ≥95% use spec-testing, finally use optimize
+First use requirements-generate, then requirements-code, then requirements-review, 
+then if score ≥90% use requirements-testing
 ```
 
 **Quality Scoring** (Total 100%):
-- Requirements Compliance (30%)
-- Code Quality (25%) 
-- Security (20%)
+- Functionality (40%)
+- Integration (25%) 
+- Code Quality (20%)
 - Performance (15%)
-- Test Coverage (10%)
 
 ### 2. 🎛️ Custom Commands (Manual Orchestration)
 
@@ -108,10 +107,11 @@ Clone or copy the configuration structure:
 ### 3. Expected Outputs
 
 **Automated Workflow Results**:
-- ✅ Complete specifications (requirements.md, design.md, tasks.md)
-- ✅ Production-ready code with security best practices
-- ✅ Comprehensive test suite (unit + integration + security)
-- ✅ 95%+ quality validation score
+- ✅ Requirements confirmation with 90+ quality score
+- ✅ Implementation-ready technical specifications
+- ✅ Production-ready code with best practices
+- ✅ Comprehensive test suite (unit + integration + functional)
+- ✅ 90%+ quality validation score
 
 ## 🏗️ Architecture Overview
 
@@ -126,10 +126,12 @@ Clone or copy the configuration structure:
 - **Operations**: `/deploy-check`, `/cicd`
 
 #### **Agents Directory** (`/agents/`)
-- **spec-generation**: Automated specification workflow
-- **spec-executor**: Implementation coordinator with progress tracking
-- **spec-validation**: Multi-dimensional quality scoring (0-100%)
-- **spec-testing**: Comprehensive test strategy coordination
+- **requirements-generate**: Technical specification generation optimized for code generation
+- **requirements-code**: Direct implementation agent with minimal architectural overhead
+- **requirements-review**: Pragmatic code review focused on functionality and maintainability
+- **requirements-testing**: Practical testing agent focused on functional validation
+- **bugfix**: Bug resolution specialist for analyzing and fixing software defects
+- **bugfix-verify**: Fix validation specialist for objective assessment
 - **code**: Development coordinator for direct implementation
 - **debug**: UltraThink systematic problem analysis
 - **optimize**: Performance optimization coordination
@@ -137,16 +139,16 @@ Clone or copy the configuration structure:
 ### Multi-Agent Coordination System
 
 **4 Core Specialists**:
-1. **Specification Generator** - Requirements, design, implementation planning
-2. **Implementation Executor** - Code development with task tracking
-3. **Quality Validator** - Multi-dimensional scoring with actionable feedback
-4. **Test Coordinator** - Comprehensive testing strategy and execution
+1. **Requirements Generator** - Implementation-ready technical specifications
+2. **Code Implementer** - Direct, pragmatic code implementation 
+3. **Quality Reviewer** - Practical quality review with scoring
+4. **Test Coordinator** - Functional validation and testing
 
 **Key Features**:
-- **Independent Contexts**: No context pollution between specialists
-- **Quality Gates**: 95% threshold for automatic progression
+- **Implementation-First Approach**: Direct technical specs for code generation
+- **Quality Gates**: 90% threshold for automatic progression
 - **Iterative Improvement**: Automatic optimization loops
-- **Traceability**: Full specification → code → test traceability
+- **Practical Focus**: Working solutions over architectural perfection
 
 ## 📚 Workflow Examples
 
@@ -154,27 +156,27 @@ Clone or copy the configuration structure:
 
 **Input**:
 ```bash
-/spec-workflow "Enterprise JWT authentication with RBAC, supporting 500 concurrent users, integrated with existing LDAP"
+/requirements-pilot "Enterprise JWT authentication with RBAC, supporting 500 concurrent users, integrated with existing LDAP"
 ```
 
 **Automated Process**:
-1. **Round 1** (Quality: 83/100) - Basic implementation
-   - Issues: JWT key hardcoded, missing password complexity
-   - **Decision**: <95%, restart with improvements
+1. **Requirements Confirmation** (Quality: 92/100) - Interactive clarification
+   - Functional clarity, technical specificity, implementation completeness
+   - **Decision**: ≥90%, proceed with implementation
 
-2. **Round 2** (Quality: 91/100) - Security improvements  
-   - Issues: Exception handling incomplete, performance not optimized
-   - **Decision**: <95%, continue optimization
+2. **Round 1** (Quality: 83/100) - Basic implementation
+   - Issues: Error handling incomplete, integration concerns
+   - **Decision**: <90%, restart with improvements
 
-3. **Round 3** (Quality: 97/100) - Production ready
-   - **Decision**: ≥95%, proceed to comprehensive testing
+3. **Round 2** (Quality: 93/100) - Production ready
+   - **Decision**: ≥90%, proceed to functional testing
 
 **Final Deliverables**:
-- Complete EARS-format requirements
-- Security-hardened JWT implementation
-- RBAC with role hierarchy
-- LDAP integration with error handling
-- Comprehensive test suite (unit + integration + security)
+- Requirements confirmation with quality assessment
+- Implementation-ready technical specifications
+- Pragmatic JWT implementation with RBAC
+- LDAP integration with proper error handling
+- Functional test suite focusing on critical paths
 
 ### API Gateway Development
 
@@ -227,7 +229,7 @@ repeat until quality threshold achieved
 | Dimension | Manual Commands | Sub-Agent Workflows |
 |-----------|----------------|-------------------|
 | **Complexity** | Manual trigger for each step | One-command full pipeline |
-| **Quality** | Subjective assessment | 95% objective scoring |
+| **Quality** | Subjective assessment | 90% objective scoring |
 | **Context** | Pollution, requires /clear | Isolated, no pollution |
 | **Expertise** | AI role switching | Focused specialists |
 | **Error Handling** | Manual discovery/fix | Automatic optimization |
@@ -239,7 +241,7 @@ repeat until quality threshold achieved
 Each agent focuses on their domain expertise in independent contexts, avoiding the quality degradation of role-switching.
 
 ### 2. **Intelligent Quality Gates**  
-95% objective scoring with automatic decision-making for workflow progression or optimization loops.
+90% objective scoring with automatic decision-making for workflow progression or optimization loops.
 
 ### 3. **Complete Automation**
 One command triggers end-to-end development workflow with minimal human intervention.
@@ -259,17 +261,17 @@ Quality feedback drives automatic specification refinement, creating intelligent
 
 ```bash
 # Custom workflow with specific quality requirements
-First use spec-generation with [strict security requirements],
-then spec-executor with [performance constraints],
-then spec-validation with [90% minimum threshold],
+First use requirements-generate with [strict security requirements],
+then requirements-code with [performance constraints],
+then requirements-review with [90% minimum threshold],
 continue optimization until threshold met
 ```
 
 ## 📖 Command Reference
 
-### Specification Workflow
-- `/spec` - Interactive requirements → design → tasks
-- `/spec-workflow` - Automated end-to-end specification + implementation
+### Requirements Workflow
+- `/requirements-pilot` - Complete requirements-driven development workflow
+- Interactive requirements confirmation → technical specifications → implementation → testing
 
 ### Development Commands  
 - `/ask` - Architecture consultation (no code changes)
@@ -309,11 +311,11 @@ MIT License - see [LICENSE](LICENSE) file for details.
 Ready to transform your development workflow? Start with:
 
 ```bash
-/spec-workflow "Your first feature description here"
+/requirements-pilot "Your first feature description here"
 ```
 
-Watch as your one-line request becomes a complete, tested, production-ready implementation with 95% quality assurance.
+Watch as your one-line request becomes a complete, tested, production-ready implementation with 90% quality assurance.
 
-**Remember**: Professional software comes from professional processes. Sub-agents give you a tireless, always-expert virtual development team.
+**Remember**: Professional software comes from professional processes. Requirements-driven workflows give you a tireless, always-expert virtual development team.
 
 *Let specialized AI do specialized work - development becomes elegant and efficient.*
