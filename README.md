@@ -60,22 +60,25 @@ then if score ≥90% use requirements-testing
 **Architecture**: Individual slash commands for targeted expertise
 ```bash
 /ask     # Technical consultation and architecture guidance
-/spec    # Interactive requirements → design → tasks workflow  
 /code    # Feature implementation with constraints
 /debug   # Systematic problem analysis using UltraThink
 /test    # Comprehensive testing strategy
 /review  # Multi-dimensional code validation
 /optimize # Performance optimization coordination
+/bugfix  # Bug resolution workflows
+/refactor # Code refactoring coordination
+/docs    # Documentation generation
+/think   # Advanced thinking and analysis
 ```
 
 **Progression Example**:
 ```bash
 # Step-by-step development with manual control
 /ask "Help me understand microservices architecture requirements"
-/spec "Generate API gateway specifications" 
 /code "Implement gateway with rate limiting"
 /test "Create load testing suite"
 /review "Validate security and performance"
+/optimize "Enhance performance for production"
 ```
 
 ## 🚀 Quick Start
@@ -85,8 +88,8 @@ then if score ≥90% use requirements-testing
 Clone or copy the configuration structure:
 ```bash
 # Your project directory
-├── commands/          # 12 specialized slash commands
-├── agents/           # 7 expert agent configurations  
+├── commands/          # 11 specialized slash commands
+├── agents/           # 9 expert agent configurations  
 └── CLAUDE.md         # Project-specific guidelines
 ```
 
@@ -94,14 +97,15 @@ Clone or copy the configuration structure:
 
 **Complete Feature Development**:
 ```bash
-/spec-workflow "Implement OAuth2 authentication with refresh tokens"
+/requirements-pilot "Implement OAuth2 authentication with refresh tokens"
 ```
 
 **Manual Development Flow**:
 ```bash
 /ask "Design principles for scalable microservices"
-/spec "OAuth2 service specifications"
 /code "Implement OAuth2 with security best practices"
+/test "Create comprehensive test suite"
+/review "Validate implementation quality"
 ```
 
 ### 3. Expected Outputs
@@ -118,12 +122,14 @@ Clone or copy the configuration structure:
 ### Core Components
 
 #### **Commands Directory** (`/commands/`)
-- **Specification**: `/spec` - Interactive requirements → design → tasks
 - **Consultation**: `/ask` - Architecture guidance (no code changes)
 - **Implementation**: `/code` - Feature development with constraints
 - **Quality Assurance**: `/test`, `/review`, `/debug`
 - **Optimization**: `/optimize`, `/refactor`
-- **Operations**: `/deploy-check`, `/cicd`
+- **Bug Resolution**: `/bugfix` - Systematic bug fixing workflows
+- **Documentation**: `/docs` - Documentation generation
+- **Analysis**: `/think` - Advanced thinking and analysis
+- **Requirements**: `/requirements-pilot` - Complete requirements-driven workflow
 
 #### **Agents Directory** (`/agents/`)
 - **requirements-generate**: Technical specification generation optimized for code generation
@@ -185,11 +191,11 @@ Clone or copy the configuration structure:
 /ask "Design considerations for high-performance API gateway"
 # (Interactive consultation phase)
 
-/spec "Microservices API gateway with rate limiting and circuit breakers"
-# (Specification generation)
-
-/code "Implement gateway based on specifications"
+/code "Implement microservices API gateway with rate limiting and circuit breakers"
 # (Implementation phase)
+
+/test "Create comprehensive test suite for gateway"
+# (Testing phase)
 ```
 
 **Results**:
@@ -205,13 +211,12 @@ Clone or copy the configuration structure:
 # Debug → Fix → Validate workflow
 First use debug to analyze [performance issue], 
 then use code to implement fixes, 
-then use spec-validation to ensure quality
+then use review to ensure quality
 
 # Complete development + optimization pipeline  
-First use spec-generation for [feature], 
-then spec-executor for implementation,
-then spec-validation for quality check,
-then if score ≥95% use spec-testing,
+First use requirements-pilot for [feature development],
+then use review for quality validation,
+then if score ≥95% use test for comprehensive testing,
 finally use optimize for production readiness
 ```
 
@@ -219,7 +224,7 @@ finally use optimize for production readiness
 
 ```bash
 # Iterative quality improvement
-First use spec-validation to score [existing code],
+First use review to score [existing code],
 then if score <95% use code to improve based on feedback,
 repeat until quality threshold achieved
 ```
@@ -261,9 +266,8 @@ Quality feedback drives automatic specification refinement, creating intelligent
 
 ```bash
 # Custom workflow with specific quality requirements
-First use requirements-generate with [strict security requirements],
-then requirements-code with [performance constraints],
-then requirements-review with [90% minimum threshold],
+First use requirements-pilot with [strict security requirements and performance constraints],
+then use review to validate with [90% minimum threshold],
 continue optimization until threshold met
 ```
 
@@ -283,7 +287,11 @@ continue optimization until threshold met
 ### Optimization Commands
 - `/optimize` - Performance optimization coordination
 - `/refactor` - Code refactoring with quality gates
-- `/deploy-check` - Deployment readiness validation
+
+### Additional Commands
+- `/bugfix` - Bug resolution workflows
+- `/docs` - Documentation generation
+- `/think` - Advanced thinking and analysis
 
 ## 🤝 Contributing
 
