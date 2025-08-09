@@ -56,20 +56,18 @@ then if Ready ask user: "Code complete. Run tests? (y/n/lint)"
 - Code Quality (20%)
 - Performance (15%)
 
-### 2. 🎛️ Custom Commands (Manual Orchestration)
+### 2. 🎛️ Individual Commands (Manual Orchestration)
 
 **Architecture**: Individual slash commands for targeted expertise
 ```bash
-/ask     # Technical consultation and architecture guidance
-/code    # Feature implementation with constraints
-/debug   # Systematic problem analysis using UltraThink
-/test    # Comprehensive testing strategy
-/review  # Multi-dimensional code validation
-/optimize # Performance optimization coordination
-/bugfix  # Bug resolution workflows
-/refactor # Code refactoring coordination
-/docs    # Documentation generation
-/think   # Advanced thinking and analysis
+/ask              # Technical consultation and architecture guidance
+/bugfix           # Bug resolution with systematic analysis 
+/code             # Feature implementation with constraints
+/debug            # Systematic problem analysis using UltraThink
+/optimize         # Performance optimization coordination
+/requirements-pilot # Complete automated workflow (recommended)
+/review           # Code quality assessment and validation
+/test             # Comprehensive testing strategy
 ```
 
 **Progression Example**:
@@ -78,23 +76,43 @@ then if Ready ask user: "Code complete. Run tests? (y/n/lint)"
 /ask "Help me understand microservices architecture requirements"
 /code "Implement gateway with rate limiting"
 /test "Create load testing suite"
-/review "Validate security and performance"
-/optimize "Enhance performance for production"
+/review "Validate implementation quality and security"
+/optimize "Improve response times under 100ms"
 ```
 
 ## 🚀 Quick Start
 
-### 1. Setup Configuration
+### Single Command Development
+```bash
+# One command handles everything - requirements, implementation, review, testing
+/requirements-pilot "Create REST API for user authentication with JWT tokens"
+
+# Advanced usage with testing control
+/requirements-pilot "Build e-commerce cart system" --test
+/requirements-pilot "Add UI theme switcher" --no-test  # UI-only changes
+```
+
+### Manual Command Usage  
+```bash
+# Targeted commands for specific needs
+/ask "What's the best caching strategy for this API?"
+/code "Implement Redis caching layer"
+/test "Create integration tests for caching"
+/debug "Investigate memory leak in cache"
+/bugfix "Fix race condition in cache invalidation"
+```
+
+### Setup Configuration
 
 Clone or copy the configuration structure:
 ```bash
 # Your project directory
-├── commands/          # 11 specialized slash commands
+├── commands/          # 8 specialized slash commands
 ├── agents/           # 9 expert agent configurations  
-└── CLAUDE.md         # Project-specific guidelines
+└── CLAUDE.md         # System instructions for Claude Code
 ```
 
-### 2. Basic Usage
+### Basic Usage
 
 **Complete Feature Development**:
 ```bash
@@ -124,10 +142,10 @@ Clone or copy the configuration structure:
 
 #### **Commands Directory** (`/commands/`)
 - **Consultation**: `/ask` - Architecture guidance (no code changes)
-- **Implementation**: `/code` - Feature development with constraints
-- **Quality Assurance**: `/test`, `/debug`
-- **Optimization**: `/optimize` - Performance optimization
+- **Implementation**: `/code` - Feature development with constraints  
+- **Quality Assurance**: `/test`, `/debug`, `/review`
 - **Bug Resolution**: `/bugfix` - Systematic bug fixing workflows
+- **Optimization**: `/optimize` - Performance optimization
 - **Requirements**: `/requirements-pilot` - Complete requirements-driven workflow with smart testing
 
 #### **Agents Directory** (`/agents/`)
