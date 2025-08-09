@@ -9,14 +9,14 @@
 
 **传统方式**: 手动命令链，需要持续监督
 ```bash
-/ask → /code → /test → /review → /optimize
+/ask → /code → /test → /bugfix → /optimize
 # 1-2小时手动操作，上下文污染，质量不确定
 ```
 
 **现在**: 一键自动化专家工作流
 ```bash
 /requirements-pilot "实现JWT用户认证系统"
-# 30分钟自动执行，90%质量门控，零人工干预
+# 30分钟自动执行，90%质量门控，智能测试决策
 ```
 
 ## 🎯 核心价值主张
@@ -27,15 +27,16 @@
 - **⚡ 质量门控自动化**: 95%阈值自动优化循环
 - **🔄 工作流自动化**: 从需求到生产就绪代码
 - **📊 上下文隔离**: 每个智能体保持专注专业性，无污染
+- **🎯 智能测试**: 比例化测试与UI感知策略，防止过度测试
 
 ## 📋 两种主要使用模式
 
 ### 1. 🏭 Requirements-Driven 工作流（自动化专家团队）
 
-**架构**: 需求导向工作流与质量门控
+**架构**: 需求导向工作流与质量门控和智能测试
 ```
-requirements-generate → requirements-code → requirements-review → (≥90%?) → requirements-testing
-         ↑                                              ↓ (<90%)
+requirements-generate → requirements-code → requirements-review → (✅ 就绪?) → 智能测试决策
+         ↑                                              ↓ (⚠️ 需改进)
          ←←←←←← 自动优化循环 ←←←←←←
 ```
 
@@ -44,9 +45,9 @@ requirements-generate → requirements-code → requirements-review → (≥90%?
 # 一条命令完成完整开发工作流
 /requirements-pilot "构建用户管理系统，支持RBAC权限控制"
 
-# 高级多阶段工作流
+# 智能工作流与测试决策
 先使用 requirements-generate，然后 requirements-code，再用 requirements-review，
-如果评分 ≥90% 则使用 requirements-testing
+如果就绪则询问用户：「代码完成。运行测试？(y/n/lint)」
 ```
 
 **质量评分体系** (总分100%):

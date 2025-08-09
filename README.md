@@ -9,14 +9,14 @@
 
 **Before**: Manual command chains requiring constant oversight
 ```bash
-/ask → /code → /test → /review → /optimize
+/ask → /code → /test → /bugfix → /optimize
 # 1-2 hours of manual orchestration, context pollution, quality uncertainty
 ```
 
 **After**: One-command automated expert workflows
 ```bash
 /requirements-pilot "Implement JWT user authentication system"
-# 30 minutes of automated execution, 90% quality gates, zero manual intervention
+# 30 minutes of automated execution, 90% quality gates, smart testing decisions
 ```
 
 ## 🎯 Core Value Proposition
@@ -27,15 +27,16 @@ This repository provides a **meta-framework for Claude Code** that implements:
 - **⚡ Quality Gate Automation**: 95% threshold with automatic optimization loops  
 - **🔄 Workflow Automation**: From requirements to production-ready code
 - **📊 Context Isolation**: Each agent maintains focused expertise without pollution
+- **🎯 Smart Testing**: Proportional testing with UI-aware strategies to prevent over-testing
 
 ## 📋 Two Primary Usage Patterns
 
 ### 1. 🏭 Requirements-Driven Workflow (Automated Expert Teams)
 
-**Architecture**: Requirements-focused workflow with quality gates
+**Architecture**: Requirements-focused workflow with quality gates and smart testing
 ```
-requirements-generate → requirements-code → requirements-review → (≥90%?) → requirements-testing
-         ↑                                              ↓ (<90%)
+requirements-generate → requirements-code → requirements-review → (✅ Ready?) → smart-testing-decision
+         ↑                                              ↓ (⚠️ Needs Improvement)
          ←←←←←← Automatic optimization loop ←←←←←←
 ```
 
@@ -44,9 +45,9 @@ requirements-generate → requirements-code → requirements-review → (≥90%?
 # Complete development workflow in one command
 /requirements-pilot "Build user management system with RBAC"
 
-# Advanced multi-stage workflow
+# Advanced workflow with intelligent testing
 First use requirements-generate, then requirements-code, then requirements-review, 
-then if score ≥90% use requirements-testing
+then if Ready ask user: "Code complete. Run tests? (y/n/lint)"
 ```
 
 **Quality Scoring** (Total 100%):
@@ -124,18 +125,16 @@ Clone or copy the configuration structure:
 #### **Commands Directory** (`/commands/`)
 - **Consultation**: `/ask` - Architecture guidance (no code changes)
 - **Implementation**: `/code` - Feature development with constraints
-- **Quality Assurance**: `/test`, `/review`, `/debug`
-- **Optimization**: `/optimize`, `/refactor`
+- **Quality Assurance**: `/test`, `/debug`
+- **Optimization**: `/optimize` - Performance optimization
 - **Bug Resolution**: `/bugfix` - Systematic bug fixing workflows
-- **Documentation**: `/docs` - Documentation generation
-- **Analysis**: `/think` - Advanced thinking and analysis
-- **Requirements**: `/requirements-pilot` - Complete requirements-driven workflow
+- **Requirements**: `/requirements-pilot` - Complete requirements-driven workflow with smart testing
 
 #### **Agents Directory** (`/agents/`)
 - **requirements-generate**: Technical specification generation optimized for code generation
 - **requirements-code**: Direct implementation agent with minimal architectural overhead
 - **requirements-review**: Pragmatic code review focused on functionality and maintainability
-- **requirements-testing**: Practical testing agent focused on functional validation
+- **requirements-testing**: Smart testing with proportional coverage and UI-aware strategies
 - **bugfix**: Bug resolution specialist for analyzing and fixing software defects
 - **bugfix-verify**: Fix validation specialist for objective assessment
 - **code**: Development coordinator for direct implementation
@@ -146,14 +145,16 @@ Clone or copy the configuration structure:
 
 **4 Core Specialists**:
 1. **Requirements Generator** - Implementation-ready technical specifications
-2. **Code Implementer** - Direct, pragmatic code implementation 
-3. **Quality Reviewer** - Practical quality review with scoring
-4. **Test Coordinator** - Functional validation and testing
+2. **Code Implementer** - Direct code generation with pragmatic focus
+3. **Quality Reviewer** - 90% threshold validation with 3-level scoring
+4. **Smart Testing Agent** - Proportional testing with UI-awareness and over-testing prevention
 
 **Key Features**:
 - **Implementation-First Approach**: Direct technical specs for code generation
 - **Quality Gates**: 90% threshold for automatic progression
-- **Iterative Improvement**: Automatic optimization loops
+- **Context Isolation**: Each agent works in separate contexts for expertise focus
+- **Smart Testing**: UI-aware strategies prevent over-testing while maintaining quality
+- **Optimization Loops**: Automatic improvement cycles until quality thresholds met
 - **Practical Focus**: Working solutions over architectural perfection
 
 ## 📚 Workflow Examples
