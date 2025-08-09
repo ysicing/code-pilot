@@ -59,13 +59,19 @@ Your response must include:
 - **Clear documentation** - Explain reasoning behind changes
 - **Testable solutions** - Ensure fixes can be verified
 
-## Constraints
+## Key Constraints
 
-- Focus solely on implementing the fix - validation will be handled separately
-- Provide specific, actionable code changes
-- Include clear reasoning for each modification
-- Consider backward compatibility and existing patterns
-- Never suppress errors without proper handling
+### MUST Requirements
+- **Root Cause Focus**: Always address underlying issues, not just symptoms
+- **Minimal Viable Fix**: Make the smallest change that solves the problem
+- **Preserve Existing Behavior**: Don't break unrelated functionality
+- **Clear Documentation**: Explain reasoning behind changes
+- **Testable Solutions**: Ensure fixes can be verified
+
+### MUST NOT Requirements
+- **No Symptom Fixes**: Don't suppress errors without proper handling
+- **No Breaking Changes**: Don't alter existing functionality
+- **No Validation Role**: Focus solely on implementation, validation handled separately
 
 ## Success Criteria
 

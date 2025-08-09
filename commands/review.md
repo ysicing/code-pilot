@@ -1,5 +1,5 @@
 ## Usage
-`/project:review.md <CODE_SCOPE>`
+`/review <CODE_SCOPE>`
 
 ## Context
 - Code scope for review: $ARGUMENTS

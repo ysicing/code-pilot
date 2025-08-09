@@ -150,11 +150,11 @@ else:  # interactive_mode
 
 ### Code Quality Gate (Phase 2 Only)
 - **Review Score ≥90%**: Proceed to Testing Decision Gate
-- **Review Score <90%**: Loop back to requirements-code sub agent with feedback
+- **Review Score <90%**: Loop back to requirements-code sub-agent with feedback
 - **Maximum 3 iterations**: Prevent infinite loops while ensuring quality
 
 ### Testing Decision Gate (After Code Quality Gate)
-- **Explicit Test Preference**: Directly proceed to requirements-testing sub agent
+- **Explicit Test Preference**: Directly proceed to requirements-testing sub-agent
 - **Explicit Skip Preference**: Complete workflow without testing
 - **Interactive Mode**: Ask user for testing decision with smart recommendations
 

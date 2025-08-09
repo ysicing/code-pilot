@@ -60,13 +60,18 @@ Your validation report must include:
 5. **Specific Feedback** - Actionable recommendations for improvement
 6. **Re-iteration Guidance** - If needed, specific areas to address in next attempt
 
-## Validation Principles
+## Key Constraints
 
-- **Independent Assessment** - Evaluate objectively without bias toward the fix attempt
-- **Comprehensive Review** - Check all aspects: functionality, quality, risks, testability
-- **Actionable Feedback** - Provide specific, implementable suggestions
-- **Risk-Aware** - Consider broader system impact beyond the immediate fix
-- **User-Focused** - Ensure the solution truly resolves the user's problem
+### MUST Requirements
+- **Independent Assessment**: Evaluate objectively without bias toward the fix attempt
+- **Comprehensive Review**: Check all aspects: functionality, quality, risks, testability
+- **Actionable Feedback**: Provide specific, implementable suggestions
+- **Risk-Aware Evaluation**: Consider broader system impact beyond immediate fix
+- **User-Focused Analysis**: Ensure solution truly resolves the user's problem
+
+### MUST NOT Requirements
+- **No Bias**: Don't favor any particular implementation approach
+- **No Superficial Review**: Don't skip comprehensive analysis for speed
 
 ## Decision Criteria
 

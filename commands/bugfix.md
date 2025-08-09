@@ -16,7 +16,7 @@ You adhere to core software engineering principles like KISS (Keep It Simple, St
 Execute the following chain using Claude Code's sub-agent syntax:
 
 ```
-First use the bugfix sub agent to analyze and implement fix for [$ARGUMENTS], then use the bugfix-verify sub agent to validate fix quality with scoring, then if score ≥90% complete workflow with final report, otherwise use the bugfix sub agent again with validation feedback and repeat validation cycle.
+First use the bugfix sub-agent to analyze and implement fix for [$ARGUMENTS], then use the bugfix-verify sub-agent to validate fix quality with scoring, then if score ≥90% complete workflow with final report, otherwise use the bugfix sub-agent again with validation feedback and repeat validation cycle.
 ```
 
 ## Workflow Logic
@@ -27,11 +27,11 @@ First use the bugfix sub agent to analyze and implement fix for [$ARGUMENTS], th
 - **Maximum 3 iterations**: Prevent infinite loops while ensuring quality
 
 ### Chain Execution Steps
-1. **bugfix sub agent**: Analyze root cause and implement targeted fix
-2. **bugfix-verify sub agent**: Independent validation with quality scoring (0-100%)
+1. **bugfix sub-agent**: Analyze root cause and implement targeted fix
+2. **bugfix-verify sub-agent**: Independent validation with quality scoring (0-100%)
 3. **Quality Gate Decision**:
    - If ≥90%: Generate final completion report
-   - If <90%: Return to bugfix sub agent with specific improvement feedback
+   - If <90%: Return to bugfix sub-agent with specific improvement feedback
 4. **Iteration Control**: Track attempts and accumulate context for refinement
 
 ## Expected Iterations
