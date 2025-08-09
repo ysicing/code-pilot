@@ -3,31 +3,33 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Claude Code](https://img.shields.io/badge/Claude-Code-blue)](https://claude.ai/code)
 
-> Transform your development workflow from manual command chains to automated expert teams with 95% quality assurance.
+> Transform your development workflow from manual command chains to automated expert teams with **lightweight quality gates** and **professional specialization**.
 
-## 🚀 From Manual Commands to Automated Workflows
+## 🎯 Core Philosophy
+
+**Quality Gate Automation + Professional Specialization + Lightweight Process**
+
+This repository provides a **lightweight meta-framework for Claude Code** that implements:
+
+- **🎛️ Quality Gate Automation**: Objective 90% standards replace subjective judgment
+- **🧠 Professional Specialization**: Each tool focuses on one domain (avoid "万能AI")  
+- **⚡ Lightweight Process**: Essential workflow steps without bureaucracy
+- **📊 Context Isolation**: Each agent maintains focused expertise without pollution
+- **🎯 Smart Testing**: Proportional testing with UI-aware strategies to prevent over-testing
+
+## 🚀 From Manual Chaos to Automated Quality
 
 **Before**: Manual command chains requiring constant oversight
 ```bash
 /ask → /code → /test → /bugfix → /optimize
-# 1-2 hours of manual orchestration, context pollution, quality uncertainty
+# 1-2 hours of manual orchestration, subjective quality judgment
 ```
 
-**After**: One-command automated expert workflows
+**After**: One-command automated expert workflows with objective quality gates
 ```bash
 /requirements-pilot "Implement JWT user authentication system"
 # 30 minutes of automated execution, 90% quality gates, smart testing decisions
 ```
-
-## 🎯 Core Value Proposition
-
-This repository provides a **meta-framework for Claude Code** that implements:
-
-- **🤖 Multi-Agent Orchestration**: Specialized AI teams working in parallel
-- **⚡ Quality Gate Automation**: 95% threshold with automatic optimization loops  
-- **🔄 Workflow Automation**: From requirements to production-ready code
-- **📊 Context Isolation**: Each agent maintains focused expertise without pollution
-- **🎯 Smart Testing**: Proportional testing with UI-aware strategies to prevent over-testing
 
 ## 📋 Two Primary Usage Patterns
 
@@ -50,75 +52,104 @@ First use requirements-generate, then requirements-code, then requirements-revie
 then if Ready ask user: "Code complete. Run tests? (y/n/lint)"
 ```
 
-**Quality Scoring** (Total 100%):
-- Functionality (40%)
-- Integration (25%) 
-- Code Quality (20%)
-- Performance (15%)
+### 2. 🎛️ Stage-Based Development (Manual Orchestration)
 
-### 2. 🎛️ Individual Commands (Manual Orchestration)
+**Architecture**: Stage-specific tools for targeted expertise
 
-**Architecture**: Individual slash commands for targeted expertise
-
-#### **🏛️ Architecture & Consultation**
+#### **📋 Stage 1: Requirements Analysis**
 ```bash
-/ask              # Senior Systems Architect consultation
-                  # - Multi-expert consultation (Systems Designer, Technology Strategist, Scalability Consultant, Risk Analyst)
-                  # - "UltraThink" reflection methodology for comprehensive analysis
-                  # - Strategic technology guidance with pros/cons analysis
-                  # - No code changes, pure architectural guidance
+/story-breakdown     # Transform complex features into implementable user stories
+                     # - 1-3 day completion estimates
+                     # - Clear acceptance criteria  
+                     # - Implementation priority order
+                     # - Dependency mapping
 ```
 
-#### **🔍 Advanced Debugging**
+#### **🏛️ Stage 2: Architecture Design**  
 ```bash
-/debug            # UltraThink Debug Orchestrator
-                  # - 4-phase systematic debugging (Problem Analysis → Multi-Agent → UltraThink → Validation)
-                  # - Multi-agent coordination (Architect, Research, Coder, Tester specialists)
-                  # - Hypothesis generation & refinement (5-7 → 1-2 most likely solutions)
-                  # - User confirmation gate before implementing fixes
-                  # - Evidence-based diagnostic strategy
+/ask                # Senior Systems Architect consultation
+                    # - Multi-expert consultation (4 specialists)
+                    # - UltraThink methodology for comprehensive analysis
+                    # - Strategic technology guidance with trade-off analysis
+                    # - Pure architectural guidance, no code changes
 ```
 
-#### **🏗️ Implementation & Quality**
+#### **⚡ Stage 3: Implementation**
 ```bash
-/code             # Feature implementation with constraints
-/review           # Multi-dimensional code review
-                  # - 4 specialist reviewers (Quality Auditor, Security Analyst, Performance Reviewer, Architecture Assessor)
-                  # - Prioritized actionable feedback with effort estimates
-                  # - Focus on practical quality over architectural perfection
-                  
-/test             # Comprehensive testing strategy
-/bugfix           # Bug resolution with systematic analysis
-/optimize         # Performance optimization coordination
+/requirements-pilot # Complete automated pipeline (recommended)
+                    # - 100-point quality assessment with user approval gate
+                    # - Smart testing decisions (--test/--no-test)
+                    # - File structure management (.claude/specs/)
+
+/code               # Direct feature implementation
+                    # - For simple features or specific components
 ```
 
-#### **🎯 Complete Automated Workflow**
+#### **🔍 Stage 4: Quality Assurance**
 ```bash
-/requirements-pilot # Requirements-Driven Development Pipeline
-                    # - Interactive requirements confirmation with 100-point quality assessment
-                    # - User approval gate at 90+ quality score
-                    # - 4-phase implementation: Requirements → Specs → Code → Testing
-                    # - Smart testing decisions (--test/--no-test flags)
-                    # - File structure management (.claude/specs/{feature_name}/)
+/review             # Multi-dimensional code review
+                    # - 4 specialist reviewers (Quality, Security, Performance, Architecture)
+                    # - 3-level scoring: ✅ Ready / ⚠️ Needs Improvement / ❌ Major Issues
+                    # - Pragmatic focus on functionality over perfection
 ```
 
-**Advanced Usage Examples**:
+#### **🧪 Stage 5: Testing**
 ```bash
-# UltraThink Debugging Workflow
-/debug "API timeout issues in production"
-# → Generates 5-7 hypotheses, coordinates 4 specialists, refines to top 2 solutions
-# → Requests user confirmation before implementing fixes
+/test               # Smart testing strategies
+                    # - UI changes: Lint-only approach
+                    # - Minor changes (1-5 lines): Proportional testing
+                    # - Business logic: Comprehensive testing
+```
 
-# Multi-Expert Architecture Consultation  
-/ask "Design considerations for high-performance API gateway"
-# → Systems Designer analyzes boundaries, Technology Strategist evaluates choices
-# → Scalability Consultant assesses performance, Risk Analyst identifies trade-offs
+#### **🐛 Stage 6: Problem Resolution**
+```bash
+/debug              # UltraThink Debug Orchestrator
+                    # - 4-phase systematic debugging
+                    # - Hypothesis refinement (5-7 → 1-2 solutions)
+                    # - User confirmation gate before fixes
+                    # - Evidence-based diagnostic strategy
+```
 
-# Requirements-Driven Development with Quality Gates
+#### **🚀 Stage 7: Release Preparation**
+```bash
+/release-check      # Production readiness verification
+                    # - Risk-based go/no-go decisions
+                    # - Practical checklist approach
+                    # - Clear mitigation plans for issues
+```
+
+## 🔧 **Flexible Usage Patterns**
+
+### Pattern 1: Complete Automation (New Features)
+```bash
+# Single command handles entire workflow
 /requirements-pilot "JWT authentication with refresh tokens" --test
-# → Interactive clarification until 90+ quality score
-# → User approval gate before implementation
-# → Automated specs → code → review → testing pipeline
+# → Requirements(90+) → User approval → Code → Review(90+) → Testing
+```
+
+### Pattern 2: Step-by-Step Control (Complex Features)  
+```bash
+/story-breakdown "E-commerce checkout flow"  # Break into stories
+/ask "Microservices vs monolith for checkout"  # Architecture guidance
+/requirements-pilot "Payment processing story 1"  # Implement story by story
+/review "Validate payment security"  # Quality gates
+/release-check "Payment system"  # Production readiness
+```
+
+### Pattern 3: Problem-Driven (Bug Fixes)
+```bash
+/debug "Production API timeout issues"  # Systematic diagnosis
+/code "Implement connection pooling fix"  # Direct fix implementation  
+/release-check "Updated API service"  # Verify production readiness
+```
+
+### Pattern 4: Quality-First (Critical Systems)
+```bash
+/story-breakdown "Financial transaction system"
+/ask "Security architecture for financial data"
+/requirements-pilot "Core transaction logic" --test
+/review "Security and performance validation"  
+/release-check "Financial system components"
 ```
 
 ## 🚀 Quick Start
@@ -133,14 +164,19 @@ then if Ready ask user: "Code complete. Run tests? (y/n/lint)"
 /requirements-pilot "Add UI theme switcher" --no-test  # UI-only changes
 ```
 
-### Manual Command Usage  
+### Stage-Based Development  
 ```bash
-# Targeted commands for specific needs
-/ask "What's the best caching strategy for this API?"
-/code "Implement Redis caching layer"
-/test "Create integration tests for caching"
-/debug "Investigate memory leak in cache"
-/bugfix "Fix race condition in cache invalidation"
+# Requirements analysis first
+/story-breakdown "User management system with RBAC permissions"
+
+# Architecture consultation
+/ask "Best practices for role-based access control in microservices"
+
+# Implementation with quality gates
+/requirements-pilot "User registration story" --test
+
+# Production readiness
+/release-check "User management components"
 ```
 
 ### Setup Configuration
@@ -148,40 +184,113 @@ then if Ready ask user: "Code complete. Run tests? (y/n/lint)"
 Clone or copy the configuration structure:
 ```bash
 # Your project directory
-├── commands/          # 8 specialized slash commands
+├── commands/          # 10 specialized slash commands
 ├── agents/           # 9 expert agent configurations  
-└── CLAUDE.md         # System instructions for Claude Code
+├── CLAUDE.md         # System instructions for Claude Code
+└── WORKFLOW-GUIDE.md # Stage-based usage guide
 ```
 
-### Basic Usage
+## 💡 **Key Innovations**
 
-**Complete Feature Development**:
+### 1. **Quality Gate Automation**
+Replace subjective judgment with objective 90% scoring:
+```python
+# Traditional: "I think the code is ready"
+if developer_subjective_opinion:
+    proceed()
+
+# This System: Objective quality measurement
+if requirements_score >= 90 and code_quality >= 90:
+    proceed()
+else:
+    optimize_and_retry()
+```
+
+### 2. **Professional Specialization**
+Avoid "万能AI" by using domain experts:
 ```bash
-/requirements-pilot "Implement OAuth2 authentication with refresh tokens"
+❌ One AI does everything: requirements + coding + testing + deployment
+✅ Expert team: Requirements expert + Code expert + Quality expert + Testing expert
 ```
 
-**Manual Development Flow**:
+### 3. **Smart Testing Prevention of Over-Testing**
+Proportional testing based on change impact:
 ```bash
-/ask "Design principles for scalable microservices"
-/code "Implement OAuth2 with security best practices"
-/test "Create comprehensive test suite"
-/review "Validate implementation quality"
+# UI color change (1 line) → Lint check only
+# Business logic change (50 lines) → Full test suite
+# New feature → Comprehensive testing with edge cases
 ```
 
-### 3. Expected Outputs
+## 📚 Workflow Examples
 
-**Automated Workflow Results**:
-- ✅ Requirements confirmation with 90+ quality score
-- ✅ Implementation-ready technical specifications
-- ✅ Production-ready code with best practices
-- ✅ Comprehensive test suite (unit + integration + functional)
-- ✅ 90%+ quality validation score
+### Enterprise User Authentication System
+
+**Step-by-Step Approach**:
+```bash
+# Requirements analysis
+/story-breakdown "Enterprise SSO with LDAP integration"
+
+# Architecture consultation  
+/ask "LDAP integration patterns for high-availability systems"
+
+# Implementation with quality gates
+/requirements-pilot "Core authentication service" --test
+
+# Production readiness verification
+/release-check "Authentication system components"
+```
+
+**Results**:
+- ✅ Implementable user stories with 1-3 day estimates
+- ✅ Architecture guidance with risk/trade-off analysis
+- ✅ Production-ready implementation with 90%+ quality score
+- ✅ Smart testing strategy based on change complexity
+- ✅ Clear go/no-go release decision
+
+### API Gateway Development
+
+**Complete Automation**:
+```bash
+/requirements-pilot "Microservices API gateway with rate limiting and circuit breakers" --test
+```
+
+**Results**:
+- ✅ Requirements confirmed with 90+ quality score
+- ✅ User approval gate before implementation
+- ✅ Technical specifications optimized for code generation
+- ✅ Multi-dimensional code review (Quality/Security/Performance)
+- ✅ Smart testing based on component complexity
+
+## 📋 Complete Command Reference
+
+### 📋 Requirements & Planning
+- `/story-breakdown` - Break features into implementable user stories
+- `/requirements-pilot` - Complete automated requirements-driven pipeline
+
+### 🏛️ Architecture & Consultation  
+- `/ask` - Senior Systems Architect with 4-expert consultation methodology
+
+### ⚡ Implementation & Development
+- `/code` - Direct feature implementation with constraints
+
+### 🔍 Quality Assurance
+- `/review` - Multi-dimensional code review (Quality/Security/Performance/Architecture)
+- `/test` - Smart testing strategies with proportional coverage
+
+### 🐛 Problem Resolution
+- `/debug` - UltraThink Debug Orchestrator with 4-phase systematic analysis
+- `/bugfix` - Systematic bug fixing workflows
+
+### 🚀 Operations & Deployment
+- `/optimize` - Performance optimization coordination
+- `/release-check` - Production readiness verification with go/no-go decisions
 
 ## 🏗️ Architecture Overview
 
 ### Core Components
 
 #### **Commands Directory** (`/commands/`)
+- **Requirements**: `/story-breakdown` - Feature breakdown into implementable stories
 - **Consultation**: `/ask` - Senior Systems Architect with 4-expert consultation methodology
 - **Implementation**: `/code` - Feature development with constraints  
 - **Quality Assurance**: 
@@ -190,7 +299,8 @@ Clone or copy the configuration structure:
   - `/review` - Multi-dimensional review (Quality, Security, Performance, Architecture)
 - **Bug Resolution**: `/bugfix` - Systematic bug fixing workflows
 - **Optimization**: `/optimize` - Performance optimization coordination
-- **Requirements**: `/requirements-pilot` - Complete pipeline with quality gates and approval workflow
+- **Release**: `/release-check` - Production readiness verification with go/no-go decisions
+- **Pipeline**: `/requirements-pilot` - Complete pipeline with quality gates and approval workflow
 
 #### **Agents Directory** (`/agents/`)
 - **requirements-generate**: Code-generation-optimized technical specifications with direct implementation mapping
@@ -212,174 +322,21 @@ Clone or copy the configuration structure:
 4. **Smart Testing Agent** - Proportional testing with UI-awareness and over-testing prevention
 
 **Key Features**:
-- **Implementation-First Approach**: Direct technical specs for code generation
-- **Quality Gates**: 90% threshold for automatic progression
-- **Context Isolation**: Each agent works in separate contexts for expertise focus
+- **Quality Gate Automation**: Objective 90% standards for progression decisions
+- **Professional Specialization**: Each agent works in separate contexts for expertise focus
 - **Smart Testing**: UI-aware strategies prevent over-testing while maintaining quality
-- **Optimization Loops**: Automatic improvement cycles until quality thresholds met
+- **Lightweight Process**: Essential steps without bureaucracy
 - **Practical Focus**: Working solutions over architectural perfection
-
-## 📚 Workflow Examples
-
-### Enterprise User Authentication System
-
-**Input**:
-```bash
-/requirements-pilot "Enterprise JWT authentication with RBAC, supporting 500 concurrent users, integrated with existing LDAP"
-```
-
-**Automated Process**:
-1. **Requirements Confirmation** (Quality: 92/100) - Interactive clarification
-   - Functional clarity, technical specificity, implementation completeness
-   - **Decision**: ≥90%, proceed with implementation
-
-2. **Round 1** (Quality: 83/100) - Basic implementation
-   - Issues: Error handling incomplete, integration concerns
-   - **Decision**: <90%, restart with improvements
-
-3. **Round 2** (Quality: 93/100) - Production ready
-   - **Decision**: ≥90%, proceed to functional testing
-
-**Final Deliverables**:
-- Requirements confirmation with quality assessment
-- Implementation-ready technical specifications
-- Pragmatic JWT implementation with RBAC
-- LDAP integration with proper error handling
-- Functional test suite focusing on critical paths
-
-### API Gateway Development
-
-**Input**:
-```bash
-/ask "Design considerations for high-performance API gateway"
-# (Interactive consultation phase)
-
-/code "Implement microservices API gateway with rate limiting and circuit breakers"
-# (Implementation phase)
-
-/test "Create comprehensive test suite for gateway"
-# (Testing phase)
-```
-
-**Results**:
-- Architectural consultation on performance patterns
-- Detailed specifications with load balancing strategy
-- Production-ready implementation with monitoring
-
-## 🔧 Advanced Usage Patterns
-
-### Custom Workflow Composition
-
-```bash
-# Debug → Fix → Validate workflow
-First use debug to analyze [performance issue], 
-then use code to implement fixes, 
-then use review to ensure quality
-
-# Complete development + optimization pipeline  
-First use requirements-pilot for [feature development],
-then use review for quality validation,
-then if score ≥95% use test for comprehensive testing,
-finally use optimize for production readiness
-```
-
-### Quality-Driven Development
-
-```bash
-# Iterative quality improvement
-First use review to score [existing code],
-then if score <95% use code to improve based on feedback,
-repeat until quality threshold achieved
-```
-
-## 🎯 Benefits & Impact
-
-| Dimension | Manual Commands | Sub-Agent Workflows |
-|-----------|----------------|-------------------|
-| **Complexity** | Manual trigger for each step | One-command full pipeline |
-| **Quality** | Subjective assessment | 90% objective scoring |
-| **Context** | Pollution, requires /clear | Isolated, no pollution |
-| **Expertise** | AI role switching | Focused specialists |
-| **Error Handling** | Manual discovery/fix | Automatic optimization |
-| **Time Investment** | 1-2 hours manual work | 30 minutes automated |
-
-## 🔮 Key Innovations
-
-### 1. **Specialist Depth Over Generalist Breadth**
-Each agent focuses on their domain expertise in independent contexts, avoiding the quality degradation of role-switching.
-
-### 2. **Intelligent Quality Gates**  
-90% objective scoring with automatic decision-making for workflow progression or optimization loops.
-
-### 3. **Complete Automation**
-One command triggers end-to-end development workflow with minimal human intervention.
-
-### 4. **Continuous Improvement**
-Quality feedback drives automatic specification refinement, creating intelligent improvement cycles.
-
-## 🛠️ Configuration
-
-### Setting Up Sub-Agents
-
-1. **Create Agent Configurations**: Copy agent files to your Claude Code configuration
-2. **Configure Commands**: Set up workflow trigger commands
-3. **Customize Quality Gates**: Adjust scoring thresholds if needed
-
-### Workflow Customization
-
-```bash
-# Custom workflow with specific quality requirements
-First use requirements-pilot with [strict security requirements and performance constraints],
-then use review to validate with [90% minimum threshold],
-continue optimization until threshold met
-```
-
-## 📖 Command Reference
-
-### Requirements Workflow
-- `/requirements-pilot` - Complete requirements-driven development workflow
-- Interactive requirements confirmation → technical specifications → implementation → testing
-
-### Development Commands  
-- `/ask` - Architecture consultation (no code changes)
-- `/bugfix` - Bug resolution workflows
-- `/code` - Feature implementation with constraints
-- `/debug` - Systematic problem analysis
-- `/optimize` - Performance optimization coordination
-- `/review` - Multi-dimensional code validation
-- `/test` - Comprehensive testing strategy
 
 ## 🤝 Contributing
 
-This is a Claude Code configuration framework. Contributions welcome:
+This is a Claude Code configuration framework focused on **lightweight quality gates**. Contributions welcome:
 
-1. **New Agent Configurations**: Specialized experts for specific domains
-2. **Workflow Patterns**: New automation sequences  
-3. **Quality Metrics**: Enhanced scoring dimensions
-4. **Command Extensions**: Additional development phase coverage
+1. **New Stage Commands**: Additional development phase coverage
+2. **Quality Gate Enhancements**: Better objective measurement criteria  
+3. **Smart Testing Rules**: More sophisticated testing decision algorithms
+4. **Workflow Patterns**: New automation sequences for specific domains
 
 ## 📄 License
 
-MIT License - see [LICENSE](LICENSE) file for details.
-
-## 🙋 Support
-
-- **Documentation**: Check `/commands/` and `/agents/` for detailed specifications
-- **Issues**: Use GitHub issues for bug reports and feature requests
-- **Discussions**: Share workflow patterns and customizations
-
----
-
-## 🎉 Getting Started
-
-Ready to transform your development workflow? Start with:
-
-```bash
-/requirements-pilot "Your first feature description here"
-```
-
-Watch as your one-line request becomes a complete, tested, production-ready implementation with 90% quality assurance.
-
-**Remember**: Professional software comes from professional processes. Requirements-driven workflows give you a tireless, always-expert virtual development team.
-
-*Let specialized AI do specialized work - development becomes elegant and efficient.*
+MIT License - Use this framework to enhance your Claude Code workflows with automated quality gates and professional specialization.
