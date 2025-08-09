@@ -154,8 +154,83 @@ requirements-generate → requirements-code → requirements-review → (✅ 就
 
 ## 🚀 快速开始
 
-### 单命令开发
+### 第一步：用户级设置（推荐）
+
+**选项A：用户级全局配置（推荐）**
 ```bash
+# 导航到用户主目录
+cd ~
+
+# 如果存在现有的.claude目录，进行备份
+if [ -d ".claude" ]; then
+  mv .claude .claude-old
+  echo "现有.claude已备份为.claude-old"
+fi
+
+# 克隆此仓库作为新的.claude配置
+git clone https://github.com/ysicing/code-pilot.git .claude
+cd .claude
+
+# 如果有现有配置，复制除agents和commands之外的文件
+if [ -d "../.claude-old" ]; then
+  # 复制除agents和commands目录之外的所有内容
+  find ../.claude-old -maxdepth 1 -type f -exec cp {} . \;
+  
+  # 复制任何自定义子目录（排除agents和commands）
+  for dir in ../.claude-old/*/; do
+    dirname=$(basename "$dir")
+    if [ "$dirname" != "agents" ] && [ "$dirname" != "commands" ]; then
+      cp -r "$dir" ./
+    fi
+  done
+  
+  echo "之前的配置已合并（排除agents和commands）"
+fi
+```
+
+**选项B：项目特定设置**
+```bash
+# 导航到你的项目目录
+cd /path/to/your/project
+
+# 如果存在现有的.claude目录，进行备份
+if [ -d ".claude" ]; then
+  mv .claude .claude-old
+fi
+
+# 克隆此仓库作为项目的.claude配置
+git clone https://github.com/ysicing/code-pilot.git .claude
+
+# 如果有现有的项目特定配置
+if [ -d ".claude-old" ]; then
+  # 从旧配置复制非agent/command文件
+  find .claude-old -maxdepth 1 -type f -exec cp {} .claude/ \;
+  
+  # 复制自定义子目录（排除agents和commands）
+  for dir in .claude-old/*/; do
+    dirname=$(basename "$dir")
+    if [ "$dirname" != "agents" ] && [ "$dirname" != "commands" ]; then
+      cp -r "$dir" .claude/
+    fi
+  done
+fi
+```
+
+### 第二步：验证Claude Code安装
+```bash
+# 确保已安装Claude Code
+npm install -g @anthropic-ai/claude-code
+# 或检查是否已安装
+claude --version
+```
+
+### 第三步：首次自动化工作流
+
+**选项A：完整自动化（新功能推荐）**
+```bash
+# 导航到你的项目目录
+cd /path/to/your/project
+
 # 一条命令处理所有事情 - 需求、实现、审查、测试
 /requirements-pilot "创建支持JWT令牌的用户认证REST API"
 
@@ -164,7 +239,7 @@ requirements-generate → requirements-code → requirements-review → (✅ 就
 /requirements-pilot "添加UI主题切换器" --no-test  # 仅UI变更
 ```
 
-### 阶段化开发  
+**选项B：步骤式控制（复杂功能推荐）**
 ```bash
 # 需求分析优先
 /story-breakdown "用户管理系统，支持RBAC权限"
@@ -179,16 +254,186 @@ requirements-generate → requirements-code → requirements-review → (✅ 就
 /release-check "用户管理组件"
 ```
 
-### 设置配置
+### 第四步：理解文件结构
 
-克隆或复制配置结构：
+设置后，你的项目将拥有：
 ```bash
-# 你的项目目录
-├── commands/          # 10个专业斜杠命令
-├── agents/           # 9个专家智能体配置  
-├── CLAUDE.md         # Claude Code系统指令
-└── WORKFLOW-GUIDE.md # 阶段化使用指南
+your-project/
+├── .claude/
+│   ├── commands/          # 10个专业斜杠命令
+│   │   ├── ask.md
+│   │   ├── bugfix.md
+│   │   ├── code.md
+│   │   ├── debug.md
+│   │   ├── optimize.md
+│   │   ├── release-check.md
+│   │   ├── requirements-pilot.md
+│   │   ├── review.md
+│   │   ├── story-breakdown.md
+│   │   └── test.md
+│   ├── agents/           # 9个专家智能体配置
+│   │   ├── bugfix.md
+│   │   ├── bugfix-verify.md
+│   │   ├── code.md
+│   │   ├── debug.md
+│   │   ├── optimize.md
+│   │   ├── requirements-code.md
+│   │   ├── requirements-generate.md
+│   │   ├── requirements-review.md
+│   │   └── requirements-testing.md
+│   ├── CLAUDE.md         # Claude Code系统指令
+│   └── specs/            # 生成的规格文档（自动创建）
+├── your-source-code/
+└── other-project-files
 ```
+
+### 第五步：自定义（可选）
+
+1. **编辑CLAUDE.md**以匹配你的项目特性：
+   ```bash
+   # 打开并自定义主配置
+   code .claude/CLAUDE.md
+   ```
+
+2. **为你的工作流自定义命令**：
+   ```bash
+   # 根据需要编辑特定命令
+   code .claude/commands/requirements-pilot.md
+   ```
+
+3. **为你的领域调整智能体配置**：
+   ```bash
+   # 修改智能体行为
+   code .claude/agents/requirements-generate.md
+   ```
+
+## 🎯 常见使用模式
+
+### Web应用开发
+```bash
+# 前端功能开发
+/requirements-pilot "创建响应式用户仪表板，支持暗色模式" --no-test
+
+# 后端API开发  
+/requirements-pilot "构建用户管理REST API" --test
+
+# 全栈功能
+/story-breakdown "电商购物车与结账系统"
+/requirements-pilot "购物车前端" --no-test
+/requirements-pilot "购物车API后端" --test
+/requirements-pilot "支付集成" --test
+```
+
+### 数据科学项目
+```bash
+# 数据分析工作流
+/ask "数据管道架构的最佳实践"
+/code "实现数据预处理管道"
+/review "数据质量和性能验证"
+
+# 模型开发
+/requirements-pilot "构建用户推荐ML模型" --test
+```
+
+### DevOps和基础设施
+```bash
+# 基础设施即代码
+/requirements-pilot "Docker容器化设置" --test
+/requirements-pilot "Kubernetes部署配置" --test
+
+# CI/CD管道
+/story-breakdown "完整CI/CD管道与测试"
+/requirements-pilot "GitHub Actions工作流" --test
+```
+
+## ⚠️ 故障排除
+
+### 常见问题与解决方案
+
+**问题：命令不起作用**
+```bash
+# 检查项目根目录是否存在.claude目录
+ls -la .claude/
+
+# 验证CLAUDE.md是否正确配置
+cat .claude/CLAUDE.md | head -20
+```
+
+**问题：质量门控失败**
+```bash
+# 命令可能未通过质量检查
+# 查看需求规格：
+cat .claude/specs/your-feature/requirements-spec.md
+
+# 尝试进一步分解功能：
+/story-breakdown "你的复杂功能描述"
+```
+
+**问题：测试策略不合适**
+```bash
+# 对于仅UI变更，使用--no-test
+/requirements-pilot "更新按钮颜色" --no-test
+
+# 对于业务逻辑，始终使用--test
+/requirements-pilot "用户认证逻辑" --test
+
+# 对于不确定的情况，让系统决定
+/requirements-pilot "混合UI和逻辑变更"
+```
+
+**问题：智能体专业化不起作用**
+```bash
+# 检查智能体配置
+ls -la .claude/agents/
+# 每个智能体应该专业化 - 避免混合关注点
+
+# 为任务使用正确的命令：
+/ask "架构问题"  # 不是/code
+/code "直接实现"  # 不是/ask
+```
+
+### 最佳实践
+
+1. **从简单开始**：大多数新功能使用`/requirements-pilot`
+2. **质量优先**：让质量门控（90%阈值）指导进度
+3. **适当测试**：逻辑用`--test`，仅UI用`--no-test`
+4. **分解复杂功能**：大型项目使用`/story-breakdown`
+5. **实现前先架构**：战略决策使用`/ask`
+
+## 🔧 高级配置
+
+### 自定义项目设置
+
+为团队或特定领域自定义系统：
+
+1. **项目特定的CLAUDE.md**：
+   ```bash
+   # 添加你项目的特定要求
+   echo "## 项目特定指令" >> .claude/CLAUDE.md
+   echo "- 所有新代码使用TypeScript" >> .claude/CLAUDE.md
+   echo "- 遵循我们的API命名约定" >> .claude/CLAUDE.md
+   ```
+
+2. **自定义命令**：
+   ```bash
+   # 创建领域特定命令
+   cp .claude/commands/code.md .claude/commands/api-code.md
+   # 编辑api-code.md用于API特定开发
+   ```
+
+3. **团队工作流**：
+   ```bash
+   # 创建团队特定工作流
+   mkdir .claude/workflows/
+   # 添加团队流程文档
+   ```
+
+## 📈 性能提示
+
+1. **使用完整自动化**：`/requirements-pilot`比手动链更高效
+2. **适当范围**：保持功能专注（1-3天实现）
+3. **质量门控**：信任90%阈值 - 它们防止返工
+4. **智能测试**：让系统根据变更类型决定测试策略
 
 ## 💡 **关键创新**
 
@@ -340,3 +585,13 @@ else:
 ## 📄 许可证
 
 MIT许可证 - 使用此框架通过自动化质量门控和专业化分工增强你的Claude Code工作流。
+
+## 🙏 致谢
+
+本项目基于 [myclaude](https://github.com/cexll/myclaude) 进行二次迭代，在此基础上实现了重大增强和创新。我们衷心感谢：
+
+- **@cexll** 创建了奠基性的myclaude项目，为本项目提供了灵感
+- **Claude (Anthropic)** 在整个开发过程中提供了卓越的AI协助和大力支持
+- Claude Code社区成员们提供的宝贵反馈和贡献
+
+特别感谢与Claude的持续合作，使得复杂的多智能体工作流系统和质量门控自动化成为可能。
