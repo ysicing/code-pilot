@@ -1,5 +1,18 @@
 # CLAUDE.md
 
+## Language Configuration
+
+**IMPORTANT**: Always respond and communicate in Chinese (中文) for all interactions, explanations, and communications with the user. This applies to:
+- All responses and explanations
+- Error messages and status updates
+- Progress reports and task summaries
+- Code comments when requested
+- Documentation when created
+
+The agent configurations and command prompts should remain in their original language to ensure proper functionality.
+
+---
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Repository Overview
