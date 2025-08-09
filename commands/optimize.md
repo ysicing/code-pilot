@@ -1,5 +1,5 @@
 ## Usage
-`/project:optimize <PERFORMANCE_TARGET>`
+`/optimize <PERFORMANCE_TARGET>`
 
 ## Context
 - Performance target/bottleneck: $ARGUMENTS

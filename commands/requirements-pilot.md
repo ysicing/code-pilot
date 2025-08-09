@@ -1,10 +1,10 @@
 ## Usage
 `/requirements-pilot <FEATURE_DESCRIPTION> [TESTING_PREFERENCE]`
 
-### Testing Control Options
-- **Explicit Test**: Include `--test`, `要测试`, `测试` to force testing execution
-- **Explicit Skip**: Include `--no-test`, `不要测试`, `跳过测试` to skip testing phase
-- **Interactive Mode**: Default behavior - asks user at testing decision point
+## Testing Control (Simplified)
+- **Default**: Ask user after code completion: "Code complete. Run tests? (y/n)"
+- **Explicit Test**: Include `--test` in command to auto-run tests
+- **Explicit Skip**: Include `--no-test` to skip testing
 
 ## Context
 - Feature to develop: $ARGUMENTS
@@ -42,20 +42,31 @@ Start this phase immediately upon receiving the command:
 
 ### 2. Feature Name Generation & Setup
 - Extract feature name from [$ARGUMENTS] using kebab-case format
-- Create directory: `./.claude/specs/{feature_name}/`
+- Create directory: `{project_root}/.claude/specs/{feature_name}/`
 - Initialize confirmation tracking
 
 ### 3. Requirements Quality Assessment (100-point system)
-- **Functional Clarity (30 points)**: Clear input/output specs, user interactions, success criteria
-- **Technical Specificity (25 points)**: Integration points, technology constraints, performance requirements  
-- **Implementation Completeness (25 points)**: Edge cases, error handling, data validation
-- **Business Context (20 points)**: User value proposition, priority definition
+- **Functional Clarity (30 points)**: 
+  - Clear input/output specs (8 points)
+  - User interaction definition (7 points)
+  - Success criteria specification (8 points)
+  - Edge case identification (7 points)
+- **Technical Specificity (25 points)**:
+  - Technology stack definition (8 points)
+  - Integration points clarity (9 points)
+  - Performance requirements (8 points)
+- **Implementation Completeness (25 points)**:
+  - Data model specification (8 points)
+  - API contract definition (9 points)
+  - Error handling strategy (8 points)
+- **Business Context (20 points)**:
+  - User value proposition (10 points)
+  - Priority definition (10 points)
 
-### 4. Interactive Clarification Loop
-- **Quality Gate**: Continue until score ≥ 90 points (no iteration limit)
-- Generate targeted clarification questions for missing areas
-- Document confirmation process and save to `./.claude/specs/{feature_name}/requirements-confirm.md`
-- Include: original request, clarification rounds, quality scores, final confirmed requirements
+### 4. Interactive Clarification
+- Continue until requirements are clear and actionable
+- Document confirmation process and save to `{project_root}/.claude/specs/{feature_name}/requirements-confirm.md`
+- Include: original request, key clarifications, final confirmed requirements
 
 ## 🛑 User Approval Gate (Mandatory Stop Point) 🛑
 
@@ -76,7 +87,7 @@ After achieving 90+ quality score:
 Execute the following sub-agent chain:
 
 ```
-First use the requirements-generate sub agent to create implementation-ready technical specifications for confirmed requirements, then use the requirements-code sub agent to implement the functionality based on specifications, then use the requirements-review sub agent to evaluate code quality with practical scoring, then if score ≥90% proceed to Testing Decision Gate: if explicit_test_requested execute requirements-testing sub agent, if explicit_skip_requested complete workflow, if interactive_mode ask user for testing preference with smart recommendations, otherwise use the requirements-code sub agent again to address review feedback and repeat the review cycle.
+First use requirements-generate to create technical specifications, then use requirements-code to implement functionality, then use requirements-review to evaluate code quality, then if status is ✅ Ready ask user about testing: "Code complete. Run tests? (y/n)", otherwise use requirements-code again to address issues.
 ```
 
 ## Testing Decision Gate Implementation
@@ -200,11 +211,13 @@ else:  # interactive_mode
 
 ### Simple Tasks (Recommend Skip Testing)
 - Configuration file changes
-- Documentation updates
+- Documentation updates  
 - Simple utility functions
-- UI text/styling changes
+- UI text/styling changes (recommend lint-only)
 - Basic data structure additions
 - Environment variable updates
+- Pure CSS/styling modifications
+- Static content updates
 
 ### Complex Tasks (Recommend Testing)
 - Business logic implementation
@@ -213,16 +226,22 @@ else:  # interactive_mode
 - Authentication/authorization features
 - Integration with external services
 - Performance-critical functionality
+- Payment/financial processing
+- Data validation and processing logic
 
 ### Interactive Mode Prompt Template
 ```markdown
 Code review completed ({review_score}% quality score). Do you want to create test cases?
 
 Based on task analysis: {smart_recommendation}
+- For UI-only changes: Recommend lint checks only
+- For business logic: Recommend comprehensive testing  
+- For mixed changes: Recommend targeted testing based on complexity
 
 - Reply 'yes'/'y'/'test' to proceed with testing
-- Reply 'no'/'n'/'skip' to skip testing
-- Chinese responses also accepted: '是'/'测试' or '不'/'跳过'
+- Reply 'no'/'n'/'skip' to skip testing  
+- Reply 'lint' for lint-only validation (UI changes)
+- Chinese responses also accepted: '是'/'测试' or '不'/'跳过'/'检查'
 ```
 
 ## Important Reminders

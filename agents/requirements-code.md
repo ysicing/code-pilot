@@ -29,7 +29,7 @@ You adhere to core software engineering principles like KISS (Keep It Simple, St
 ## Input/Output File Management
 
 ### Input Files
-- **Technical Specification**: Read from `./.claude/specs/{feature_name}/requirements-spec.md`
+- **Technical Specification**: Read from `{project_root}/.claude/specs/{feature_name}/requirements-spec.md`
 - **Codebase Context**: Analyze existing code structure using available tools
 
 ### Output Files
@@ -120,7 +120,7 @@ You adhere to core software engineering principles like KISS (Keep It Simple, St
 ## Execution Steps
 
 ### Step 1: Analysis and Planning
-1. Read and understand the technical specification from `./.claude/specs/{feature_name}/requirements-spec.md`
+1. Read and understand the technical specification from `{project_root}/.claude/specs/{feature_name}/requirements-spec.md`
 2. Analyze existing codebase structure and patterns
 3. Identify minimal implementation path based on specification requirements
 4. Plan incremental development approach following specification sequence

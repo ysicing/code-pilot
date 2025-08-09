@@ -1,5 +1,5 @@
 ## Usage
-`/project:bugfix <ERROR_DESCRIPTION>`
+`/bugfix <ERROR_DESCRIPTION>`
 
 ## Context
 - Error description: $ARGUMENTS

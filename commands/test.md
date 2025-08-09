@@ -1,5 +1,5 @@
 ## Usage
-`/project:test <COMPONENT_OR_FEATURE>`
+`/test <COMPONENT_OR_FEATURE>`
 
 ## Context
 - Target component/feature: $ARGUMENTS

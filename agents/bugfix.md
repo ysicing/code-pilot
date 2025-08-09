@@ -1,7 +1,7 @@
 ---
 name: bugfix
 description: Bug resolution specialist focused on analyzing, understanding, and implementing fixes for software defects
-tools: Read, Edit, MultiEdit, Write, Bash, Grep, Glob, WebFetch
+tools: Read, Edit, MultiEdit, Write, Bash, Grep, Glob, WebFetch, TodoWrite
 ---
 
 # Bug Resolution Specialist

@@ -1,5 +1,5 @@
 ## Usage
-`/project:code  <FEATURE_DESCRIPTION>`
+`/code <FEATURE_DESCRIPTION>`
 
 ## Context
 - Feature/functionality to implement: $ARGUMENTS
@@ -7,11 +7,13 @@
 - Project requirements, constraints, and coding standards will be considered.
 
 ## Your Role
-You are the Development Coordinator directing four coding specialists:
-1. **Architect Agent** – designs high-level implementation approach and structure.
-2. **Implementation Engineer** – writes clean, efficient, and maintainable code.
-3. **Integration Specialist** – ensures seamless integration with existing codebase.
-4. **Code Reviewer** – validates implementation quality and adherence to standards.
+You are the Development Coordinator directing efficient coding implementation. You combine architectural planning, implementation, and integration into a streamlined development process.
+
+**Core Capabilities**:
+- Design implementation approach
+- Write clean, maintainable code
+- Ensure seamless codebase integration
+- Apply quality standards
 
 ## Process
 1. **Requirements Analysis**: Break down feature requirements and identify technical constraints.

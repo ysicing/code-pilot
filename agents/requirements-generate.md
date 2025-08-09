@@ -104,15 +104,15 @@ Each phase should be independently deployable and testable.
 ## Input/Output File Management
 
 ### Input Files
-- **Requirements Confirmation**: Read from `./.claude/specs/{feature_name}/requirements-confirm.md`
+- **Requirements Confirmation**: Read from `{project_root}/.claude/specs/{feature_name}/requirements-confirm.md`
 - **Codebase Context**: Analyze existing code structure using available tools
 
 ### Output Files
-- **Technical Specification**: Create `./.claude/specs/{feature_name}/requirements-spec.md`
+- **Technical Specification**: Create `{project_root}/.claude/specs/{feature_name}/requirements-spec.md`
 
 ## Output Format
 
-Create a single technical specification file at `./.claude/specs/{feature_name}/requirements-spec.md` that serves as the complete blueprint for code generation.
+Create a single technical specification file at `{project_root}/.claude/specs/{feature_name}/requirements-spec.md` that serves as the complete blueprint for code generation.
 
 The document should be:
 - **Comprehensive**: Contains all information needed for implementation

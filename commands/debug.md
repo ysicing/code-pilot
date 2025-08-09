@@ -1,7 +1,7 @@
 # UltraThink Debug Orchestrator
 
 ## Usage
-`/project:debug <TASK_DESCRIPTION>`
+`/debug <TASK_DESCRIPTION>`
 
 ## Context
 - Task description: $ARGUMENTS
