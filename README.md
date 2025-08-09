@@ -59,25 +59,66 @@ then if Ready ask user: "Code complete. Run tests? (y/n/lint)"
 ### 2. 🎛️ Individual Commands (Manual Orchestration)
 
 **Architecture**: Individual slash commands for targeted expertise
+
+#### **🏛️ Architecture & Consultation**
 ```bash
-/ask              # Technical consultation and architecture guidance
-/bugfix           # Bug resolution with systematic analysis 
-/code             # Feature implementation with constraints
-/debug            # Systematic problem analysis using UltraThink
-/optimize         # Performance optimization coordination
-/requirements-pilot # Complete automated workflow (recommended)
-/review           # Code quality assessment and validation
-/test             # Comprehensive testing strategy
+/ask              # Senior Systems Architect consultation
+                  # - Multi-expert consultation (Systems Designer, Technology Strategist, Scalability Consultant, Risk Analyst)
+                  # - "UltraThink" reflection methodology for comprehensive analysis
+                  # - Strategic technology guidance with pros/cons analysis
+                  # - No code changes, pure architectural guidance
 ```
 
-**Progression Example**:
+#### **🔍 Advanced Debugging**
 ```bash
-# Step-by-step development with manual control
-/ask "Help me understand microservices architecture requirements"
-/code "Implement gateway with rate limiting"
-/test "Create load testing suite"
-/review "Validate implementation quality and security"
-/optimize "Improve response times under 100ms"
+/debug            # UltraThink Debug Orchestrator
+                  # - 4-phase systematic debugging (Problem Analysis → Multi-Agent → UltraThink → Validation)
+                  # - Multi-agent coordination (Architect, Research, Coder, Tester specialists)
+                  # - Hypothesis generation & refinement (5-7 → 1-2 most likely solutions)
+                  # - User confirmation gate before implementing fixes
+                  # - Evidence-based diagnostic strategy
+```
+
+#### **🏗️ Implementation & Quality**
+```bash
+/code             # Feature implementation with constraints
+/review           # Multi-dimensional code review
+                  # - 4 specialist reviewers (Quality Auditor, Security Analyst, Performance Reviewer, Architecture Assessor)
+                  # - Prioritized actionable feedback with effort estimates
+                  # - Focus on practical quality over architectural perfection
+                  
+/test             # Comprehensive testing strategy
+/bugfix           # Bug resolution with systematic analysis
+/optimize         # Performance optimization coordination
+```
+
+#### **🎯 Complete Automated Workflow**
+```bash
+/requirements-pilot # Requirements-Driven Development Pipeline
+                    # - Interactive requirements confirmation with 100-point quality assessment
+                    # - User approval gate at 90+ quality score
+                    # - 4-phase implementation: Requirements → Specs → Code → Testing
+                    # - Smart testing decisions (--test/--no-test flags)
+                    # - File structure management (.claude/specs/{feature_name}/)
+```
+
+**Advanced Usage Examples**:
+```bash
+# UltraThink Debugging Workflow
+/debug "API timeout issues in production"
+# → Generates 5-7 hypotheses, coordinates 4 specialists, refines to top 2 solutions
+# → Requests user confirmation before implementing fixes
+
+# Multi-Expert Architecture Consultation  
+/ask "Design considerations for high-performance API gateway"
+# → Systems Designer analyzes boundaries, Technology Strategist evaluates choices
+# → Scalability Consultant assesses performance, Risk Analyst identifies trade-offs
+
+# Requirements-Driven Development with Quality Gates
+/requirements-pilot "JWT authentication with refresh tokens" --test
+# → Interactive clarification until 90+ quality score
+# → User approval gate before implementation
+# → Automated specs → code → review → testing pipeline
 ```
 
 ## 🚀 Quick Start
@@ -141,22 +182,25 @@ Clone or copy the configuration structure:
 ### Core Components
 
 #### **Commands Directory** (`/commands/`)
-- **Consultation**: `/ask` - Architecture guidance (no code changes)
+- **Consultation**: `/ask` - Senior Systems Architect with 4-expert consultation methodology
 - **Implementation**: `/code` - Feature development with constraints  
-- **Quality Assurance**: `/test`, `/debug`, `/review`
+- **Quality Assurance**: 
+  - `/test` - Comprehensive testing strategy
+  - `/debug` - UltraThink Debug Orchestrator with 4-phase systematic analysis
+  - `/review` - Multi-dimensional review (Quality, Security, Performance, Architecture)
 - **Bug Resolution**: `/bugfix` - Systematic bug fixing workflows
-- **Optimization**: `/optimize` - Performance optimization
-- **Requirements**: `/requirements-pilot` - Complete requirements-driven workflow with smart testing
+- **Optimization**: `/optimize` - Performance optimization coordination
+- **Requirements**: `/requirements-pilot` - Complete pipeline with quality gates and approval workflow
 
 #### **Agents Directory** (`/agents/`)
-- **requirements-generate**: Technical specification generation optimized for code generation
+- **requirements-generate**: Code-generation-optimized technical specifications with direct implementation mapping
 - **requirements-code**: Direct implementation agent with minimal architectural overhead
-- **requirements-review**: Pragmatic code review focused on functionality and maintainability
+- **requirements-review**: Pragmatic review focusing on functionality over architectural perfection (3-level scoring)
 - **requirements-testing**: Smart testing with proportional coverage and UI-aware strategies
 - **bugfix**: Bug resolution specialist for analyzing and fixing software defects
 - **bugfix-verify**: Fix validation specialist for objective assessment
 - **code**: Development coordinator for direct implementation
-- **debug**: UltraThink systematic problem analysis
+- **debug**: UltraThink systematic problem analysis with multi-agent coordination
 - **optimize**: Performance optimization coordination
 
 ### Multi-Agent Coordination System
