@@ -298,19 +298,12 @@ continue optimization until threshold met
 
 ### Development Commands  
 - `/ask` - Architecture consultation (no code changes)
+- `/bugfix` - Bug resolution workflows
 - `/code` - Feature implementation with constraints
 - `/debug` - Systematic problem analysis
-- `/test` - Comprehensive testing strategy
-- `/review` - Multi-dimensional code validation
-
-### Optimization Commands
 - `/optimize` - Performance optimization coordination
-- `/refactor` - Code refactoring with quality gates
-
-### Additional Commands
-- `/bugfix` - Bug resolution workflows
-- `/docs` - Documentation generation
-- `/think` - Advanced thinking and analysis
+- `/review` - Multi-dimensional code validation
+- `/test` - Comprehensive testing strategy
 
 ## 🤝 Contributing
 
