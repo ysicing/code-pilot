@@ -25,10 +25,10 @@ This is a Claude Code Multi-Agent Workflow System that provides a **lightweight 
 
 ### Core Components
 
-The repository contains two main directories:
+The system provides:
 
-1. **`/commands/`** - 10 specialized slash commands for targeted development workflows
-2. **`/agents/`** - 9 expert agent configurations for multi-agent orchestration
+1. **Commands** - 10 specialized commands (1 Primary + 9 Manual) for targeted development workflows
+2. **Agents** - 9 expert agent configurations for multi-agent orchestration (4 Requirements Workflow + 5 Specialized)
 
 ### Key Workflow Patterns
 
@@ -37,21 +37,9 @@ The repository contains two main directories:
 requirements-generate → requirements-code → requirements-review → (✅ Ready?) → smart-testing-decision
 ```
 
-**Manual Command Workflow** (Secondary):
-- `/ask` - Architecture consultation (no code changes)
-- `/story-breakdown` - Requirements breakdown into implementable stories
-- `/bugfix` - Bug resolution with systematic analysis
-- `/code` - Feature implementation
-- `/debug` - Systematic problem analysis
-- `/optimize` - Performance optimization  
-- `/review` - Code quality assessment
-- `/test` - Testing strategy
-- `/release-check` - Production readiness verification
-- `/requirements-pilot` - Main automated workflow
+## Commands Overview
 
-## Primary Commands
-
-### `/requirements-pilot`
+### Primary Command: `/requirements-pilot`
 The main automated workflow command with intelligent adaptation:
 
 **Usage**: 
@@ -61,12 +49,12 @@ The main automated workflow command with intelligent adaptation:
 
 **Core Features**:
 - Interactive requirements confirmation with 100-point quality assessment
-- User approval gate at 90+ quality score (mandatory stop point)
+- User approval gate at 90+ quality points (mandatory stop point)
 - 4-phase automated implementation: Requirements → Specs → Code → Testing
 - Smart testing decisions with UI-aware strategies
 - File structure management (.claude/specs/{feature_name}/)
 
-### Core Manual Commands (10 total)
+### Manual Commands (9 total)
 
 - `/ask <TECHNICAL_QUESTION>` - Senior Systems Architect with 4-expert consultation methodology
 - `/story-breakdown <FEATURE_DESCRIPTION>` - Break complex features into implementable user stories
@@ -77,7 +65,6 @@ The main automated workflow command with intelligent adaptation:
 - `/review <CODE_SCOPE>` - Multi-dimensional review (Quality, Security, Performance, Architecture)
 - `/test <COMPONENT_OR_FEATURE>` - Testing strategy and implementation
 - `/release-check <COMPONENT_OR_SYSTEM>` - Production readiness verification with go/no-go decision
-- `/requirements-pilot <FEATURE_DESCRIPTION>` - Main automated workflow with intelligent testing
 
 ## Agent Architecture
 
@@ -96,38 +83,30 @@ The main automated workflow command with intelligent adaptation:
 
 ## Quality Gate System
 
-### Lightweight Quality Standards
+### Quality Standards
 - **Requirements Clarity**: 90+ points before implementation starts
 - **Code Quality**: 90+ points before testing phase
 - **Production Readiness**: Clear go/no-go decision for releases
-
-### Smart Testing Logic
-- **UI-Only Changes**: Lint checks only
-- **Minor Changes (1-5 lines)**: Proportional testing
-- **Business Logic**: Comprehensive testing
-- **Complex Features**: Full test pyramid approach
 
 ## Workflow Guidelines
 
 ### Multi-Agent Coordination
 - Each agent operates in isolated contexts to prevent quality degradation
 - Automatic quality gates determine workflow progression  
-- 90% threshold for most quality gates
+- 90+ quality points threshold for most quality gates
 - Iterative improvement loops when quality thresholds not met
 
-### Intelligent Review and Testing Logic
+### Smart Testing Strategy
+- **UI-Only Changes**: Lint checks only for pure UI changes (colors, layouts, text)
+- **Minor Changes (1-5 lines)**: Proportional testing with lint check only
+- **Business Logic**: Comprehensive testing with risk-based coverage
+- **Complex Features**: Full test pyramid approach
 
-**Smart Testing Decision Logic**:
+**Testing Decision Logic**:
 - **Default**: Ask "Code complete. Run tests? (y/n)" after review passes
 - **--test**: Automatically run tests after successful review
 - **--no-test**: Skip testing entirely
-- **Smart Detection**: Proportional testing based on change complexity and type
-
-**Testing Optimization Features**:
-- **UI-Aware Strategy**: Lint-only approach for pure UI changes (colors, layouts, text)
-- **Change-Proportional Testing**: 1-5 lines = lint check only, no over-testing
-- **Component Type Recognition**: Different strategies for frontend UI vs backend logic
-- **Risk-Based Coverage**: Focus testing on business-critical functionality only
+- **Component Recognition**: Different strategies for frontend UI vs backend logic
 
 ### Implementation-First Approach
 - Direct technical specifications optimized for code generation
@@ -150,20 +129,26 @@ Automated pipeline or direct implementation based on complexity.
 Smart testing strategies with proportional coverage.
 
 ### 🔍 Quality Assurance → `/review`
-Multi-dimensional code review with 90+ quality threshold.
+Multi-dimensional code review with 90+ quality points threshold.
 
-### 🐛 Problem Resolution → `/debug`
-UltraThink systematic debugging with user confirmation gates.
+### 🐛 Problem Resolution → `/debug` or `/bugfix`
+- `/debug`: UltraThink systematic debugging with user confirmation gates
+- `/bugfix`: Bug resolution workflow with systematic analysis
+
+### ⚡ Performance Optimization → `/optimize`
+Performance optimization for specific targets and bottlenecks.
 
 ### 🚀 Release Preparation → `/release-check`
 Production readiness verification with clear go/no-go decisions.
 
 ## File Structure Conventions
 
-### Specifications Directory
-- `{project_root}/.claude/specs/{feature_name}/` - Created automatically for each feature
+### Specifications Directory (for `/requirements-pilot` workflow)
+- `.claude/specs/{feature_name}/` - Created automatically when using `/requirements-pilot`
 - `requirements-confirm.md` - Requirements confirmation process and final requirements
 - `requirements-spec.md` - Technical implementation specifications
+
+**Note**: This directory structure is only created when using the `/requirements-pilot` automated workflow.
 
 ## Core Principles
 
@@ -176,3 +161,47 @@ The system adheres to:
 - **Lightweight Process**: Essential workflow steps without bureaucracy
 
 Focus on pragmatic, working solutions with automated quality assurance.
+
+## Development Guidelines
+
+### Content and Communication
+- **File Priority**: Always prefer editing existing files over creating new files
+- **Documentation**: Never proactively create documentation files unless explicitly requested
+- **Verification**: Always verify information sources independently
+- **Style**: Clear, concise communication with professional tone
+- **Punctuation**: Use English punctuation in code, match document language for documentation
+- **Emoji Usage**: Use sparingly for section navigation only (avoid in code and communication)
+
+### Task Completion Criteria
+A task is considered complete when the primary objectives are achieved. When full completion is not possible:
+
+**Partial Execution Strategy**:
+- Execute all feasible components first
+- Clearly document remaining issues and blockers
+- Provide specific next steps for resolution
+
+**Alternative Solutions (when task cannot be executed)**:
+- Offer at least 3 alternative approaches to achieve the same goal
+- Explain trade-offs and recommendations for each alternative
+- Suggest modified scope or requirements if needed
+
+**Completion Prohibitions**:
+NEVER consider a task complete if any of the following exist:
+- Critical functionality is broken or non-functional
+- Explicitly listed specific remaining work items in responses that affect core functionality
+
+### Code Quality Standards
+Following the "Keep It Simple" principle:
+- **Avoid Over-Abstraction**: Keep implementations practical and direct
+- **Single Responsibility**: Follow single responsibility principle
+- **Code Reuse**: Eliminate duplicate code by extracting common functionality
+- **Consistent Naming**: Apply uniform naming conventions
+- **Error Handling**: Implement consistent error handling patterns
+- **No Hard-Coding**: Use configuration or constants instead of hard-coded values
+
+**Balance Principle**: Apply automation and abstraction only when it reduces complexity.
+
+### Continuous Improvement
+- Learn from code patterns and apply best practices consistently
+- Incorporate user feedback into implementation approach
+- Update practices based on project-specific requirements
