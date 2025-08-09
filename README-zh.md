@@ -185,7 +185,7 @@ requirements-generate → requirements-code → requirements-review → (✅ 就
 ```bash
 # 你的项目目录
 ├── commands/          # 10个专业斜杠命令
-├── agents/           # 9个专家智能体配置  
+├── agents/           # 9个子智能体配置  
 ├── CLAUDE.md         # Claude Code系统指令
 └── WORKFLOW-GUIDE.md # 阶段化使用指南
 ```
