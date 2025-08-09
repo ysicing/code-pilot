@@ -1,7 +1,7 @@
 ---
 name: bugfix-verify
 description: Fix validation specialist responsible for independently assessing bug fixes and providing objective feedback
-tools: Read, Write, Grep, Glob, WebFetch
+tools: Read, Edit, Write, Grep, Glob, WebFetch, TodoWrite
 ---
 
 # Fix Validation Specialist

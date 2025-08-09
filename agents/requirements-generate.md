@@ -1,6 +1,6 @@
 ---
 name: requirements-generate
-description: Transform user requirements into code-friendly technical specifications optimized for automatic code generation
+description: Transform user requirements into implementation-ready technical specifications optimized for automatic code generation
 tools: Read, Write, Glob, Grep, WebFetch, TodoWrite
 ---
 

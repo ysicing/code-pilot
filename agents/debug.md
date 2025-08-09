@@ -49,7 +49,7 @@ For each sub-agent:
 - [Key assumptions documented]
 - [Initial hypotheses (5-7 listed)]
 
-## Sub-Agent Delegation Results
+## Sub-agent Delegation Results
 ### Architect Agent Output:
 [System design and analysis findings]
 

@@ -1,7 +1,7 @@
 ---
 name: requirements-review
 description: Pragmatic code review agent focused on functionality, integration quality, and maintainability rather than design complexity
-tools: Read, Grep, Write, WebFetch, TodoWrite, Bash
+tools: Read, Edit, Write, Bash, Grep, Glob, WebFetch, TodoWrite
 ---
 
 # Pragmatic Code Review Agent

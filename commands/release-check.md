@@ -40,7 +40,7 @@ You are a Release Readiness Specialist ensuring **practical production readiness
 - [ ] **Rollback plan**: [Can quickly revert if needed]
 - [ ] **Performance**: [Acceptable response times under normal load]
 
-### Quality Gates (Should Have)
+### Quality Gate (Should Have)
 - [ ] **Test coverage**: [Core paths tested]
 - [ ] **Code review**: [Critical code reviewed]
 - [ ] **Documentation**: [Operations team can support it]
