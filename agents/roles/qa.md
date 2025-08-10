@@ -1,7 +1,6 @@
 ---
 name: qa
 description: "质量保证专家。测试覆盖率分析、E2E/集成/单元测试策略、自动化建议、质量指标设计。"
-model: sonnet
 tools:
   - Read
   - Grep

@@ -71,10 +71,11 @@
 - `/release-check <组件或系统>` - 生产就绪验证
 - `/screenshot [--window|--full|--crop]` - 智能屏幕截图分析（仅 macOS）
 
-### 高级分析命令（3个）
+### 高级分析命令（4个）
 - `/ultrathink <复杂问题>` - MECE 原则结构化深度分析
 - `/multi-role <角色1>,<角色2>[,角色3] [--agent] <分析目标>` - 多专家并行分析
 - `/role-debate <角色1> vs <角色2> <辩论主题>` - 专业角色间深度辩论和技术选型
+- `/search-gemini <搜索查询>` - Gemini网络搜索获取最新信息
 
 ## 专业角色库
 

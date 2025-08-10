@@ -273,7 +273,7 @@ After setup, your project will have:
 ```bash
 your-project/
 ├── .claude/
-│   ├── commands/          # 14 specialized slash commands
+│   ├── commands/          # 15 specialized slash commands
 │   │   ├── ask.md
 │   │   ├── bugfix.md
 │   │   ├── code.md
@@ -285,10 +285,11 @@ your-project/
 │   │   ├── review.md
 │   │   ├── role-debate.md
 │   │   ├── screenshot.md
+│   │   ├── search-gemini.md
 │   │   ├── story-breakdown.md
 │   │   ├── test.md
 │   │   └── ultrathink.md
-│   ├── agents/           # 9 expert agent configurations
+│   ├── agents/           # 14 expert agent configurations
 │   │   ├── bugfix.md
 │   │   ├── bugfix-verify.md
 │   │   ├── code.md
@@ -297,7 +298,13 @@ your-project/
 │   │   ├── requirements-code.md
 │   │   ├── requirements-generate.md
 │   │   ├── requirements-review.md
-│   │   └── requirements-testing.md
+│   │   ├── requirements-testing.md
+│   │   └── roles/
+│   │       ├── architect.md
+│   │       ├── frontend.md
+│   │       ├── performance.md
+│   │       ├── qa.md
+│   │       └── security.md
 │   ├── CLAUDE.md         # System instructions for Claude Code
 │   └── specs/            # Generated specifications (auto-created)
 ├── your-source-code/
@@ -552,7 +559,8 @@ Proportional testing based on change impact:
 - `/ultrathink` - MECE principle structured deep analysis
 - `/multi-role` - Multi-expert parallel analysis
 - `/role-debate` - Professional role deep debate and technical selection
-- `/screenshot` - Smart screenshot analysis (UI/UX evaluation, error diagnosis)
+- `/screenshot` - Smart screenshot analysis and visual evaluation (macOS only)
+- `/search-gemini` - Gemini web search for latest information
 
 ## 🏗️ Architecture Overview
 
@@ -575,6 +583,7 @@ Proportional testing based on change impact:
   - `/ultrathink` - MECE principle structured deep analysis
   - `/multi-role` - Multi-expert parallel analysis
   - `/role-debate` - Professional role technical selection debate
+  - `/search-gemini` - Gemini web search for latest information
 
 #### **Agents Directory** (`/agents/`)
 - **requirements-generate**: Code-generation-optimized technical specifications with direct implementation mapping

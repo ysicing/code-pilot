@@ -1,7 +1,6 @@
 ---
 name: security
 description: "安全专家。OWASP Top 10、CVE 对照、LLM/AI 安全对应。"
-model: opus
 tools:
   - Read
   - Grep

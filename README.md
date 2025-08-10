@@ -273,7 +273,7 @@ cd /path/to/your/project
 ```bash
 your-project/
 ├── .claude/
-│   ├── commands/          # 14个专业斜杠命令
+│   ├── commands/          # 15个专业斜杠命令
 │   │   ├── ask.md
 │   │   ├── bugfix.md
 │   │   ├── code.md
@@ -285,10 +285,11 @@ your-project/
 │   │   ├── review.md
 │   │   ├── role-debate.md
 │   │   ├── screenshot.md
+│   │   ├── search-gemini.md
 │   │   ├── story-breakdown.md
 │   │   ├── test.md
 │   │   └── ultrathink.md
-│   ├── agents/           # 9个专家智能体配置
+│   ├── agents/           # 14个专家智能体配置
 │   │   ├── bugfix.md
 │   │   ├── bugfix-verify.md
 │   │   ├── code.md
@@ -297,7 +298,13 @@ your-project/
 │   │   ├── requirements-code.md
 │   │   ├── requirements-generate.md
 │   │   ├── requirements-review.md
-│   │   └── requirements-testing.md
+│   │   ├── requirements-testing.md
+│   │   └── roles/
+│   │       ├── architect.md
+│   │       ├── frontend.md
+│   │       ├── performance.md
+│   │       ├── qa.md
+│   │       └── security.md
 │   ├── CLAUDE.md         # Claude Code系统指令
 │   └── specs/            # 生成的规格文档（自动创建）
 ├── your-source-code/
@@ -552,8 +559,8 @@ else:
 - `/ultrathink` - MECE原则结构化深度分析
 - `/multi-role` - 多专家并行分析
 - `/role-debate` - 专业角色间深度辩论和技术选型
-- `/screenshot` - 智能屏幕截图分析（UI/UX评估，错误诊断）
 - `/screenshot` - 智能屏幕截图分析和视觉评估（仅 macOS）
+- `/search-gemini` - Gemini网络搜索获取最新信息
 
 ## 🏗️ 架构概览
 
@@ -576,6 +583,7 @@ else:
   - `/ultrathink` - MECE原则结构化深度分析
   - `/multi-role` - 多专家并行分析 
   - `/role-debate` - 专业角色间技术选型辩论
+  - `/search-gemini` - Gemini网络搜索获取最新信息
 
 #### **Agents目录** (`/agents/`)
 - **requirements-generate**：代码生成优化的技术规格，直接实现映射

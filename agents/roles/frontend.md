@@ -1,7 +1,6 @@
 ---
 name: frontend
 description: "前端和 UI/UX 专家。WCAG 2.1 合规、设计系统、用户中心设计。React/Vue/Angular 优化。"
-model: sonnet
 tools:
   - Read
   - Glob
