@@ -1,0 +1,42 @@
+{
+  "cleanupPeriodDays": 30,
+  "env": {
+    "BASH_DEFAULT_TIMEOUT_MS": "600000",
+    "BASH_MAX_TIMEOUT_MS": "600000",
+    "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR": "true",
+    "CLAUDE_LANGUAGE": "zh",
+  },
+  "includeCoAuthoredBy": false,
+  "permissions": {
+    "allow": [],
+    "deny": []
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -lc 'nohup sh -c "osascript -e \''display notification \"{{NOTIFICATION_WAITING}}\" with title \"Claude Code\"\'' && afplay -v 0.3 ~/.claude/assets/confirm.mp3" >/dev/null 2>&1 &'"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/scripts/check-continue.sh"
+          },
+          {
+            "type": "command",
+            "command": "bash -lc 'nohup sh -c "osascript -e \''display notification \"{{NOTIFICATION_COMPLETED}}\" with title \"Claude Code\"\'' && afplay -v 0.3 ~/.claude/assets/perfect.mp3" >/dev/null 2>&1 &'"
+          }
+        ]
+      }
+    ]
+  }
+}
