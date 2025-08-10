@@ -13,195 +13,195 @@ The agent configurations and command prompts should remain in their original lan
 
 ---
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+本文件为 Claude Code (claude.ai/code) 在此代码仓库中工作时提供指导。
 
-## Repository Overview
+## 项目概述
 
-This is a Claude Code Multi-Agent Workflow System that provides a **lightweight meta-framework** for implementing automated expert development workflows. It transforms manual command chains into automated multi-agent processes with practical quality gates and specialized expertise.
+这是一个 Claude Code 多智能体工作流系统，提供了一个**轻量级元框架**，用于实现自动化的专家开发工作流。它将手动命令链转换为具有实用质量门禁和专业化技能的自动化多智能体流程。
 
-**Core Philosophy**: Quality gate automation + Professional specialization + Lightweight process
+**核心理念**：质量门禁自动化 + 专业化分工 + 轻量级流程
 
-## Architecture
+## 架构
 
-### Core Components
+### 核心组件
 
-The system provides:
+系统提供：
 
-1. **Commands** - 10 specialized commands (1 Primary + 9 Manual) for targeted development workflows
-2. **Agents** - 9 expert agent configurations for multi-agent orchestration (4 Requirements Workflow + 5 Specialized)
+1. **Commands（命令）** - 10个专门化命令（1个主要 + 9个手动），用于目标导向的开发工作流
+2. **Agents（智能体）** - 9个专家智能体配置，用于多智能体编排（4个需求工作流 + 5个专门化）
 
-### Key Workflow Patterns
+### 关键工作流模式
 
-**Requirements-Driven Workflow** (Primary):
+**需求驱动工作流**（主要）：
 ```
 requirements-generate → requirements-code → requirements-review → (✅ Ready?) → smart-testing-decision
 ```
 
-## Commands Overview
+## 命令概览
 
-### Primary Command: `/requirements-pilot`
-The main automated workflow command with intelligent adaptation:
+### 主要命令：`/requirements-pilot`
+具有智能适配能力的主要自动化工作流命令：
 
-**Usage**: 
+**用法**：
 ```bash
 /requirements-pilot <FEATURE_DESCRIPTION> [--test|--no-test]
 ```
 
-**Core Features**:
-- Interactive requirements confirmation with 100-point quality assessment
-- User approval gate at 90+ quality points (mandatory stop point)
-- 4-phase automated implementation: Requirements → Specs → Code → Testing
-- Smart testing decisions with UI-aware strategies
-- File structure management (.claude/specs/{feature_name}/)
+**核心功能**：
+- 交互式需求确认，配备100分质量评估
+- 90+质量分数的用户审批门禁（强制停止点）
+- 4阶段自动化实施：需求 → 规范 → 代码 → 测试
+- 智能测试决策，支持UI感知策略
+- 文件结构管理（.claude/specs/{feature_name}/）
 
-### Manual Commands (9 total)
+### 手动命令（共9个）
 
-- `/ask <TECHNICAL_QUESTION>` - Senior Systems Architect with 4-expert consultation methodology
-- `/story-breakdown <FEATURE_DESCRIPTION>` - Break complex features into implementable user stories
-- `/bugfix <ERROR_DESCRIPTION>` - Bug resolution workflow with systematic analysis
-- `/code <FEATURE_DESCRIPTION>` - Direct feature implementation
-- `/debug <TASK_DESCRIPTION>` - UltraThink Debug Orchestrator with 4-phase systematic analysis
-- `/optimize <PERFORMANCE_TARGET>` - Performance optimization
-- `/review <CODE_SCOPE>` - Multi-dimensional review (Quality, Security, Performance, Architecture)
-- `/test <COMPONENT_OR_FEATURE>` - Testing strategy and implementation
-- `/release-check <COMPONENT_OR_SYSTEM>` - Production readiness verification with go/no-go decision
+- `/ask <TECHNICAL_QUESTION>` - 高级系统架构师，采用4专家咨询方法论
+- `/story-breakdown <FEATURE_DESCRIPTION>` - 将复杂功能分解为可实施的用户故事
+- `/bugfix <ERROR_DESCRIPTION>` - 缺陷解决工作流，配备系统化分析
+- `/code <FEATURE_DESCRIPTION>` - 直接功能实现
+- `/debug <TASK_DESCRIPTION>` - UltraThink 调试编排器，4阶段系统化分析
+- `/optimize <PERFORMANCE_TARGET>` - 性能优化
+- `/review <CODE_SCOPE>` - 多维度代码审查（质量、安全、性能、架构）
+- `/test <COMPONENT_OR_FEATURE>` - 测试策略和实施
+- `/release-check <COMPONENT_OR_SYSTEM>` - 生产就绪验证，包含通过/不通过决策
 
-## Agent Architecture
+## 智能体架构
 
-### Requirements Workflow Agents
-- **requirements-generate**: Code-generation-optimized technical specifications with direct implementation mapping
-- **requirements-code**: Direct implementation with minimal architectural overhead  
-- **requirements-review**: Pragmatic review focusing on functionality over architectural perfection (3-level scoring)
-- **requirements-testing**: Smart testing with proportional coverage and UI-aware strategies to prevent over-testing
+### 需求工作流智能体
+- **requirements-generate**：面向代码生成优化的技术规范，具有直接实现映射
+- **requirements-code**：直接实现，最小架构开销
+- **requirements-review**：实用性评审，专注功能而非架构完美（3级评分）
+- **requirements-testing**：智能测试，比例覆盖和UI感知策略，防止过度测试
 
-### Specialized Agents
-- **bugfix**: Bug resolution specialist for systematic defect analysis and fixing
-- **bugfix-verify**: Independent fix validation and objective assessment
-- **code**: Development coordinator directing coding specialists
-- **debug**: UltraThink debug orchestrator for systematic problem analysis with multi-agent coordination
-- **optimize**: Performance optimization coordinator
+### 专门化智能体
+- **bugfix**：缺陷解决专家，用于系统化缺陷分析和修复
+- **bugfix-verify**：独立修复验证和客观评估
+- **code**：开发协调员，指导编码专家
+- **debug**：UltraThink 调试编排器，用于系统化问题分析和多智能体协调
+- **optimize**：性能优化协调员
 
-## Quality Gate System
+## 质量门禁系统
 
-### Quality Standards
-- **Requirements Clarity**: 90+ points before implementation starts
-- **Code Quality**: 90+ points before testing phase
-- **Production Readiness**: Clear go/no-go decision for releases
+### 质量标准
+- **需求清晰度**：实施开始前90+分
+- **代码质量**：测试阶段前90+分
+- **生产就绪度**：发布时明确的通过/不通过决策
 
-## Workflow Guidelines
+## 工作流指南
 
-### Multi-Agent Coordination
-- Each agent operates in isolated contexts to prevent quality degradation
-- Automatic quality gates determine workflow progression  
-- 90+ quality points threshold for most quality gates
-- Iterative improvement loops when quality thresholds not met
+### 多智能体协调
+- 每个智能体在隔离环境中操作，防止质量下降
+- 自动质量门禁决定工作流进展
+- 大多数质量门禁的90+质量分数阈值
+- 未达到质量阈值时的迭代改进循环
 
-### Smart Testing Strategy
-- **UI-Only Changes**: Lint checks only for pure UI changes (colors, layouts, text)
-- **Minor Changes (1-5 lines)**: Proportional testing with lint check only
-- **Business Logic**: Comprehensive testing with risk-based coverage
-- **Complex Features**: Full test pyramid approach
+### 智能测试策略
+- **仅UI变更**：纯UI变更（颜色、布局、文本）仅进行Lint检查
+- **轻微变更（1-5行）**：比例测试，仅进行Lint检查
+- **业务逻辑**：基于风险的全面测试覆盖
+- **复杂功能**：完整测试金字塔方法
 
-**Testing Decision Logic**:
-- **Default**: Ask "Code complete. Run tests? (y/n)" after review passes
-- **--test**: Automatically run tests after successful review
-- **--no-test**: Skip testing entirely
-- **Component Recognition**: Different strategies for frontend UI vs backend logic
+**测试决策逻辑**：
+- **默认**：审查通过后问 "代码完成。运行测试吗？ (y/n)"
+- **--test**：审查成功后自动运行测试
+- **--no-test**：完全跳过测试
+- **组件识别**：前端UI和后端逻辑采用不同策略
 
-### Implementation-First Approach
-- Direct technical specifications optimized for code generation
-- Minimal architectural abstractions
-- Single document strategy for specifications
-- Concrete implementation details over theoretical design
+### 实现优先方法
+- 面向代码生成优化的直接技术规范
+- 最小化架构抽象
+- 规范的单文档策略
+- 具体实现细节优于理论设计
 
-## Stage-Based Tool Usage
+## 阶段化工具使用
 
-### 📋 Requirements Analysis → `/story-breakdown`
-Break complex features into implementable user stories with clear acceptance criteria.
+### 📋 需求分析 → `/story-breakdown`
+将复杂功能分解为具有明确验收标准的可实现用户故事。
 
-### 🏛️ Architecture Design → `/ask`  
-Multi-expert consultation for technical decisions before implementation.
+### 🏛️ 架构设计 → `/ask`  
+在实施前进行技术决策的多专家咨询。
 
-### ⚡ Implementation → `/requirements-pilot` (recommended) or `/code`
-Automated pipeline or direct implementation based on complexity.
+### ⚡ 实现 → `/requirements-pilot`（推荐）或 `/code`
+基于复杂度的自动化流水线或直接实现。
 
-### 🧪 Testing → `/test` 
-Smart testing strategies with proportional coverage.
+### 🧪 测试 → `/test` 
+具有比例覆盖的智能测试策略。
 
-### 🔍 Quality Assurance → `/review`
-Multi-dimensional code review with 90+ quality points threshold.
+### 🔍 质量保障 → `/review`
+90+质量分数阈值的多维度代码审查。
 
-### 🐛 Problem Resolution → `/debug` or `/bugfix`
-- `/debug`: UltraThink systematic debugging with user confirmation gates
-- `/bugfix`: Bug resolution workflow with systematic analysis
+### 🐛 问题解决 → `/debug` 或 `/bugfix`
+- `/debug`：UltraThink系统化调试，包含用户确认门禁
+- `/bugfix`：具有系统化分析的缺陷解决工作流
 
-### ⚡ Performance Optimization → `/optimize`
-Performance optimization for specific targets and bottlenecks.
+### ⚡ 性能优化 → `/optimize`
+针对特定目标和瓶颈的性能优化。
 
-### 🚀 Release Preparation → `/release-check`
-Production readiness verification with clear go/no-go decisions.
+### 🚀 发布准备 → `/release-check`
+具有明确通过/不通过决策的生产就绪验证。
 
-## File Structure Conventions
+## 文件结构约定
 
-### Specifications Directory (for `/requirements-pilot` workflow)
-- `.claude/specs/{feature_name}/` - Created automatically when using `/requirements-pilot`
-- `requirements-confirm.md` - Requirements confirmation process and final requirements
-- `requirements-spec.md` - Technical implementation specifications
+### 规范目录（针对 `/requirements-pilot` 工作流）
+- `.claude/specs/{feature_name}/` - 使用 `/requirements-pilot` 时自动创建
+- `requirements-confirm.md` - 需求确认过程和最终需求
+- `requirements-spec.md` - 技术实现规范
 
-**Note**: This directory structure is only created when using the `/requirements-pilot` automated workflow.
+**注意**：此目录结构仅在使用 `/requirements-pilot` 自动化工作流时创建。
 
-## Core Principles
+## 核心原则
 
-The system adheres to:
+系统遵循：
 - **KISS** (Keep It Simple, Stupid)
 - **YAGNI** (You Ain't Gonna Need It)  
-- **SOLID** principles
-- **Quality Gate Automation**: Objective standards over subjective judgment
-- **Professional Specialization**: Each tool focuses on one domain
-- **Lightweight Process**: Essential workflow steps without bureaucracy
+- **SOLID** 原则
+- **质量门禁自动化**：客观标准优于主观判断
+- **专业化分工**：每个工具专注一个领域
+- **轻量化流程**：无官僚主义的必要工作流步骤
 
-Focus on pragmatic, working solutions with automated quality assurance.
+专注于具有自动化质量保障的实用、可工作解决方案。
 
-## Development Guidelines
+## 开发指南
 
-### Content and Communication
-- **File Priority**: Always prefer editing existing files over creating new files
-- **Documentation**: Never proactively create documentation files unless explicitly requested
-- **Verification**: Always verify information sources independently
-- **Style**: Clear, concise communication with professional tone
-- **Punctuation**: Use English punctuation in code, match document language for documentation
-- **Emoji Usage**: Use sparingly for section navigation only (avoid in code and communication)
+### 内容和沟通
+- **文件优先级**：始终优先编辑现有文件而非创建新文件
+- **文档**：除非明确要求，否则不主动创建文档文件
+- **验证**：始终独立验证信息来源
+- **风格**：专业语调下的清晰、简洁沟通
+- **标点**：代码中使用英文标点，文档中匹配文档语言
+- **Emoji使用**：仅用于章节导航，避免在代码和沟通中使用
 
-### Task Completion Criteria
-A task is considered complete when the primary objectives are achieved. When full completion is not possible:
+### 任务完成标准
+当主要目标实现时，任务即被认为完成。当无法完全完成时：
 
-**Partial Execution Strategy**:
-- Execute all feasible components first
-- Clearly document remaining issues and blockers
-- Provide specific next steps for resolution
+**部分执行策略**：
+- 首先执行所有可行组件
+- 清晰记录剩余问题和阻塞因素
+- 提供具体的下一步解决方案
 
-**Alternative Solutions (when task cannot be executed)**:
-- Offer at least 3 alternative approaches to achieve the same goal
-- Explain trade-offs and recommendations for each alternative
-- Suggest modified scope or requirements if needed
+**替代解决方案（当任务无法执行时）**：
+- 提供至少3种替代方法来实现相同目标
+- 解释每种替代方案的权衡和建议
+- 必要时建议修改范围或需求
 
-**Completion Prohibitions**:
-NEVER consider a task complete if any of the following exist:
-- Critical functionality is broken or non-functional
-- Explicitly listed specific remaining work items in responses that affect core functionality
+**完成禁止事项**：
+如果存在以下任一情况，绝不认为任务已完成：
+- 关键功能损坏或无法正常工作
+- 响应中明确列出影响核心功能的具体剩余工作项
 
-### Code Quality Standards
-Following the "Keep It Simple" principle:
-- **Avoid Over-Abstraction**: Keep implementations practical and direct
-- **Single Responsibility**: Follow single responsibility principle
-- **Code Reuse**: Eliminate duplicate code by extracting common functionality
-- **Consistent Naming**: Apply uniform naming conventions
-- **Error Handling**: Implement consistent error handling patterns
-- **No Hard-Coding**: Use configuration or constants instead of hard-coded values
+### 代码质量标准
+遵循“保持简单”原则：
+- **避免过度抽象**：保持实现实用和直接
+- **单一职责**：遵循单一职责原则
+- **代码复用**：通过提取公共功能来消除重复代码
+- **一致命名**：采用统一的命名约定
+- **错误处理**：实现一致的错误处理模式
+- **无硬编码**：使用配置或常量而非硬编码值
 
-**Balance Principle**: Apply automation and abstraction only when it reduces complexity.
+**平衡原则**：仅在能减少复杂性时才应用自动化和抽象。
 
-### Continuous Improvement
-- Learn from code patterns and apply best practices consistently
-- Incorporate user feedback into implementation approach
-- Update practices based on project-specific requirements
+### 持续改进
+- 从代码模式中学习并一致地应用最佳实践
+- 将用户反馈融入实现方法
+- 根据项目特定需求更新实践

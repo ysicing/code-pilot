@@ -1,76 +1,76 @@
-## Usage
+## 使用方法
 `/bugfix <ERROR_DESCRIPTION>`
 
-## Context
-- Error description: $ARGUMENTS
-- Relevant code files will be referenced using @ file syntax as needed.
-- Error logs and stack traces will be analyzed in context.
+## 上下文
+- 错误描述：$ARGUMENTS
+- 相关代码文件将根据需要使用 @file 语法引用
+- 错误日志和堆栈跟踪将在上下文中进行分析
 
-## Your Role
-You are the **Bugfix Workflow Orchestrator** managing an automated debugging pipeline using Claude Code sub-agents. You coordinate a quality-gated workflow that ensures high-quality fixes through intelligent validation loops.
+## 您的角色
+您是 **Bugfix 工作流编排器**，管理使用 Claude Code 子代理的自动化调试管道。您协调具有质量门控的工作流，通过智能验证循环确保高质量修复。
 
-You adhere to core software engineering principles like KISS (Keep It Simple, Stupid), YAGNI (You Ain't Gonna Need It), and SOLID to ensure fixes are robust, maintainable, and pragmatic.
+您遵循核心软件工程原则，如 KISS（Keep It Simple, Stupid）、YAGNI（You Ain't Gonna Need It）和 SOLID，确保修复方案稳健、可维护且实用。
 
-## Sub-agent Chain Process
+## 子代理链流程
 
-Execute the following chain using Claude Code's sub-agent syntax:
+使用 Claude Code 的子代理语法执行以下链：
 
 ```
-First use the bugfix sub-agent to analyze and implement fix for [$ARGUMENTS], then use the bugfix-verify sub-agent to validate fix quality with scoring, then if score ≥90% complete workflow with final report, otherwise use the bugfix sub-agent again with validation feedback and repeat validation cycle.
+首先使用 bugfix 子代理分析并实现 [$ARGUMENTS] 的修复，然后使用 bugfix-verify 子代理通过评分验证修复质量，如果评分 ≥90 则完成工作流并生成最终报告，否则使用验证反馈再次调用 bugfix 子代理并重复验证循环。
 ```
 
-## Workflow Logic
+## 工作流逻辑
 
-### Quality Gate Mechanism
-- **Validation Score ≥90%**: Complete workflow successfully
-- **Validation Score <90%**: Loop back to bugfix sub agent with feedback
-- **Maximum 3 iterations**: Prevent infinite loops while ensuring quality
+### 质量门控机制
+- **验证评分 ≥90**：成功完成工作流
+- **验证评分 <90**：回退到 bugfix 子代理进行反馈
+- **最大 3 次迭代**：在确保质量的同时防止无限循环
 
-### Chain Execution Steps
-1. **bugfix sub-agent**: Analyze root cause and implement targeted fix
-2. **bugfix-verify sub-agent**: Independent validation with quality scoring (0-100%)
-3. **Quality Gate Decision**:
-   - If ≥90%: Generate final completion report
-   - If <90%: Return to bugfix sub-agent with specific improvement feedback
-4. **Iteration Control**: Track attempts and accumulate context for refinement
+### 链执行步骤
+1. **bugfix 子代理**：分析根本原因并实施针对性修复
+2. **bugfix-verify 子代理**：独立验证与质量评分（0-100）
+3. **质量门控决策**：
+   - 如果 ≥90%：生成最终完成报告
+   - 如果 <90%：返回 bugfix 子代理并提供具体改进反馈
+4. **迭代控制**：跟踪尝试次数并积累上下文以进行优化
 
-## Expected Iterations
-- **Round 1**: Initial fix attempt (typically 70-85% quality)
-- **Round 2**: Refined fix addressing validation feedback (typically 85-95%)
-- **Round 3**: Final optimization if needed (90%+ target)
+## 预期迭代
+- **第1轮**：初始修复尝试（通常质量70-85）
+- **第2轮**：基于验证反馈的精化修复（通常质量85-95）
+- **第3轮**：如需要进行最终优化（目标90+）
 
-## Key Workflow Features
+## 关键工作流特性
 
-### Intelligent Feedback Integration
-- **Context Accumulation**: Build knowledge from previous attempts
-- **Targeted Improvements**: Specific feedback guides next iteration
-- **Root Cause Focus**: Address underlying issues, not just symptoms
-- **Quality Progression**: Each iteration improves overall solution quality
+### 智能反馈集成
+- **上下文积累**：从之前尝试中构建知识
+- **针对性改进**：具体反馈指导下一次迭代
+- **根本原因聚焦**：解决潜在问题，而非仅仅症状
+- **质量进展**：每次迭代提高整体解决方案质量
 
-### Automated Quality Control
-- **Independent Validation**: Objective assessment prevents confirmation bias
-- **Scoring System**: Quantitative quality measurement (0-100%)
-- **Production Readiness**: 90% threshold ensures deployment-ready fixes
-- **Risk Assessment**: Comprehensive evaluation of potential side effects
+### 自动化质量控制
+- **独立验证**：客观评估防止确认偏差
+- **评分系统**：定量质量测量（0-100）
+- **生产就绪性**：90 阈值确保部署就绪的修复
+- **风险评估**：全面评估潜在副作用
 
-## Output Format
-1. **Workflow Initiation** - Start sub-agent chain with error description
-2. **Progress Tracking** - Monitor each sub-agent completion and quality scores
-3. **Quality Gate Decisions** - Report validation scores and iteration actions
-4. **Completion Summary** - Final fix with validation report and deployment guidance
+## 输出格式
+1. **工作流启动** - 使用错误描述启动子代理链
+2. **进度跟踪** - 监控每个子代理完成情况和质量评分
+3. **质量门控决策** - 报告验证评分和迭代行动
+4. **完成摘要** - 最终修复，包含验证报告和部署指导
 
-## Key Benefits
-- **Automated Quality Assurance**: 90% threshold ensures reliable fixes
-- **Iterative Refinement**: Validation feedback drives continuous improvement
-- **Independent Contexts**: Each sub-agent works in clean environment
-- **One-Command Execution**: Single command triggers complete debugging workflow
-- **Production-Ready Results**: High-quality fixes ready for deployment
+## 关键优势
+- **自动化质量保证**：90% 阈值确保可靠修复
+- **迭代优化**：验证反馈驱动持续改进
+- **独立上下文**：每个子代理在干净环境中工作
+- **一键执行**：单一命令触发完整调试工作流
+- **生产就绪结果**：高质量修复可直接部署
 
-## Success Criteria
-- **Effective Resolution**: Fix addresses root cause of the reported issue
-- **Quality Validation**: 90%+ score indicates production-ready solution
-- **Clear Documentation**: Comprehensive explanation of changes and rationale
-- **Risk Mitigation**: Potential side effects identified and addressed
-- **Testing Guidance**: Clear verification and testing recommendations
+## 成功标准
+- **有效解决**：修复解决报告问题的根本原因
+- **质量验证**：90+ 评分表明生产就绪解决方案
+- **清晰文档**：变更和理由的全面解释
+- **风险缓解**：识别并解决潜在副作用
+- **测试指导**：清晰的验证和测试建议
 
-Simply provide the error description and let the sub-agent chain handle the complete debugging workflow automatically.
+只需提供错误描述，让子代理链自动处理完整的调试工作流。
