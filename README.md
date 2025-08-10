@@ -1,182 +1,182 @@
-# Claude Code Multi-Agent Workflow System
+# Claude Code 多智能体工作流系统
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Claude Code](https://img.shields.io/badge/Claude-Code-blue)](https://claude.ai/code)
 
-> Transform your development workflow from manual command chains to automated expert teams with **lightweight quality gates** and **professional specialization**.
+> 将开发工作流从手动命令链升级为自动化专家团队，采用**轻量级质量门控**和**专业化分工**。
 
-## 🎯 Core Philosophy
+## 🎯 核心理念
 
-**Quality Gate Automation + Professional Specialization + Lightweight Process**
+**质量门控自动化 + 专业化分工 + 轻量级流程**
 
-This repository provides a **lightweight meta-framework for Claude Code** that implements:
+本仓库提供了一个**轻量级的 Claude Code 元框架**，实现：
 
-- **🎛️ Quality Gate Automation**: Objective 90% standards replace subjective judgment
-- **🧠 Professional Specialization**: Each tool focuses on one domain (avoid "万能AI")  
-- **⚡ Lightweight Process**: Essential workflow steps without bureaucracy
-- **📊 Context Isolation**: Each agent maintains focused expertise without pollution
-- **🎯 Smart Testing**: Proportional testing with UI-aware strategies to prevent over-testing
+- **🎛️ 质量门控自动化**：客观90%标准替代主观判断
+- **🧠 专业化分工**：每个工具专注一个领域（避免"万能AI"）  
+- **⚡ 轻量级流程**：核心工作流步骤，无冗余环节
+- **📊 上下文隔离**：每个智能体保持专业性，避免污染
+- **🎯 智能测试**：比例化测试与UI感知策略，防止过度测试
 
-## 🚀 From Manual Chaos to Automated Quality
+## 🚀 从手动混乱到自动化质量
 
-**Before**: Manual command chains requiring constant oversight
+**之前**：需要持续监督的手动命令链
 ```bash
 /ask → /code → /test → /bugfix → /optimize
-# 1-2 hours of manual orchestration, subjective quality judgment
+# 1-2小时手动协调，主观质量判断
 ```
 
-**After**: One-command automated expert workflows with objective quality gates
+**之后**：一键自动化专家工作流与客观质量门控
 ```bash
-/requirements-pilot "Implement JWT user authentication system"
-# 30 minutes of automated execution, 90% quality gates, smart testing decisions
+/requirements-pilot "实现JWT用户认证系统"
+# 30分钟自动执行，90%质量门控，智能测试决策
 ```
 
-## 📋 Two Primary Usage Patterns
+## 📋 两种主要使用模式
 
-### 1. 🏭 Requirements-Driven Workflow (Automated Expert Teams)
+### 1. 🏭 需求驱动工作流（自动化专家团队）
 
-**Architecture**: Requirements-focused workflow with quality gates and smart testing
+**架构**：以需求为中心的工作流，配备质量门控和智能测试
 ```
-requirements-generate → requirements-code → requirements-review → (✅ Ready?) → smart-testing-decision
-         ↑                                              ↓ (⚠️ Needs Improvement)
-         ←←←←←← Automatic optimization loop ←←←←←←
+requirements-generate → requirements-code → requirements-review → (✅ 就绪?) → 智能测试决策
+         ↑                                              ↓ (⚠️ 需要改进)
+         ←←←←←← 自动优化循环 ←←←←←←
 ```
 
-**Usage**:
+**使用方法**：
 ```bash
-# Complete development workflow in one command
-/requirements-pilot "Build user management system with RBAC"
+# 一条命令完成完整开发工作流
+/requirements-pilot "构建用户管理系统，支持RBAC权限"
 
-# Advanced workflow with intelligent testing
-First use requirements-generate, then requirements-code, then requirements-review, 
-then if Ready ask user: "Code complete. Run tests? (y/n/lint)"
+# 高级工作流与智能测试
+先使用 requirements-generate，然后 requirements-code，再用 requirements-review，
+如果就绪则询问用户："代码完成。运行测试？(y/n/lint)"
 ```
 
-### 2. 🎛️ Stage-Based Development (Manual Orchestration)
+### 2. 🎛️ 阶段化开发（手动协调）
 
-**Architecture**: Stage-specific tools for targeted expertise
+**架构**：针对特定阶段的专业工具
 
-#### **📋 Stage 1: Requirements Analysis**
+#### **📋 阶段1：需求分析**
 ```bash
-/story-breakdown     # Transform complex features into implementable user stories
-                     # - 1-3 day completion estimates
-                     # - Clear acceptance criteria  
-                     # - Implementation priority order
-                     # - Dependency mapping
+/story-breakdown     # 将复杂功能转化为可实现的用户故事
+                     # - 1-3天完成预估
+                     # - 明确验收标准  
+                     # - 实现优先级排序
+                     # - 依赖关系映射
 ```
 
-#### **🏛️ Stage 2: Architecture Design**  
+#### **🏛️ 阶段2：架构设计**  
 ```bash
-/ask                # Senior Systems Architect consultation
-                    # - Multi-expert consultation (4 specialists)
-                    # - UltraThink methodology for comprehensive analysis
-                    # - Strategic technology guidance with trade-off analysis
-                    # - Pure architectural guidance, no code changes
+/ask                # 高级系统架构师咨询
+                    # - 多专家咨询（4个专家）
+                    # - UltraThink方法论进行全面分析
+                    # - 战略技术指导与权衡分析
+                    # - 纯架构指导，不修改代码
 ```
 
-#### **⚡ Stage 3: Implementation**
+#### **⚡ 阶段3：实现开发**
 ```bash
-/requirements-pilot # Complete automated pipeline (recommended)
-                    # - 100-point quality assessment with user approval gate
-                    # - Smart testing decisions (--test/--no-test)
-                    # - File structure management (.claude/specs/)
+/requirements-pilot # 完整自动化流水线（推荐）
+                    # - 100分质量评估与用户批准门控
+                    # - 智能测试决策（--test/--no-test）
+                    # - 文件结构管理（.claude/specs/）
 
-/code               # Direct feature implementation
-                    # - For simple features or specific components
+/code               # 直接功能实现
+                    # - 适用于简单功能或特定组件
 ```
 
-#### **🔍 Stage 4: Quality Assurance**
+#### **🔍 阶段4：质量保证**
 ```bash
-/review             # Multi-dimensional code review
-                    # - 4 specialist reviewers (Quality, Security, Performance, Architecture)
-                    # - 3-level scoring: ✅ Ready / ⚠️ Needs Improvement / ❌ Major Issues
-                    # - Pragmatic focus on functionality over perfection
+/review             # 多维度代码审查
+                    # - 4专家审查员（质量、安全、性能、架构）
+                    # - 3级评分：✅ 就绪 / ⚠️ 需改进 / ❌ 重大问题
+                    # - 实用性优于完美性的实用专注
 ```
 
-#### **🧪 Stage 5: Testing**
+#### **🧪 阶段5：测试验证**
 ```bash
-/test               # Smart testing strategies
-                    # - UI changes: Lint-only approach
-                    # - Minor changes (1-5 lines): Proportional testing
-                    # - Business logic: Comprehensive testing
+/test               # 智能测试策略
+                    # - UI变更：仅Lint方法
+                    # - 小变更（1-5行）：比例化测试
+                    # - 业务逻辑：全面测试
 ```
 
-#### **🐛 Stage 6: Problem Resolution**
+#### **🐛 阶段6：问题解决**
 ```bash
-/debug              # UltraThink Debug Orchestrator
-                    # - 4-phase systematic debugging
-                    # - Hypothesis refinement (5-7 → 1-2 solutions)
-                    # - User confirmation gate before fixes
-                    # - Evidence-based diagnostic strategy
+/debug              # UltraThink调试协调器
+                    # - 4阶段系统化调试
+                    # - 假设精炼（5-7个 → 1-2个解决方案）
+                    # - 修复前用户确认门控
+                    # - 基于证据的诊断策略
 ```
 
-#### **🚀 Stage 7: Release Preparation**
+#### **🚀 阶段7：发布准备**
 ```bash
-/release-check      # Production readiness verification
-                    # - Risk-based go/no-go decisions
-                    # - Practical checklist approach
-                    # - Clear mitigation plans for issues
+/release-check      # 生产就绪验证
+                    # - 基于风险的go/no-go决策
+                    # - 实用清单方法
+                    # - 问题的明确缓解计划
 ```
 
-## 🔧 **Flexible Usage Patterns**
+## 🔧 **灵活使用模式**
 
-### Pattern 1: Complete Automation (New Features)
+### 模式1：完整自动化（新功能）
 ```bash
-# Single command handles entire workflow
-/requirements-pilot "JWT authentication with refresh tokens" --test
-# → Requirements(90+) → User approval → Code → Review(90+) → Testing
+# 单条命令处理整个工作流
+/requirements-pilot "JWT认证与刷新令牌" --test
+# → 需求(90+) → 用户批准 → 代码 → 审查(90+) → 测试
 ```
 
-### Pattern 2: Step-by-Step Control (Complex Features)  
+### 模式2：步骤式控制（复杂功能）  
 ```bash
-/story-breakdown "E-commerce checkout flow"  # Break into stories
-/ask "Microservices vs monolith for checkout"  # Architecture guidance
-/requirements-pilot "Payment processing story 1"  # Implement story by story
-/review "Validate payment security"  # Quality gates
-/release-check "Payment system"  # Production readiness
+/story-breakdown "电商结账流程"  # 分解为故事
+/ask "结账流程：微服务vs单体架构"  # 架构指导
+/requirements-pilot "支付处理故事1"  # 逐个故事实现
+/review "验证支付安全性"  # 质量门控
+/release-check "支付系统"  # 生产就绪
 ```
 
-### Pattern 3: Problem-Driven (Bug Fixes)
+### 模式3：问题驱动（Bug修复）
 ```bash
-/debug "Production API timeout issues"  # Systematic diagnosis
-/code "Implement connection pooling fix"  # Direct fix implementation  
-/release-check "Updated API service"  # Verify production readiness
+/debug "生产API超时问题"  # 系统化诊断
+/code "实现连接池修复"  # 直接修复实现  
+/release-check "更新的API服务"  # 验证生产就绪
 ```
 
-### Pattern 4: Quality-First (Critical Systems)
+### 模式4：质量优先（关键系统）
 ```bash
-/story-breakdown "Financial transaction system"
-/ask "Security architecture for financial data"
-/requirements-pilot "Core transaction logic" --test
-/review "Security and performance validation"  
-/release-check "Financial system components"
+/story-breakdown "金融交易系统"
+/ask "金融数据的安全架构"
+/requirements-pilot "核心交易逻辑" --test
+/review "安全和性能验证"  
+/release-check "金融系统组件"
 ```
 
-## 🚀 Quick Start
+## 🚀 快速开始
 
-### Step 1: User-Level Setup (Recommended)
+### 第一步：用户级设置（推荐）
 
-**Option A: User-Level Global Configuration (Recommended)**
+**选项A：用户级全局配置（推荐）**
 ```bash
-# Navigate to your home directory
+# 导航到用户主目录
 cd ~
 
-# Backup existing .claude directory if it exists
+# 如果存在现有的.claude目录，进行备份
 if [ -d ".claude" ]; then
   mv .claude .claude-old
-  echo "Existing .claude backed up to .claude-old"
+  echo "现有.claude已备份为.claude-old"
 fi
 
-# Clone this repository as your new .claude configuration
+# 克隆此仓库作为新的.claude配置
 git clone https://github.com/ysicing/code-pilot.git .claude
 cd .claude
 
-# If you had an existing configuration, copy non-agent/command files
+# 如果有现有配置，复制除agents和commands之外的文件
 if [ -d "../.claude-old" ]; then
-  # Copy everything except agents and commands directories
+  # 复制除agents和commands目录之外的所有内容
   find ../.claude-old -maxdepth 1 -type f -exec cp {} . \;
   
-  # Copy any custom subdirectories (excluding agents and commands)
+  # 复制任何自定义子目录（排除agents和commands）
   for dir in ../.claude-old/*/; do
     dirname=$(basename "$dir")
     if [ "$dirname" != "agents" ] && [ "$dirname" != "commands" ]; then
@@ -184,29 +184,29 @@ if [ -d "../.claude-old" ]; then
     fi
   done
   
-  echo "Previous configuration merged (excluding agents and commands)"
+  echo "之前的配置已合并（排除agents和commands）"
 fi
 ```
 
-**Option B: Project-Specific Setup**
+**选项B：项目特定设置**
 ```bash
-# Navigate to your project directory
+# 导航到你的项目目录
 cd /path/to/your/project
 
-# Backup existing .claude directory if it exists
+# 如果存在现有的.claude目录，进行备份
 if [ -d ".claude" ]; then
   mv .claude .claude-old
 fi
 
-# Clone this repository as your project's .claude configuration
+# 克隆此仓库作为项目的.claude配置
 git clone https://github.com/ysicing/code-pilot.git .claude
 
-# If you had existing project-specific configuration
+# 如果有现有的项目特定配置
 if [ -d ".claude-old" ]; then
-  # Copy non-agent/command files from old configuration
+  # 从旧配置复制非agent/command文件
   find .claude-old -maxdepth 1 -type f -exec cp {} .claude/ \;
   
-  # Copy custom subdirectories (excluding agents and commands)
+  # 复制自定义子目录（排除agents和commands）
   for dir in .claude-old/*/; do
     dirname=$(basename "$dir")
     if [ "$dirname" != "agents" ] && [ "$dirname" != "commands" ]; then
@@ -216,51 +216,51 @@ if [ -d ".claude-old" ]; then
 fi
 ```
 
-### Step 2: Verify Claude Code Installation
+### 第二步：验证Claude Code安装
 ```bash
-# Make sure you have Claude Code installed
+# 确保已安装Claude Code
 npm install -g @anthropic-ai/claude-code
-# or check if already installed
+# 或检查是否已安装
 claude --version
 ```
 
-### Step 3: Your First Automated Workflow
+### 第三步：首次自动化工作流
 
-**Option A: Complete Automation (Recommended for New Features)**
+**选项A：完整自动化（新功能推荐）**
 ```bash
-# Navigate to your project directory
+# 导航到你的项目目录
 cd /path/to/your/project
 
-# One command handles everything - requirements, implementation, review, testing
-/requirements-pilot "Create REST API for user authentication with JWT tokens"
+# 一条命令处理所有事情 - 需求、实现、审查、测试
+/requirements-pilot "创建支持JWT令牌的用户认证REST API"
 
-# Advanced usage with testing control
-/requirements-pilot "Build e-commerce cart system" --test
-/requirements-pilot "Add UI theme switcher" --no-test  # UI-only changes
+# 高级用法与测试控制
+/requirements-pilot "构建电商购物车系统" --test
+/requirements-pilot "添加UI主题切换器" --no-test  # 仅UI变更
 ```
 
-**Option B: Step-by-Step Control (For Complex Features)**
+**选项B：步骤式控制（复杂功能推荐）**
 ```bash
-# Requirements analysis first
-/story-breakdown "User management system with RBAC permissions"
+# 需求分析优先
+/story-breakdown "用户管理系统，支持RBAC权限"
 
-# Architecture consultation
-/ask "Best practices for role-based access control in microservices"
+# 架构咨询
+/ask "微服务中基于角色访问控制的最佳实践"
 
-# Implementation with quality gates
-/requirements-pilot "User registration story" --test
+# 带质量门控的实现
+/requirements-pilot "用户注册故事" --test
 
-# Production readiness
-/release-check "User management components"
+# 生产就绪
+/release-check "用户管理组件"
 ```
 
-### Step 4: Understanding the File Structure
+### 第四步：理解文件结构
 
-After setup, your project will have:
+设置后，你的项目将拥有：
 ```bash
 your-project/
 ├── .claude/
-│   ├── commands/          # 10 specialized slash commands
+│   ├── commands/          # 10个专业斜杠命令
 │   │   ├── ask.md
 │   │   ├── bugfix.md
 │   │   ├── code.md
@@ -271,7 +271,7 @@ your-project/
 │   │   ├── review.md
 │   │   ├── story-breakdown.md
 │   │   └── test.md
-│   ├── agents/           # 9 expert agent configurations
+│   ├── agents/           # 9个专家智能体配置
 │   │   ├── bugfix.md
 │   │   ├── bugfix-verify.md
 │   │   ├── code.md
@@ -281,317 +281,317 @@ your-project/
 │   │   ├── requirements-generate.md
 │   │   ├── requirements-review.md
 │   │   └── requirements-testing.md
-│   ├── CLAUDE.md         # System instructions for Claude Code
-│   └── specs/            # Generated specifications (auto-created)
+│   ├── CLAUDE.md         # Claude Code系统指令
+│   └── specs/            # 生成的规格文档（自动创建）
 ├── your-source-code/
 └── other-project-files
 ```
 
-### Step 5: Customization (Optional)
+### 第五步：自定义（可选）
 
-1. **Edit CLAUDE.md** to match your project specifics:
+1. **编辑CLAUDE.md**以匹配你的项目特性：
    ```bash
-   # Open and customize the main configuration
+   # 打开并自定义主配置
    code .claude/CLAUDE.md
    ```
 
-2. **Customize Commands** for your workflow:
+2. **为你的工作流自定义命令**：
    ```bash
-   # Edit specific commands as needed
+   # 根据需要编辑特定命令
    code .claude/commands/requirements-pilot.md
    ```
 
-3. **Adjust Agent Configurations** for your domain:
+3. **为你的领域调整智能体配置**：
    ```bash
-   # Modify agent behaviors
+   # 修改智能体行为
    code .claude/agents/requirements-generate.md
    ```
 
-## 🎯 Common Usage Patterns
+## 🎯 常见使用模式
 
-### For Web Applications
+### Web应用开发
 ```bash
-# Frontend feature development
-/requirements-pilot "Create responsive user dashboard with dark mode" --no-test
+# 前端功能开发
+/requirements-pilot "创建响应式用户仪表板，支持暗色模式" --no-test
 
-# Backend API development  
-/requirements-pilot "Build REST API for user management" --test
+# 后端API开发  
+/requirements-pilot "构建用户管理REST API" --test
 
-# Full-stack feature
-/story-breakdown "E-commerce shopping cart with checkout"
-/requirements-pilot "Shopping cart frontend" --no-test
-/requirements-pilot "Cart API backend" --test
-/requirements-pilot "Payment integration" --test
+# 全栈功能
+/story-breakdown "电商购物车与结账系统"
+/requirements-pilot "购物车前端" --no-test
+/requirements-pilot "购物车API后端" --test
+/requirements-pilot "支付集成" --test
 ```
 
-### For Data Science Projects
+### 数据科学项目
 ```bash
-# Data analysis workflow
-/ask "Best practices for data pipeline architecture"
-/code "Implement data preprocessing pipeline"
-/review "Data quality and performance validation"
+# 数据分析工作流
+/ask "数据管道架构的最佳实践"
+/code "实现数据预处理管道"
+/review "数据质量和性能验证"
 
-# Model development
-/requirements-pilot "Build ML model for user recommendation" --test
+# 模型开发
+/requirements-pilot "构建用户推荐ML模型" --test
 ```
 
-### For DevOps and Infrastructure
+### DevOps和基础设施
 ```bash
-# Infrastructure as code
-/requirements-pilot "Docker containerization setup" --test
-/requirements-pilot "Kubernetes deployment configuration" --test
+# 基础设施即代码
+/requirements-pilot "Docker容器化设置" --test
+/requirements-pilot "Kubernetes部署配置" --test
 
-# CI/CD pipeline
-/story-breakdown "Complete CI/CD pipeline with testing"
-/requirements-pilot "GitHub Actions workflow" --test
+# CI/CD管道
+/story-breakdown "完整CI/CD管道与测试"
+/requirements-pilot "GitHub Actions工作流" --test
 ```
 
-## ⚠️ Troubleshooting
+## ⚠️ 故障排除
 
-### Common Issues and Solutions
+### 常见问题与解决方案
 
-**Issue: Commands not working**
+**问题：命令不起作用**
 ```bash
-# Check if .claude directory exists in project root
+# 检查项目根目录是否存在.claude目录
 ls -la .claude/
 
-# Verify CLAUDE.md is properly configured
+# 验证CLAUDE.md是否正确配置
 cat .claude/CLAUDE.md | head -20
 ```
 
-**Issue: Quality gates failing**
+**问题：质量门控失败**
 ```bash
-# Commands might be failing quality checks
-# Review the requirements specification:
+# 命令可能未通过质量检查
+# 查看需求规格：
 cat .claude/specs/your-feature/requirements-spec.md
 
-# Try breaking down the feature further:
-/story-breakdown "Your complex feature description"
+# 尝试进一步分解功能：
+/story-breakdown "你的复杂功能描述"
 ```
 
-**Issue: Testing strategy not appropriate**
+**问题：测试策略不合适**
 ```bash
-# For UI-only changes, use --no-test
-/requirements-pilot "Update button colors" --no-test
+# 对于仅UI变更，使用--no-test
+/requirements-pilot "更新按钮颜色" --no-test
 
-# For business logic, always use --test
-/requirements-pilot "User authentication logic" --test
+# 对于业务逻辑，始终使用--test
+/requirements-pilot "用户认证逻辑" --test
 
-# For uncertain cases, let the system decide
-/requirements-pilot "Mixed UI and logic changes"
+# 对于不确定的情况，让系统决定
+/requirements-pilot "混合UI和逻辑变更"
 ```
 
-**Issue: Agent specialization not working**
+**问题：智能体专业化不起作用**
 ```bash
-# Check agent configurations
+# 检查智能体配置
 ls -la .claude/agents/
-# Each agent should be specialized - avoid mixing concerns
+# 每个智能体应该专业化 - 避免混合关注点
 
-# Use the right command for the task:
-/ask "Architecture questions"  # Not /code
-/code "Direct implementation"  # Not /ask
+# 为任务使用正确的命令：
+/ask "架构问题"  # 不是/code
+/code "直接实现"  # 不是/ask
 ```
 
-### Best Practices
+### 最佳实践
 
-1. **Start Simple**: Use `/requirements-pilot` for most new features
-2. **Quality First**: Let quality gates (90% thresholds) guide progression
-3. **Appropriate Testing**: Use `--test` for logic, `--no-test` for UI-only
-4. **Break Down Complex Features**: Use `/story-breakdown` for large initiatives
-5. **Architecture Before Implementation**: Use `/ask` for strategic decisions
+1. **从简单开始**：大多数新功能使用`/requirements-pilot`
+2. **质量优先**：让质量门控（90%阈值）指导进度
+3. **适当测试**：逻辑用`--test`，仅UI用`--no-test`
+4. **分解复杂功能**：大型项目使用`/story-breakdown`
+5. **实现前先架构**：战略决策使用`/ask`
 
-## 🔧 Advanced Configuration
+## 🔧 高级配置
 
-### Custom Project Setup
+### 自定义项目设置
 
-For teams or specific domains, customize the system:
+为团队或特定领域自定义系统：
 
-1. **Project-Specific CLAUDE.md**:
+1. **项目特定的CLAUDE.md**：
    ```bash
-   # Add your project's specific requirements
-   echo "## Project-Specific Instructions" >> .claude/CLAUDE.md
-   echo "- Use TypeScript for all new code" >> .claude/CLAUDE.md
-   echo "- Follow our API naming conventions" >> .claude/CLAUDE.md
+   # 添加你项目的特定要求
+   echo "## 项目特定指令" >> .claude/CLAUDE.md
+   echo "- 所有新代码使用TypeScript" >> .claude/CLAUDE.md
+   echo "- 遵循我们的API命名约定" >> .claude/CLAUDE.md
    ```
 
-2. **Custom Commands**:
+2. **自定义命令**：
    ```bash
-   # Create domain-specific commands
+   # 创建领域特定命令
    cp .claude/commands/code.md .claude/commands/api-code.md
-   # Edit api-code.md for API-specific development
+   # 编辑api-code.md用于API特定开发
    ```
 
-3. **Team Workflows**:
+3. **团队工作流**：
    ```bash
-   # Create team-specific workflows
+   # 创建团队特定工作流
    mkdir .claude/workflows/
-   # Add team process documentation
+   # 添加团队流程文档
    ```
 
-## 📈 Performance Tips
+## 📈 性能提示
 
-1. **Use Complete Automation**: `/requirements-pilot` is more efficient than manual chains
-2. **Appropriate Scope**: Keep features focused (1-3 day implementations)
-3. **Quality Gates**: Trust the 90% thresholds - they prevent rework
-4. **Smart Testing**: Let the system decide testing strategy based on change type
+1. **使用完整自动化**：`/requirements-pilot`比手动链更高效
+2. **适当范围**：保持功能专注（1-3天实现）
+3. **质量门控**：信任90%阈值 - 它们防止返工
+4. **智能测试**：让系统根据变更类型决定测试策略
 
-## 💡 **Key Innovations**
+## 💡 **关键创新**
 
-### 1. **Quality Gate Automation**
-Replace subjective judgment with objective 90% scoring:
+### 1. **质量门控自动化**
+用客观90%评分替代主观判断：
 ```python
-# Traditional: "I think the code is ready"
+# 传统方式："我觉得代码准备好了"
 if developer_subjective_opinion:
     proceed()
 
-# This System: Objective quality measurement
+# 本系统：客观质量测量
 if requirements_score >= 90 and code_quality >= 90:
     proceed()
 else:
     optimize_and_retry()
 ```
 
-### 2. **Professional Specialization**
-Avoid "万能AI" by using domain experts:
+### 2. **专业化分工**
+避免"万能AI"，使用领域专家：
 ```bash
-❌ One AI does everything: requirements + coding + testing + deployment
-✅ Expert team: Requirements expert + Code expert + Quality expert + Testing expert
+❌ 一个AI做所有事：需求 + 编码 + 测试 + 部署
+✅ 专家团队：需求专家 + 代码专家 + 质量专家 + 测试专家
 ```
 
-### 3. **Smart Testing Prevention of Over-Testing**
-Proportional testing based on change impact:
+### 3. **智能测试防止过度测试**
+基于变更影响的比例化测试：
 ```bash
-# UI color change (1 line) → Lint check only
-# Business logic change (50 lines) → Full test suite
-# New feature → Comprehensive testing with edge cases
+# UI颜色变更（1行） → 仅Lint检查
+# 业务逻辑变更（50行） → 完整测试套件
+# 新功能 → 全面测试包括边界情况
 ```
 
-## 📚 Workflow Examples
+## 📚 工作流示例
 
-### Enterprise User Authentication System
+### 企业用户认证系统
 
-**Step-by-Step Approach**:
+**步骤式方法**：
 ```bash
-# Requirements analysis
-/story-breakdown "Enterprise SSO with LDAP integration"
+# 需求分析
+/story-breakdown "企业SSO与LDAP集成"
 
-# Architecture consultation  
-/ask "LDAP integration patterns for high-availability systems"
+# 架构咨询  
+/ask "高可用系统的LDAP集成模式"
 
-# Implementation with quality gates
-/requirements-pilot "Core authentication service" --test
+# 带质量门控的实现
+/requirements-pilot "核心认证服务" --test
 
-# Production readiness verification
-/release-check "Authentication system components"
+# 生产就绪验证
+/release-check "认证系统组件"
 ```
 
-**Results**:
-- ✅ Implementable user stories with 1-3 day estimates
-- ✅ Architecture guidance with risk/trade-off analysis
-- ✅ Production-ready implementation with 90%+ quality score
-- ✅ Smart testing strategy based on change complexity
-- ✅ Clear go/no-go release decision
+**结果**：
+- ✅ 可实现的用户故事，1-3天预估
+- ✅ 架构指导与风险/权衡分析
+- ✅ 生产就绪实现，90%+质量评分
+- ✅ 基于变更复杂度的智能测试策略
+- ✅ 明确的go/no-go发布决策
 
-### API Gateway Development
+### API网关开发
 
-**Complete Automation**:
+**完整自动化**：
 ```bash
-/requirements-pilot "Microservices API gateway with rate limiting and circuit breakers" --test
+/requirements-pilot "微服务API网关，支持限流和熔断器" --test
 ```
 
-**Results**:
-- ✅ Requirements confirmed with 90+ quality score
-- ✅ User approval gate before implementation
-- ✅ Technical specifications optimized for code generation
-- ✅ Multi-dimensional code review (Quality/Security/Performance)
-- ✅ Smart testing based on component complexity
+**结果**：
+- ✅ 需求确认，90+质量评分
+- ✅ 实现前用户批准门控
+- ✅ 为代码生成优化的技术规格
+- ✅ 多维度代码审查（质量/安全/性能）
+- ✅ 基于组件复杂度的智能测试
 
-## 📋 Complete Command Reference
+## 📋 完整命令参考
 
-### 📋 Requirements & Planning
-- `/story-breakdown` - Break features into implementable user stories
-- `/requirements-pilot` - Complete automated requirements-driven pipeline
+### 📋 需求与规划
+- `/story-breakdown` - 将功能分解为可实现的用户故事
+- `/requirements-pilot` - 完整自动化需求驱动流水线
 
-### 🏛️ Architecture & Consultation  
-- `/ask` - Senior Systems Architect with 4-expert consultation methodology
+### 🏛️ 架构与咨询  
+- `/ask` - 高级系统架构师，4专家咨询方法论
 
-### ⚡ Implementation & Development
-- `/code` - Direct feature implementation with constraints
+### ⚡ 实现与开发
+- `/code` - 带约束的直接功能实现
 
-### 🔍 Quality Assurance
-- `/review` - Multi-dimensional code review (Quality/Security/Performance/Architecture)
-- `/test` - Smart testing strategies with proportional coverage
+### 🔍 质量保证
+- `/review` - 多维度代码审查（质量/安全/性能/架构）
+- `/test` - 智能测试策略，比例化覆盖
 
-### 🐛 Problem Resolution
-- `/debug` - UltraThink Debug Orchestrator with 4-phase systematic analysis
-- `/bugfix` - Systematic bug fixing workflows
+### 🐛 问题解决
+- `/debug` - UltraThink调试协调器，4阶段系统化分析
+- `/bugfix` - 系统化bug修复工作流
 
-### 🚀 Operations & Deployment
-- `/optimize` - Performance optimization coordination
-- `/release-check` - Production readiness verification with go/no-go decisions
+### 🚀 运维与部署
+- `/optimize` - 性能优化协调
+- `/release-check` - 生产就绪验证，go/no-go决策
 
-## 🏗️ Architecture Overview
+## 🏗️ 架构概览
 
-### Core Components
+### 核心组件
 
-#### **Commands Directory** (`/commands/`)
-- **Requirements**: `/story-breakdown` - Feature breakdown into implementable stories
-- **Consultation**: `/ask` - Senior Systems Architect with 4-expert consultation methodology
-- **Implementation**: `/code` - Feature development with constraints  
-- **Quality Assurance**: 
-  - `/test` - Comprehensive testing strategy
-  - `/debug` - UltraThink Debug Orchestrator with 4-phase systematic analysis
-  - `/review` - Multi-dimensional review (Quality, Security, Performance, Architecture)
-- **Bug Resolution**: `/bugfix` - Systematic bug fixing workflows
-- **Optimization**: `/optimize` - Performance optimization coordination
-- **Release**: `/release-check` - Production readiness verification with go/no-go decisions
-- **Pipeline**: `/requirements-pilot` - Complete pipeline with quality gates and approval workflow
+#### **Commands目录** (`/commands/`)
+- **需求规划**：`/story-breakdown` - 功能分解为可实现故事
+- **咨询服务**：`/ask` - 高级系统架构师，4专家咨询方法论
+- **实现工具**：`/code` - 带约束的功能开发  
+- **质量保证**：
+  - `/test` - 全面测试策略
+  - `/debug` - UltraThink调试协调器，4阶段系统化分析
+  - `/review` - 多维度审查（质量、安全、性能、架构）
+- **Bug解决**：`/bugfix` - 系统化bug修复工作流
+- **性能优化**：`/optimize` - 性能优化协调
+- **发布管理**：`/release-check` - 生产就绪验证，go/no-go决策
+- **流水线**：`/requirements-pilot` - 完整流水线，质量门控和批准工作流
 
-#### **Agents Directory** (`/agents/`)
-- **requirements-generate**: Code-generation-optimized technical specifications with direct implementation mapping
-- **requirements-code**: Direct implementation agent with minimal architectural overhead
-- **requirements-review**: Pragmatic review focusing on functionality over architectural perfection (3-level scoring)
-- **requirements-testing**: Smart testing with proportional coverage and UI-aware strategies
-- **bugfix**: Bug resolution specialist for analyzing and fixing software defects
-- **bugfix-verify**: Fix validation specialist for objective assessment
-- **code**: Development coordinator for direct implementation
-- **debug**: UltraThink systematic problem analysis with multi-agent coordination
-- **optimize**: Performance optimization coordination
+#### **Agents目录** (`/agents/`)
+- **requirements-generate**：代码生成优化的技术规格，直接实现映射
+- **requirements-code**：最小架构开销的直接实现智能体
+- **requirements-review**：实用审查，专注功能性而非架构完美（3级评分）
+- **requirements-testing**：智能测试，比例化覆盖和UI感知策略
+- **bugfix**：分析和修复软件缺陷的bug解决专家
+- **bugfix-verify**：客观评估的修复验证专家
+- **code**：直接实现的开发协调员
+- **debug**：UltraThink系统化问题分析，多智能体协调
+- **optimize**：性能优化协调
 
-### Multi-Agent Coordination System
+### 多智能体协调系统
 
-**4 Core Specialists**:
-1. **Requirements Generator** - Implementation-ready technical specifications
-2. **Code Implementer** - Direct code generation with pragmatic focus
-3. **Quality Reviewer** - 90% threshold validation with 3-level scoring
-4. **Smart Testing Agent** - Proportional testing with UI-awareness and over-testing prevention
+**4个核心专家**：
+1. **需求生成器** - 实现就绪的技术规格
+2. **代码实现器** - 直接代码生成，实用专注
+3. **质量审查员** - 90%阈值验证，3级评分
+4. **智能测试智能体** - 比例化测试，UI感知和过度测试预防
 
-**Key Features**:
-- **Quality Gate Automation**: Objective 90% standards for progression decisions
-- **Professional Specialization**: Each agent works in separate contexts for expertise focus
-- **Smart Testing**: UI-aware strategies prevent over-testing while maintaining quality
-- **Lightweight Process**: Essential steps without bureaucracy
-- **Practical Focus**: Working solutions over architectural perfection
+**关键特性**：
+- **质量门控自动化**：客观90%标准用于进展决策
+- **专业化分工**：每个智能体在独立上下文中工作，保持专业专注
+- **智能测试**：UI感知策略防止过度测试同时保持质量
+- **轻量级流程**：核心步骤，无官僚主义
+- **实用专注**：工作解决方案优于架构完美
 
-## 🤝 Contributing
+## 🤝 贡献
 
-This is a Claude Code configuration framework focused on **lightweight quality gates**. Contributions welcome:
+这是一个专注于**轻量级质量门控**的Claude Code配置框架。欢迎贡献：
 
-1. **New Stage Commands**: Additional development phase coverage
-2. **Quality Gate Enhancements**: Better objective measurement criteria  
-3. **Smart Testing Rules**: More sophisticated testing decision algorithms
-4. **Workflow Patterns**: New automation sequences for specific domains
+1. **新阶段命令**：额外的开发阶段覆盖
+2. **质量门控增强**：更好的客观测量标准  
+3. **智能测试规则**：更复杂的测试决策算法
+4. **工作流模式**：特定领域的新自动化序列
 
-## 📄 License
+## 📄 许可证
 
-MIT License - Use this framework to enhance your Claude Code workflows with automated quality gates and professional specialization.
+MIT许可证 - 使用此框架通过自动化质量门控和专业化分工增强你的Claude Code工作流。
 
-## 🙏 Acknowledgments
+## 🙏 致谢
 
-This project is a secondary iteration based on [myclaude](https://github.com/cexll/myclaude) with significant enhancements and innovations. We extend our heartfelt gratitude to:
+本项目基于 [myclaude](https://github.com/cexll/myclaude) 进行二次迭代，在此基础上实现了重大增强和创新。我们衷心感谢：
 
-- **@cexll** for creating the foundational myclaude project that inspired this work
-- **Claude (Anthropic)** for providing exceptional AI assistance and support throughout the development process
-- The Claude Code community for their valuable feedback and contributions
+- **@cexll** 创建了奠基性的myclaude项目，为本项目提供了灵感
+- **Claude (Anthropic)** 在整个开发过程中提供了卓越的AI协助和大力支持
+- Claude Code社区成员们提供的宝贵反馈和贡献
 
-Special thanks to the continuous collaboration with Claude, which made the sophisticated multi-agent workflow system and quality gate automation possible.
+特别感谢与Claude的持续合作，使得复杂的多智能体工作流系统和质量门控自动化成为可能。
