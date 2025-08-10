@@ -59,7 +59,7 @@
 /requirements-pilot <功能描述> [--test|--no-test]
 ```
 
-### 核心命令（11个）
+### 核心命令（12个）
 - `/ask <技术问题>` - 高级系统架构师咨询
 - `/story-breakdown <功能描述>` - 复杂功能分解
 - `/bugfix <错误描述>` - 系统化缺陷解决
@@ -69,16 +69,18 @@
 - `/review <代码范围>` - 多维度代码审查
 - `/test <组件或功能>` - 智能测试策略
 - `/release-check <组件或系统>` - 生产就绪验证
+- `/screenshot [--window|--full|--crop]` - 智能屏幕截图分析（仅 macOS）
 
-### 高级分析命令（2个）
+### 高级分析命令（3个）
 - `/ultrathink <复杂问题>` - MECE 原则结构化深度分析
 - `/multi-role <角色1>,<角色2>[,角色3] [--agent] <分析目标>` - 多专家并行分析
+- `/role-debate <角色1> vs <角色2> <辩论主题>` - 专业角色间深度辩论和技术选型
 
 ## 专业角色库
 
 ### 核心专业角色（5个）
 - **architect** - 系统架构师，专注可扩展设计和技术决策
-- **security** - 安全专家，专注威胁建模和防护策略  
+- **security** - 安全专家，专注威胁建模和防护策略
 - **performance** - 性能专家，专注系统优化和瓶颈分析
 - **frontend** - 前端专家，专注现代Web应用和用户体验
 - **qa** - 质量保证专家，专注测试策略和质量管控
@@ -93,6 +95,14 @@
 
 # 组合专业分析
 /multi-role architect,frontend,qa 评估系统重构方案
+
+# 专业角色技术辩论
+/role-debate security vs performance JWT vs Session认证机制选择
+/role-debate architect vs performance 单体架构vs微服务架构
+
+# 智能截图分析（仅 macOS）
+/screenshot --crop
+"分析这个UI界面的可用性问题和改进建议"
 ```
 
 ## 智能自动化系统

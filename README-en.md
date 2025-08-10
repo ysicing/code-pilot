@@ -72,6 +72,12 @@ then if Ready ask user: "Code complete. Run tests? (y/n/lint)"
                     # - UltraThink methodology for comprehensive analysis
                     # - Strategic technology guidance with trade-off analysis
                     # - Pure architectural guidance, no code changes
+
+/role-debate        # Professional role technical debate
+                    # - Deep architecture selection debates (monolith vs microservices)
+                    # - Technology trade-off discussions (security vs performance)
+                    # - Structured argumentation process
+                    # - Objective judgment and balanced recommendations
 ```
 
 #### **⚡ Stage 3: Implementation**
@@ -131,6 +137,7 @@ then if Ready ask user: "Code complete. Run tests? (y/n/lint)"
 ```bash
 /story-breakdown "E-commerce checkout flow"  # Break into stories
 /ask "Microservices vs monolith for checkout"  # Architecture guidance
+/role-debate architect vs performance "Performance impact of monolith vs microservices"  # Technical debate
 /requirements-pilot "Payment processing story 1"  # Implement story by story
 /review "Validate payment security"  # Quality gates
 /release-check "Payment system"  # Production readiness
@@ -260,17 +267,20 @@ After setup, your project will have:
 ```bash
 your-project/
 ├── .claude/
-│   ├── commands/          # 10 specialized slash commands
+│   ├── commands/          # 12 specialized slash commands
 │   │   ├── ask.md
 │   │   ├── bugfix.md
 │   │   ├── code.md
 │   │   ├── debug.md
+│   │   ├── multi-role.md
 │   │   ├── optimize.md
 │   │   ├── release-check.md
 │   │   ├── requirements-pilot.md
 │   │   ├── review.md
+│   │   ├── role-debate.md
 │   │   ├── story-breakdown.md
-│   │   └── test.md
+│   │   ├── test.md
+│   │   └── ultrathink.md
 │   ├── agents/           # 9 expert agent configurations
 │   │   ├── bugfix.md
 │   │   ├── bugfix-verify.md
@@ -519,6 +529,7 @@ Proportional testing based on change impact:
 - `/code` - Direct feature implementation with constraints
 
 ### 🔍 Quality Assurance
+- `/screenshot` - Smart screenshot analysis and UI evaluation (macOS only)
 - `/review` - Multi-dimensional code review (Quality/Security/Performance/Architecture)
 - `/test` - Smart testing strategies with proportional coverage
 
@@ -529,6 +540,11 @@ Proportional testing based on change impact:
 ### 🚀 Operations & Deployment
 - `/optimize` - Performance optimization coordination
 - `/release-check` - Production readiness verification with go/no-go decisions
+
+### 🧠 Advanced Analysis
+- `/ultrathink` - MECE principle structured deep analysis
+- `/multi-role` - Multi-expert parallel analysis
+- `/role-debate` - Professional role deep debate and technical selection
 
 ## 🏗️ Architecture Overview
 
@@ -546,6 +562,10 @@ Proportional testing based on change impact:
 - **Optimization**: `/optimize` - Performance optimization coordination
 - **Release**: `/release-check` - Production readiness verification with go/no-go decisions
 - **Pipeline**: `/requirements-pilot` - Complete pipeline with quality gates and approval workflow
+- **Advanced Analysis**:
+  - `/ultrathink` - MECE principle structured deep analysis
+  - `/multi-role` - Multi-expert parallel analysis
+  - `/role-debate` - Professional role technical selection debate
 
 #### **Agents Directory** (`/agents/`)
 - **requirements-generate**: Code-generation-optimized technical specifications with direct implementation mapping
