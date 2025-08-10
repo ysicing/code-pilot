@@ -78,6 +78,12 @@ then if Ready ask user: "Code complete. Run tests? (y/n/lint)"
                     # - Technology trade-off discussions (security vs performance)
                     # - Structured argumentation process
                     # - Objective judgment and balanced recommendations
+
+/screenshot         # Smart screenshot analysis (macOS only)
+                    # - UI/UX design evaluation and problem diagnosis
+                    # - Error message analysis and solutions
+                    # - Interface consistency and accessibility review
+                    # - Multi-dimensional visual design analysis
 ```
 
 #### **⚡ Stage 3: Implementation**
@@ -267,7 +273,7 @@ After setup, your project will have:
 ```bash
 your-project/
 ├── .claude/
-│   ├── commands/          # 12 specialized slash commands
+│   ├── commands/          # 14 specialized slash commands
 │   │   ├── ask.md
 │   │   ├── bugfix.md
 │   │   ├── code.md
@@ -278,6 +284,7 @@ your-project/
 │   │   ├── requirements-pilot.md
 │   │   ├── review.md
 │   │   ├── role-debate.md
+│   │   ├── screenshot.md
 │   │   ├── story-breakdown.md
 │   │   ├── test.md
 │   │   └── ultrathink.md
@@ -545,6 +552,7 @@ Proportional testing based on change impact:
 - `/ultrathink` - MECE principle structured deep analysis
 - `/multi-role` - Multi-expert parallel analysis
 - `/role-debate` - Professional role deep debate and technical selection
+- `/screenshot` - Smart screenshot analysis (UI/UX evaluation, error diagnosis)
 
 ## 🏗️ Architecture Overview
 
@@ -558,6 +566,7 @@ Proportional testing based on change impact:
   - `/test` - Comprehensive testing strategy
   - `/debug` - UltraThink Debug Orchestrator with 4-phase systematic analysis
   - `/review` - Multi-dimensional review (Quality, Security, Performance, Architecture)
+  - `/screenshot` - Smart screenshot analysis and UI evaluation (macOS only)
 - **Bug Resolution**: `/bugfix` - Systematic bug fixing workflows
 - **Optimization**: `/optimize` - Performance optimization coordination
 - **Release**: `/release-check` - Production readiness verification with go/no-go decisions

@@ -78,6 +78,12 @@ requirements-generate → requirements-code → requirements-review → (✅ 就
                     # - 技术权衡讨论（安全vs性能）
                     # - 结构化论证过程
                     # - 客观裁决和平衡建议
+
+/screenshot         # 智能屏幕截图分析（仅 macOS）
+                    # - UI/UX 设计评估和问题诊断
+                    # - 错误信息分析和解决方案
+                    # - 界面一致性和可访问性审查
+                    # - 多维度视觉设计分析
 ```
 
 #### **⚡ 阶段3：实现开发**
@@ -267,7 +273,7 @@ cd /path/to/your/project
 ```bash
 your-project/
 ├── .claude/
-│   ├── commands/          # 12个专业斜杠命令
+│   ├── commands/          # 14个专业斜杠命令
 │   │   ├── ask.md
 │   │   ├── bugfix.md
 │   │   ├── code.md
@@ -278,6 +284,7 @@ your-project/
 │   │   ├── requirements-pilot.md
 │   │   ├── review.md
 │   │   ├── role-debate.md
+│   │   ├── screenshot.md
 │   │   ├── story-breakdown.md
 │   │   ├── test.md
 │   │   └── ultrathink.md
@@ -529,7 +536,7 @@ else:
 - `/code` - 带约束的直接功能实现
 
 ### 🔍 质量保证
-- `/screenshot` - 智能屏幕截图分析（仅 macOS）
+- `/screenshot` - 智能屏幕截图分析和UI评估（仅 macOS）
 - `/review` - 多维度代码审查（质量/安全/性能/架构）
 - `/test` - 智能测试策略，比例化覆盖
 
@@ -545,6 +552,8 @@ else:
 - `/ultrathink` - MECE原则结构化深度分析
 - `/multi-role` - 多专家并行分析
 - `/role-debate` - 专业角色间深度辩论和技术选型
+- `/screenshot` - 智能屏幕截图分析（UI/UX评估，错误诊断）
+- `/screenshot` - 智能屏幕截图分析和视觉评估（仅 macOS）
 
 ## 🏗️ 架构概览
 
@@ -558,6 +567,7 @@ else:
   - `/test` - 全面测试策略
   - `/debug` - UltraThink调试协调器，4阶段系统化分析
   - `/review` - 多维度审查（质量、安全、性能、架构）
+  - `/screenshot` - 智能屏幕截图分析和UI评估（仅 macOS）
 - **Bug解决**：`/bugfix` - 系统化bug修复工作流
 - **性能优化**：`/optimize` - 性能优化协调
 - **发布管理**：`/release-check` - 生产就绪验证，go/no-go决策
