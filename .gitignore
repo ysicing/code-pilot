@@ -6,3 +6,4 @@ shell-snapshots
 statsig
 todos
 CLAUDE.md
+scripts/custom.*.sh
