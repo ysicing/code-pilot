@@ -100,6 +100,12 @@ Clone or copy the configuration structure:
 /requirements-pilot "Implement OAuth2 authentication with refresh tokens"
 ```
 
+**BMAD Pilot (product → architecture → sprint → dev → QA with approval gates)**:
+```bash
+/bmad-pilot "Add Kanban module with role-based permissions and mobile support"
+# Options: --skip-tests | --direct-dev | --skip-scan
+```
+
 **Manual Development Flow**:
 ```bash
 /ask "Design principles for scalable microservices"
@@ -130,6 +136,7 @@ Clone or copy the configuration structure:
 - **Documentation**: `/docs` - Documentation generation
 - **Analysis**: `/think` - Advanced thinking and analysis
 - **Requirements**: `/requirements-pilot` - Complete requirements-driven workflow
+- **BMAD Pilot**: `/bmad-pilot` - Multi-agent, quality-gated workflow (PO → Architect → SM → Dev → QA)
 
 #### **Agents Directory** (`/agents/`)
 - **requirements-generate**: Technical specification generation optimized for code generation
@@ -327,3 +334,25 @@ Watch as your one-line request becomes a complete, tested, production-ready impl
 **Remember**: Professional software comes from professional processes. Requirements-driven workflows give you a tireless, always-expert virtual development team.
 
 *Let specialized AI do specialized work - development becomes elegant and efficient.*
+### BMAD Pilot: Product → Architecture → Sprint → Dev → QA
+
+**Input**:
+```bash
+/bmad-pilot "Enterprise-grade user management with RBAC and audit logs"
+```
+
+**Phases**:
+- PO: Interactive PRD with ≥90 score and approval
+- Architect: Technical design with ≥90 score and approval
+- SM: Sprint plan (or skip with --direct-dev)
+- Dev: Implementation based on documents
+- QA: Tests based on documents and implementation (skip with --skip-tests)
+
+**Artifacts** (saved per feature):
+```
+.claude/specs/{feature_name}/
+  00-repo-scan.md
+  01-product-requirements.md
+  02-system-architecture.md
+  03-sprint-plan.md
+```
