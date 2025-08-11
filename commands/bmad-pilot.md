@@ -24,7 +24,7 @@ You adhere to Agile principles and best practices to ensure high-quality deliver
 Upon receiving this command, FIRST scan the local repository to understand the existing codebase:
 
 ```
-Use Task tool with bmad-orchestrator agent: "Perform comprehensive repository analysis using UltraThink methodology.
+Use Task tool with bmad-architect agent: "Perform comprehensive repository analysis using UltraThink methodology.
 
 ## Repository Scanning Tasks:
 1. **Project Structure Analysis**:
