@@ -123,14 +123,14 @@ cd your-project
 - ✅ **输出实现**：代码、配置、解决方案
 
 **典型智能体**：
-- `bugfix` - Bug修复专家
+- `bugfix` - Bug修复专家（多层次智能检测v2.0，支持框架特定错误）
 - `requirements-code` - 代码实现专家  
 - `debug` - 调试分析专家
 - `optimize` - 性能优化专家
 
 **调用示例**：
 ```bash
-/bugfix "登录页面样式错乱"                    # 直接执行修复
+/bugfix "登录页面样式错乱"                    # 多层次自动检测前端修复
 /requirements-pilot "实现JWT认证"              # 完整开发流程
 /debug "API超时问题"                          # 系统化调试
 ```
@@ -191,6 +191,7 @@ cd your-project
 | | `/test` | 测试验证 | 功能质量验证 | 测试结果 | 验证其他命令结果 |
 | **问题解决** | `/debug` | 系统化调试 | 复杂问题分析 | 调试分析 | 深度问题诊断 |
 | | `/bugfix` | Bug修复 | 具体错误修复 | 修复方案 | 直接解决问题 |
+|         |         |       | 多层次智能检测 | v2.0简化验证 | 框架特定错误 |
 | **性能优化** | `/optimize` | 性能优化 | 性能瓶颈解决 | 优化方案 | 专业性能改进 |
 | **多角色协作** | `/multi-role` | 并行分析 | 综合专业评估 | 多维分析报告 | 整合专业视角 |
 | | `/role-debate` | 对立辩论 | 技术选型争议 | 辩论结果 | 帮助技术决策 |
@@ -222,6 +223,7 @@ cd your-project
 /debug "生产API偶发超时"                   # ① 系统化分析
 ↓  
 /bugfix "数据库连接池配置问题"             # ② 具体问题修复
+/bugfix "Cannot access 'refetchAIReview' before initialization" # ② TDZ时序错误自动检测
 ↓
 /optimize "API响应时间优化"                # ③ 性能进一步优化
 ```
@@ -262,7 +264,7 @@ cd your-project
    │
    ├─ 🐛 需要修复问题？
    │  ├─ 复杂问题 → 🔍 /debug 系统分析
-   │  └─ 简单Bug → 🔧 /bugfix 直接修复
+   │  └─ 简单Bug → 🔧 /bugfix 直接修复（多层次智能检测）
    │
    ├─ 📈 需要改进代码？
    │  ├─ 发现问题 → 👁️ /review 代码审查
@@ -282,7 +284,7 @@ cd your-project
 | 我想要... | 推荐命令 | 预估时间 | 备注 |
 |-----------|---------|----------|------|
 | 实现新功能 | `/requirements-pilot` | 10-30分钟 | 一站式解决方案 |
-| 修复Bug | `/bugfix` | 5-15分钟 | 直接问题修复 |
+| 修复Bug | `/bugfix` | 5-15分钟 | 直接问题修复（多层次智能检测v2.0） |
 | 分析复杂问题 | `/debug` | 15-30分钟 | 系统化调试 |
 | 改进代码质量 | `/review` → `/refactor` | 20-40分钟 | 先分析再实施 |
 | 获取技术建议 | `/ask` | 3-8分钟 | 快速专家咨询 |
@@ -349,7 +351,7 @@ cd your-project
 # UltraThink调试协调器：4阶段系统化分析
 # 假设收敛：从多个假设精炼到1-2个解决方案
 
-/bugfix "错误描述"
+/bugfix "错误描述"                        # 多层次智能检测，支持框架特定错误
 # 系统化bug修复：分析→实现→验证
 # 内置验证机制确保修复有效性
 ```
@@ -426,7 +428,8 @@ cd your-project
 
 ### 场景2：Bug修复
 ```bash
-# 简单bug
+# 简单bug（包括前端逻辑错误）
+/bugfix "Cannot access 'refetchAIReview' before initialization"
 /bugfix "登录页面在Safari浏览器下样式错乱"
 
 # 复杂问题
@@ -501,7 +504,7 @@ cd your-project
 ### 问题2：不知道用哪个命令
 **原则**：参考上面的命令选择决策树
 - 实现新功能：用 `/requirements-pilot`
-- 修复bug：用 `/bugfix` 
+- 修复bug：用 `/bugfix` （多层次智能检测，支持React/Vue等框架错误） 
 - 技术咨询：用 `/ask`
 - **重大决策**：用 `/ultrathink`（架构选型、技术战略、系统重构）
 - 技术选型有争议：用 `/role-debate`
@@ -576,6 +579,7 @@ cd your-project
 
 ❌ /bugfix "系统有问题"  
 ✅ /bugfix "用户点击提交按钮后页面空白，控制台显示404错误"
+✅ /bugfix "Cannot access 'useState' before initialization"
 ```
 
 ### 2. 相信质量门控

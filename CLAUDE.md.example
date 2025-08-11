@@ -59,13 +59,14 @@
 /requirements-pilot <功能描述> [--test|--no-test]
 ```
 
-### 核心命令（12个）
+### 核心命令（13个）
 - `/ask <技术问题>` - 高级系统架构师咨询
 - `/story-breakdown <功能描述>` - 复杂功能分解
-- `/bugfix <错误描述>` - 系统化缺陷解决
+- `/bugfix <错误描述>` - 系统化缺陷解决，智能识别前端修复并自动简化验证
 - `/code <功能描述>` - 直接功能实现
 - `/debug <任务描述>` - UltraThink 调试分析
 - `/optimize <性能目标>` - 性能优化专家
+- `/refactor <代码范围>` - 安全渐进式重构与SOLID原则评估
 - `/review <代码范围>` - 多维度代码审查
 - `/test <组件或功能>` - 智能测试策略
 - `/release-check <组件或系统>` - 生产就绪验证
@@ -79,12 +80,13 @@
 
 ## 专业角色库
 
-### 核心专业角色（5个）
+### 核心专业角色（6个）
 - **architect** - 系统架构师，专注可扩展设计和技术决策
 - **security** - 安全专家，专注威胁建模和防护策略
 - **performance** - 性能专家，专注系统优化和瓶颈分析
 - **frontend** - 前端专家，专注现代Web应用和用户体验
 - **qa** - 质量保证专家，专注测试策略和质量管控
+- **refactorer** - 重构专家，专注SOLID原则和代码质量改进
 
 ### 使用示例
 ```bash
@@ -97,6 +99,9 @@
 # 组合专业分析
 /multi-role architect,frontend,qa 评估系统重构方案
 
+# 安全渐进式重构
+/refactor src/api/user.ts
+
 # 专业角色技术辩论
 /role-debate security vs performance JWT vs Session认证机制选择
 /role-debate architect vs performance 单体架构vs微服务架构
@@ -104,6 +109,11 @@
 # 智能截图分析（仅 macOS）
 /screenshot --crop
 "分析这个UI界面的可用性问题和改进建议"
+
+# 智能前端bug修复（多层次自动检测v2.0）
+/bugfix 按钮点击无响应问题
+/bugfix Cannot access 'refetchAIReview' before initialization
+/bugfix useGetPullRequestInfo.ts中的Hook时序错误
 ```
 
 ## 智能自动化系统
@@ -184,10 +194,16 @@
 
 ### 提交纪律
 仅在满足所有条件时执行提交：
-- ✅ 所有测试通过
+- ✅ 所有测试通过（前端简化验证模式除外）
 - ✅ 零编译器/linter 警告
 - ✅ 代表单一逻辑工作单元
 - ✅ 提交信息清晰解释变更
+
+**前端智能简化模式 v2.0**：
+- 多层次自动识别：文件类型 → 代码内容 → 错误模式 → 语义分析 → 文件名模式
+- 框架特定检测：React Hook错误、Vue响应式问题、Angular组件错误
+- TDZ时序错误：`Cannot access before initialization`等JavaScript时序问题  
+- 无需手动参数，系统智能判断并应用简化验证策略
 
 ## 质量保证
 
@@ -201,6 +217,7 @@
 - 考虑边缘情况的实施
 - 同步文档更新
 - 立即消除重复逻辑
+- **前端智能验证 v2.0**：多层次自动识别前端修复，支持框架特定错误检测，仅执行静态检查，跳过复杂测试
 
 ### 错误处理策略
 - **无法执行时**：提供 3 个替代方案

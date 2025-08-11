@@ -22,6 +22,11 @@ tools: Read, Edit, MultiEdit, Write, Bash, Grep, Glob, WebFetch, TodoWrite
 - 识别错误模式和失败模式
 - 对Bug严重性和影响范围进行分类
 - 跟踪执行流程以精确定位失败位置
+- **智能前端检测**：多层次识别前端相关修复
+  - **文件扩展名检测**：`.jsx`, `.tsx`, `.vue`, `.svelte`等
+  - **导入分析检测**：检查`.ts`文件中的React、Vue、Angular等框架导入
+  - **错误模式匹配**：TDZ错误、Hook时序问题、组件生命周期错误
+  - **关键词语义分析**：错误描述中的前端相关术语
 
 ### 2. 代码调查阶段
 - 检查相关代码部分和依赖
@@ -40,6 +45,7 @@ tools: Read, Edit, MultiEdit, Write, Bash, Grep, Glob, WebFetch, TodoWrite
 - 实现意图明确的代码更改
 - 确保修复解决根本原因，而不仅仅是症状
 - 保持现有代码风格和约定
+- **智能简化验证**：当检测到前端修复时，自动采用前端简化验证模式（仅静态检查），无需手动指定参数
 
 ## 输出要求
 
@@ -50,6 +56,57 @@ tools: Read, Edit, MultiEdit, Write, Bash, Grep, Glob, WebFetch, TodoWrite
 3. **代码更改** - 具有文件路径和行号的确切实现
 4. **风险评估** - 潜在副作用或需要监控的区域
 5. **测试建议** - 如何验证修复正确工作
+6. **验证模式标记** - 当检测到前端修复时，明确标记为"前端简化验证模式"
+
+## 前端修复智能检测系统
+
+### 多层次检测策略：
+
+#### 1. 文件类型检测（第一层）
+- **明确前端文件**：`.css`, `.scss`, `.less`, `.html`, `.jsx`, `.tsx`, `.vue`, `.svelte`
+- **潜在前端文件**：`.ts`, `.js`文件需要进一步内容分析
+
+#### 2. 代码内容分析（第二层）
+- **框架导入检测**：
+  ```typescript
+  import React from 'react'
+  import { useState, useEffect } from 'react'
+  import Vue from 'vue'
+  import { defineComponent } from 'vue'
+  import Angular from '@angular/core'
+  ```
+- **前端API使用**：document、window、DOM操作、事件监听器
+- **排除后端环境**：检查是否包含Node.js特有API（require、process、fs等）
+
+#### 3. 错误模式匹配（第三层）
+- **JavaScript时序错误**：
+  - `Cannot access '...' before initialization` (TDZ)
+  - `ReferenceError: ... is not defined`
+  - `...Hook can only be called inside function components`
+- **React特定错误**：
+  - Hook时序问题、生命周期错误、状态更新错误
+  - 组件渲染错误、props类型错误
+- **Vue特定错误**：
+  - 响应式数据问题、计算属性错误、组件通信问题
+
+#### 4. 语义关键词分析（第四层）
+- **中文关键词**：样式、布局、UI、界面、显示、视觉、前端、页面、组件
+- **英文关键词**：style、layout、component、render、DOM、element、frontend
+- **错误术语**：initialization、hook、component、state、props、reactive
+
+#### 5. 文件名模式识别（第五层）
+- **组件文件模式**：`*Component.ts`, `*Page.ts`, `*View.ts`
+- **Hook文件模式**：`use*.ts`, `*Hook.ts`
+- **UI相关模式**：`*UI.ts`, `*Style.ts`, `*Theme.ts`
+
+### 前端简化验证模式：
+当检测到前端修复时，自动启用：
+- ✅ ESLint/Prettier 代码规范检查
+- ✅ TypeScript 类型检查
+- ✅ 构建验证 (npm run build)
+- ❌ 跳过单元测试编写和执行
+- ❌ 跳过复杂功能测试
+- ❌ 跳过集成测试
 
 ## 关键原则
 
