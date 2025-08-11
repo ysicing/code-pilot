@@ -10,7 +10,7 @@
 
 - 命令：`/bmad-pilot <PROJECT_DESCRIPTION> [OPTIONS]`
 - 作用：在仓库上下文中，按阶段编排 `bmad-po → bmad-architect → bmad-sm → bmad-dev → bmad-qa`。
-- Orchestrator：`bmad-orchestrator` 负责整体调度与确认门控制。
+- Orchestrator：由工作流统一编排（使用 bmad-orchestrator 进行仓库扫描）。
 
 ### Options
 - `--skip-tests`：跳过 QA 阶段
@@ -86,7 +86,7 @@
 
 ## 仓库上下文
 
-- 首次扫描：`bmad-orchestrator` 自动扫描当前仓库（`--skip-scan` 可跳过）。
+- 首次扫描：由工作流触发的 orchestrator 扫描（`bmad-orchestrator`）自动分析当前仓库（`--skip-scan` 可跳过）。
 - 缓存路径：`./.claude/specs/{feature_name}/00-repo-scan.md`（供所有后续 Agent 引用）。
 - 作用：提供技术栈识别、约定、测试模式、集成点，避免上下文丢失并保持一致性。
 
@@ -161,4 +161,3 @@
 ## 版本记录
 
 - 2025-08-11：新增仓库扫描摘要缓存 `00-repo-scan.md`，统一路径与跨阶段引用；明确确认门与目录预创建说明。
-
