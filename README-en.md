@@ -95,6 +95,11 @@ then if Ready ask user: "Code complete. Run tests? (y/n/lint)"
 
 /code               # Direct feature implementation
                     # - For simple features or specific components
+
+/refactor           # Safe progressive refactoring with SOLID principle evaluation
+                    # - Code quality improvement and architectural optimization
+                    # - SOLID principle compliance analysis
+                    # - Progressive refactoring strategies
 ```
 
 #### **🔍 Stage 4: Quality Assurance**
@@ -273,13 +278,14 @@ After setup, your project will have:
 ```bash
 your-project/
 ├── .claude/
-│   ├── commands/          # 15 specialized slash commands
+│   ├── commands/          # 16 specialized slash commands
 │   │   ├── ask.md
 │   │   ├── bugfix.md
 │   │   ├── code.md
 │   │   ├── debug.md
 │   │   ├── multi-role.md
 │   │   ├── optimize.md
+│   │   ├── refactor.md
 │   │   ├── release-check.md
 │   │   ├── requirements-pilot.md
 │   │   ├── review.md
@@ -289,7 +295,7 @@ your-project/
 │   │   ├── story-breakdown.md
 │   │   ├── test.md
 │   │   └── ultrathink.md
-│   ├── agents/           # 14 expert agent configurations
+│   ├── agents/           # 15 expert agent configurations
 │   │   ├── bugfix.md
 │   │   ├── bugfix-verify.md
 │   │   ├── code.md
@@ -304,6 +310,7 @@ your-project/
 │   │       ├── frontend.md
 │   │       ├── performance.md
 │   │       ├── qa.md
+│   │       ├── refactorer.md
 │   │       └── security.md
 │   ├── CLAUDE.md         # System instructions for Claude Code
 │   └── specs/            # Generated specifications (auto-created)
@@ -541,6 +548,7 @@ Proportional testing based on change impact:
 
 ### ⚡ Implementation & Development
 - `/code` - Direct feature implementation with constraints
+- `/refactor` - Safe progressive refactoring with SOLID principle evaluation
 
 ### 🔍 Quality Assurance
 - `/screenshot` - Smart screenshot analysis and UI evaluation (macOS only)
@@ -556,7 +564,7 @@ Proportional testing based on change impact:
 - `/release-check` - Production readiness verification with go/no-go decisions
 
 ### 🧠 Advanced Analysis
-- `/ultrathink` - MECE principle structured deep analysis
+- `/ultrathink` - **For Major Decisions**: MECE principle structured deep analysis for architecture selection, technical strategy, and strategic planning
 - `/multi-role` - Multi-expert parallel analysis
 - `/role-debate` - Professional role deep debate and technical selection
 - `/screenshot` - Smart screenshot analysis and visual evaluation (macOS only)
@@ -569,7 +577,9 @@ Proportional testing based on change impact:
 #### **Commands Directory** (`/commands/`)
 - **Requirements**: `/story-breakdown` - Feature breakdown into implementable stories
 - **Consultation**: `/ask` - Senior Systems Architect with 4-expert consultation methodology
-- **Implementation**: `/code` - Feature development with constraints  
+- **Implementation**: 
+  - `/code` - Feature development with constraints
+  - `/refactor` - Safe progressive refactoring with SOLID principle evaluation  
 - **Quality Assurance**: 
   - `/test` - Comprehensive testing strategy
   - `/debug` - UltraThink Debug Orchestrator with 4-phase systematic analysis

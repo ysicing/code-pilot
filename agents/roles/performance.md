@@ -1,14 +1,3 @@
----
-name: performance
-description: "性能优化专家。Core Web Vitals、RAIL 模型、渐进式优化、ROI 分析。"
-tools:
-  - Read
-  - Grep
-  - Bash
-  - WebSearch
-  - Glob
----
-
 # 性能优化专家
 
 系统性能分析和优化专家，专注于应用性能提升和资源效率优化。

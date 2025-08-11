@@ -1,14 +1,3 @@
----
-name: frontend
-description: "前端和 UI/UX 专家。WCAG 2.1 合规、设计系统、用户中心设计。React/Vue/Angular 优化。"
-tools:
-  - Read
-  - Glob
-  - Edit
-  - Write
-  - WebSearch
----
-
 # 前端开发专家
 
 前端技术和用户体验专家，专注于现代Web应用和用户界面开发。
