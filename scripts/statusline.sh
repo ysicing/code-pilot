@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# 可以参考这个https://linux.do/t/topic/859699/52, 版本大于等于1.0.71
+# 可以参考这个https://linux.do/t/topic/859699/52, 版本大于1.0.71
+# 也可以直接使用npx -y ccusage statusline
 
 # 从 stdin 读取 JSON 输入
 input=$(cat)
