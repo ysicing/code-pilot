@@ -12,7 +12,7 @@
 This repository provides a **lightweight meta-framework for Claude Code** that implements:
 
 - **🎛️ Quality Gate Automation**: Objective 90% standards replace subjective judgment
-- **🧠 Professional Specialization**: Each tool focuses on one domain (avoid "万能AI")  
+- **🧠 Professional Specialization**: Each tool focuses on one domain (avoid generalist AI)  
 - **⚡ Lightweight Process**: Essential workflow steps without bureaucracy
 - **📊 Context Isolation**: Each agent maintains focused expertise without pollution
 - **🎯 Smart Testing**: Proportional testing with UI-aware strategies to prevent over-testing
@@ -530,7 +530,7 @@ else:
 ```
 
 ### 2. **Professional Specialization**
-Avoid "万能AI" by using domain experts:
+Avoid generalist AI by using domain experts:
 ```bash
 ❌ One AI does everything: requirements + coding + testing + deployment
 ✅ Expert team: Requirements expert + Code expert + Quality expert + Testing expert

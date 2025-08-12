@@ -11,26 +11,26 @@
 
 本仓库提供了一个**轻量级的 Claude Code 元框架**，实现：
 
-- **🎛️ 质量门控自动化**：客观90%标准替代主观判断
-- **🧠 专业化分工**：每个工具专注一个领域（避免"万能AI"）  
+- **🎛️ 质量门控自动化**：客观 90% 标准替代主观判断
+- **🧠 专业化分工**：每个工具专注一个领域（避免通用型智能体）  
 - **⚡ 轻量级流程**：核心工作流步骤，无冗余环节
 - **📊 上下文隔离**：每个智能体保持专业性，避免污染
 - **🎯 智能测试**：比例化测试与UI感知策略，防止过度测试
 
 ## 🚀 从手动混乱到自动化质量
 
-**之前**：需要持续监督的手动命令链
+**原有方式**：依赖持续监督的手动命令链
 ```bash
 /ask → /code → /test → /bugfix → /optimize
 # 1-2小时手动协调，主观质量判断
 ```
 
-**之后**：一键自动化专家工作流与客观质量门控
+**现有方式**：一键自动化专家工作流与客观质量门控
 ```bash
 /requirements-pilot "实现 JWT 用户认证系统"
 # 或使用新的 BMAD AI团队流水线
 /bmad-pilot "实现 JWT 用户认证系统"
-# 30分钟自动执行，90%质量门控，智能测试决策
+# 30分钟自动执行、90%质量门控、智能测试决策
 ```
 
 ## 📋 两种主要使用模式
@@ -40,7 +40,7 @@
 **架构**：以需求为中心的工作流，配备质量门控和智能测试
 ```
 requirements-generate → requirements-code → requirements-review → (✅ 就绪?) → 智能测试决策
-         ↑                                              ↓ (⚠️ 需要改进)
+         ↑                                              ↓ (⚠️ 有待改进)
          ←←←←←← 自动优化循环 ←←←←←←
 ```
 
@@ -53,7 +53,7 @@ requirements-generate → requirements-code → requirements-review → (✅ 就
 
 # 高级工作流与智能测试
 先使用 requirements-generate，然后 requirements-code，再用 requirements-review，
-如果就绪则询问用户："代码完成。运行测试？(y/n/lint)"
+如果就绪则询问用户："代码完成。执行测试？(y/n/lint)"
 ```
 
 ### 2. 🎛️ 阶段化开发（手动协调）
@@ -383,9 +383,9 @@ your-project/
 /bmad-pilot "创建响应式用户仪表板，支持暗色模式" --skip-tests
 
 # 后端API开发  
-/requirements-pilot "构建用户管理REST API" --test
+/requirements-pilot "构建用户管理 REST API" --test
 # 或使用 BMAD 团队协作开发
-/bmad-pilot "构建用户管理REST API" --test
+/bmad-pilot "构建用户管理 REST API" --test
 
 # 全栈功能
 /story-breakdown "电商购物车与结账系统"
@@ -530,7 +530,7 @@ else:
 ```
 
 ### 2. **专业化分工**
-避免"万能AI"，使用领域专家：
+避免通用型智能体，使用领域专家：
 ```bash
 ❌ 一个AI做所有事：需求 + 编码 + 测试 + 部署
 ✅ 专家团队：需求专家 + 代码专家 + 质量专家 + 测试专家
