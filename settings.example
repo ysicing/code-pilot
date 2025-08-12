@@ -1,6 +1,9 @@
 {
-  "cleanupPeriodDays": 30,
+  "cleanupPeriodDays": 7,
   "env": {
+    "ANTHROPIC_AUTH_TOKEN": "sk-自定义",
+    "ANTHROPIC_BASE_URL": "https://api自定义",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
     "BASH_DEFAULT_TIMEOUT_MS": "600000",
     "BASH_MAX_TIMEOUT_MS": "600000",
     "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR": "true",
@@ -10,6 +13,11 @@
   "permissions": {
     "allow": [],
     "deny": []
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/scripts/statusline.sh",
+    "padding": 0
   },
   "hooks": {
     "Notification": [
