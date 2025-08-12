@@ -1,4 +1,4 @@
-# Claude Code Multi-Agent Workflow System
+# Claude Code Multi-Agent (Sub-Agent) Workflow System
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Claude Code](https://img.shields.io/badge/Claude-Code-blue)](https://claude.ai/code)
@@ -324,7 +324,7 @@ your-project/
 │   │   ├── story-breakdown.md
 │   │   ├── test.md
 │   │   └── ultrathink.md
-│   ├── agents/           # 17 expert agent configurations
+│   ├── agents/           # 22 agent configuration files
 │   │   ├── bmad-architect.md
 │   │   ├── bmad-dev.md
 │   │   ├── bmad-orchestrator.md

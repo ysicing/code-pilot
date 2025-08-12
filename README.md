@@ -324,7 +324,7 @@ your-project/
 │   │   ├── story-breakdown.md
 │   │   ├── test.md
 │   │   └── ultrathink.md
-│   ├── agents/           # 17个专家智能体配置
+│   ├── agents/           # 22个智能体配置文件
 │   │   ├── bmad-architect.md
 │   │   ├── bmad-dev.md
 │   │   ├── bmad-orchestrator.md

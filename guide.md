@@ -1,4 +1,4 @@
-# Claude Code AI 代理快速入门指南
+# Claude Code 智能体快速入门指南
 
 > 本指南帮助你在5分钟内掌握核心功能。详细使用手册请参考 [user-manual.md](./user-manual.md)
 
@@ -94,6 +94,15 @@
 
 ## 🛠️ 特殊功能命令
 
+### 开发专用命令
+```bash
+/debug "任务描述"      # UltraThink 调试分析
+/optimize "性能目标"   # 性能优化专家
+/refactor "代码范围"   # 安全渐进式重构与SOLID原则评估
+/test "组件或功能"     # 智能测试策略
+/release-check "系统"  # 生产就绪验证
+```
+
 ### macOS 专用：`/screenshot` 
 智能截图分析（仅支持 macOS）
 ```bash
@@ -102,18 +111,28 @@
 /screenshot --crop    # 选择范围
 ```
 
-### 网络搜索：`/search-gemini`
-获取最新技术信息
+### 高级分析命令
 ```bash
-/search-gemini "React 18 新特性"
-/search-gemini "Docker 最佳实践 2024"
+/ultrathink "复杂问题"  # MECE 原则结构化深度分析
+/multi-role architect,security "分析目标"  # 多专家并行分析
+/role-debate security vs performance "JWT vs Session认证"  # 专业角色深度辩论
+/search-gemini "搜索查询"  # Gemini网络搜索获取最新信息
 ```
 
-### 角色辩论：`/role-debate`
-技术选型深度讨论
+### BMAD 专业智能体
 ```bash
-/role-debate security vs performance "JWT vs Session认证"
-/role-debate architect vs performance "微服务 vs 单体架构"
+# 产品和业务分析
+/bmad-po "需求描述"        # 产品负责人：需求分析、用户故事
+/bmad-analyst "分析主题"   # 业务分析师：市场研究、竞争分析
+
+# 技术架构和开发
+/bmad-architect "系统设计需求"  # 系统架构师：技术架构、系统设计
+/bmad-sm "冲刺规划需求"         # 敏捷教练：任务分解、冲刺规划
+/bmad-dev "开发任务描述"        # 开发工程师：代码实现、技术文档
+/bmad-qa "测试需求描述"         # 质量保证：测试策略、质量验证
+
+# 主编排器
+/bmad-orchestrator "复杂项目协调"  # 工作流协调、多智能体任务管理
 ```
 
 ## ⚠️ 快速故障排除

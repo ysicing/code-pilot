@@ -56,13 +56,13 @@
 ### 主要工作流：`/requirements-pilot`
 自动化需求到代码的完整流程：
 ```bash
-/requirements-pilot <功能描述> [--test|--no-test]
+/requirements-pilot <功能描述> [--test|--no-test|--skip-scan]
 ```
 
 ### 核心命令（13个）
 - `/ask <技术问题>` - 高级系统架构师咨询
 - `/story-breakdown <功能描述>` - 复杂功能分解
-- `/requirements-pilot <功能描述> [--test|--no-test]` - 自动化需求驱动开发流水线
+- `/requirements-pilot <功能描述> [--test|--no-test|--skip-scan]` - 自动化需求驱动开发流水线
 - `/bmad-pilot <项目描述> [选项]` - BMAD AI团队完整开发流水线
 - `/bugfix <错误描述>` - 系统化缺陷解决，智能识别前端修复并自动简化验证
 - `/code <功能描述>` - 直接功能实现

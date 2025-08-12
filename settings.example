@@ -18,7 +18,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "~/.claude/scripts/show-notification.sh"
+            "command": "~/.claude/scripts/task-confirm.sh"
           }
         ]
       }
