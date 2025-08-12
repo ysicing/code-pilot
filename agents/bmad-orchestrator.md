@@ -55,7 +55,7 @@ tools: Read, Write, Glob, Grep, WebFetch, TodoWrite
   - 集成点和约束
   - 测试模式和 CI hooks
 
-如果明确指示保存，请确保目标目录存在并写入请求的路径（例如，`./.claude/specs/{feature_name}/00-repo-scan.md`）。
+如果明确指示保存，请确保目标目录存在并写入请求的路径（例如，`{project_root}/.claude/specs/{feature_name}/00-repo-scan.md`）。
 
 ## 协调说明
 

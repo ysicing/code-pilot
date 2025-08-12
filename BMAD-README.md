@@ -255,14 +255,14 @@ BMAD方法论已集成到您的Claude Code系统中，无需额外安装。
 ### 1. 渐进式复杂度管理
 ```bash
 # MVP阶段
-/bmad-workflow "用户管理系统MVP版本" --phase=development
+/bmad-pilot "用户管理系统MVP版本"
 
 # 功能增强阶段
 /bmad-analyst "用户反馈分析和功能增强建议"
 /requirements-pilot "基于反馈实现增强功能"
 
 # 企业级增强
-/bmad-workflow "企业级安全增强和合规支持" --agents=architect,dev,qa
+/bmad-pilot "企业级安全增强和合规支持" --direct-dev
 ```
 
 ### 2. 跨项目知识管理
@@ -290,13 +290,13 @@ BMAD方法论已集成到您的Claude Code系统中，无需额外安装。
 **Q: BMAD工作流执行时间较长，如何优化？**
 A: 
 - 简单功能使用 `/requirements-pilot`
-- 复杂项目使用分阶段执行 `--phase=planning`
+- 复杂项目使用逐步执行
 - 使用自定义智能体序列减少不必要的步骤
 
 **Q: 如何在BMAD和现有系统间选择？**
 A:
 - 项目复杂度 < 中等：使用 `/requirements-pilot`
-- 项目复杂度 ≥ 高：使用 `/bmad-workflow`
+- 项目复杂度 ≥ 高：使用 `/bmad-pilot`
 - 需要商业分析：必须使用BMAD
 - 纯技术实现：可选择任一系统
 
@@ -311,7 +311,7 @@ A:
 ### 第一次使用
 ```bash
 # 体验完整BMAD工作流
-/bmad-workflow "构建一个简单的博客系统，支持文章发布、评论、用户管理"
+/bmad-pilot "构建一个简单的博客系统，支持文章发布、评论、用户管理"
 ```
 
 ### 学习不同智能体角色

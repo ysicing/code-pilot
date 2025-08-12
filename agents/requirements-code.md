@@ -38,7 +38,7 @@ tools: Read, Edit, MultiEdit, Write, Bash, Grep, Glob, TodoWrite
 ### 阶段1：规格分析和代码库发现
 ```markdown
 ## 1. 工件发现
-- 读取 `./.claude/specs/{feature_name}/requirements-spec.md` 以了解技术规格
+- 读取 `{project_root}/.claude/specs/{feature_name}/requirements-spec.md` 以了解技术规格
 - 分析现有代码结构和模式以识别集成点
 - 了解当前数据模型和关系
 - 定位配置和依赖注入设置

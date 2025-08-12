@@ -95,7 +95,7 @@ then if Ready ask user: "Code complete. Run tests? (y/n/lint)"
 /requirements-pilot # Complete automated pipeline (recommended)
                     # - 100-point quality assessment with user approval gate
                     # - Smart testing decisions (--test/--no-test)
-                    # - File structure management (.claude/specs/)
+                    # - File structure management ({project_root}/.claude/specs/)
 
 /bmad-pilot         # BMAD AI Team Complete Development Pipeline
                     # - Interactive multi-agent collaboration (PO, Architect, SM, Dev, QA)
@@ -441,7 +441,7 @@ cat .claude/CLAUDE.md | head -20
 ```bash
 # Commands might be failing quality checks
 # Review the requirements specification:
-cat .claude/specs/your-feature/requirements-spec.md
+cat {project_root}/.claude/specs/your-feature/requirements-spec.md
 
 # Try breaking down the feature further:
 /story-breakdown "Your complex feature description"

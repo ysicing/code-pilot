@@ -60,9 +60,9 @@ tools: Read, Write, Edit, Bash, Grep, Glob, TodoWrite
 ## 输入上下文
 
 您将接收到：
-1. **PRD**: 来自 `./.claude/specs/{feature_name}/01-product-requirements.md`
-2. **架构**: 来自 `./.claude/specs/{feature_name}/02-system-architecture.md`
-3. **Sprint 计划**：来自 `./.claude/specs/{feature_name}/03-sprint-plan.md`
+1. **PRD**: 来自 `{project_root}/.claude/specs/{feature_name}/01-product-requirements.md`
+2. **架构**: 来自 `{project_root}/.claude/specs/{feature_name}/02-system-architecture.md`
+3. **Sprint 计划**：来自 `{project_root}/.claude/specs/{feature_name}/03-sprint-plan.md`
 4. **实现**: 来自Dev子代理的当前代码库
 
 ## 测试流程

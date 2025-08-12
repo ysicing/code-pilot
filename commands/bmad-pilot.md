@@ -78,8 +78,8 @@
 - 潜在约束或考虑事项
 
 保存：
-1. 确保目录 ./.claude/specs/{feature_name}/ 存在
-2. 将扫描总结保存到 ./.claude/specs/{feature_name}/00-repo-scan.md
+1. 确保目录 {project_root}/.claude/specs/{feature_name}/ 存在
+2. 将扫描总结保存到 {project_root}/.claude/specs/{feature_name}/00-repo-scan.md
 3. 同时直接返回上下文报告内容以供立即使用”
 ```
 
@@ -110,7 +110,7 @@
 ### 1. 输入验证和功能提取
 - **解析选项**：从输入中提取任何选项（--skip-tests、--direct-dev、--skip-scan）
 - **功能名称生成**：使用 kebab-case 格式从 [$ARGUMENTS] 中提取功能名称（小写，空格/标点 → 连字符，合并重复，修剪）
-- **目录创建**：确保目录 ./.claude/specs/{feature_name}/ 在任何保存之前存在（编排职责）
+- **目录创建**：确保目录 {project_root}/.claude/specs/{feature_name}/ 在任何保存之前存在（编排职责）
 - **如果输入 > 500 字符**：首先总结核心功能并请求用户确认
 - **如果输入不清楚**：在继续之前请求更具体的详细信息
 
@@ -121,7 +121,7 @@
 ```
 项目需求：[$ARGUMENTS]
 仓库上下文：[如果可用，包括仓库扫描结果]
-仓库扫描路径：./.claude/specs/{feature_name}/00-repo-scan.md
+仓库扫描路径：{project_root}/.claude/specs/{feature_name}/00-repo-scan.md
 功能名称：{feature_name}
 
 任务：分析需求并准备初始 PRD 草稿
@@ -170,8 +170,8 @@
 最终 PRD 内容：[包括带质量分数的最终 PRD 内容]
 
 您的任务：
-1. 确保目录 ./.claude/specs/{feature_name}/ 存在
-2. 将 PRD 保存到 ./.claude/specs/{feature_name}/01-product-requirements.md
+1. 确保目录 {project_root}/.claude/specs/{feature_name}/ 存在
+2. 将 PRD 保存到 {project_root}/.claude/specs/{feature_name}/01-product-requirements.md
 3. 确认保存成功"
 ```
 
@@ -203,7 +203,7 @@
 ```
 PRD 内容：[包括阶段 1 的 PRD 内容]
 仓库上下文：[包括仓库扫描结果]
-仓库扫描路径：./.claude/specs/{feature_name}/00-repo-scan.md
+仓库扫描路径：{project_root}/.claude/specs/{feature_name}/00-repo-scan.md
 功能名称：{feature_name}
 
 任务：分析需求并准备初始架构设计
@@ -252,8 +252,8 @@ PRD 内容：[包括阶段 1 的 PRD 内容]
 最终架构内容：[包括带质量分数的最终架构内容]
 
 您的任务：
-1. 确保目录 ./.claude/specs/{feature_name}/ 存在
-2. 将架构保存到 ./.claude/specs/{feature_name}/02-system-architecture.md
+1. 确保目录 {project_root}/.claude/specs/{feature_name}/ 存在
+2. 将架构保存到 {project_root}/.claude/specs/{feature_name}/02-system-architecture.md
 3. 确认保存成功"
 ```
 
@@ -284,9 +284,9 @@ PRD 内容：[包括阶段 1 的 PRD 内容]
 使用 Task 工具调用 bmad-sm 子代理：
 ```
 仓库上下文：[包括仓库扫描结果]
-仓库扫描路径：./.claude/specs/{feature_name}/00-repo-scan.md
-PRD 路径：./.claude/specs/{feature_name}/01-product-requirements.md
-架构路径：./.claude/specs/{feature_name}/02-system-architecture.md
+仓库扫描路径：{project_root}/.claude/specs/{feature_name}/00-repo-scan.md
+PRD 路径：{project_root}/.claude/specs/{feature_name}/01-product-requirements.md
+架构路径：{project_root}/.claude/specs/{feature_name}/02-system-architecture.md
 功能名称：{feature_name}
 
 任务：准备初始 sprint 计划草稿。
@@ -331,8 +331,8 @@ PRD 路径：./.claude/specs/{feature_name}/01-product-requirements.md
 最终 Sprint 计划内容：[包括最终 sprint 计划内容]
 
 您的任务：
-1. 确保目录 ./.claude/specs/{feature_name}/ 存在
-2. 将 sprint 计划保存到 ./.claude/specs/{feature_name}/03-sprint-plan.md
+1. 确保目录 {project_root}/.claude/specs/{feature_name}/ 存在
+2. 将 sprint 计划保存到 {project_root}/.claude/specs/{feature_name}/03-sprint-plan.md
 3. 确认保存成功"
 ```
 
@@ -341,15 +341,15 @@ PRD 路径：./.claude/specs/{feature_name}/01-product-requirements.md
 使用 Task 工具调用 bmad-dev 子代理:
 
 仓库上下文：[包括仓库扫描结果]
-仓库扫描路径：./.claude/specs/{feature_name}/00-repo-scan.md
+仓库扫描路径：{project_root}/.claude/specs/{feature_name}/00-repo-scan.md
 功能名称：{feature_name}
 工作目录：[项目根目录]
 
 任务：根据规格实施所有功能。
 指令：
-1. 从 ./.claude/specs/{feature_name}/01-product-requirements.md 读取 PRD
-2. 从 ./.claude/specs/{feature_name}/02-system-architecture.md 读取架构
-3. 从 ./.claude/specs/{feature_name}/03-sprint-plan.md 读取 Sprint 计划
+1. 从 {project_root}/.claude/specs/{feature_name}/01-product-requirements.md 读取 PRD
+2. 从 {project_root}/.claude/specs/{feature_name}/02-system-architecture.md 读取架构
+3. 从 {project_root}/.claude/specs/{feature_name}/03-sprint-plan.md 读取 Sprint 计划
 4. 按照 sprint 计划任务顺序实现功能
 5. 创建带测试的生产级代码
 6. 报告实现状态
@@ -360,15 +360,15 @@ PRD 路径：./.claude/specs/{feature_name}/01-product-requirements.md
 使用 Task 工具调用 bmad-qa 子代理:
 
 仓库上下文：[包括扫描中的测试模式]
-仓库扫描路径：./.claude/specs/{feature_name}/00-repo-scan.md
+仓库扫描路径：{project_root}/.claude/specs/{feature_name}/00-repo-scan.md
 功能名称：{feature_name}
 工作目录：[项目根目录]
 
 任务：创建和执行综合测试套件。
 指令：
-1. 从 ./.claude/specs/{feature_name}/01-product-requirements.md 读取 PRD
-2. 从 ./.claude/specs/{feature_name}/02-system-architecture.md 读取架构
-3. 从 ./.claude/specs/{feature_name}/03-sprint-plan.md 读取 Sprint 计划
+1. 从 {project_root}/.claude/specs/{feature_name}/01-product-requirements.md 读取 PRD
+2. 从 {project_root}/.claude/specs/{feature_name}/02-system-architecture.md 读取架构
+3. 从 {project_root}/.claude/specs/{feature_name}/03-sprint-plan.md 读取 Sprint 计划
 4. 审查阶段 4 的实现代码
 5. 创建综合测试套件验证所有验收标准
 6. 执行测试并报告结果
@@ -397,7 +397,7 @@ PRD 路径：./.claude/specs/{feature_name}/01-product-requirements.md
 
 ## 输出结构
 
-所有输出保存到 `./.claude/specs/{feature_name}/`：
+所有输出保存到 `{project_root}/.claude/specs/{feature_name}/`：
 ```
 00-repo-scan.md             # 仓库扫描摘要（扫描后自动保存）
 01-product-requirements.md    # PO 的 PRD（批准后）

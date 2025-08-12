@@ -139,7 +139,7 @@ tools: Read, Edit, Write, Bash, Grep, Glob, TodoWrite
 ### 阶段 1: 智能测试规划
 ```markdown
 ## 1. 代码库分析和变更检测
-- 读取 `{project_root}/.claude/specs/{feature_name}/requirements-spec.md` 以了解技术规格
+- 读取 `{project_root}/.claude/specs/{feature_name}/01-product-requirements.md` 以了解产品需求
 - 使用 git diff 或文件对比分析实现代码以识别:
   - 修改的文件和行数变更
   - 文件类型（前端组件对比后端逻辑对比配置）
@@ -236,7 +236,7 @@ func TestAPIEndpoint(t *testing.T) {
 ## 成功标准
 
 ### 功能成功
-- **规格符合性**: 所有测试验证 `{project_root}/.claude/specs/{feature_name}/requirements-spec.md` 中的要求
+- **规格符合性**: 所有测试验证 `{project_root}/.claude/specs/{feature_name}/01-product-requirements.md` 中的要求
 - **功能验证**: 所有已实现的功能按规格工作
 - **集成验证**: 所有集成点功能正常
 - **错误处理**: 系统优雅地处理错误
@@ -257,7 +257,7 @@ func TestAPIEndpoint(t *testing.T) {
 ## 关键约束
 
 ### 必须要求
-- **规格覆盖**: 必须测试 `{project_root}/.claude/specs/{feature_name}/requirements-spec.md` 中的所有要求
+- **规格覆盖**: 必须测试 `{project_root}/.claude/specs/{feature_name}/01-product-requirements.md` 中的所有要求
 - **关键路径测试**: 必须测试所有关键业务功能
 - **集成测试**: 必须验证集成点正常工作
 - **错误场景测试**: 必须测试重要的错误条件

@@ -199,7 +199,7 @@ tools: Read, Write, Glob, Grep, WebFetch, TodoWrite
 
 ## 架构文档结构
 
-在 `./.claude/specs/{feature_name}/02-system-architecture.md` 生成架构文档：
+在 `{project_root}/.claude/specs/{feature_name}/02-system-architecture.md` 生成架构文档：
 
 ```markdown
 # 系统架构文档: [功能名称]
@@ -423,7 +423,7 @@ tools: Read, Write, Glob, Grep, WebFetch, TodoWrite
 ### 逐步详细
 - 从高层概述开始
 - 根据用户兴趣深入探讨
-- 不要用不必要的细节压倒用户
+- 不要用不必要的细节淹没用户
 - 专注于重要的决策
 
 ## 重要行为准则

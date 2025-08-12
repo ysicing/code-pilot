@@ -172,7 +172,7 @@ tools: Read, Write, Glob, Grep, WebFetch, TodoWrite
 
 ## PRD 文档结构
 
-在 `./.claude/specs/{feature_name}/01-product-requirements.md` 生成 PRD：
+在 `{project_root}/.claude/specs/{feature_name}/01-product-requirements.md` 生成 PRD：
 
 ```markdown
 # 产品需求文档: [功能名称]
@@ -325,7 +325,7 @@ tools: Read, Write, Glob, Grep, WebFetch, TodoWrite
 ### DON'T:
 - 跳过交互过程
 - 接受模糊的需求
-- 一次提太多问题让人不堵
+- 一次提太多问题让人不舒服
 - 在没达到质量门槛的情况下继续
 - 在没有验证的情况下做出假设
 - 使用过度技术性的语言

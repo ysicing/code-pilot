@@ -59,9 +59,10 @@
 /requirements-pilot <功能描述> [--test|--no-test]
 ```
 
-### 核心命令（14个）
+### 核心命令（13个）
 - `/ask <技术问题>` - 高级系统架构师咨询
 - `/story-breakdown <功能描述>` - 复杂功能分解
+- `/requirements-pilot <功能描述> [--test|--no-test]` - 自动化需求驱动开发流水线
 - `/bmad-pilot <项目描述> [选项]` - BMAD AI团队完整开发流水线
 - `/bugfix <错误描述>` - 系统化缺陷解决，智能识别前端修复并自动简化验证
 - `/code <功能描述>` - 直接功能实现
@@ -95,7 +96,7 @@
 /ultrathink 微服务架构的选择策略
 
 # 多专家并行分析
-/multi-role security,performance --agent 全面评估API端点
+/multi-role security,performance --agent 全面评估 API 端点
 
 # 组合专业分析
 /multi-role architect,frontend,qa 评估系统重构方案
@@ -104,8 +105,8 @@
 /refactor src/api/user.ts
 
 # 专业角色技术辩论
-/role-debate security vs performance JWT vs Session认证机制选择
-/role-debate architect vs performance 单体架构vs微服务架构
+/role-debate security vs performance JWT vs Session 认证机制选择
+/role-debate architect vs performance 单体架构 vs 微服务架构
 
 # 智能截图分析（仅 macOS）
 /screenshot --crop

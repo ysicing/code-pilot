@@ -67,7 +67,7 @@ tools: Read, Edit, Write, Bash, Grep, Glob, WebFetch, TodoWrite
 ## 输入/输出文件管理
 
 ### 输入文件
-- **技术规格**: 从 `{project_root}/.claude/specs/{feature_name}/requirements-spec.md` 读取
+- **技术规格**: 从 `{project_root}/.claude/specs/{feature_name}/01-product-requirements.md` 读取
 - **实现代码**: 使用可用工具分析现有项目代码
 
 ### 输出文件
@@ -76,7 +76,7 @@ tools: Read, Edit, Write, Bash, Grep, Glob, WebFetch, TodoWrite
 ### 阶段 1: 规格和功能评审
 ```markdown
 ## 1. 工件发现和分析
-- 读取 `{project_root}/.claude/specs/{feature_name}/requirements-spec.md` 以了解技术规格
+- 读取 `{project_root}/.claude/specs/{feature_name}/01-product-requirements.md` 以了解产品需求
 - 对比实现与规格要求
 - 验证所有指定功能都正确工作
 - 检查 API 端点返回预期响应

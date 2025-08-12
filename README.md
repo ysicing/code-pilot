@@ -27,9 +27,9 @@
 
 **之后**：一键自动化专家工作流与客观质量门控
 ```bash
-/requirements-pilot "实现JWT用户认证系统"
+/requirements-pilot "实现 JWT 用户认证系统"
 # 或使用新的 BMAD AI团队流水线
-/bmad-pilot "实现JWT用户认证系统"
+/bmad-pilot "实现 JWT 用户认证系统"
 # 30分钟自动执行，90%质量门控，智能测试决策
 ```
 
@@ -78,8 +78,8 @@ requirements-generate → requirements-code → requirements-review → (✅ 就
                     # - 纯架构指导，不修改代码
 
 /role-debate        # 专业角色技术辩论
-                    # - 架构选型深度辩论（单体vs微服务）
-                    # - 技术权衡讨论（安全vs性能）
+                    # - 架构选型深度辩论（单体 vs 微服务）
+                    # - 技术权衡讨论（安全 vs 性能）
                     # - 结构化论证过程
                     # - 客观裁决和平衡建议
 
@@ -95,7 +95,7 @@ requirements-generate → requirements-code → requirements-review → (✅ 就
 /requirements-pilot # 完整自动化流水线（推荐）
                     # - 100分质量评估与用户批准门控
                     # - 智能测试决策（--test/--no-test）
-                    # - 文件结构管理（.claude/specs/）
+                    # - 文件结构管理（{project_root}/.claude/specs/）
 
 /bmad-pilot         # BMAD AI团队完整开发流水线
                     # - 交互式多智能体协作（PO、架构师、SM、开发、QA）
@@ -150,19 +150,19 @@ requirements-generate → requirements-code → requirements-review → (✅ 就
 ### 模式1：完整自动化（新功能）
 ```bash
 # 单条命令处理整个工作流
-/requirements-pilot "JWT认证与刷新令牌" --test
+/requirements-pilot "JWT 认证与刷新令牌" --test
 # → 需求(90+) → 用户批准 → 代码 → 审查(90+) → 测试
 
 # 或使用 BMAD AI团队完整流水线
-/bmad-pilot "JWT认证与刷新令牌" --test
+/bmad-pilot "JWT 认证与刷新令牌" --test
 # → 仓库扫描 → PO需求收集 → 架构设计 → Sprint规划 → 开发 → QA测试
 ```
 
 ### 模式2：步骤式控制（复杂功能）  
 ```bash
 /story-breakdown "电商结账流程"  # 分解为故事
-/ask "结账流程：微服务vs单体架构"  # 架构指导
-/role-debate architect vs performance "单体vs微服务的性能影响"  # 技术选型辩论
+/ask "结账流程：微服务 vs 单体架构"  # 架构指导
+/role-debate architect vs performance "单体 vs 微服务的性能影响"  # 技术选型辩论
 /requirements-pilot "支付处理故事1"  # 逐个故事实现
 # 或使用 BMAD 团队流水线
 /bmad-pilot "支付处理系统" --direct-dev  # 跳过Sprint规划
@@ -268,10 +268,10 @@ claude --version
 cd /path/to/your/project
 
 # 一条命令处理所有事情 - 需求、实现、审查、测试
-/requirements-pilot "创建支持JWT令牌的用户认证REST API"
+/requirements-pilot "创建支持 JWT 令牌的用户认证 REST API"
 
 # 或使用 BMAD AI团队完整开发流水线
-/bmad-pilot "创建支持JWT令牌的用户认证REST API"
+/bmad-pilot "创建支持 JWT 令牌的用户认证 REST API"
 
 # 高级用法与测试控制
 /requirements-pilot "构建电商购物车系统" --test
@@ -441,7 +441,7 @@ cat .claude/CLAUDE.md | head -20
 ```bash
 # 命令可能未通过质量检查
 # 查看需求规格：
-cat .claude/specs/your-feature/requirements-spec.md
+cat {project_root}/.claude/specs/your-feature/requirements-spec.md
 
 # 尝试进一步分解功能：
 /story-breakdown "你的复杂功能描述"
