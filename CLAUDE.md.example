@@ -59,9 +59,10 @@
 /requirements-pilot <功能描述> [--test|--no-test]
 ```
 
-### 核心命令（13个）
+### 核心命令（14个）
 - `/ask <技术问题>` - 高级系统架构师咨询
 - `/story-breakdown <功能描述>` - 复杂功能分解
+- `/bmad-pilot <项目描述> [选项]` - BMAD AI团队完整开发流水线
 - `/bugfix <错误描述>` - 系统化缺陷解决，智能识别前端修复并自动简化验证
 - `/code <功能描述>` - 直接功能实现
 - `/debug <任务描述>` - UltraThink 调试分析
@@ -114,6 +115,11 @@
 /bugfix 按钮点击无响应问题
 /bugfix Cannot access 'refetchAIReview' before initialization
 /bugfix useGetPullRequestInfo.ts中的Hook时序错误
+
+# BMAD AI团队完整开发流水线
+/bmad-pilot "构建用户认证系统" --test
+/bmad-pilot "实现电商购物车功能" --skip-tests
+/bmad-pilot "创建API网关服务" --direct-dev
 ```
 
 ## 智能自动化系统

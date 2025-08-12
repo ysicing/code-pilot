@@ -8,6 +8,9 @@
 ```bash
 # 这一条命令就能实现从需求到代码的完整流程
 /requirements-pilot "实现用户注册功能，支持邮箱验证"
+
+# 或者使用 BMAD AI团队完整开发流水线
+/bmad-pilot "实现用户注册功能，支持邮箱验证"
 ```
 
 系统会自动：
@@ -21,38 +24,47 @@
 - **从简单开始**：不确定用什么命令时，先用 `/ask` 咨询
 - **一步步来**：复杂功能先用 `/story-breakdown` 分解
 
-## 🔥 最常用的5个命令
+## 🔥 最常用的6个命令
 
-### 1. `/requirements-pilot` - 万能命令
-**使用场景**：实现任何新功能
+### 1. `/requirements-pilot` - 快速自动化命令
+**使用场景**：快速实现新功能
 ```bash
 /requirements-pilot "功能描述"        # 让系统智能决定测试策略
 /requirements-pilot "功能描述" --test  # 强制包含测试
 /requirements-pilot "UI更新" --no-test # 纯UI不需要测试
 ```
 
-### 2. `/ask` - 技术咨询
+### 2. `/bmad-pilot` - 团队协作命令
+**使用场景**：复杂功能需要完整团队协作开发
+```bash
+/bmad-pilot "功能描述"                # 完整AI团队协作开发
+/bmad-pilot "功能描述" --test         # 包含测试的团队开发
+/bmad-pilot "功能描述" --direct-dev   # 跳过Sprint规划直接开发
+/bmad-pilot "功能描述" --skip-tests   # 跳过测试阶段
+```
+
+### 3. `/ask` - 技术咨询
 **使用场景**：不确定怎么做的时候
 ```bash
 /ask "React vs Vue 选择建议"
 /ask "微服务架构最佳实践"
 ```
 
-### 3. `/bugfix` - 错误修复  
+### 4. `/bugfix` - 错误修复  
 **使用场景**：系统有问题需要修复
 ```bash
 /bugfix "用户登录后页面空白"
 /bugfix "API响应时间过长"
 ```
 
-### 4. `/story-breakdown` - 功能分解
+### 5. `/story-breakdown` - 功能分解
 **使用场景**：功能太复杂，需要拆分
 ```bash
 /story-breakdown "完整的电商系统"
 /story-breakdown "用户权限管理系统"
 ```
 
-### 5. `/review` - 代码审查
+### 6. `/review` - 代码审查
 **使用场景**：检查代码质量
 ```bash
 /review "登录模块"
@@ -63,8 +75,11 @@
 
 ### 模式1：新手模式（推荐）
 ```bash
-# 一条命令解决问题
+# 快速开发用 requirements-pilot
 /requirements-pilot "你想实现的功能"
+
+# 复杂功能用 bmad-pilot 团队协作
+/bmad-pilot "你想实现的复杂功能"
 ```
 
 ### 模式2：分步控制  
@@ -73,6 +88,8 @@
 /story-breakdown "复杂功能"     # 第一步：分解功能
 /ask "技术选型问题"             # 第二步：咨询架构
 /requirements-pilot "具体功能"   # 第三步：逐个实现
+# 或者用团队协作方式
+/bmad-pilot "具体功能"          # 团队协作实现
 ```
 
 ## 🛠️ 特殊功能命令
@@ -110,7 +127,8 @@
 
 ### 问题：不知道用哪个命令
 **解决方案**：
-- 实现新功能 → `/requirements-pilot`
+- 快速实现功能 → `/requirements-pilot`
+- 复杂功能需团队协作 → `/bmad-pilot`
 - 修复bug → `/bugfix`  
 - 技术咨询 → `/ask`
 - **重大决策** → `/ultrathink`（架构选型、技术战略）
@@ -140,9 +158,10 @@
 
 ## 🎯 核心记忆点
 
-1. **新功能**：直接用 `/requirements-pilot`
-2. **修bug**：直接用 `/bugfix`  
-3. **重大决策**：用 `/ultrathink` 深度分析
-4. **不确定**：先用 `/ask` 咨询
-5. **太复杂**：先用 `/story-breakdown` 分解
-6. **相信90分质量门控**：系统比你更懂何时可以继续
+1. **简单新功能**：直接用 `/requirements-pilot`
+2. **复杂功能**：用 `/bmad-pilot` 团队协作开发
+3. **修bug**：直接用 `/bugfix`  
+4. **重大决策**：用 `/ultrathink` 深度分析
+5. **不确定**：先用 `/ask` 咨询
+6. **太复杂**：先用 `/story-breakdown` 分解
+7. **相信90分质量门控**：系统比你更懂何时可以继续

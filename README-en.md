@@ -28,6 +28,8 @@ This repository provides a **lightweight meta-framework for Claude Code** that i
 **After**: One-command automated expert workflows with objective quality gates
 ```bash
 /requirements-pilot "Implement JWT user authentication system"
+# Or use the new BMAD AI Team Pipeline
+/bmad-pilot "Implement JWT user authentication system"
 # 30 minutes of automated execution, 90% quality gates, smart testing decisions
 ```
 
@@ -46,6 +48,8 @@ requirements-generate → requirements-code → requirements-review → (✅ Rea
 ```bash
 # Complete development workflow in one command
 /requirements-pilot "Build user management system with RBAC"
+# Or use BMAD AI Team complete pipeline
+/bmad-pilot "Build user management system with RBAC"
 
 # Advanced workflow with intelligent testing
 First use requirements-generate, then requirements-code, then requirements-review, 
@@ -92,6 +96,12 @@ then if Ready ask user: "Code complete. Run tests? (y/n/lint)"
                     # - 100-point quality assessment with user approval gate
                     # - Smart testing decisions (--test/--no-test)
                     # - File structure management (.claude/specs/)
+
+/bmad-pilot         # BMAD AI Team Complete Development Pipeline
+                    # - Interactive multi-agent collaboration (PO, Architect, SM, Dev, QA)
+                    # - UltraThink methodology integration
+                    # - Quality gates with user confirmation mechanisms
+                    # - Repository-aware context-driven development
 
 /code               # Direct feature implementation
                     # - For simple features or specific components
@@ -142,6 +152,10 @@ then if Ready ask user: "Code complete. Run tests? (y/n/lint)"
 # Single command handles entire workflow
 /requirements-pilot "JWT authentication with refresh tokens" --test
 # → Requirements(90+) → User approval → Code → Review(90+) → Testing
+
+# Or use BMAD AI Team complete pipeline
+/bmad-pilot "JWT authentication with refresh tokens" --test
+# → Repository scan → PO requirements → Architecture design → Sprint planning → Development → QA testing
 ```
 
 ### Pattern 2: Step-by-Step Control (Complex Features)  
@@ -150,6 +164,8 @@ then if Ready ask user: "Code complete. Run tests? (y/n/lint)"
 /ask "Microservices vs monolith for checkout"  # Architecture guidance
 /role-debate architect vs performance "Performance impact of monolith vs microservices"  # Technical debate
 /requirements-pilot "Payment processing story 1"  # Implement story by story
+# Or use BMAD team pipeline
+/bmad-pilot "Payment processing system" --direct-dev  # Skip Sprint planning
 /review "Validate payment security"  # Quality gates
 /release-check "Payment system"  # Production readiness
 ```
@@ -166,6 +182,8 @@ then if Ready ask user: "Code complete. Run tests? (y/n/lint)"
 /story-breakdown "Financial transaction system"
 /ask "Security architecture for financial data"
 /requirements-pilot "Core transaction logic" --test
+# Or use BMAD team pipeline for highest quality assurance
+/bmad-pilot "Financial transaction core system" --test
 /review "Security and performance validation"  
 /release-check "Financial system components"
 ```
@@ -252,9 +270,17 @@ cd /path/to/your/project
 # One command handles everything - requirements, implementation, review, testing
 /requirements-pilot "Create REST API for user authentication with JWT tokens"
 
+# Or use BMAD AI Team complete development pipeline
+/bmad-pilot "Create REST API for user authentication with JWT tokens"
+
 # Advanced usage with testing control
 /requirements-pilot "Build e-commerce cart system" --test
 /requirements-pilot "Add UI theme switcher" --no-test  # UI-only changes
+/requirements-pilot "Quick feature implementation" --skip-scan  # Skip repository scan (not recommended)
+
+# BMAD advanced usage
+/bmad-pilot "Build e-commerce cart system" --test
+/bmad-pilot "Add UI theme switcher" --skip-tests --direct-dev  # Fast development
 ```
 
 **Option B: Step-by-Step Control (For Complex Features)**
@@ -267,6 +293,8 @@ cd /path/to/your/project
 
 # Implementation with quality gates
 /requirements-pilot "User registration story" --test
+# Or use BMAD team pipeline
+/bmad-pilot "User management core functionality" --test
 
 # Production readiness
 /release-check "User management components"
@@ -278,8 +306,9 @@ After setup, your project will have:
 ```bash
 your-project/
 ├── .claude/
-│   ├── commands/          # 16 specialized slash commands
+│   ├── commands/          # 17 specialized slash commands
 │   │   ├── ask.md
+│   │   ├── bmad-pilot.md
 │   │   ├── bugfix.md
 │   │   ├── code.md
 │   │   ├── debug.md
@@ -295,7 +324,13 @@ your-project/
 │   │   ├── story-breakdown.md
 │   │   ├── test.md
 │   │   └── ultrathink.md
-│   ├── agents/           # 15 expert agent configurations
+│   ├── agents/           # 17 expert agent configurations
+│   │   ├── bmad-architect.md
+│   │   ├── bmad-dev.md
+│   │   ├── bmad-orchestrator.md
+│   │   ├── bmad-po.md
+│   │   ├── bmad-qa.md
+│   │   ├── bmad-sm.md
 │   │   ├── bugfix.md
 │   │   ├── bugfix-verify.md
 │   │   ├── code.md
@@ -344,15 +379,21 @@ your-project/
 ```bash
 # Frontend feature development
 /requirements-pilot "Create responsive user dashboard with dark mode" --no-test
+# Or use BMAD pipeline
+/bmad-pilot "Create responsive user dashboard with dark mode" --skip-tests
 
 # Backend API development  
 /requirements-pilot "Build REST API for user management" --test
+# Or use BMAD team collaborative development
+/bmad-pilot "Build REST API for user management" --test
 
 # Full-stack feature
 /story-breakdown "E-commerce shopping cart with checkout"
 /requirements-pilot "Shopping cart frontend" --no-test
 /requirements-pilot "Cart API backend" --test
 /requirements-pilot "Payment integration" --test
+# Or use BMAD unified pipeline
+/bmad-pilot "Complete e-commerce cart system" --test
 ```
 
 ### For Data Science Projects
@@ -364,6 +405,8 @@ your-project/
 
 # Model development
 /requirements-pilot "Build ML model for user recommendation" --test
+# Or use BMAD team for data science projects
+/bmad-pilot "Build user recommendation ML model with evaluation system" --test
 ```
 
 ### For DevOps and Infrastructure
@@ -371,10 +414,14 @@ your-project/
 # Infrastructure as code
 /requirements-pilot "Docker containerization setup" --test
 /requirements-pilot "Kubernetes deployment configuration" --test
+# Or use BMAD team for infrastructure development
+/bmad-pilot "Complete containerized deployment system" --test
 
 # CI/CD pipeline
 /story-breakdown "Complete CI/CD pipeline with testing"
 /requirements-pilot "GitHub Actions workflow" --test
+# Or use BMAD pipeline for CI/CD development
+/bmad-pilot "Enterprise-grade CI/CD pipeline system" --test
 ```
 
 ## ⚠️ Troubleshooting
@@ -542,6 +589,7 @@ Proportional testing based on change impact:
 ### 📋 Requirements & Planning
 - `/story-breakdown` - Break features into implementable user stories
 - `/requirements-pilot` - Complete automated requirements-driven pipeline
+- `/bmad-pilot` - BMAD AI Team complete development pipeline with interactive multi-agent collaboration
 
 ### 🏛️ Architecture & Consultation  
 - `/ask` - Senior Systems Architect with 4-expert consultation methodology
@@ -576,6 +624,9 @@ Proportional testing based on change impact:
 
 #### **Commands Directory** (`/commands/`)
 - **Requirements**: `/story-breakdown` - Feature breakdown into implementable stories
+- **Complete Pipelines**: 
+  - `/requirements-pilot` - Automated requirements-driven pipeline
+  - `/bmad-pilot` - BMAD AI Team complete development pipeline
 - **Consultation**: `/ask` - Senior Systems Architect with 4-expert consultation methodology
 - **Implementation**: 
   - `/code` - Feature development with constraints
@@ -596,19 +647,36 @@ Proportional testing based on change impact:
   - `/search-gemini` - Gemini web search for latest information
 
 #### **Agents Directory** (`/agents/`)
-- **requirements-generate**: Code-generation-optimized technical specifications with direct implementation mapping
-- **requirements-code**: Direct implementation agent with minimal architectural overhead
-- **requirements-review**: Pragmatic review focusing on functionality over architectural perfection (3-level scoring)
-- **requirements-testing**: Smart testing with proportional coverage and UI-aware strategies
-- **bugfix**: Bug resolution specialist for analyzing and fixing software defects
-- **bugfix-verify**: Fix validation specialist for objective assessment
-- **code**: Development coordinator for direct implementation
-- **debug**: UltraThink systematic problem analysis with multi-agent coordination
-- **optimize**: Performance optimization coordination
+- **BMAD Multi-Agent System**:
+  - **bmad-orchestrator**: Workflow coordination and context management
+  - **bmad-po**: Interactive Product Owner for requirements gathering and quality scoring
+  - **bmad-architect**: System Architect for technical design and quality scoring  
+  - **bmad-sm**: Scrum Master for Sprint planning and task decomposition
+  - **bmad-dev**: Developer for specification-based feature implementation
+  - **bmad-qa**: QA Engineer for comprehensive testing and quality validation
+- **Requirements Series**:
+  - **requirements-generate**: Code-generation-optimized technical specifications with direct implementation mapping
+  - **requirements-code**: Direct implementation agent with minimal architectural overhead
+  - **requirements-review**: Pragmatic review focusing on functionality over architectural perfection (3-level scoring)
+  - **requirements-testing**: Smart testing with proportional coverage and UI-aware strategies
+- **Professional Tool Agents**:
+  - **bugfix**: Bug resolution specialist for analyzing and fixing software defects
+  - **bugfix-verify**: Fix validation specialist for objective assessment
+  - **code**: Development coordinator for direct implementation
+  - **debug**: UltraThink systematic problem analysis with multi-agent coordination
+  - **optimize**: Performance optimization coordination
 
 ### Multi-Agent Coordination System
 
-**4 Core Specialists**:
+**BMAD AI Team (6 Specialists)**:
+1. **Orchestrator** - Workflow coordination, context management and quality gates
+2. **Product Owner** - Interactive requirements gathering with 90+ quality scoring
+3. **System Architect** - Technical design and architecture quality validation
+4. **Scrum Master** - Sprint planning, task decomposition and dependency management
+5. **Developer** - Specification-based feature implementation
+6. **QA Engineer** - Comprehensive testing, quality validation and defect detection
+
+**Requirements Series (4 Core Specialists)**:
 1. **Requirements Generator** - Implementation-ready technical specifications
 2. **Code Implementer** - Direct code generation with pragmatic focus
 3. **Quality Reviewer** - 90% threshold validation with 3-level scoring

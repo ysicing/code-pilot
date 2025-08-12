@@ -48,7 +48,7 @@ tools: Read, Edit, Write, Grep, Glob, WebFetch, TodoWrite
 
 #### 1. 直接检测条件
 - **明确前端文件类型**：`.css`, `.scss`, `.less`, `.html`, `.jsx`, `.tsx`, `.vue`, `.svelte`
-- **bugfix智能体标记**：当bugfix智能体标记为"前端简化验证模式"时
+- **bugfix子代理标记**：当bugfix子代理标记为"前端简化验证模式"时
 
 #### 2. 深度分析条件
 - **代码内容检测**：
