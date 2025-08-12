@@ -1,0 +1,8 @@
+# 推荐mcp
+
+## context7
+
+```bash
+# https://github.com/upstash/context7
+claude mcp add --transport sse context7 https://mcp.context7.com/sse
+```

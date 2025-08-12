@@ -7,5 +7,5 @@ statsig
 todos
 CLAUDE.md
 scripts/custom.*.sh
-bin/
-!bin/.gitkeep
+# bin/
+# !bin/.gitkeep
