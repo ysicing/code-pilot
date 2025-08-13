@@ -339,7 +339,7 @@ After setup, your project will have:
 ```bash
 your-project/
 ├── .claude/
-│   ├── commands/          # 17 specialized slash commands
+│   ├── commands/          # 20 specialized slash commands
 │   │   ├── ask.md
 │   │   ├── bmad-pilot.md
 │   │   ├── bugfix.md
@@ -357,7 +357,7 @@ your-project/
 │   │   ├── story-breakdown.md
 │   │   ├── test.md
 │   │   └── ultrathink.md
-│   ├── agents/           # 22 agent configuration files
+│   ├── agents/           # 28+ agent configuration files
 │   │   ├── bmad-architect.md
 │   │   ├── bmad-dev.md
 │   │   ├── bmad-orchestrator.md

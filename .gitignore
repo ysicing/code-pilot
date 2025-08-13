@@ -9,3 +9,4 @@ CLAUDE.md
 scripts/custom.*.sh
 bin/
 !bin/.gitkeep
+session-reviews
