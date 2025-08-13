@@ -1,3 +1,8 @@
+---
+description: 聚焦实施特定功能任务，基于规范文档执行编码任务
+argument-hint: [FEATURE_NAME] [TASK_DESCRIPTION_OR_NUMBER]
+---
+
 ## 使用方法
 `/kiro:execute [FEATURE_NAME] [TASK_DESCRIPTION_OR_NUMBER]`
 

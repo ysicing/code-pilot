@@ -1,3 +1,8 @@
+---
+description: UltraThink 调试编排器，系统化分析和多代理协调进行问题解决
+argument-hint: <ERROR_DESCRIPTION>
+---
+
 # UltraThink 调试编排器
 
 ## 使用方法

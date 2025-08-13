@@ -1,3 +1,8 @@
+---
+description: 性能优化协调员，系统化性能改进和瓶颈分析
+argument-hint: <PERFORMANCE_TARGET>
+---
+
 ## 使用方法
 `/optimize <PERFORMANCE_TARGET>`
 

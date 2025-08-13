@@ -1,3 +1,8 @@
+---
+description: 基于研究和架构创建全面的功能设计文档
+argument-hint: [FEATURE_NAME_OR_IDEA]
+---
+
 ## 使用方法
 `/kiro:design [FEATURE_NAME_OR_IDEA]`
 

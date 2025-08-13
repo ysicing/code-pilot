@@ -1,3 +1,8 @@
+---
+description: 多维度代码审查，质量、安全、性能和架构全面评估
+argument-hint: <CODE_SCOPE>
+---
+
 ## 使用方法
 `/review <CODE_SCOPE>`
 

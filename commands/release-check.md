@@ -1,3 +1,8 @@
+---
+description: 生产就绪性验证，确保组件或系统符合发布标准
+argument-hint: <COMPONENT_OR_SYSTEM>
+---
+
 ## 使用方法
 `/release-check <COMPONENT_OR_SYSTEM>`
 

@@ -1,3 +1,8 @@
+---
+description: 开发协调员，高效代码实现和集成
+argument-hint: <FEATURE_DESCRIPTION>
+---
+
 ## 使用方法
 `/code <FEATURE_DESCRIPTION>`
 

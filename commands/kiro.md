@@ -1,3 +1,8 @@
+---
+description: Kiro 智能开发助手统一入口，智能路由到最合适的专家角色
+argument-hint: <MODE_OR_QUERY> [ARGS...]
+---
+
 ## 使用方法
 `/kiro <MODE_OR_QUERY> [ARGS...]`
 

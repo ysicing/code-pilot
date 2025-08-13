@@ -1,3 +1,8 @@
+---
+description: Kiro 快速开发协助，轻松友好的编程支持
+argument-hint: [QUESTION_OR_QUERY]
+---
+
 ## 使用方法
 `/kiro:vibe [QUESTION_OR_QUERY]`
 

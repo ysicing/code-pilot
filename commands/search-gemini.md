@@ -1,3 +1,8 @@
+---
+description: 使用 Gemini CLI 执行网络搜索获取最新信息
+argument-hint: <搜索查询>
+---
+
 ## Gemini 网络搜索
 
 使用 Gemini CLI 执行网络搜索以获取最新信息。

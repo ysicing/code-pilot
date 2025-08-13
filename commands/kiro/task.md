@@ -1,3 +1,8 @@
+---
+description: 从已批准的功能设计生成可操作的实施任务列表
+argument-hint: [FEATURE_NAME]
+---
+
 ## 使用方法
 `/kiro:task [FEATURE_NAME]`
 

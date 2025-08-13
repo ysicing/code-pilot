@@ -1,3 +1,8 @@
+---
+description: macOS 屏幕截图并分析图像内容（仅支持 macOS 系统）
+argument-hint: [选项]
+---
+
 ## 截图
 
 在 macOS 上截取屏幕并分析图像。

@@ -1,3 +1,8 @@
+---
+description: Kiro 项目状态管理，查看功能状态和工作流控制
+argument-hint: [ACTION] [ARGS...]
+---
+
 ## 使用方法
 `/kiro-status [ACTION] [ARGS...]`
 

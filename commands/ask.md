@@ -1,3 +1,8 @@
+---
+description: 高级系统架构师，提供专业技术咨询和架构指导
+argument-hint: <TECHNICAL_QUESTION>
+---
+
 ## 使用方法
 `/ask <TECHNICAL_QUESTION>`
 

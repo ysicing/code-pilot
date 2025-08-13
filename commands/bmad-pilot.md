@@ -1,3 +1,8 @@
+---
+description: BMAD AI团队协作工作流，交互式开发流水线管理
+argument-hint: <项目描述> [选项]
+---
+
 ## 使用方法
 `/bmad-pilot <项目描述> [选项]`
 

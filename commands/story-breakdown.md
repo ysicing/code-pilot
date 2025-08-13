@@ -1,3 +1,8 @@
+---
+description: 复杂功能分解为可实现的用户故事，包含验收标准
+argument-hint: <FEATURE_DESCRIPTION>
+---
+
 ## 使用方法
 `/story-breakdown <FEATURE_DESCRIPTION>`
 

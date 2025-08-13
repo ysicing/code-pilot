@@ -1,3 +1,8 @@
+---
+description: 测试策略协调员，全面测试规划和实施
+argument-hint: <COMPONENT_OR_FEATURE>
+---
+
 ## 使用方法
 `/test <COMPONENT_OR_FEATURE>`
 

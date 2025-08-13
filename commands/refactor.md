@@ -1,3 +1,8 @@
+---
+description: 安全渐进式重构实施，SOLID原则评估和代码结构改进
+argument-hint: <具体文件或类/方法>
+---
+
 # /refactor 命令
 
 专注于安全重构实施的执行专家，与/review和/optimize形成互补，专门负责代码结构改进的具体实施。

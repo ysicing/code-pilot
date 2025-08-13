@@ -1,3 +1,8 @@
+---
+description: 创建完整功能规范，从需求到设计到实施计划的结构化工作流
+argument-hint: [FEATURE_NAME_OR_IDEA]
+---
+
 ## 使用方法
 `/kiro:spec [FEATURE_NAME_OR_IDEA]`
 

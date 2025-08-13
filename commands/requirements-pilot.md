@@ -1,3 +1,8 @@
+---
+description: 需求驱动开发工作流，从需求到实现的完整自动化管道
+argument-hint: <FEATURE_DESCRIPTION> [OPTIONS]
+---
+
 ## 使用方法
 `/requirements-pilot <FEATURE_DESCRIPTION> [OPTIONS]`
 

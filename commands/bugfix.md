@@ -1,3 +1,8 @@
+---
+description: 智能bug修复工作流，多层次检测和质量门控自动化修复
+argument-hint: <ERROR_DESCRIPTION>
+---
+
 ## 使用方法
 `/bugfix <ERROR_DESCRIPTION>`
 
