@@ -348,7 +348,7 @@ cd /path/to/your/project
 ```bash
 your-project/
 ├── .claude/
-│   ├── commands/          # 20个专业斜杠命令
+│   ├── commands/          # 21个专业斜杠命令
 │   │   ├── ask.md
 │   │   ├── bmad-pilot.md
 │   │   ├── bugfix.md
@@ -370,7 +370,7 @@ your-project/
 │   │   ├── story-breakdown.md
 │   │   ├── test.md
 │   │   └── ultrathink.md
-│   ├── agents/           # 28+智能体配置文件
+│   ├── agents/           # 36+智能体配置文件
 │   │   ├── bmad-architect.md
 │   │   ├── bmad-dev.md
 │   │   ├── bmad-orchestrator.md
