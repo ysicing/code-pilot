@@ -2,7 +2,11 @@
 
 本指南介绍如何使用 BMAD Pilot 工作流，编排一组协作 AI 角色（PO/Architect/SM/Dev/QA）在仓库上下文中完成：01 产品需求文档、02 系统设计规范、03 冲刺计划，并自动进入开发与测试，整个过程包含多次用户确认门与质量评分。
 
-参考阅读：BMAD-README.md（BMAD 方法概览）、BMAD-INTEGRATION-GUIDE.md（进阶集成）。
+参考阅读：
+- **[BMAD-README.md](./BMAD-README.md)** - BMAD 方法概览
+- **[GUIDE.md](./GUIDE.md)** - 快速入门指南  
+- **[USER-MANUAL.md](./USER-MANUAL.md)** - 详细使用手册
+- **[README.md](./README.md)** - 系统完整说明
 
 ---
 

@@ -511,3 +511,10 @@ A: 使用 `/kiro-status` 获得完整项目概览
 ```bash
 /kiro 我想开发一个 [您的项目想法]
 ```
+
+## 📚 相关文档
+
+- **[GUIDE.md](./GUIDE.md)** - 快速入门指南
+- **[USER-MANUAL.md](./USER-MANUAL.md)** - 详细使用手册  
+- **[README.md](./README.md)** - 系统完整说明
+- **[BMAD-PILOT-GUIDE.md](./BMAD-PILOT-GUIDE.md)** - BMAD AI团队方法论指南

@@ -745,3 +745,12 @@ cp .claude/commands/code.md .claude/commands/api-code.md
 3. **专家用户**：自定义工作流，适应特定团队需求
 
 **请注意**：信赖质量门控，90 分标准是经过验证的。当系统提示需要改进时，通常意味着确实有改进空间。
+
+## 📚 相关文档
+
+- **[GUIDE.md](./GUIDE.md)** - 快速入门指南
+- **[README.md](./README.md)** - 系统概览说明
+- **[BMAD-PILOT-GUIDE.md](./BMAD-PILOT-GUIDE.md)** - BMAD AI团队方法论指南
+- **[KIRO-GUIDE.md](./KIRO-GUIDE.md)** - Kiro开发助手完整指南
+- **[README-en.md](./README-en.md)** - English documentation
+- **[GUIDE-EN.md](./GUIDE-EN.md)** - English quick start guide

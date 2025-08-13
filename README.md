@@ -28,14 +28,19 @@
 **现有方式**：一键自动化专家工作流与客观质量门控
 ```bash
 /requirements-pilot "实现 JWT 用户认证系统"
-# 或使用新的 BMAD AI团队流水线
+# 或使用 BMAD AI团队流水线
 /bmad-pilot "实现 JWT 用户认证系统"
+# 或使用 Kiro 结构化开发工作流
+/kiro 实现JWT用户认证系统
 # 30分钟自动执行、90%质量门控、智能测试决策
 ```
 
-## 📋 两种主要使用模式
+## 📋 三大核心工作流系统
 
-### 1. 🏭 需求驱动工作流（自动化专家团队）
+### 1. ⚡ Requirements-Pilot 快速开发工作流（推荐优先使用）
+
+**适用场景**：大多数功能开发、快速实现、原型开发、小型项目  
+**核心优势**：一键自动化、快速迭代、质量门控、简单直接
 
 **架构**：以需求为中心的工作流，配备质量门控和智能测试
 ```
@@ -47,16 +52,70 @@ requirements-generate → requirements-code → requirements-review → (✅ 就
 **使用方法**：
 ```bash
 # 一条命令完成完整开发工作流
-/requirements-pilot "构建用户管理系统，支持RBAC权限"
-# 或使用 BMAD AI团队完整流水线
-/bmad-pilot "构建用户管理系统，支持RBAC权限"
+/requirements-pilot "构建用户管理系统，支持RBAC权限" --test
 
 # 高级工作流与智能测试
 先使用 requirements-generate，然后 requirements-code，再用 requirements-review，
 如果就绪则询问用户："代码完成。执行测试？(y/n/lint)"
 ```
 
-### 2. 🎛️ 阶段化开发（手动协调）
+### 2. 🎯 Kiro 结构化开发工作流（推荐用于复杂项目）
+
+**适用场景**：多功能项目、长期开发、需要状态管理和中断恢复
+**核心优势**：项目状态感知、智能中断恢复、分阶段实施、多功能管理
+
+```bash
+# 统一入口，智能路由
+/kiro <自然语言描述>
+
+# 显式子命令
+/kiro:spec <功能名>     # 创建功能规范
+/kiro:design <功能名>   # 技术设计  
+/kiro:task <功能名>     # 任务规划
+/kiro:execute <功能名> <任务> # 执行任务
+/kiro:vibe <问题>       # 快速协助
+
+# 项目状态管理
+/kiro-status            # 查看项目状态
+/kiro-status <功能名>    # 查看特定功能
+```
+
+### 3. 🏢 BMAD AI团队协作工作流（企业级项目专用）
+
+**适用场景**：企业级项目、需要多角色协作、最高质量要求  
+**核心优势**：完整团队模拟、交互式协作、全面质量保证
+
+**架构**：模拟完整AI团队协作开发，包含产品经理、架构师、Scrum Master、开发者、QA工程师
+```
+仓库扫描 → PO需求收集 → 架构设计 → Sprint规划 → 开发实现 → QA测试 → 发布验证
+    ↑                                                                        ↓
+    ←←←←←← 交互式确认与质量门控 ←←←←←←
+```
+
+**使用方法**：
+```bash
+# 企业级完整开发流水线
+/bmad-pilot "构建用户管理系统，支持RBAC权限" --test
+
+# 高级用法
+/bmad-pilot "金融交易核心系统" --test        # 最高质量要求
+/bmad-pilot "快速UI功能" --skip-tests       # 跳过测试阶段
+/bmad-pilot "核心业务逻辑" --direct-dev     # 跳过Sprint规划
+```
+
+### 工作流选择指南
+
+| 场景 | 推荐工作流 | 原因 |
+|------|-----------|------|
+| 大多数功能开发、API实现 | ⚡ Requirements-Pilot | 快速高效、质量门控 |
+| 快速原型、Bug修复 | ⚡ Requirements-Pilot | 简单直接、快速解决 |
+| 复杂电商系统、多模块项目 | 🎯 Kiro | 状态管理、分阶段开发 |
+| 学习新技术、实验功能 | 🎯 Kiro | 中断恢复、渐进学习 |
+| 企业级系统、关键项目 | 🏢 BMAD | 全面协作、最高质量 |
+
+## 🎛️ 手动阶段化开发（高级用户）
+
+当需要精细控制开发过程时，可以使用阶段化专业工具：
 
 **架构**：针对特定阶段的专业工具
 
@@ -145,49 +204,6 @@ requirements-generate → requirements-code → requirements-review → (✅ 就
                     # - 问题的明确缓解计划
 ```
 
-## 🔧 **灵活使用模式**
-
-### 模式1：完整自动化（新功能）
-```bash
-# 单条命令处理整个工作流
-/requirements-pilot "JWT 认证与刷新令牌" --test
-# → 需求(90+) → 用户批准 → 代码 → 审查(90+) → 测试
-
-# 或使用 BMAD AI团队完整流水线
-/bmad-pilot "JWT 认证与刷新令牌" --test
-# → 仓库扫描 → PO需求收集 → 架构设计 → Sprint规划 → 开发 → QA测试
-```
-
-### 模式2：步骤式控制（复杂功能）  
-```bash
-/story-breakdown "电商结账流程"  # 分解为故事
-/ask "结账流程：微服务 vs 单体架构"  # 架构指导
-/role-debate architect vs performance "单体 vs 微服务的性能影响"  # 技术选型辩论
-/requirements-pilot "支付处理故事1"  # 逐个故事实现
-# 或使用 BMAD 团队流水线
-/bmad-pilot "支付处理系统" --direct-dev  # 跳过Sprint规划
-/review "验证支付安全性"  # 质量门控
-/release-check "支付系统"  # 生产就绪
-```
-
-### 模式3：问题驱动（Bug修复）
-```bash
-/debug "生产API超时问题"  # 系统化诊断
-/code "实现连接池修复"  # 直接修复实现  
-/release-check "更新的API服务"  # 验证生产就绪
-```
-
-### 模式4：质量优先（关键系统）
-```bash
-/story-breakdown "金融交易系统"
-/ask "金融数据的安全架构"
-/requirements-pilot "核心交易逻辑" --test
-# 或使用 BMAD 团队流水线确保最高质量
-/bmad-pilot "金融交易核心系统" --test
-/review "安全和性能验证"  
-/release-check "金融系统组件"
-```
-
 ## 🚀 快速开始
 
 ### 第一步：用户级设置（推荐）
@@ -260,9 +276,9 @@ npm install -g @anthropic-ai/claude-code
 claude --version
 ```
 
-### 第三步：首次自动化工作流
+### 第三步：选择工作流并开始使用
 
-**选项A：完整自动化（新功能推荐）**
+**选项A：完整自动化（推荐）**
 ```bash
 # 导航到你的项目目录
 cd /path/to/your/project
@@ -279,7 +295,7 @@ cd /path/to/your/project
 /requirements-pilot "快速功能实现" --skip-scan  # 跳过仓库扫描（不推荐）
 ```
 
-**选项B：Kiro 智能开发助手（新增，推荐用于结构化开发）**
+**选项B：Kiro 结构化开发工作流（推荐用于复杂项目）**
 ```bash
 # 自然语言方式 - Kiro 智能路由到最合适的专家
 /kiro 我需要开发一个用户认证系统
@@ -332,12 +348,14 @@ cd /path/to/your/project
 ```bash
 your-project/
 ├── .claude/
-│   ├── commands/          # 17个专业斜杠命令
+│   ├── commands/          # 19个专业斜杠命令
 │   │   ├── ask.md
 │   │   ├── bmad-pilot.md
 │   │   ├── bugfix.md
 │   │   ├── code.md
 │   │   ├── debug.md
+│   │   ├── kiro.md
+│   │   ├── kiro-status.md
 │   │   ├── multi-role.md
 │   │   ├── optimize.md
 │   │   ├── refactor.md
@@ -350,7 +368,7 @@ your-project/
 │   │   ├── story-breakdown.md
 │   │   ├── test.md
 │   │   └── ultrathink.md
-│   ├── agents/           # 22个智能体配置文件
+│   ├── agents/           # 25+智能体配置文件
 │   │   ├── bmad-architect.md
 │   │   ├── bmad-dev.md
 │   │   ├── bmad-orchestrator.md
@@ -361,6 +379,13 @@ your-project/
 │   │   ├── bugfix-verify.md
 │   │   ├── code.md
 │   │   ├── debug.md
+│   │   ├── kiro-assistant.md
+│   │   ├── kiro-feature-designer.md
+│   │   ├── kiro-router.md
+│   │   ├── kiro-spec-creator.md
+│   │   ├── kiro-state-manager.md
+│   │   ├── kiro-task-executor.md
+│   │   ├── kiro-task-planner.md
 │   │   ├── optimize.md
 │   │   ├── requirements-code.md
 │   │   ├── requirements-generate.md
@@ -399,7 +424,7 @@ your-project/
    code .claude/agents/requirements-generate.md
    ```
 
-## 🎯 常见使用模式
+## 🎯 技术领域应用示例
 
 ### Web应用开发
 ```bash
@@ -407,11 +432,15 @@ your-project/
 /requirements-pilot "创建响应式用户仪表板，支持暗色模式" --no-test
 # 或使用 BMAD 流水线
 /bmad-pilot "创建响应式用户仪表板，支持暗色模式" --skip-tests
+# 或使用 Kiro 结构化开发
+/kiro 创建响应式用户仪表板系统
 
 # 后端API开发  
 /requirements-pilot "构建用户管理 REST API" --test
 # 或使用 BMAD 团队协作开发
 /bmad-pilot "构建用户管理 REST API" --test
+# 或使用 Kiro 结构化开发
+/kiro 构建用户管理API系统
 
 # 全栈功能
 /story-breakdown "电商购物车与结账系统"
@@ -420,6 +449,8 @@ your-project/
 /requirements-pilot "支付集成" --test
 # 或使用 BMAD 统一流水线
 /bmad-pilot "电商购物车完整系统" --test
+# 或使用 Kiro 统一管理
+/kiro 电商购物车完整解决方案
 ```
 
 ### 数据科学项目
@@ -442,12 +473,16 @@ your-project/
 /requirements-pilot "Kubernetes部署配置" --test
 # 或使用 BMAD 团队进行基础设施开发
 /bmad-pilot "完整的容器化部署系统" --test
+# 或使用 Kiro 统一规划
+/kiro 完整的容器化部署架构
 
 # CI/CD管道
 /story-breakdown "完整CI/CD管道与测试"
 /requirements-pilot "GitHub Actions工作流" --test
 # 或使用 BMAD 流水线开发CI/CD
 /bmad-pilot "企业级CI/CD管道系统" --test
+# 或使用 Kiro 统一管理
+/kiro 企业级CI/CD自动化解决方案
 ```
 
 ## ⚠️ 故障排除
@@ -503,6 +538,7 @@ ls -la .claude/agents/
 3. **适当测试**：逻辑用`--test`，仅UI用`--no-test`
 4. **分解复杂功能**：大型项目使用`/story-breakdown`
 5. **实现前先架构**：战略决策使用`/ask`
+6. **状态管理**：复杂项目使用Kiro工作流进行状态管理
 
 ## 🔧 高级配置
 
@@ -616,6 +652,7 @@ else:
 - `/story-breakdown` - 将功能分解为可实现的用户故事
 - `/requirements-pilot` - 完整自动化需求驱动流水线
 - `/bmad-pilot` - BMAD AI团队完整开发流水线
+- `/kiro` - Kiro智能开发助手统一入口
 
 ### 🏛️ 架构与咨询  
 - `/ask` - 高级系统架构师，4专家咨询方法论
@@ -652,7 +689,6 @@ else:
 - `/ultrathink` - **重大决策专用**：MECE原则结构化深度分析，用于架构选型、技术战略等重大决策
 - `/multi-role` - 多专家并行分析
 - `/role-debate` - 专业角色间深度辩论和技术选型
-- `/screenshot` - 智能屏幕截图分析和视觉评估（仅 macOS）
 - `/search-gemini` - Gemini网络搜索获取最新信息
 
 ## 🏗️ 架构概览
@@ -734,6 +770,15 @@ else:
 2. **质量门控增强**：更好的客观测量标准  
 3. **智能测试规则**：更复杂的测试决策算法
 4. **工作流模式**：特定领域的新自动化序列
+
+## 📚 相关文档
+
+- **[GUIDE.md](./GUIDE.md)** - 快速入门指南
+- **[USER-MANUAL.md](./USER-MANUAL.md)** - 详细使用手册
+- **[BMAD-PILOT-GUIDE.md](./BMAD-PILOT-GUIDE.md)** - BMAD AI团队方法论指南
+- **[KIRO-GUIDE.md](./KIRO-GUIDE.md)** - Kiro开发助手完整指南
+- **[README-en.md](./README-en.md)** - English documentation
+- **[GUIDE-EN.md](./GUIDE-EN.md)** - English quick start guide
 
 ## 📄 许可证
 

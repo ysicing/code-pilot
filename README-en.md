@@ -28,14 +28,19 @@ This repository provides a **lightweight meta-framework for Claude Code** that i
 **After**: One-command automated expert workflows with objective quality gates
 ```bash
 /requirements-pilot "Implement JWT user authentication system"
-# Or use the new BMAD AI Team Pipeline
+# Or use BMAD AI Team Pipeline
 /bmad-pilot "Implement JWT user authentication system"
+# Or use Kiro Structured Development Workflow
+/kiro Implement JWT user authentication system
 # 30 minutes of automated execution, 90% quality gates, smart testing decisions
 ```
 
-## 📋 Two Primary Usage Patterns
+## 📋 Three Core Workflow Systems
 
-### 1. 🏭 Requirements-Driven Workflow (Automated Expert Teams)
+### 1. ⚡ Requirements-Pilot Rapid Development Workflow (Recommended Priority)
+
+**Use Cases**: Most feature development, rapid implementation, prototype development, small projects  
+**Core Advantages**: One-click automation, rapid iteration, quality gates, simple and direct
 
 **Architecture**: Requirements-focused workflow with quality gates and smart testing
 ```
@@ -47,16 +52,70 @@ requirements-generate → requirements-code → requirements-review → (✅ Rea
 **Usage**:
 ```bash
 # Complete development workflow in one command
-/requirements-pilot "Build user management system with RBAC"
-# Or use BMAD AI Team complete pipeline
-/bmad-pilot "Build user management system with RBAC"
+/requirements-pilot "Build user management system with RBAC" --test
 
 # Advanced workflow with intelligent testing
 First use requirements-generate, then requirements-code, then requirements-review, 
 then if Ready ask user: "Code complete. Run tests? (y/n/lint)"
 ```
 
-### 2. 🎛️ Stage-Based Development (Manual Orchestration)
+### 2. 🎯 Kiro Structured Development Workflow (Recommended for Complex Projects)
+
+**Use Cases**: Multi-feature projects, long-term development, requires state management and interruption recovery
+**Core Advantages**: Project state awareness, intelligent interruption recovery, phased implementation, multi-feature management
+
+```bash
+# Unified entry point with smart routing
+/kiro <natural language description>
+
+# Explicit sub-commands
+/kiro:spec <feature-name>     # Create feature specification
+/kiro:design <feature-name>   # Technical design  
+/kiro:task <feature-name>     # Task planning
+/kiro:execute <feature-name> <task> # Execute task
+/kiro:vibe <question>         # Quick assistance
+
+# Project state management
+/kiro-status            # View project status
+/kiro-status <feature-name>    # View specific feature
+```
+
+### 3. 🏢 BMAD AI Team Collaboration Workflow (Enterprise-grade Projects)
+
+**Use Cases**: Enterprise-grade projects, requires multi-role collaboration, highest quality requirements  
+**Core Advantages**: Complete team simulation, interactive collaboration, comprehensive quality assurance
+
+**Architecture**: Simulates complete AI team collaboration including Product Owner, Architect, Scrum Master, Developer, QA Engineer
+```
+Repository Scan → PO Requirements → Architecture Design → Sprint Planning → Development → QA Testing → Release Verification
+    ↑                                                                                            ↓
+    ←←←←←← Interactive Confirmation & Quality Gates ←←←←←←
+```
+
+**Usage**:
+```bash
+# Enterprise-grade complete development pipeline
+/bmad-pilot "Build user management system with RBAC" --test
+
+# Advanced usage
+/bmad-pilot "Financial trading core system" --test        # Highest quality requirements
+/bmad-pilot "Quick UI features" --skip-tests             # Skip testing phase
+/bmad-pilot "Core business logic" --direct-dev           # Skip Sprint planning
+```
+
+### Workflow Selection Guide
+
+| Scenario | Recommended Workflow | Reason |
+|----------|---------------------|--------|
+| Most feature development, API implementation | ⚡ Requirements-Pilot | Fast and efficient, quality gates |
+| Quick prototypes, Bug fixes | ⚡ Requirements-Pilot | Simple and direct, quick resolution |
+| Complex e-commerce systems, multi-module projects | 🎯 Kiro | State management, phased development |
+| Learning new technologies, experimental features | 🎯 Kiro | Interruption recovery, gradual learning |
+| Enterprise systems, critical projects | 🏢 BMAD | Comprehensive collaboration, highest quality |
+
+## 🎛️ Manual Stage-Based Development (Advanced Users)
+
+When fine-grained control over the development process is needed, use stage-specific professional tools:
 
 **Architecture**: Stage-specific tools for targeted expertise
 
@@ -145,49 +204,6 @@ then if Ready ask user: "Code complete. Run tests? (y/n/lint)"
                     # - Clear mitigation plans for issues
 ```
 
-## 🔧 **Flexible Usage Patterns**
-
-### Pattern 1: Complete Automation (New Features)
-```bash
-# Single command handles entire workflow
-/requirements-pilot "JWT authentication with refresh tokens" --test
-# → Requirements(90+) → User approval → Code → Review(90+) → Testing
-
-# Or use BMAD AI Team complete pipeline
-/bmad-pilot "JWT authentication with refresh tokens" --test
-# → Repository scan → PO requirements → Architecture design → Sprint planning → Development → QA testing
-```
-
-### Pattern 2: Step-by-Step Control (Complex Features)  
-```bash
-/story-breakdown "E-commerce checkout flow"  # Break into stories
-/ask "Microservices vs monolith for checkout"  # Architecture guidance
-/role-debate architect vs performance "Performance impact of monolith vs microservices"  # Technical debate
-/requirements-pilot "Payment processing story 1"  # Implement story by story
-# Or use BMAD team pipeline
-/bmad-pilot "Payment processing system" --direct-dev  # Skip Sprint planning
-/review "Validate payment security"  # Quality gates
-/release-check "Payment system"  # Production readiness
-```
-
-### Pattern 3: Problem-Driven (Bug Fixes)
-```bash
-/debug "Production API timeout issues"  # Systematic diagnosis
-/code "Implement connection pooling fix"  # Direct fix implementation  
-/release-check "Updated API service"  # Verify production readiness
-```
-
-### Pattern 4: Quality-First (Critical Systems)
-```bash
-/story-breakdown "Financial transaction system"
-/ask "Security architecture for financial data"
-/requirements-pilot "Core transaction logic" --test
-# Or use BMAD team pipeline for highest quality assurance
-/bmad-pilot "Financial transaction core system" --test
-/review "Security and performance validation"  
-/release-check "Financial system components"
-```
-
 ## 🚀 Quick Start
 
 ### Step 1: User-Level Setup (Recommended)
@@ -260,9 +276,9 @@ npm install -g @anthropic-ai/claude-code
 claude --version
 ```
 
-### Step 3: Your First Automated Workflow
+### Step 3: Choose Workflow and Start Using
 
-**Option A: Complete Automation (Recommended for New Features)**
+**Option A: Complete Automation (Recommended)**
 ```bash
 # Navigate to your project directory
 cd /path/to/your/project
@@ -390,7 +406,7 @@ your-project/
    code .claude/agents/requirements-generate.md
    ```
 
-## 🎯 Common Usage Patterns
+## 🎯 Technical Domain Application Examples
 
 ### For Web Applications
 ```bash
@@ -725,6 +741,15 @@ This is a Claude Code configuration framework focused on **lightweight quality g
 2. **Quality Gate Enhancements**: Better objective measurement criteria  
 3. **Smart Testing Rules**: More sophisticated testing decision algorithms
 4. **Workflow Patterns**: New automation sequences for specific domains
+
+## 📚 Related Documentation
+
+- **[GUIDE-EN.md](./GUIDE-EN.md)** - Quick start guide
+- **[USER-MANUAL.md](./USER-MANUAL.md)** - Detailed user manual
+- **[BMAD-PILOT-GUIDE.md](./BMAD-PILOT-GUIDE.md)** - BMAD AI Team methodology guide
+- **[KIRO-GUIDE.md](./KIRO-GUIDE.md)** - Kiro development assistant complete guide
+- **[README.md](./README.md)** - Chinese documentation
+- **[GUIDE.md](./GUIDE.md)** - Chinese quick start guide
 
 ## 📄 License
 

@@ -1,22 +1,19 @@
 # Claude Code 智能体快速入门指南
 
-> 本指南帮助你在5分钟内掌握核心功能。详细使用手册请参考 [user-manual.md](./user-manual.md)
+> 5分钟掌握核心功能。详细使用手册请参考 [USER-MANUAL.md](./USER-MANUAL.md)
 
 ## ⚡ 一分钟极速上手
 
 ### 第一条命令
 ```bash
-# 这一条命令就能实现从需求到代码的完整流程
+# 这一条命令就能实现从需求到代码的完整流程（推荐优先使用）
 /requirements-pilot "实现用户注册功能，支持邮箱验证"
 
 # 或者使用 BMAD AI团队完整开发流水线
 /bmad-pilot "实现用户注册功能，支持邮箱验证"
 
-# 或者使用新的 Kiro 智能开发助手（推荐用于复杂项目）
+# 或者使用 Kiro 智能开发助手（推荐用于复杂项目）
 /kiro 我需要实现用户注册功能，支持邮箱验证
-
-# 推荐优先使用 Requirements-Pilot（大多数情况）
-/requirements-pilot "实现用户注册功能，支持邮箱验证"
 ```
 
 系统会自动：
@@ -64,34 +61,6 @@
 /bmad-pilot "功能描述" --skip-tests   # 跳过测试阶段
 ```
 
-### 5. `/ask` - 技术咨询
-**使用场景**：不确定怎么做的时候
-```bash
-/ask "React vs Vue 选择建议"
-/ask "微服务架构最佳实践"
-```
-
-### 6. `/bugfix` - 错误修复  
-**使用场景**：系统有问题需要修复
-```bash
-/bugfix "用户登录后页面空白"
-/bugfix "API响应时间过长"
-```
-
-### 7. `/story-breakdown` - 功能分解
-**使用场景**：功能太复杂，需要拆分
-```bash
-/story-breakdown "完整的电商系统"
-/story-breakdown "用户权限管理系统"
-```
-
-### 8. `/review` - 代码审查
-**使用场景**：检查代码质量
-```bash
-/review "登录模块"
-/review "整个用户管理系统"
-```
-
 ## 🎯 工作流选择指南
 
 ### 模式1：快速开发（推荐优先）
@@ -123,48 +92,28 @@
 /kiro:execute "功能名" "任务"   # 第六步：逐步实现
 ```
 
-## 🛠️ 专业工具命令
+## 🛠️ 常用专业工具命令
 
-### 开发专用命令
-```bash
-/debug "任务描述"      # UltraThink 调试分析
-/optimize "性能目标"   # 性能优化专家
-/refactor "代码范围"   # 安全渐进式重构与SOLID原则评估
-/test "组件或功能"     # 智能测试策略
-/release-check "系统"  # 生产就绪验证
-```
-
-### macOS 专用：`/screenshot` 
-智能截图分析（仅支持 macOS）
-```bash
-/screenshot --window  # 选择窗口
-/screenshot --full    # 全屏截图  
-/screenshot --crop    # 选择范围
-```
+### 核心开发命令
+- `/ask` - 技术咨询，4专家方法论
+- `/story-breakdown` - 复杂功能分解
+- `/bugfix` - 系统化错误修复，智能识别前端修复
+- `/code` - 直接功能实现
+- `/refactor` - 安全渐进式重构与SOLID原则评估
+- `/review` - 多维度代码审查
+- `/test` - 智能测试策略
+- `/optimize` - 性能优化专家
+- `/release-check` - 生产就绪验证
+- `/debug` - UltraThink 调试分析
 
 ### 高级分析命令
-```bash
-/ultrathink "复杂问题"  # MECE 原则结构化深度分析
-/multi-role architect,security "分析目标"  # 多专家并行分析
-/role-debate security vs performance "JWT vs Session认证"  # 专业角色深度辩论
-/search-gemini "搜索查询"  # Gemini网络搜索获取最新信息
-```
+- `/ultrathink` - **重大决策专用**：MECE原则结构化深度分析
+- `/multi-role` - 多专家并行分析
+- `/role-debate` - 专业角色深度辩论和技术选型
+- `/search-gemini` - Gemini网络搜索获取最新信息
 
-### BMAD 专业智能体
-```bash
-# 产品和业务分析
-/bmad-po "需求描述"        # 产品负责人：需求分析、用户故事
-/bmad-analyst "分析主题"   # 业务分析师：市场研究、竞争分析
-
-# 技术架构和开发
-/bmad-architect "系统设计需求"  # 系统架构师：技术架构、系统设计
-/bmad-sm "冲刺规划需求"         # 敏捷教练：任务分解、冲刺规划
-/bmad-dev "开发任务描述"        # 开发工程师：代码实现、技术文档
-/bmad-qa "测试需求描述"         # 质量保证：测试策略、质量验证
-
-# 主编排器
-/bmad-orchestrator "复杂项目协调"  # 工作流协调、多智能体任务管理
-```
+### macOS 专用命令
+- `/screenshot` - 智能截图分析（支持 --window、--full、--crop）
 
 ## ⚠️ 快速故障排除
 
@@ -201,7 +150,7 @@
 ## 📚 进阶学习
 
 完整功能和详细案例请参考：
-- **[user-manual.md](./user-manual.md)** - 详细使用手册
+- **[USER-MANUAL.md](./USER-MANUAL.md)** - 详细使用手册
 - **[README.md](./README.md)** - 完整系统说明
 - **[README-en.md](./README-en.md)** - English documentation
 
