@@ -283,7 +283,24 @@ cd /path/to/your/project
 /bmad-pilot "Add UI theme switcher" --skip-tests --direct-dev  # Fast development
 ```
 
-**Option B: Step-by-Step Control (For Complex Features)**
+**Option B: Kiro Smart Development Assistant (New, Recommended for Structured Development)**
+```bash
+# Natural language approach - Kiro intelligently routes to the most appropriate expert
+/kiro I need to develop a user authentication system
+
+# Or use explicit modes
+/kiro spec user-authentication         # Create complete specification
+/kiro design user-authentication       # Technical design
+/kiro task user-authentication         # Task planning
+/kiro execute user-authentication 1.1  # Execute specific task
+/kiro vibe How to optimize login performance?  # Quick consultation
+
+# Project status management
+/kiro-status                           # View project overview
+/kiro-status user-authentication       # View specific feature status
+```
+
+**Option C: Step-by-Step Control (For Complex Features)**
 ```bash
 # Requirements analysis first
 /story-breakdown "User management system with RBAC permissions"
@@ -610,6 +627,17 @@ Proportional testing based on change impact:
 ### 🚀 Operations & Deployment
 - `/optimize` - Performance optimization coordination
 - `/release-check` - Production readiness verification with go/no-go decisions
+
+### 🤖 Kiro Smart Development Assistant
+- `/kiro` - Smart routing unified entry point with natural language and explicit mode support
+- `/kiro-status` - Project status management, workflow control, and quick operations
+
+#### Kiro Sub-commands (can be used independently)
+- `/kiro spec` - Create complete feature specifications (requirements→design→tasks)
+- `/kiro design` - Research-based feature design and technical architecture
+- `/kiro task` - Convert designs into executable task lists
+- `/kiro execute` - Focused execution of specific task implementations
+- `/kiro vibe` - Quick development assistance and technical consultation
 
 ### 🧠 Advanced Analysis
 - `/ultrathink` - **For Major Decisions**: MECE principle structured deep analysis for architecture selection, technical strategy, and strategic planning

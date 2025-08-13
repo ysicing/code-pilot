@@ -11,6 +11,9 @@
 
 # 或者使用 BMAD AI团队完整开发流水线
 /bmad-pilot "实现用户注册功能，支持邮箱验证"
+
+# 或者使用新的 Kiro 智能开发助手（推荐用于结构化开发）
+/kiro 我需要实现用户注册功能，支持邮箱验证
 ```
 
 系统会自动：
@@ -24,7 +27,7 @@
 - **从简单开始**：不确定用什么命令时，先用 `/ask` 咨询
 - **一步步来**：复杂功能先用 `/story-breakdown` 分解
 
-## 🔥 最常用的6个命令
+## 🔥 最常用的8个命令
 
 ### 1. `/requirements-pilot` - 快速自动化命令
 **使用场景**：快速实现新功能
@@ -34,7 +37,26 @@
 /requirements-pilot "UI更新" --no-test # 纯UI不需要测试
 ```
 
-### 2. `/bmad-pilot` - 团队协作命令
+### 2. `/kiro` - 智能开发助手（新增推荐）
+**使用场景**：结构化功能开发，支持自然语言和项目状态管理
+```bash
+/kiro 我想开发一个购物车功能          # 智能路由到合适专家
+/kiro spec 用户认证系统              # 创建完整规范
+/kiro design 支付模块                # 技术设计
+/kiro task 订单管理                  # 任务规划
+/kiro execute shopping-cart 1.1      # 执行特定任务
+/kiro vibe 如何优化数据库查询性能？    # 快速咨询
+```
+
+### 3. `/kiro-status` - 项目状态管理（新增推荐）
+**使用场景**：查看项目进度，管理多功能开发
+```bash
+/kiro-status                        # 查看所有功能开发状态
+/kiro-status shopping-cart          # 查看特定功能详细状态
+/kiro-status --detailed             # 详细状态报告
+```
+
+### 4. `/bmad-pilot` - 团队协作命令
 **使用场景**：复杂功能需要完整团队协作开发
 ```bash
 /bmad-pilot "功能描述"                # 完整AI团队协作开发
@@ -43,28 +65,28 @@
 /bmad-pilot "功能描述" --skip-tests   # 跳过测试阶段
 ```
 
-### 3. `/ask` - 技术咨询
+### 5. `/ask` - 技术咨询
 **使用场景**：不确定怎么做的时候
 ```bash
 /ask "React vs Vue 选择建议"
 /ask "微服务架构最佳实践"
 ```
 
-### 4. `/bugfix` - 错误修复  
+### 6. `/bugfix` - 错误修复  
 **使用场景**：系统有问题需要修复
 ```bash
 /bugfix "用户登录后页面空白"
 /bugfix "API响应时间过长"
 ```
 
-### 5. `/story-breakdown` - 功能分解
+### 7. `/story-breakdown` - 功能分解
 **使用场景**：功能太复杂，需要拆分
 ```bash
 /story-breakdown "完整的电商系统"
 /story-breakdown "用户权限管理系统"
 ```
 
-### 6. `/review` - 代码审查
+### 8. `/review` - 代码审查
 **使用场景**：检查代码质量
 ```bash
 /review "登录模块"

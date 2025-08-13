@@ -59,7 +59,7 @@
 /requirements-pilot <功能描述> [--test|--no-test|--skip-scan]
 ```
 
-### 核心命令（13个）
+### 核心命令（16个）
 - `/ask <技术问题>` - 高级系统架构师咨询
 - `/story-breakdown <功能描述>` - 复杂功能分解
 - `/requirements-pilot <功能描述> [--test|--no-test|--skip-scan]` - 自动化需求驱动开发流水线
@@ -73,6 +73,8 @@
 - `/test <组件或功能>` - 智能测试策略
 - `/release-check <组件或系统>` - 生产就绪验证
 - `/screenshot [--window|--full|--crop]` - 智能屏幕截图分析（仅 macOS）
+- `/kiro <模式或查询>` - Kiro 智能开发助手统一入口
+- `/kiro-status [动作]` - Kiro 项目状态管理和快捷操作
 
 ### 高级分析命令（4个）
 - `/ultrathink <复杂问题>` - MECE 原则结构化深度分析
@@ -115,7 +117,18 @@
 # 智能前端bug修复（多层次自动检测v2.0）
 /bugfix 按钮点击无响应问题
 /bugfix Cannot access 'refetchAIReview' before initialization
-/bugfix useGetPullRequestInfo.ts中的Hook时序错误
+
+# Kiro 智能开发助手
+/kiro 我想开发一个用户认证系统
+/kiro spec 电商购物车功能
+/kiro design 支付系统
+/kiro task 用户管理模块
+/kiro execute shopping-cart 1.1
+/kiro vibe 如何优化这个函数的性能？
+
+# Kiro 项目管理
+/kiro-status
+/kiro-status shopping-cart --detailed
 
 # BMAD AI团队完整开发流水线
 /bmad-pilot "构建用户认证系统" --test

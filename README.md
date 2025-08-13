@@ -277,13 +277,39 @@ cd /path/to/your/project
 /requirements-pilot "构建电商购物车系统" --test
 /requirements-pilot "添加UI主题切换器" --no-test  # 仅UI变更
 /requirements-pilot "快速功能实现" --skip-scan  # 跳过仓库扫描（不推荐）
+```
 
+**选项B：Kiro 智能开发助手（新增，推荐用于结构化开发）**
+```bash
+# 自然语言方式 - Kiro 智能路由到最合适的专家
+/kiro 我需要开发一个用户认证系统
+
+# 或者使用显式模式
+/kiro spec 用户认证系统        # 创建完整规范
+/kiro design 用户认证系统      # 技术设计
+/kiro task 用户认证系统        # 任务规划
+/kiro execute 用户认证系统 1.1 # 执行特定任务
+/kiro vibe 如何优化登录性能？   # 快速咨询
+
+# 项目状态管理
+/kiro-status                   # 查看项目概览
+/kiro-status 用户认证系统       # 查看特定功能状态
+```
+
+**选项C：阶段化控制（复杂功能）**
+```bash
 # BMAD 高级用法
 /bmad-pilot "构建电商购物车系统" --test
 /bmad-pilot "添加UI主题切换器" --skip-tests --direct-dev  # 快速开发
+
+# 手动分步控制
+/ask "如何设计微服务架构？"
+/code "实现用户认证中间件"
+/test "测试认证逻辑"
+/review "审查安全实现"
 ```
 
-**选项B：步骤式控制（复杂功能推荐）**
+**选项D：步骤式控制（复杂功能推荐）**
 ```bash
 # 需求分析优先
 /story-breakdown "用户管理系统，支持RBAC权限"
@@ -610,6 +636,17 @@ else:
 ### 🚀 运维与部署
 - `/optimize` - 性能优化协调
 - `/release-check` - 生产就绪验证，go/no-go决策
+
+### 🤖 Kiro 智能开发助手
+- `/kiro` - 智能路由统一入口，支持自然语言和显式模式调用
+- `/kiro-status` - 项目状态管理、工作流控制和快捷操作
+
+#### Kiro 子命令（可独立使用）
+- `/kiro spec` - 创建完整功能规范（需求→设计→任务）
+- `/kiro design` - 基于研究的功能设计和技术架构
+- `/kiro task` - 将设计转换为可执行任务列表
+- `/kiro execute` - 聚焦执行特定任务实现
+- `/kiro vibe` - 快速开发协助和技术咨询
 
 ### 🧠 高级分析
 - `/ultrathink` - **重大决策专用**：MECE原则结构化深度分析，用于架构选型、技术战略等重大决策
