@@ -1,5 +1,5 @@
 ## 使用方法
-`/kiro execute [FEATURE_NAME] [TASK_DESCRIPTION_OR_NUMBER]`
+`/kiro:execute [FEATURE_NAME] [TASK_DESCRIPTION_OR_NUMBER]`
 
 ## 上下文
 - 功能名称和任务描述：$ARGUMENTS

@@ -70,7 +70,7 @@ config: kiro/shared-config.md
 ✅ 技术约束和偏好
 
 下一步建议：开始技术设计和架构规划
-🎨 快捷命令：/kiro design 用户认证系统
+🎨 快捷命令：/kiro:design 用户认证系统
 
 或者您想要：
 📝 继续完善需求

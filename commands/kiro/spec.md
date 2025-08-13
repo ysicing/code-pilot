@@ -1,5 +1,5 @@
 ## 使用方法
-`/kiro spec [FEATURE_NAME_OR_IDEA]`
+`/kiro:spec [FEATURE_NAME_OR_IDEA]`
 
 ## 上下文
 - 功能名称或粗略想法：$ARGUMENTS

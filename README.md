@@ -285,11 +285,11 @@ cd /path/to/your/project
 /kiro 我需要开发一个用户认证系统
 
 # 或者使用显式模式
-/kiro spec 用户认证系统        # 创建完整规范
-/kiro design 用户认证系统      # 技术设计
-/kiro task 用户认证系统        # 任务规划
-/kiro execute 用户认证系统 1.1 # 执行特定任务
-/kiro vibe 如何优化登录性能？   # 快速咨询
+/kiro:spec 用户认证系统        # 创建完整规范
+/kiro:design 用户认证系统      # 技术设计
+/kiro:task 用户认证系统        # 任务规划
+/kiro:execute 用户认证系统 1.1 # 执行特定任务
+/kiro:vibe 如何优化登录性能？   # 快速咨询
 
 # 项目状态管理
 /kiro-status                   # 查看项目概览
@@ -642,11 +642,11 @@ else:
 - `/kiro-status` - 项目状态管理、工作流控制和快捷操作
 
 #### Kiro 子命令（可独立使用）
-- `/kiro spec` - 创建完整功能规范（需求→设计→任务）
-- `/kiro design` - 基于研究的功能设计和技术架构
-- `/kiro task` - 将设计转换为可执行任务列表
-- `/kiro execute` - 聚焦执行特定任务实现
-- `/kiro vibe` - 快速开发协助和技术咨询
+- `/kiro:spec` - 创建完整功能规范（需求→设计→任务）
+- `/kiro:design` - 基于研究的功能设计和技术架构
+- `/kiro:task` - 将设计转换为可执行任务列表
+- `/kiro:execute` - 聚焦执行特定任务实现
+- `/kiro:vibe` - 快速开发协助和技术咨询
 
 ### 🧠 高级分析
 - `/ultrathink` - **重大决策专用**：MECE原则结构化深度分析，用于架构选型、技术战略等重大决策

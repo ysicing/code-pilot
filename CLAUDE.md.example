@@ -53,17 +53,57 @@
 
 ## 智能体工作流系统
 
-### 主要工作流：`/requirements-pilot`
-自动化需求到代码的完整流程：
+### 三大核心工作流
+
+#### 1. ⚡ Requirements-Pilot 快速开发工作流（推荐优先使用）
+**适用场景**：大多数功能开发、快速实现、原型开发、小型项目
+**核心优势**：一键自动化、快速迭代、质量门控、简单直接
+
 ```bash
 /requirements-pilot <功能描述> [--test|--no-test|--skip-scan]
 ```
 
-### 核心命令（16个）
+#### 2. 🎯 Kiro 结构化开发工作流（推荐用于复杂项目）
+**适用场景**：多功能项目、长期开发、需要状态管理和中断恢复
+**核心优势**：项目状态感知、智能中断恢复、分阶段实施、多功能管理
+
+```bash
+# 统一入口，智能路由
+/kiro <自然语言描述>
+
+# 显式子命令
+/kiro:spec <功能名>     # 创建功能规范
+/kiro:design <功能名>   # 技术设计  
+/kiro:task <功能名>     # 任务规划
+/kiro:execute <功能名> <任务> # 执行任务
+/kiro:vibe <问题>       # 快速协助
+
+# 项目状态管理
+/kiro-status            # 查看项目状态
+/kiro-status <功能名>    # 查看特定功能
+```
+
+#### 3. 🏢 BMAD AI团队协作工作流（企业级项目专用）
+**适用场景**：企业级项目、需要多角色协作、最高质量要求
+**核心优势**：完整团队模拟、交互式协作、全面质量保证
+
+```bash
+/bmad-pilot <项目描述> [--test|--skip-tests|--direct-dev]
+```
+
+### 工作流选择指南
+
+| 场景 | 推荐工作流 | 原因 |
+|------|-----------|------|
+| 大多数功能开发、API实现 | ⚡ Requirements-Pilot | 快速高效、质量门控 |
+| 快速原型、Bug修复 | ⚡ Requirements-Pilot | 简单直接、快速解决 |
+| 复杂电商系统、多模块项目 | 🎯 Kiro | 状态管理、分阶段开发 |
+| 学习新技术、实验功能 | 🎯 Kiro | 中断恢复、渐进学习 |
+| 企业级系统、关键项目 | 🏢 BMAD | 全面协作、最高质量 |
+
+### 专业工具命令（12个）
 - `/ask <技术问题>` - 高级系统架构师咨询
 - `/story-breakdown <功能描述>` - 复杂功能分解
-- `/requirements-pilot <功能描述> [--test|--no-test|--skip-scan]` - 自动化需求驱动开发流水线
-- `/bmad-pilot <项目描述> [选项]` - BMAD AI团队完整开发流水线
 - `/bugfix <错误描述>` - 系统化缺陷解决，智能识别前端修复并自动简化验证
 - `/code <功能描述>` - 直接功能实现
 - `/debug <任务描述>` - UltraThink 调试分析
@@ -73,8 +113,6 @@
 - `/test <组件或功能>` - 智能测试策略
 - `/release-check <组件或系统>` - 生产就绪验证
 - `/screenshot [--window|--full|--crop]` - 智能屏幕截图分析（仅 macOS）
-- `/kiro <模式或查询>` - Kiro 智能开发助手统一入口
-- `/kiro-status [动作]` - Kiro 项目状态管理和快捷操作
 
 ### 高级分析命令（4个）
 - `/ultrathink <复杂问题>` - MECE 原则结构化深度分析
@@ -93,6 +131,62 @@
 - **refactorer** - 重构专家，专注SOLID原则和代码质量改进
 
 ### 使用示例
+
+#### ⚡ Requirements-Pilot 快速开发演示
+
+```bash
+# 场景：大多数功能开发（推荐优先使用）
+
+# 基础功能开发
+/requirements-pilot "JWT用户认证API，支持注册登录退出" --test
+/requirements-pilot "电商购物车功能" --test         # 业务逻辑需要测试
+/requirements-pilot "用户界面优化" --no-test       # 纯UI改进
+/requirements-pilot "支付集成模块"                 # 让系统智能决定
+
+# 复杂功能示例
+/requirements-pilot "用户权限管理系统，支持角色分配" --test
+/requirements-pilot "订单状态流转，支持退款和售后" --test
+/requirements-pilot "实时聊天功能，支持文件传输" --test
+
+# 系统自动完成：需求分析 → 代码实现 → 质量审查 → 测试
+# 适合：大多数功能、快速原型、Bug修复、单一模块开发
+```
+
+#### 🎯 Kiro 结构化开发工作流演示
+
+```bash
+# 场景：复杂多模块项目
+
+# 统一入口开始
+/kiro 我想开发一个电商系统，包含用户、商品、订单管理
+
+# 分阶段开发
+/kiro:design ecommerce-system    # 技术设计
+/kiro:task ecommerce-system      # 任务规划  
+/kiro:execute ecommerce-system 1.1  # 逐步执行
+
+# 项目状态管理
+/kiro-status                     # 查看整体进度
+/kiro-status ecommerce-system --detailed  # 查看详细状态
+
+# 适合：多功能项目、长期开发、状态管理需求
+```
+
+#### 🏢 BMAD 团队协作演示
+
+```bash
+# 场景：企业级关键系统
+
+/bmad-pilot "企业级订单管理系统" --test
+/bmad-pilot "金融交易核心系统" --test
+/bmad-pilot "大型CRM客户管理平台" --test
+
+# 模拟完整AI团队协作开发
+# 适合：关键系统、复杂项目、最高质量要求
+```
+
+#### 专业工具组合使用
+
 ```bash
 # 单一专家深度分析
 /ultrathink 微服务架构的选择策略
@@ -117,23 +211,6 @@
 # 智能前端bug修复（多层次自动检测v2.0）
 /bugfix 按钮点击无响应问题
 /bugfix Cannot access 'refetchAIReview' before initialization
-
-# Kiro 智能开发助手
-/kiro 我想开发一个用户认证系统
-/kiro spec 电商购物车功能
-/kiro design 支付系统
-/kiro task 用户管理模块
-/kiro execute shopping-cart 1.1
-/kiro vibe 如何优化这个函数的性能？
-
-# Kiro 项目管理
-/kiro-status
-/kiro-status shopping-cart --detailed
-
-# BMAD AI团队完整开发流水线
-/bmad-pilot "构建用户认证系统" --test
-/bmad-pilot "实现电商购物车功能" --skip-tests
-/bmad-pilot "创建API网关服务" --direct-dev
 ```
 
 ## 智能自动化系统

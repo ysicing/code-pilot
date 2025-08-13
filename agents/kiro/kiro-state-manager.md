@@ -230,7 +230,7 @@ function generateRecoveryOptions(status) {
     options.push({
       action: 'continue_design',
       description: `继续完成${status.feature_name}的设计`,
-      command: `/kiro design ${status.feature_slug} --continue`
+      command: `/kiro:design ${status.feature_slug} --continue`
     });
   }
   

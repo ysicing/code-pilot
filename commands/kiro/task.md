@@ -1,5 +1,5 @@
 ## 使用方法
-`/kiro task [FEATURE_NAME]`
+`/kiro:task [FEATURE_NAME]`
 
 ## 上下文
 - 功能名称：$ARGUMENTS

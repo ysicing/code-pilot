@@ -21,7 +21,7 @@ config: kiro/shared-config.md
 ```bash
 # 1. 检查前置条件
 确保需求文档存在于 `.kiro/specs/{feature_name}/requirements.md`
-如果缺失，建议用户先使用 `/kiro spec` 创建需求
+如果缺失，建议用户先使用 `/kiro:spec` 创建需求
 
 # 2. 读取项目上下文
 加载用户偏好和技术栈选择

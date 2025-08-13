@@ -25,7 +25,7 @@ color: cyan
 
 **场景 1：全新功能**
 - 提示用户先创建需求文档
-- 建议使用 `/kiro spec` 命令
+- 建议使用 `/kiro:spec` 命令
 - 或者协助快速梳理基本需求
 
 **场景 2：需求已完成**  
@@ -57,7 +57,7 @@ color: cyan
 1. 更新项目状态为 "design_completed"
 2. 生成设计摘要供后续 agents 使用
 3. 建议下一步操作："准备好创建实施任务了吗？"
-4. 提供快捷命令：`/kiro task {feature_name}`
+4. 提供快捷命令：`/kiro:task {feature_name}`
 ```
 
 ### 用户体验改进
@@ -65,7 +65,7 @@ color: cyan
 #### 智能恢复对话
 ```markdown
 示例对话：
-User: "/kiro design 用户认证系统"
+User: "/kiro:design 用户认证系统"
 
 Kiro: "我看到您已经有了用户认证系统的需求文档，很好！
 我注意到您偏好使用 Node.js + React 技术栈。

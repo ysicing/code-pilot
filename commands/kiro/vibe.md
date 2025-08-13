@@ -1,5 +1,5 @@
 ## 使用方法
-`/kiro vibe [QUESTION_OR_QUERY]`
+`/kiro:vibe [QUESTION_OR_QUERY]`
 
 ## 上下文
 - 问题或疑问：$ARGUMENTS

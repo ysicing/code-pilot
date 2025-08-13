@@ -21,18 +21,18 @@
 
 ### 工作流控制
 ```bash
-/kiro-continue                 # 继续上次中断的工作
-/kiro-continue user-auth       # 继续特定功能的工作
-/kiro-switch payment-system    # 切换到其他功能
-/kiro-reset user-auth design   # 重置特定阶段
+/kiro-status continue                 # 继续上次中断的工作
+/kiro-status continue user-auth       # 继续特定功能的工作
+/kiro-status switch payment-system    # 切换到其他功能
+/kiro-status reset user-auth design   # 重置特定阶段
 ```
 
 ### 快捷操作
 ```bash
-/kiro-next                     # 执行建议的下一步操作
-/kiro-next user-auth          # 特定功能的下一步
-/kiro-help user-auth          # 获取功能相关帮助
-/kiro-clean                   # 清理临时文件和状态
+/kiro-status next                     # 执行建议的下一步操作
+/kiro-status next user-auth          # 特定功能的下一步
+/kiro-status help user-auth          # 获取功能相关帮助
+/kiro-status clean                   # 清理临时文件和状态
 ```
 
 ## 状态展示格式
@@ -50,9 +50,9 @@
 ⏳ 消息通知        [未开始] → 建议: 开始需求分析
 
 快捷操作:
-• /kiro task user-auth    (创建认证系统任务)
-• /kiro spec payment     (继续支付系统规范)
-• /kiro status --help    (查看更多选项)
+1. /kiro:task user-auth     (创建认证系统任务)
+2. /kiro:spec payment     (继续支付系统规范)
+3. /kiro-status --help    (查看更多选项)
 ```
 
 ### 详细功能状态
@@ -80,9 +80,9 @@
 ⏳ tasks.md        (待创建)
 
 建议操作:
-1. /kiro task user-auth     (创建实施任务列表)
-2. /kiro design --review    (重新审查设计)
-3. /kiro switch payment     (切换到支付系统)
+1. /kiro:task user-auth     (创建实施任务列表)
+2. /kiro:design --review    (重新审查设计)
+3. /kiro-status switch payment     (切换到支付系统)
 ```
 
 ## 智能建议系统
@@ -95,13 +95,13 @@ def generate_suggestions(project_state):
     for feature in project_state.features:
         if feature.phase == "requirements_completed":
             suggestions.append({
-                "action": f"/kiro design {feature.name}",
+                "action": f"/kiro:design {feature.name}",
                 "description": f"为{feature.name}创建技术设计",
                 "priority": "high"
             })
         elif feature.phase == "design_completed":
             suggestions.append({
-                "action": f"/kiro task {feature.name}", 
+                "action": f"/kiro:task {feature.name}", 
                 "description": f"规划{feature.name}的实施任务",
                 "priority": "medium"
             })
@@ -120,10 +120,10 @@ def generate_suggestions(project_state):
 中断时间: 2小时前
 
 恢复选项:
-1. 继续完成设计 (/kiro continue)
-2. 重新开始设计 (/kiro design user-auth --restart)
-3. 切换到其他工作 (/kiro switch)
-4. 查看已完成部分 (/kiro status user-auth --detailed)
+1. 继续完成设计 (/kiro-status continue)
+2. 重新开始设计 (/kiro:design user-auth --restart)
+3. 切换到其他工作 (/kiro-status switch)
+4. 查看已完成部分 (/kiro-status user-auth --detailed)
 
 建议: 继续完成设计，只剩下错误处理部分了 👍"
 ```
@@ -132,21 +132,21 @@ def generate_suggestions(project_state):
 
 ### 工作流模板
 ```bash
-/kiro-template web-app         # 使用Web应用模板
-/kiro-template api-service     # 使用API服务模板  
-/kiro-template mobile-app      # 使用移动应用模板
+/kiro-status template web-app         # 使用Web应用模板
+/kiro-status template api-service     # 使用API服务模板  
+/kiro-status template mobile-app      # 使用移动应用模板
 ```
 
 ### 批量操作
 ```bash
-/kiro-batch "spec user-auth; design user-auth; task user-auth"
-/kiro-export user-auth         # 导出功能完整文档
-/kiro-import feature.zip       # 导入现有功能规范
+/kiro-status batch "spec user-auth; design user-auth; task user-auth"
+/kiro-status export user-auth         # 导出功能完整文档
+/kiro-status import feature.zip       # 导入现有功能规范
 ```
 
 ### 团队协作
 ```bash
-/kiro-share user-auth          # 生成功能分享链接
-/kiro-merge feature-branch     # 合并其他分支的更改
-/kiro-diff user-auth v1 v2     # 比较不同版本
+/kiro-status share user-auth          # 生成功能分享链接
+/kiro-status merge feature-branch     # 合并其他分支的更改
+/kiro-status diff user-auth v1 v2     # 比较不同版本
 ```

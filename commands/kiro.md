@@ -25,11 +25,11 @@
 
 **备选调用方式：**
 用户也可以直接使用独立的子命令：
-- `/kiro spec [feature]` - 直接创建功能规范
-- `/kiro design [feature]` - 直接进行功能设计  
-- `/kiro task [feature]` - 直接规划任务
-- `/kiro execute [feature] [task]` - 直接执行任务
-- `/kiro vibe [query]` - 直接快速协助
+- `/kiro:spec [feature]` - 直接创建功能规范
+- `/kiro:design [feature]` - 直接进行功能设计  
+- `/kiro:task [feature]` - 直接规划任务
+- `/kiro:execute [feature] [task]` - 直接执行任务
+- `/kiro:vibe [query]` - 直接快速协助
 
 **自然语言模式：**
 - 分析用户的自然语言描述
@@ -207,14 +207,14 @@ def generate_smart_suggestions(project_state):
         if feature.phase == "requirements_completed":
             suggestions.append({
                 "text": f"为 {feature.name} 创建技术设计",
-                "command": f"/kiro design {feature.slug}",
+                "command": f"/kiro:design {feature.slug}",
                 "priority": "high",
                 "icon": "🎨"
             })
         elif feature.phase == "design_completed":
             suggestions.append({
                 "text": f"规划 {feature.name} 的实施任务", 
-                "command": f"/kiro task {feature.slug}",
+                "command": f"/kiro:task {feature.slug}",
                 "priority": "medium",
                 "icon": "📝"
             })
@@ -237,11 +237,11 @@ if routing_failed:
     return """
     🤔 我不太确定您想要做什么。让我为您提供一些选项：
     
-    📋 创建新功能规范: /kiro spec [功能名]
-    🎨 设计功能架构: /kiro design [功能名]  
-    📝 规划实施任务: /kiro task [功能名]
-    ⚡ 执行具体任务: /kiro execute [功能名] [任务]
-    🔍 查看项目状态: /kiro status
+    📋 创建新功能规范: /kiro:spec [功能名]
+    🎨 设计功能架构: /kiro:design [功能名]  
+    📝 规划实施任务: /kiro:task [功能名]
+    ⚡ 执行具体任务: /kiro:execute [功能名] [任务]
+    🔍 查看项目状态: /kiro-status
     
     或者，请更详细地描述您想要做的事情。
     """
