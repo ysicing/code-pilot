@@ -90,8 +90,8 @@ cd your-project
 **特点**：每个阶段可以精确控制
 
 ```bash
-# 步骤1：功能分解
-/story-breakdown "电商购物车系统"
+# 步骤1：架构咨询
+/ask "电商购物车系统的架构设计"
 
 # 步骤2：架构咨询
 /ask "购物车数据存储的最佳实践"
@@ -106,7 +106,7 @@ cd your-project
 /review "验证购物车逻辑的正确性"
 
 # 步骤6：发布准备
-/release-check "购物车模块"
+/review "购物车模块"
 ```
 
 ## 🛠️ 智能体架构说明
@@ -191,7 +191,7 @@ cd your-project
 
 | 命令类别 | 命令 | 核心功能 | 适用场景 | 输出类型 | 协作关系 |
 |---------|------|----------|----------|----------|----------|
-| **需求分析** | `/story-breakdown` | 功能分解 | 复杂功能拆分 | 用户故事列表 | 为其他命令提供输入 |
+| **架构咨询** | `/ask` | 技术指导 | 复杂功能咨询 | 架构建议 | 为其他命令提供输入 |
 | | `/ask` | 技术咨询 | 架构设计咨询 | 专业建议 | 辅助决策制定 |
 | | `/requirements-pilot` | 快速开发工作流 | 端到端快速实现 | 完整解决方案 | 集成多个环节 |
 | | `/bmad-pilot` | AI团队协作工作流 | 复杂功能团队开发 | 企业级完整方案 | 多智能体深度协作 |
@@ -243,7 +243,7 @@ cd your-project
 
 #### 4. 复杂功能开发工作流
 ```bash
-/story-breakdown "电商支付系统"            # ① 功能分解
+/ask "电商支付系统的架构设计"            # ① 架构咨询
 ↓
 /ask "支付安全架构最佳实践"               # ② 架构咨询
 ↓
@@ -272,7 +272,7 @@ cd your-project
 ```
 🎯 需要实现新功能？
    ├─ 是：功能复杂吗？
-   │  ├─ 复杂 → 🔄 /story-breakdown 先分解
+   │  ├─ 复杂 → 🔄 /ask 先咨询架构
    │  └─ 简单 → ⚡ /requirements-pilot 直接实现
    │
    ├─ 🐛 需要修复问题？
@@ -306,11 +306,11 @@ cd your-project
 | 解决技术争议 | `/role-debate` | 10-20分钟 | 对比不同方案 |
 | 多角度分析 | `/multi-role` | 8-15分钟 | 综合专业评估 |
 | 提升性能 | `/optimize` | 15-40分钟 | 性能专项优化 |
-| 分解复杂任务 | `/story-breakdown` | 5-15分钟 | 化繁为简 |
+| 架构咨询 | `/ask` | 5-15分钟 | 技术指导 |
 
 ### 📋 需求和规划类
 ```bash
-/story-breakdown "复杂功能描述"
+/ask "复杂功能描述"
 # 将大功能分解为1-3天完成的小任务
 # 输出：用户故事、验收标准、优先级、依赖关系
 
@@ -382,7 +382,7 @@ cd your-project
 # 性能优化协调：分析瓶颈→制定方案→实施优化
 # 涵盖前端、后端、数据库、架构优化
 
-/release-check "组件或系统"
+/review "组件或系统"
 # 生产就绪验证：风险评估→go/no-go决策
 # 实用清单方法，确保发布质量
 ```
@@ -491,7 +491,7 @@ cd your-project
 /bmad-pilot "用户权限管理系统，支持RBAC和LDAP集成"
 
 # 或分步实现复杂功能
-/story-breakdown "用户权限管理系统"
+/ask "用户权限管理系统的架构设计"
 /ask "RBAC权限设计最佳实践"
 /requirements-pilot "用户角色管理" --test
 /requirements-pilot "权限分配界面" --no-test
@@ -568,7 +568,7 @@ cd your-project
 **解决方案**：
 ```bash
 # 让系统自动优化需求
-/story-breakdown "你的功能描述"  # 先分解为更具体的任务
+/ask "你的功能描述"  # 先咨询架构设计
 /requirements-pilot "分解后的具体任务"  # 针对具体任务重新生成规格
 ```
 
@@ -598,7 +598,7 @@ cd your-project
 ### 问题4：输出太复杂
 ```bash
 # 使用分步模式，每次只处理一个问题
-/story-breakdown "复杂功能"  # 先分解
+/ask "复杂功能"  # 先咨询架构
 /ask "具体技术问题"  # 再咨询
 /code "单一明确的功能"  # 最后实现
 ```
@@ -657,7 +657,7 @@ cd your-project
 ```bash
 # 当系统说评分不够时，不要强行继续
 # 而是优化需求描述或分解任务
-✅ 如果需求规格 < 90 分，先用 /story-breakdown 分解
+✅ 如果需求规格 < 90 分，先用 /ask 咨询架构
 ✅ 如果代码质量 < 90 分，相信系统的改进建议
 ```
 
@@ -680,7 +680,7 @@ cd your-project
 ### 案例1：电商网站开发
 ```bash
 # 1. 项目规划
-/story-breakdown "电商网站：用户注册、商品展示、购物车、订单支付"
+/ask "电商网站：用户注册、商品展示、购物车、订单支付的架构设计"
 
 # 2. 架构设计
 /ask "电商网站微服务架构设计最佳实践"
@@ -695,7 +695,7 @@ cd your-project
 /optimize "商品列表页加载速度优化到2秒以内"
 
 # 5. 发布准备
-/release-check "电商网站核心功能模块"
+/review "电商网站核心功能模块"
 ```
 
 ### 案例2：API服务重构
@@ -752,5 +752,3 @@ cp .claude/commands/code.md .claude/commands/api-code.md
 - **[README.md](./README.md)** - 系统概览说明
 - **[BMAD-PILOT-GUIDE.md](./BMAD-PILOT-GUIDE.md)** - BMAD AI团队方法论指南
 - **[KIRO-GUIDE.md](./KIRO-GUIDE.md)** - Kiro开发助手完整指南
-- **[README-en.md](./README-en.md)** - English documentation
-- **[GUIDE-EN.md](./GUIDE-EN.md)** - English quick start guide
