@@ -26,8 +26,9 @@ allowed-tools: [Bash, git add, git commit, git push]
 
 ### 1. 检查和分析阶段
 - 检查工作区状态和变更文件
+- **Git状态检测**：优先检查已暂存文件，避免重复add操作
 - 安全验证：文件数量检查、目录过滤、敏感文件检测
-- 智能暂存：过滤系统文件和配置目录（.claude/, .kiro/）
+- 智能选择：优先使用已暂存文件，仅在需要时暂存工作区文件
 
 ### 2. 智能生成阶段
 - 输入分析：判断完整提交信息 vs 附加信息
@@ -45,6 +46,7 @@ allowed-tools: [Bash, git add, git commit, git push]
 
 **核心能力**：
 - 智能检测工作区状态和分支信息
+- **Git状态感知**：优先使用已暂存文件，智能决定是否执行add操作
 - 生成具体的 Conventional Commit 格式提交信息
 - 智能附加信息处理（任务号、Bug号等）
 - 多语言支持（英文/中文）
@@ -101,6 +103,12 @@ allowed-tools: [Bash, git add, git commit, git push]
 
 ### 操作预览示例
 ```bash
+# 场景1：已有暂存文件
+# 📋 变更预览: Staged: src/auth.ts, tests/auth.test.ts
+# 🤖 生成提交信息: "feat: add JWT token validation (task#99966)"
+# 📝 执行操作: git commit → git push origin main
+
+# 场景2：需要暂存文件
 # 📋 变更预览: Modified: src/auth.ts, Added: tests/auth.test.ts
 # 🤖 生成提交信息: "feat: add JWT token validation (task#99966)"
 # 📝 执行操作: git add → git commit → git push origin main
@@ -108,6 +116,7 @@ allowed-tools: [Bash, git add, git commit, git push]
 ```
 
 ## 注意事项
+- **Git状态优先**：优先使用已暂存文件，避免重复add操作
 - **安全确认**: 始终显示操作预览并等待用户确认
 - **附加信息**: 使用逗号分隔格式 `task#123,bug#456`
 - **语言模式**: 默认英文，使用 `--zh` 生成中文
@@ -115,6 +124,7 @@ allowed-tools: [Bash, git add, git commit, git push]
 - **长度建议**: 控制在72字符以内，具体性优先
 
 ## 成功标准
+- ✅ **智能Git状态检测**：正确识别已暂存文件，避免重复add操作
 - ✅ 正确识别输入类型（完整信息 vs 附加信息）
 - ✅ 生成符合 Conventional Commit 规范的具体提交信息  
 - ✅ 正确解析和组合附加信息（逗号分隔）
