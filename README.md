@@ -59,25 +59,17 @@ requirements-generate → requirements-code → requirements-review → (✅ 就
 如果就绪则询问用户："代码完成。执行测试？(y/n/lint)"
 ```
 
-### 2. 🎯 Kiro 结构化开发工作流（推荐用于复杂项目）
+### 2. 📋 Kiro 规范创建工具（用于复杂功能规范设计）
 
-**适用场景**：多功能项目、长期开发、需要状态管理和中断恢复
-**核心优势**：项目状态感知、智能中断恢复、分阶段实施、多功能管理
+**适用场景**：需要详细功能规范的复杂功能设计
+**核心优势**：引导式规范创建、需求澄清、设计文档生成
 
 ```bash
-# 统一入口，智能路由
-/kiro <自然语言描述>
+# 创建功能规范（需求 → 设计文档）
+/kiro <功能描述>
 
-# 显式子命令
-/kiro:spec <功能名>     # 创建功能规范
-/kiro:design <功能名>   # 技术设计  
-/kiro:task <功能名>     # 任务规划
-/kiro:execute <功能名> <任务> # 执行任务
-/kiro:vibe <问题>       # 快速协助
-
-# 项目状态管理
-/kiro-status            # 查看项目状态
-/kiro-status <功能名>    # 查看特定功能
+# 注意：kiro 只创建规范文档，不实现代码
+# 实际开发请使用 requirements-pilot 或 bmad-pilot
 ```
 
 ### 3. 🏢 BMAD AI团队协作工作流（企业级项目专用）
@@ -109,8 +101,7 @@ requirements-generate → requirements-code → requirements-review → (✅ 就
 |------|-----------|------|
 | 大多数功能开发、API实现 | ⚡ Requirements-Pilot | 快速高效、质量门控 |
 | 快速原型、Bug修复 | ⚡ Requirements-Pilot | 简单直接、快速解决 |
-| 复杂电商系统、多模块项目 | 🎯 Kiro | 状态管理、分阶段开发 |
-| 学习新技术、实验功能 | 🎯 Kiro | 中断恢复、渐进学习 |
+| 需要详细功能规范的复杂功能设计 | 📋 Kiro | 引导式规范创建、文档生成 |
 | 企业级系统、关键项目 | 🏢 BMAD | 全面协作、最高质量 |
 
 ## 🎛️ 手动阶段化开发（高级用户）
@@ -295,21 +286,12 @@ cd /path/to/your/project
 /requirements-pilot "快速功能实现" --skip-scan  # 跳过仓库扫描（不推荐）
 ```
 
-**选项B：Kiro 结构化开发工作流（推荐用于复杂项目）**
+**选项B：Kiro 规范创建工具（用于复杂功能规范设计）**
 ```bash
-# 自然语言方式 - Kiro 智能路由到最合适的专家
-/kiro 我需要开发一个用户认证系统
+# 创建功能规范
+/kiro 我需要设计一个用户认证系统
 
-# 或者使用显式模式
-/kiro:spec 用户认证系统        # 创建完整规范
-/kiro:design 用户认证系统      # 技术设计
-/kiro:task 用户认证系统        # 任务规划
-/kiro:execute 用户认证系统 1.1 # 执行特定任务
-/kiro:vibe 如何优化登录性能？   # 快速咨询
-
-# 项目状态管理
-/kiro-status                   # 查看项目概览
-/kiro-status 用户认证系统       # 查看特定功能状态
+# 注意：kiro 只创建规范文档，实际开发请使用其他工具
 ```
 
 **选项C：阶段化控制（复杂功能）**
@@ -434,29 +416,30 @@ your-project/
 
 ### Web应用开发
 ```bash
-# 前端功能开发
-/requirements-pilot "创建响应式用户仪表板，支持暗色模式" --no-test
+# 前端功能设计
+/kiro "创建响应式用户仪表盘规范"
+# 或使用 requirements-pilot 实现
+/requirements-pilot "创建响应式用户仪表盘，支持暗色模式" --no-test
 # 或使用 BMAD 流水线
-/bmad-pilot "创建响应式用户仪表板，支持暗色模式" --skip-tests
-# 或使用 Kiro 结构化开发
-/kiro 创建响应式用户仪表板系统
+/bmad-pilot "创建响应式用户仪表盘，支持暗色模式" --skip-tests
 
-# 后端API开发  
+# 后端API设计
+/kiro "构建用户管理 REST API 规范"
+# 或使用 requirements-pilot 实现
 /requirements-pilot "构建用户管理 REST API" --test
 # 或使用 BMAD 团队协作开发
 /bmad-pilot "构建用户管理 REST API" --test
-# 或使用 Kiro 结构化开发
-/kiro 构建用户管理API系统
 
-# 全栈功能
+# 全栈功能设计和开发
 /story-breakdown "电商购物车与结账系统"
+# 先用 kiro 创建详细规范
+/kiro "电商购物车功能完整规范"
+# 然后实现各个模块
 /requirements-pilot "购物车前端" --no-test
 /requirements-pilot "购物车API后端" --test
 /requirements-pilot "支付集成" --test
 # 或使用 BMAD 统一流水线
 /bmad-pilot "电商购物车完整系统" --test
-# 或使用 Kiro 统一管理
-/kiro 电商购物车完整解决方案
 ```
 
 ### 数据科学项目
@@ -474,21 +457,19 @@ your-project/
 
 ### DevOps和基础设施
 ```bash
-# 基础设施即代码
+# 基础设施即代码设计和开发
+/kiro "完整的容器化部署架构规范"
 /requirements-pilot "Docker容器化设置" --test
 /requirements-pilot "Kubernetes部署配置" --test
 # 或使用 BMAD 团队进行基础设施开发
 /bmad-pilot "完整的容器化部署系统" --test
-# 或使用 Kiro 统一规划
-/kiro 完整的容器化部署架构
 
-# CI/CD管道
+# CI/CD管道设计和开发
 /story-breakdown "完整CI/CD管道与测试"
+/kiro "企业级CI/CD自动化解决方案规范"
 /requirements-pilot "GitHub Actions工作流" --test
 # 或使用 BMAD 流水线开发CI/CD
 /bmad-pilot "企业级CI/CD管道系统" --test
-# 或使用 Kiro 统一管理
-/kiro 企业级CI/CD自动化解决方案
 ```
 
 ## ⚠️ 故障排除
@@ -544,7 +525,7 @@ ls -la .claude/agents/
 3. **适当测试**：逻辑用`--test`，仅UI用`--no-test`
 4. **分解复杂功能**：大型项目使用`/story-breakdown`
 5. **实现前先架构**：战略决策使用`/ask`
-6. **状态管理**：复杂项目使用Kiro工作流进行状态管理
+6. **复杂功能设计阶段**：使用Kiro工作流进行规范设计和状态管理
 
 ## 🔧 高级配置
 
@@ -680,16 +661,12 @@ else:
 - `/optimize` - 性能优化协调
 - `/release-check` - 生产就绪验证，go/no-go决策
 
-### 🤖 Kiro 智能开发助手
-- `/kiro` - 智能路由统一入口，支持自然语言和显式模式调用
-- `/kiro-status` - 项目状态管理、工作流控制和快捷操作
+### 📋 Kiro 规范创建工具
+- `/kiro` - 规范创建工具，生成需求和设计文档
 
-#### Kiro 子命令（可独立使用）
-- `/kiro:spec` - 创建完整功能规范（需求→设计→任务）
-- `/kiro:design` - 基于研究的功能设计和技术架构
-- `/kiro:task` - 将设计转换为可执行任务列表
-- `/kiro:execute` - 聚焦执行特定任务实现
-- `/kiro:vibe` - 快速开发协助和技术咨询
+**重要说明**: Kiro 只创建规范文档，不实现代码。实际开发请使用：
+- `/requirements-pilot` - 快速开发工作流
+- `/bmad-pilot` - AI团队协作开发
 
 ### 🧠 高级分析
 - `/ultrathink` - **重大决策专用**：MECE原则结构化深度分析，用于架构选型、技术战略等重大决策
@@ -800,8 +777,6 @@ else:
 - **[USER-MANUAL.md](./USER-MANUAL.md)** - 详细使用手册
 - **[BMAD-PILOT-GUIDE.md](./BMAD-PILOT-GUIDE.md)** - BMAD AI团队方法论指南
 - **[KIRO-GUIDE.md](./KIRO-GUIDE.md)** - Kiro开发助手完整指南
-- **[README-en.md](./README-en.md)** - English documentation
-- **[GUIDE-EN.md](./GUIDE-EN.md)** - English quick start guide
 
 ## 📄 许可证
 
