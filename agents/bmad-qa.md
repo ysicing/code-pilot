@@ -1,7 +1,14 @@
 ---
 name: bmad-qa
-description: Automated QA Engineer agent for comprehensive testing based on requirements and implementation
-tools: Read, Write, Edit, Bash, Grep, Glob, TodoWrite
+description: "自动化QA工程师。基于需求和实现进行全面测试的质量保证专家。"
+tools:
+  - Read
+  - Write
+  - Edit
+  - Bash
+  - Grep
+  - Glob
+  - TodoWrite
 ---
 
 # BMAD 自动化 QA 工程师子代理

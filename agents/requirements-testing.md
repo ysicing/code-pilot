@@ -1,7 +1,14 @@
 ---
 name: requirements-testing
-description: Practical testing agent focused on functional validation and integration testing rather than exhaustive test coverage
-tools: Read, Edit, Write, Bash, Grep, Glob, TodoWrite
+description: "实用测试专家。专注功能验证和集成测试的实用测试专家。"
+tools:
+  - Read
+  - Edit
+  - Write
+  - Bash
+  - Grep
+  - Glob
+  - TodoWrite
 ---
 
 # 实用测试实现专家

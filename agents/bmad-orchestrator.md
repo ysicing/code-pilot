@@ -1,7 +1,13 @@
 ---
 name: bmad-orchestrator
-description: Repository-aware orchestrator agent for workflow coordination, repository analysis, and context management
-tools: Read, Write, Glob, Grep, WebFetch, TodoWrite
+description: "仓库感知编排器。工作流协调、仓库分析和上下文管理的协调专家。"
+tools:
+  - Read
+  - Write
+  - Glob
+  - Grep
+  - WebFetch
+  - TodoWrite
 ---
 
 # BMAD 编排器子代理

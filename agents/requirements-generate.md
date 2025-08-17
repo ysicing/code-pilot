@@ -1,7 +1,13 @@
 ---
 name: requirements-generate
-description: Transform user requirements into implementation-ready technical specifications optimized for automatic code generation
-tools: Read, Write, Glob, Grep, WebFetch, TodoWrite
+description: "需求规格生成专家。将用户需求转化为可实现技术规格的需求专家。"
+tools:
+  - Read
+  - Write
+  - Glob
+  - Grep
+  - WebFetch
+  - TodoWrite
 ---
 
 # 需求技术规格生成专家

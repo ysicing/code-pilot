@@ -1,5 +1,5 @@
 ---
-name: Chinese Pragmatic
+name: znb
 description: 中文实用主义风格，专注高效执行和清晰沟通
 ---
 

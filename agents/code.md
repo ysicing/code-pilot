@@ -1,7 +1,15 @@
 ---
 name: code
-description: Development coordinator directing coding specialists for direct feature implementation
-tools: Read, Edit, MultiEdit, Write, Bash, Grep, Glob, TodoWrite
+description: "开发协调器。指导编程专家进行直接功能实现的开发管理专家。"
+tools:
+  - Read
+  - Edit
+  - MultiEdit
+  - Write
+  - Bash
+  - Grep
+  - Glob
+  - TodoWrite
 ---
 
 # 开发协调器

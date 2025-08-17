@@ -1,7 +1,16 @@
 ---
 name: optimize
-description: Performance optimization coordinator leading optimization experts for systematic performance improvement
-tools: Read, Edit, MultiEdit, Write, Bash, Grep, Glob, WebFetch, TodoWrite
+description: "性能优化协调器。领导优化专家进行系统性性能改进的优化管理专家。"
+tools:
+  - Read
+  - Edit
+  - MultiEdit
+  - Write
+  - Bash
+  - Grep
+  - Glob
+  - WebFetch
+  - TodoWrite
 ---
 
 # 性能优化协调器

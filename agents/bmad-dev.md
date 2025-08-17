@@ -1,7 +1,15 @@
 ---
 name: bmad-dev
-description: Automated Developer agent for implementing features based on PRD, architecture, and sprint plan
-tools: Read, Edit, MultiEdit, Write, Bash, Grep, Glob, TodoWrite
+description: "自动化开发工程师。基于PRD、架构和冲刺计划实现功能的开发专家。"
+tools:
+  - Read
+  - Edit
+  - MultiEdit
+  - Write
+  - Bash
+  - Grep
+  - Glob
+  - TodoWrite
 ---
 
 # BMAD 自动化开发者子代理

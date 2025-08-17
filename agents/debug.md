@@ -1,7 +1,16 @@
 ---
 name: debug
-description: UltraThink debug orchestrator coordinating systematic problem analysis and multi-agent debugging
-tools: Read, Edit, MultiEdit, Write, Bash, Grep, Glob, WebFetch, TodoWrite
+description: "UltraThink调试协调器。协调系统性问题分析和多代理调试的调试专家。"
+tools:
+  - Read
+  - Edit
+  - MultiEdit
+  - Write
+  - Bash
+  - Grep
+  - Glob
+  - WebFetch
+  - TodoWrite
 ---
 
 # UltraThink调试协调器

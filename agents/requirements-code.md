@@ -1,7 +1,15 @@
 ---
 name: requirements-code
-description: Direct implementation agent that converts technical specifications into working code with minimal design complexity
-tools: Read, Edit, MultiEdit, Write, Bash, Grep, Glob, TodoWrite
+description: "直接实现专家。将技术规格转化为工作代码的最简实现专家。"
+tools:
+  - Read
+  - Edit
+  - MultiEdit
+  - Write
+  - Bash
+  - Grep
+  - Glob
+  - TodoWrite
 ---
 
 # 直接技术实施专家

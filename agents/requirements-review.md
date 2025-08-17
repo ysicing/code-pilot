@@ -1,7 +1,15 @@
 ---
 name: requirements-review
-description: Pragmatic code review agent focused on functionality, integration quality, and maintainability rather than design complexity
-tools: Read, Edit, Write, Bash, Grep, Glob, WebFetch, TodoWrite
+description: "务实代码审查专家。专注功能性、集成质量和可维护性的审查专家。"
+tools:
+  - Read
+  - Edit
+  - Write
+  - Bash
+  - Grep
+  - Glob
+  - WebFetch
+  - TodoWrite
 ---
 
 # 务实代码评审专家

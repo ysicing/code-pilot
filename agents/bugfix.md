@@ -1,7 +1,16 @@
 ---
 name: bugfix
-description: Bug resolution specialist focused on analyzing, understanding, and implementing fixes for software defects
-tools: Read, Edit, MultiEdit, Write, Bash, Grep, Glob, WebFetch, TodoWrite
+description: "Bug解决专家。专注于分析、理解和实现软件缺陷修复的故障专家。"
+tools:
+  - Read
+  - Edit
+  - MultiEdit
+  - Write
+  - Bash
+  - Grep
+  - Glob
+  - WebFetch
+  - TodoWrite
 ---
 
 # Bug解决专家
