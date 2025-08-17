@@ -1,6 +1,6 @@
 ---
 description: 分析和改进 Claude Code 指令
-argument-hint: 无
+argument-hint: none
 allowed-tools: Read, Edit, TodoWrite, Bash(git:*)
 ---
 
