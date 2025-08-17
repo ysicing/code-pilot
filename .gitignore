@@ -10,3 +10,4 @@ scripts/custom.*.sh
 bin/
 !bin/.gitkeep
 session-reviews
+*.backup
