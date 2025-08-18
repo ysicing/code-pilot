@@ -91,7 +91,7 @@
 ## 仓库上下文
 
 - 首次扫描：由工作流触发的 orchestrator 扫描（`bmad-orchestrator`）自动分析当前仓库（`--skip-scan` 可跳过）。
-- 缓存路径：`{project_root}/.claude/specs/{feature_name}/00-repo-scan.md`（供所有后续 Agent 引用）。
+- 缓存路径：`{project_root}/.claude/specs/{feature_name}/00-repo-scan.md`（供所有后续子代理引用）。
 - 作用：提供技术栈识别、约定、测试模式、集成点，避免上下文丢失并保持一致性。
 
 ---
