@@ -11,3 +11,4 @@ bin/
 !bin/.gitkeep
 session-reviews
 *.backup
+plugins
