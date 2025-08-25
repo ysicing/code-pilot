@@ -12,3 +12,5 @@ bin/
 session-reviews
 *.backup
 plugins
+context
+!commands/context

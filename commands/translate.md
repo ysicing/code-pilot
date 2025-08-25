@@ -236,29 +236,60 @@ Markdown 文件处理：
 - 忠实原文含义，不添加或删减信息
 - 确保技术概念的准确传达
 - 保持原文的逻辑结构和层次
+- **引用内容完全保留**：学术引用、书名、人名等按原格式保持
 
 ### 流畅性原则
 - 符合中文表达习惯
 - 语句自然流畅，易于理解
 - 避免直译导致的生硬表达
+- **长句智能拆分**：复杂句子分解为多个简洁的中文句子
+- **语态优化**：被动语态转换为符合中文习惯的主动表达
 
 ### 专业性原则
 - 技术术语保持英文原文
 - 专业概念翻译准确
 - 保持行业惯用表达方式
+- **复合术语识别**：正确处理"技术词汇+修饰词"的组合
 
 ### 一致性原则
 - 同一术语在文档中翻译一致
 - 保持翻译风格的统一性
 - 维护专业术语的标准化
+- **语境感知判断**：根据文档类型和目标受众调整翻译策略
+
+### 语境适应原则
+- **文档类型识别**：技术文档保持专业性，营销文案增强可读性
+- **受众判断**：开发者文档保留更多技术术语，用户文档适度本土化
+- **正式程度调节**：官方文档保持正式，社区内容允许口语化表达
 
 ## 特殊处理规则：
 
 ### 技术名词保留列表
-- 编程语言：JavaScript, Python, Java, React, Vue 等
-- 技术概念：API, JWT, OAuth, REST, GraphQL 等
-- 工具平台：Git, Docker, Kubernetes, AWS 等
-- Markdown 语法：headers, links, code blocks, tables 等
+
+#### 完全保留的专业术语
+- **编程语言**：JavaScript, Python, Java, C++, Go, Rust, Swift, Kotlin 等
+- **技术概念**：API, JWT, OAuth, REST, GraphQL, CRUD, MVC, MVP, MVVM 等
+- **工具平台**：Git, Docker, Kubernetes, AWS, Azure, GCP, Jenkins, GitHub 等
+- **Markdown 语法**：headers, links, code blocks, tables, footnotes 等
+- **数据库**：MySQL, PostgreSQL, MongoDB, Redis, Elasticsearch 等
+- **框架库**：React, Vue, Angular, Express, Spring, Django, Flask 等
+
+#### 混合翻译的复合术语
+- **产品服务名 + 功能词**：保留产品名，翻译功能描述
+  - "GitHub Actions" → "GitHub Actions"
+  - "AWS Lambda function" → "AWS Lambda 函数"
+  - "Docker container" → "Docker 容器"
+- **技术概念 + 修饰词**：保留核心概念，翻译修饰部分
+  - "RESTful API design" → "RESTful API 设计"
+  - "Machine Learning model" → "Machine Learning 模型"
+  - "Microservices architecture" → "Microservices 架构"
+
+#### 引用内容保留规则
+- **学术引用**：[Author, Year] 格式完全保留
+- **书籍影视**：《书名》、"Movie Title" 保留原格式
+- **引用语句**：直接引语用引号标识，保持原文
+- **品牌商标**：Apple, Google, Microsoft 等保持英文
+- **专有名词**：人名、地名、公司名保持原文
 
 ### 标点符号映射
 - 保留代码相关符号等
