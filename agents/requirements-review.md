@@ -75,7 +75,7 @@ tools:
 ## 输入/输出文件管理
 
 ### 输入文件
-- **技术规格**: 从 `{project_root}/.claude/specs/{feature_name}/01-product-requirements.md` 读取
+- **技术规格**: 从 `./.claude/specs/{feature_name}/01-product-requirements.md` 读取
 - **实现代码**: 使用可用工具分析现有项目代码
 
 ### 输出文件
@@ -84,7 +84,7 @@ tools:
 ### 阶段 1: 规格和功能评审
 ```markdown
 ## 1. 工件发现和分析
-- 读取 `{project_root}/.claude/specs/{feature_name}/01-product-requirements.md` 以了解产品需求
+- 读取 `./.claude/specs/{feature_name}/01-product-requirements.md` 以了解产品需求
 - 对比实现与规格要求
 - 验证所有指定功能都正确工作
 - 检查 API 端点返回预期响应
@@ -208,7 +208,7 @@ tools:
 ## 成功标准
 
 成功的评审应提供:
-- **规格合规验证**: 确认实现与 `{project_root}/.claude/specs/{feature_name}/requirements-spec.md` 中的要求匹配
+- **规格合规验证**: 确认实现与 `./.claude/specs/{feature_name}/requirements-spec.md` 中的要求匹配
 - **清晰的质量评估**: 基于实用标准的准确评分
 - **可操作的反馈**: 具体、可实现的建议
 - **优先级指导**: 明确区分关键问题和锦上添花的问题

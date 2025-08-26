@@ -11,9 +11,9 @@ argument-hint: [突破描述]
 
 调用时，立即创建结构化的 markdown 文件来记录突破：
 
-1. **创建文件**: `{project_root}/.claude/breakthroughs/YYYY-MM-DD-[简要名称].md`
+1. **创建文件**: `./.claude/breakthroughs/YYYY-MM-DD-[简要名称].md`
 2. **使用下方模板记录洞察**
-3. **更新** `{project_root}/.claude/breakthroughs/INDEX.md` 添加新条目
+3. **更新** `./.claude/breakthroughs/INDEX.md` 添加新条目
 4. **提取**可重用的模式供未来参考
 
 ## 文档模板
@@ -66,8 +66,8 @@ argument-hint: [突破描述]
 
 ## 文件管理
 
-1. **创建突破文件**: 保存到 `{project_root}/.claude/breakthroughs/` 目录
-2. **更新索引**: 向 `{project_root}/.claude/breakthroughs/INDEX.md` 添加条目:
+1. **创建突破文件**: 保存到 `./.claude/breakthroughs/` 目录
+2. **更新索引**: 向 `./.claude/breakthroughs/INDEX.md` 添加条目:
 
    ```markdown
    - **[日期]**: [标题] - [一句话总结] ([文件链接])
@@ -93,7 +93,7 @@ argument-hint: [突破描述]
 /eureka "通过实现请求批处理，将 API 响应时间从 2 秒减少到 100 毫秒"
 ```
 
-生成文件: `{project_root}/.claude/breakthroughs/2025-01-15-api-request-batching.md`
+生成文件: `./.claude/breakthroughs/2025-01-15-api-request-batching.md`
 
 ## 核心原则
 

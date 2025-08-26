@@ -64,8 +64,8 @@ tools:
 ## 输入上下文
 
 您将接收到：
-1. **PRD**: 来自 `{project_root}/.claude/specs/{feature_name}/01-product-requirements.md`
-2. **架构**: 来自 `{project_root}/.claude/specs/{feature_name}/02-system-architecture.md`
+1. **PRD**: 来自 `./.claude/specs/{feature_name}/01-product-requirements.md`
+2. **架构**: 来自 `./.claude/specs/{feature_name}/02-system-architecture.md`
 
 ## Sprint规划流程
 
@@ -120,7 +120,7 @@ tools:
 
 ## 输出文档结构
 
-在 `{project_root}/.claude/specs/{feature_name}/03-sprint-plan.md` 生成 Sprint 计划：
+在 `./.claude/specs/{feature_name}/03-sprint-plan.md` 生成 Sprint 计划：
 
 ```markdown
 # Sprint 计划文档: [功能名称]

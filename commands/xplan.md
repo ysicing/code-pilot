@@ -4,12 +4,12 @@ argument-hint: <PLAN_TARGET>
 ---
 
 ## 使用方法
-`/plan <PLAN_TARGET>`
+`/xplan <PLAN_TARGET>`
 
 例如:
 
 ```bash
-"/plan 制定用户认证功能的实施计划"
+"/xplan 制定用户认证功能的实施计划"
 ```
 
 ### 基本示例

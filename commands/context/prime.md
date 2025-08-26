@@ -12,17 +12,17 @@ allowed-tools: Bash, Read, LS
 不要用开始前检查的进度打扰用户（"我不会..."）。直接执行并继续。
 
 ### 1. 上下文可用性检查
-- 运行：`ls -la {project_root}/.claude/context/ 2>/dev/null`
+- 运行：`ls -la ./.claude/context/ 2>/dev/null`
 - 如果目录不存在或为空：
   - 告知用户："❌ 未找到上下文。请先运行 /context:create 建立项目上下文。"
   - 优雅退出
-- 计算可用上下文文件：`ls -1 {project_root}/.claude/context/*.md 2>/dev/null | wc -l`
+- 计算可用上下文文件：`ls -1 ./.claude/context/*.md 2>/dev/null | wc -l`
 - 报告："📁 发现 {count} 个上下文文件待加载"
 
 ### 2. 文件完整性检查
 - 对每个发现的上下文文件：
-  - 验证文件可读：`test -r "{project_root}/.claude/context/{file}" && echo "可读"`
-  - 检查文件有内容：`test -s "{project_root}/.claude/context/{file}" && echo "有内容"`
+  - 验证文件可读：`test -r "./.claude/context/{file}" && echo "可读"`
+  - 检查文件有内容：`test -s "./.claude/context/{file}" && echo "有内容"`
   - 检查有效前言（应以 `---` 开始）
 - 报告任何问题：
   - 空文件："⚠️ {filename} 为空（跳过）"

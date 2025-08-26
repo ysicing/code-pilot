@@ -22,7 +22,7 @@
 - `--skip-scan`：跳过初始仓库扫描（不推荐）
 
 ### 输出目录
-- 所有产出归档在：`{project_root}/.claude/specs/{feature_name}/`
+- 所有产出归档在：`./.claude/specs/{feature_name}/`
   - `00-repo-scan.md` — 仓库扫描摘要（自动生成）
   - `01-product-requirements.md` — 产品需求文档（确认后保存）
   - `02-system-architecture.md` — 系统设计规范（确认后保存）
@@ -42,7 +42,7 @@
 3) 与 Architect 讨论技术决策，直至架构 ≥ 90 分 → 确认保存。
 4) 审阅并确认 SM 的冲刺计划（或使用 `--direct-dev` 跳过该阶段）。
 5) Dev 基于文档实现；QA 基于文档与实现测试（除非 `--skip-tests`）。
-6) 查看产出目录：`{project_root}/.claude/specs/{feature_name}/`。
+6) 查看产出目录：`./.claude/specs/{feature_name}/`。
 
 ---
 
@@ -91,7 +91,7 @@
 ## 仓库上下文
 
 - 首次扫描：由工作流触发的 orchestrator 扫描（`bmad-orchestrator`）自动分析当前仓库（`--skip-scan` 可跳过）。
-- 缓存路径：`{project_root}/.claude/specs/{feature_name}/00-repo-scan.md`（供所有后续子代理引用）。
+- 缓存路径：`./.claude/specs/{feature_name}/00-repo-scan.md`（供所有后续子代理引用）。
 - 作用：提供技术栈识别、约定、测试模式、集成点，避免上下文丢失并保持一致性。
 
 ---
@@ -149,7 +149,7 @@
 - 分数上不去：优先补齐评分分项的缺口（业务指标、关键流程、性能/安全约束等）。
 - 上下文不一致：检查并引用 `00-repo-scan.md` 的关键约定与模式，保证 PRD/架构/计划一致。
 - 依赖/网络受限：Dev/QA 的实际执行受环境影响；请在项目内准备依赖与测试环境，或先提交伪实现/测试策略。
-- 文档路径：确保在项目根目录执行，Pilot 会将文件写入 `{project_root}/.claude/specs/{feature_name}/`。
+- 文档路径：确保在项目根目录执行，Pilot 会将文件写入 `./.claude/specs/{feature_name}/`。
 
 ---
 
