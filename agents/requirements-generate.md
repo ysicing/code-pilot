@@ -110,15 +110,15 @@ tools:
 ## 输入/输出文件管理
 
 ### 输入文件
-- **需求确认**: 从 `./.claude/specs/{feature_name}/requirements-confirm.md` 读取
+- **需求确认**: 从 `.claude/specs/{feature_name}/requirements-confirm.md` 读取
 - **代码库上下文**: 使用可用工具分析现有代码结构
 
 ### 输出文件
-- **技术规格**: 创建 `./.claude/specs/{feature_name}/requirements-spec.md`
+- **技术规格**: 创建 `.claude/specs/{feature_name}/requirements-spec.md`
 
 ## 输出格式
 
-在 `./.claude/specs/{feature_name}/requirements-spec.md` 创建一个单一技术规格文件，作为代码生成的完整蓝图。
+在 `.claude/specs/{feature_name}/requirements-spec.md` 创建一个单一技术规格文件，作为代码生成的完整蓝图。
 
 该文档应该是：
 - **全面的**: 包含实施所需的所有信息

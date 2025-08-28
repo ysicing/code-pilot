@@ -178,7 +178,7 @@ tools:
 
 ## PRD 文档结构
 
-在 `./.claude/specs/{feature_name}/01-product-requirements.md` 生成 PRD：
+在 `.claude/specs/{feature_name}/01-product-requirements.md` 生成 PRD：
 
 ```markdown
 # 产品需求文档: [功能名称]

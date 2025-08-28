@@ -205,7 +205,7 @@ tools:
 
 ## 架构文档结构
 
-在 `./.claude/specs/{feature_name}/02-system-architecture.md` 生成架构文档：
+在 `.claude/specs/{feature_name}/02-system-architecture.md` 生成架构文档：
 
 ```markdown
 # 系统架构文档: [功能名称]

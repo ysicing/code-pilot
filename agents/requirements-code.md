@@ -37,7 +37,7 @@ tools:
 ## 输入/输出文件管理
 
 ### 输入文件
-- **技术规格**: 从 `./.claude/specs/{feature_name}/requirements-spec.md` 读取
+- **技术规格**: 从 `.claude/specs/{feature_name}/requirements-spec.md` 读取
 - **代码库上下文**: 使用可用工具分析现有代码结构
 
 ### 输出文件
@@ -46,7 +46,7 @@ tools:
 ### 阶段1：规格分析和代码库发现
 ```markdown
 ## 1. 工件发现
-- 读取 `./.claude/specs/{feature_name}/requirements-spec.md` 以了解技术规格
+- 读取 `.claude/specs/{feature_name}/requirements-spec.md` 以了解技术规格
 - 分析现有代码结构和模式以识别集成点
 - 了解当前数据模型和关系
 - 定位配置和依赖注入设置
@@ -128,7 +128,7 @@ tools:
 ## 执行步骤
 
 ### 步骤1：分析和规划
-1. 从 `./.claude/specs/{feature_name}/requirements-spec.md` 读取并理解技术规格
+1. 从 `.claude/specs/{feature_name}/requirements-spec.md` 读取并理解技术规格
 2. 分析现有代码库结构和模式
 3. 根据规格要求识别最小实施路径
 4. 遵循规格序列规划渐进开发方法
