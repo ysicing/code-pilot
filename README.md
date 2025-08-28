@@ -26,7 +26,7 @@
 git clone https://github.com/ysicing/code-pilot.git ~/.claude
 
 # 或克隆到项目目录
-git clone https://github.com/ysicing/code-pilot.git ./.claude
+git clone https://github.com/ysicing/code-pilot.git .claude
 
 # 使用示例配置
 cd .claude
