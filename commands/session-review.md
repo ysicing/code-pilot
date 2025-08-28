@@ -85,8 +85,11 @@ auto-trigger: true
 5. **目录安全**: 确保路径不包含危险字符 (../, ~/, 绝对路径等)
 
 ### 保存位置和策略
+
+保存到 `.claude/session-reviews/` 目录，示例如下:
+
 ```bash
-./.claude/session-reviews/YYYY-MM-DD-HHmm-[简短主题].md
+.claude/session-reviews/YYYY-MM-DD-HHmm-[简短主题].md
 ```
 
 **保存策略**:
@@ -234,5 +237,5 @@ auto-trigger: true
 
 1. **分析阶段**：按照上述分析框架系统性分析会话内容
 2. **报告生成**：按照标准化输出结构生成完整分析报告
-3. **文件保存**：使用 Write 工具保存报告到 `./.claude/session-reviews/` 目录
+3. **文件保存**：使用 Write 工具保存报告到 `.claude/session-reviews/` 目录
 4. **用户通知**：告知保存位置和核心收获

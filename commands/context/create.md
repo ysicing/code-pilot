@@ -4,7 +4,7 @@ allowed-tools: Bash, Read, Write, LS
 
 # 创建初始上下文
 
-此命令通过分析当前项目状态并建立全面的基线文档，在 `./.claude/context/` 中创建初始项目上下文文档。
+此命令通过分析当前项目状态并建立全面的基线文档，在 `.claude/context/` 中创建初始项目上下文文档。
 
 ## 开始前检查清单
 
@@ -12,9 +12,9 @@ allowed-tools: Bash, Read, Write, LS
 不要用开始前检查的进度打扰用户（"我不会..."）。直接执行并继续。
 
 ### 1. 上下文目录检查
-- 运行：`ls -la ./.claude/context/ 2>/dev/null`
+- 运行：`ls -la .claude/context/ 2>/dev/null`
 - 如果目录存在且有文件：
-  - 计算现有文件：`ls -1 ./.claude/context/*.md 2>/dev/null | wc -l`
+  - 计算现有文件：`ls -1 .claude/context/*.md 2>/dev/null | wc -l`
   - 询问用户："⚠️ 发现 {count} 个现有上下文文件。覆盖所有上下文？(yes/no)"
   - 仅在明确'yes'确认时继续
   - 如果用户说 no，建议："使用 /context:update 刷新现有上下文"
@@ -29,8 +29,8 @@ allowed-tools: Bash, Read, Write, LS
 - 如果不是 git 仓库，询问："⚠️ 非 git 仓库。仍然继续？(yes/no)"
 
 ### 3. 目录创建
-- 如果 `./.claude/` 不存在，创建它：`mkdir -p ./.claude/context/`
-- 验证写入权限：`touch ./.claude/context/.test && rm ./.claude/context/.test`
+- 如果 `.claude/` 不存在，创建它：`mkdir -p .claude/context/`
+- 验证写入权限：`touch .claude/context/.test && rm .claude/context/.test`
 - 如果权限被拒绝，告知用户："❌ 无法创建上下文目录。检查权限。"
 
 ### 4. 获取当前日期时间
@@ -101,7 +101,7 @@ author: Claude Code PM System
 ### 5. 错误处理
 
 **常见问题：**
-- **无写入权限：** "❌ 无法写入 ./.claude/context/。检查权限。"
+- **无写入权限：** "❌ 无法写入 .claude/context/。检查权限。"
 - **磁盘空间：** "❌ 上下文文件磁盘空间不足。"
 - **文件创建失败：** "❌ 创建 {filename} 失败。错误：{error}"
 
@@ -116,7 +116,7 @@ author: Claude Code PM System
 ```
 📋 上下文创建完成
 
-📁 在此创建上下文：./.claude/context/
+📁 在此创建上下文：.claude/context/
 ✅ 已创建文件：{count}/9
 
 📊 上下文摘要：
@@ -138,7 +138,7 @@ author: Claude Code PM System
 ## 上下文收集命令
 
 使用这些命令收集项目信息：
-- 目标目录：`./.claude/context/`（如需要则创建）
+- 目标目录：`.claude/context/`（如需要则创建）
 - 当前 git 状态：`git status --short`
 - 最近提交：`git log --oneline -10`
 - 项目 README：如存在则读取 `README.md`

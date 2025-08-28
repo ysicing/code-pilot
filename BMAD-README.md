@@ -402,7 +402,6 @@ A:
 
 - **[BMAD-PILOT-GUIDE.md](./BMAD-PILOT-GUIDE.md)** - BMAD Pilot 详细使用指南
 - **[GUIDE.md](./GUIDE.md)** - 快速入门指南
-- **[USER-MANUAL.md](./USER-MANUAL.md)** - 详细使用手册  
 - **[README.md](./README.md)** - 系统完整说明
 - [BMAD-METHOD原理](https://github.com/bmadcode/BMAD-METHOD) - 外部链接
 - [Claude Code文档](https://docs.anthropic.com/en/docs/claude-code) - 外部链接

@@ -19,6 +19,8 @@
     "command": "~/.claude/scripts/statusline.sh",
     "padding": 0
   },
+  "model": "opusplan",
+  "outputStyle": "znb",
   "hooks": {
     "Notification": [
       {

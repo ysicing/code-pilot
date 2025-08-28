@@ -4,8 +4,7 @@
 
 参考阅读：
 - **[BMAD-README.md](./BMAD-README.md)** - BMAD 方法概览
-- **[GUIDE.md](./GUIDE.md)** - 快速入门指南  
-- **[USER-MANUAL.md](./USER-MANUAL.md)** - 详细使用手册
+- **[GUIDE.md](./GUIDE.md)** - 快速入门指南
 - **[README.md](./README.md)** - 系统完整说明
 
 ---
