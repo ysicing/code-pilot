@@ -427,6 +427,10 @@ cp CLAUDE.md.example CLAUDE.md
 
 🎯 **记住**：系统设计遵循KISS原则，核心命令覆盖90%开发场景。从简单开始，逐步深入！
 
+## 其他
+
+> 目前scripts仅适配了unix,不支持windows
+
 📚 相关文档：
 - [`README.md`](./README.md) - 项目概览
 - [`BMAD-README.md`](./BMAD-README.md) - BMAD方法论指南
