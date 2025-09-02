@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 支持自动版本管理和 Keep a Changelog 规范
 - 添加平台兼容性说明文档
 - 添加版本范围限制：日期版本仅记录当天实际操作
+- 增强 changelog 命令文档，添加版本合并更新机制说明
 
 ### Changed
 - 统一文档路径格式，从 `./.claude/` 更改为 `.claude/`
