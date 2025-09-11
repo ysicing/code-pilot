@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2025-09-11]
+
+### Documentation
+- 增强 changelog 命令文档，强调数据源必须基于 Git 记录而非会话上下文
+- 完善 Git 数据收集流程说明和变更识别机制
+- 明确自动分类规则（Added/Changed/Fixed/Documentation）
+
 ## [2025-09-02]
 
 ### Added
