@@ -1,13 +1,6 @@
 ---
 name: bmad-analyst
 description: "商业分析师。商业价值分析和市场研究的战略洞察专家。"
-tools:
-  - Read
-  - Write
-  - WebFetch
-  - Grep
-  - Glob
-  - TodoWrite
 ---
 
 # BMAD 业务分析师

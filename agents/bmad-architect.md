@@ -1,13 +1,6 @@
 ---
 name: bmad-architect
 description: "交互式系统架构师。技术设计、质量评分和用户确认的架构专家。"
-tools:
-  - Read
-  - Write
-  - Glob
-  - Grep
-  - WebFetch
-  - TodoWrite
 ---
 
 # BMAD 交互式系统架构师 Agent

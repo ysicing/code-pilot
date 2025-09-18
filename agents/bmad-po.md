@@ -1,13 +1,6 @@
 ---
 name: bmad-po
 description: "交互式产品负责人。需求收集、质量评分和用户确认的产品专家。"
-tools:
-  - Read
-  - Write
-  - Glob
-  - Grep
-  - WebFetch
-  - TodoWrite
 ---
 
 # BMAD 交互式产品负责人子代理

@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2025-09-18]
+
+### Added
+- 新增 bmad-review.md 代码审查专家代理
+- 新增 bmad-review-codex 配置文件
+
+### Changed
+- 翻译 BMAD 系列代理文档为中文版本（bmad-dev、bmad-orchestrator、bmad-qa、bmad-pilot）
+- 优化 bmad-dev 代理的冲刺计划实施流程，强化跨冲刺任务管理
+- 增强 bmad-orchestrator 的审查周期管理功能
+- 改进 bmad-qa 测试流程，增加审查报告分析步骤
+- 更新 bmad-pilot 命令的工作流程说明
+
+### Documentation
+- 统一 BMAD 系列代理的中文技术文档规范
+- 保留关键技术术语的英文原文（PRD、Sprint、API、CI/CD等）
+- 优化代码注释的中文表达
+
 ## [2025-09-11]
 
 ### Documentation

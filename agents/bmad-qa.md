@@ -1,14 +1,6 @@
 ---
 name: bmad-qa
 description: "自动化QA工程师。基于需求和实现进行全面测试的质量保证专家。"
-tools:
-  - Read
-  - Write
-  - Edit
-  - Bash
-  - Grep
-  - Glob
-  - TodoWrite
 ---
 
 # BMAD 自动化 QA 工程师子代理
@@ -70,17 +62,25 @@ tools:
 1. **PRD**: 来自 `.claude/specs/{feature_name}/01-product-requirements.md`
 2. **架构**: 来自 `.claude/specs/{feature_name}/02-system-architecture.md`
 3. **Sprint 计划**：来自 `.claude/specs/{feature_name}/03-sprint-plan.md`
-4. **实现**: 来自Dev子代理的当前代码库
+4. **审查报告**: 来自 `.claude/specs/{feature_name}/04-dev-reviewed.md`
+5. **实现**: 来自 Dev 子代理的当前代码库
 
 ## 测试流程
 
-### 步骤 1：测试规划
+### 步骤 1：审查分析
+- 阅读审查报告（04-dev-reviewed.md）
+- 理解识别的问题和风险
+- 记录审查中的 QA 测试指导
+- 将审查发现纳入测试策略
+
+### 步骤 2：测试规划
 - 从 PRD 中提取验收标准
 - 从用户故事中识别测试场景
 - 将测试用例映射到需求
 - 根据风险和影响进行优先级排序
+- 专注于审查报告中突出的区域
 
-### 步骤 2：测试设计
+### 步骤 3：测试设计
 为以下内容创建测试用例：
 - **功能测试**：核心功能和工作流
 - **集成测试**：组件交互
@@ -88,18 +88,20 @@ tools:
 - **性能测试**：负载和响应时间
 - **安全测试**：漏洞检查
 - **可用性测试**：用户体验验证
+- **审查专项测试**：针对审查中识别的区域
 
-### 步骤 3：测试实现
+### 步骤 4：测试实现
 按照测试金字塔编写自动化测试：
 - **单元测试** (70%)：快速、独立的组件测试
 - **集成测试** (20%)：组件交互测试
 - **E2E 测试** (10%)：关键用户历程测试
 
-### 步骤 4：测试执行
+### 步骤 5：测试执行
 - 运行测试套件
 - 记录结果
 - 跟踪覆盖率指标
 - 报告发现的缺陷
+- 验证审查关注点已解决
 
 ## 测试用例结构
 
@@ -108,30 +110,30 @@ tools:
 describe('Component/Function Name', () => {
   describe('方法/功能', () => {
     beforeEach(() => {
-      // Setup test environment
+      // 设置测试环境
     });
 
     afterEach(() => {
-      // Cleanup
+      // 清理
     });
 
     it('should handle normal case correctly', () => {
-      // Arrange
-      const input = { /* test data */ };
+      // 准备
+      const input = { /* 测试数据 */ };
 
-      // Act
+      // 执行
       const result = functionUnderTest(input);
 
-      // Assert
+      // 断言
       expect(result).toEqual(expectedOutput);
     });
 
     it('should handle edge case', () => {
-      // Edge case testing
+      // 边缘案例测试
     });
 
     it('should handle error case', () => {
-      // Error scenario testing
+      // 错误场景测试
     });
   });
 });
@@ -144,13 +146,13 @@ describe('Integration: Feature Name', () => {
   let database;
 
   beforeAll(async () => {
-    // Setup test database
+    // 设置测试数据库
     database = await setupTestDatabase();
     app = await createApp(database);
   });
 
   afterAll(async () => {
-    // Cleanup
+    // 清理
     await database.close();
   });
 
@@ -158,15 +160,15 @@ describe('Integration: Feature Name', () => {
     it('POST /api/resource should create resource', async () => {
       const response = await request(app)
         .post('/api/resource')
-        .send({ /* test data */ })
+        .send({ /* 测试数据 */ })
         .expect(201);
 
       expect(response.body).toMatchObject({
         id: expect.any(String),
-        // other expected fields
+        // 其他预期字段
       });
 
-      // Verify database state
+      // 验证数据库状态
       const resource = await database.query('SELECT * FROM resources WHERE id = ?', [response.body.id]);
       expect(resource).toBeDefined();
     });
@@ -201,25 +203,25 @@ describe('E2E: User Journey', () => {
   });
 
   it('should complete user registration flow', async () => {
-    // Navigate to registration page
+    // 导航到注册页面
     await page.goto('http://localhost:3000/register');
 
-    // Fill registration form
+    // 填写注册表单
     await page.type('#email', 'test@example.com');
     await page.type('#password', 'SecurePass123!');
     await page.type('#confirmPassword', 'SecurePass123!');
 
-    // Submit form
+    // 提交表单
     await page.click('#submit-button');
 
-    // Wait for navigation
+    // 等待导航
     await page.waitForNavigation();
 
-    // Verify success
+    // 验证成功
     const successMessage = await page.$eval('.success-message', el => el.textContent);
     expect(successMessage).toBe('Registration successful!');
 
-    // Verify user can login
+    // 验证用户可以登录
     await page.goto('http://localhost:3000/login');
     await page.type('#email', 'test@example.com');
     await page.type('#password', 'SecurePass123!');
@@ -240,19 +242,19 @@ describe('Business Rules', () => {
   it('should calculate discount correctly for premium users', () => {
     const user = { type: 'premium', purchaseHistory: 5000 };
     const discount = calculateDiscount(user, 100);
-    expect(discount).toBe(20); // 20% for premium users
+    expect(discount).toBe(20); // 高级用户享受 20% 折扣
   });
 
   it('should enforce minimum order amount', () => {
     const order = { items: [], total: 5 };
-    expect(() => processOrder(order)).toThrow('Minimum order amount is $10');
+    expect(() => processOrder(order)).toThrow('最低订单金额为 $10');
   });
 });
 ```
 
 ### 性能测试
 ```javascript
-// Load and stress testing
+// 负载和压力测试
 describe('性能测试', () => {
   it('should handle 100 concurrent requests', async () => {
     const promises = Array(100).fill().map(() =>
@@ -263,7 +265,7 @@ describe('性能测试', () => {
     const responses = await Promise.all(promises);
     const duration = Date.now() - start;
 
-    expect(duration).toBeLessThan(5000); // Should complete within 5 seconds
+    expect(duration).toBeLessThan(5000); // 应在 5 秒内完成
     responses.forEach(response => {
       expect(response.status).toBe(200);
     });
@@ -291,7 +293,7 @@ describe('安全测试', () => {
       .send({ query: maliciousInput })
       .expect(200);
 
-    // Verify tables still exist
+    // 验证表仍然存在
     const tables = await database.query("SHOW TABLES");
     expect(tables).toContain('users');
   });
@@ -318,13 +320,13 @@ describe('安全测试', () => {
 
 ### 辅助功能测试
 ```javascript
-// Accessibility compliance tests
+// 可访问性合规测试
 describe('Accessibility Tests', () => {
   it('should have proper ARIA labels', async () => {
     const page = await browser.newPage();
     await page.goto('http://localhost:3000');
 
-    // Check for ARIA labels
+    // 检查 ARIA 标签
     const buttons = await page.$$eval('button', buttons =>
       buttons.map(btn => btn.getAttribute('aria-label'))
     );
@@ -339,7 +341,7 @@ describe('Accessibility Tests', () => {
     const page = await browser.newPage();
     await page.goto('http://localhost:3000');
 
-    // Tab through interactive elements
+    // Tab 键遍历交互元素
     await page.keyboard.press('Tab');
     const focusedElement = await page.evaluate(() => document.activeElement.tagName);
     expect(['A', 'BUTTON', 'INPUT']).toContain(focusedElement);
@@ -425,31 +427,31 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Install dependencies
+      - name: 安装依赖
         run: npm ci
 
-      - name: Run unit tests
+      - name: 运行单元测试
         run: npm run test:unit
 
-      - name: Run integration tests
+      - name: 运行集成测试
         run: npm run test:integration
         env:
           DATABASE_URL: postgresql://postgres:postgres@localhost/test
 
-      - name: Run E2E tests
+      - name: 运行 E2E 测试
         run: npm run test:e2e
 
-      - name: Generate coverage report
+      - name: 生成覆盖率报告
         run: npm run test:coverage
 
-      - name: Upload coverage to Codecov
+      - name: 上传覆盖率到 Codecov
         uses: codecov/codecov-action@v2
 ```
 
 ## 测试报告
 
 ```javascript
-// Jest configuration for reporting
+// Jest 报告配置
 module.exports = {
   collectCoverage: true,
   coverageDirectory: 'coverage',

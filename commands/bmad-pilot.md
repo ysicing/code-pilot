@@ -19,7 +19,7 @@ argument-hint: <项目描述> [选项]
 - 通过初始扫描的仓库上下文感知
 
 ## 您的角色
-您是 BMAD AI 团队 Orchestrator，管理交互式开发流水线。
+您是 BMAD AI 团队编排器，管理交互式开发流水线。
 
 您协调一个完整的软件开发团队：产品负责人（PO）、系统架构师、Scrum Master（SM）、开发者（Dev）和 QA 工程师。
 
@@ -35,7 +35,7 @@ argument-hint: <项目描述> [选项]
 收到这个命令后，首先扫描本地仓库以理解现有代码库：
 
 ```
-使用 Task 工具调用 bmad-orchestrator 子代理：“使用 UltraThink 方法论执行全面的仓库分析。
+使用 Task 工具调用 bmad-orchestrator 子代理："使用 UltraThink 方法论执行全面的仓库分析。
 
 ## 仓库扫描任务：
 1. **项目结构分析**：
@@ -85,7 +85,7 @@ argument-hint: <项目描述> [选项]
 保存：
 1. 确保`.claude/specs/{feature_name}/` 存在
 2. 将扫描总结保存到`.claude/specs/{feature_name}/00-repo-scan.md`
-3. 同时直接返回上下文报告内容以供立即使用”
+3. 同时直接返回上下文报告内容以供立即使用"
 ```
 
 ## 工作流概览
@@ -139,7 +139,7 @@ argument-hint: <项目描述> [选项]
 6. 暂不保存任何文件
 ```
 
-#### 2b. 交互式澄清（Orchestrator 处理）
+#### 2b. 交互式澄清（编排器处理）
 接收到 PO 的初始分析后：
 1. 向用户呈现质量分数和差距
 2. 直接向用户询问 PO 的澄清问题
@@ -158,7 +158,7 @@ argument-hint: <项目描述> [选项]
 不要保存文件 - 返回更新的 PRD 内容和分数。"
 ```
 
-#### 2d. 最终 PRD 确认（Orchestrator 处理）
+#### 2d. 最终 PRD 确认（编排器处理）
 当质量分数 ≥ 90：
 1. 向用户呈现最终 PRD 摘要
 2. 显示质量分数：{score}/100
@@ -180,11 +180,11 @@ argument-hint: <项目描述> [选项]
 3. 确认保存成功"
 ```
 
-### 3. Orchestrator 管理的迭代
-- Orchestrator 管理所有用户交互
-- PO 子代理 提供分析和问题
-- Orchestrator 向用户呈现问题
-- Orchestrator 将回复发送回 PO
+### 3. 编排器管理的迭代
+- 编排器管理所有用户交互
+- PO 子代理提供分析和问题
+- 编排器向用户呈现问题
+- 编排器将回复发送回 PO
 - 继续直到 PRD 质量 ≥ 90 分
 
 ## 🛑 用户审批门 #1（强制停止点）🛑
@@ -221,7 +221,7 @@ PRD 内容：[包括阶段 1 的 PRD 内容]
 6. 暂不保存任何文件
 ```
 
-#### 1b. 技术讨论（Orchestrator 处理）
+#### 1b. 技术讨论（编排器处理）
 接收到 Architect 的初始设计后：
 1. 向用户呈现架构概览和分数
 2. 直接向用户询问 Architect 的技术问题
@@ -240,7 +240,7 @@ PRD 内容：[包括阶段 1 的 PRD 内容]
 不要保存文件 - 返回更新的架构内容和分数。"
 ```
 
-#### 1d. 最终架构确认（Orchestrator 处理）
+#### 1d. 最终架构确认（编排器处理）
 当质量分数 ≥ 90：
 1. 向用户呈现最终架构摘要
 2. 显示质量分数：{score}/100
@@ -262,11 +262,11 @@ PRD 内容：[包括阶段 1 的 PRD 内容]
 3. 确认保存成功"
 ```
 
-### 2. Orchestrator 管理的完善
-- Orchestrator 管理所有用户交互
+### 2. 编排器管理的完善
+- 编排器管理所有用户交互
 - Architect 子代理提供设计和问题
-- Orchestrator 向用户呈现技术问题
-- Orchestrator 将回复发送回 Architect
+- 编排器向用户呈现技术问题
+- 编排器将回复发送回 Architect
 - 继续直到架构质量 ≥ 90 分
 
 ## 🛑 用户审批门 #2（强制停止点）🛑
@@ -297,13 +297,13 @@ PRD 路径：`.claude/specs/{feature_name}/01-product-requirements.md`
 任务：准备初始 sprint 计划草稿。
 指令：
 1. 从指定路径读取 PRD 和架构
-2. 生成初始 sprint 计划草稿（stories、任务、估算、风险）
+2. 生成初始 sprint 计划草稿（故事、任务、估算、风险）
 3. 识别澄清点或假设
 4. 返回草稿计划和问题
 5. 暂不保存任何文件
 ```
 
-#### 3b. 交互式澄清（Orchestrator 处理）
+#### 3b. 交互式澄清（编排器处理）
 接收到 SM 的草稿后：
 1. 向用户呈现关键计划要点
 2. 直接向用户询问 SM 的澄清问题
@@ -311,7 +311,7 @@ PRD 路径：`.claude/specs/{feature_name}/01-product-requirements.md`
 4. 将回复发送回 SM 进行完善
 
 #### 3c. Sprint 计划完善循环
-与 bmad-sm 子代理 重复直到计划准备好确认：
+与 bmad-sm 子代理重复直到计划准备好确认：
 ```
 使用 Task 工具调用 bmad-sm 子代理:
 "以下是用户的回答和偏好：
@@ -320,7 +320,7 @@ PRD 路径：`.claude/specs/{feature_name}/01-product-requirements.md`
 请相应完善 sprint 计划并返回更新的计划。不要保存文件。"
 ```
 
-#### 3d. 最终 Sprint 计划确认（Orchestrator 处理）
+#### 3d. 最终 Sprint 计划确认（编排器处理）
 当 sprint 计划令人满意时：
 1. 向用户呈现最终 sprint 计划摘要（待办事项、顺序、估算、风险）
 2. 询问："Sprint 计划已完成。是否保存 Sprint 计划文档？"
@@ -350,14 +350,36 @@ PRD 路径：`.claude/specs/{feature_name}/01-product-requirements.md`
 功能名称：{feature_name}
 工作目录：[项目根目录]
 
-任务：根据规格实施所有功能。
+任务：根据规范实现所有冲刺中的所有功能。
 指令：
 1. 从`.claude/specs/{feature_name}/01-product-requirements.md` 读取 PRD
 2. 从`.claude/specs/{feature_name}/02-system-architecture.md` 读取架构
 3. 从`.claude/specs/{feature_name}/03-sprint-plan.md` 读取 Sprint 计划
-4. 按照 sprint 计划任务顺序实现功能
-5. 创建带测试的生产级代码
-6. 报告实现状态
+4. 按顺序识别并实现所有冲刺（Sprint 1、Sprint 2 等）
+5. 在完成前完成所有冲刺中的所有任务
+6. 为整个功能集创建生产就绪的代码和测试
+7. 报告每个冲刺的实施状态和总体完成情况
+```
+
+### 阶段 4.5：代码审查（自动化）
+```
+使用 Task 工具调用 bmad-review 代理：
+
+仓库上下文：[包括仓库扫描结果]
+仓库扫描路径：`.claude/specs/{feature_name}/00-repo-scan.md`
+功能名称：{feature_name}
+工作目录：[项目根目录]
+审查迭代：[当前迭代号，从 1 开始]
+
+任务：进行独立代码审查
+指令：
+1. 从 `.claude/specs/{feature_name}/01-product-requirements.md` 读取 PRD
+2. 从 `.claude/specs/{feature_name}/02-system-architecture.md` 读取架构
+3. 从 `.claude/specs/{feature_name}/03-sprint-plan.md` 读取 Sprint 计划
+4. 根据需求和架构分析实现
+5. 生成结构化审查报告
+6. 将报告保存到 `.claude/specs/{feature_name}/04-dev-reviewed.md`
+7. 返回审查状态（通过/带风险通过/失败）
 ```
 
 ### 阶段 5：质量保证（自动化 - 除非 --skip-tests）
@@ -396,6 +418,7 @@ PRD 路径：`.claude/specs/{feature_name}/01-product-requirements.md`
 11. 🛑 停止：请求用户 sprint 计划批准
 12. 如果批准 → 执行剩余阶段：
     - 开发（Dev）
+    - 代码审查（Review）
     - 测试（QA）除非 --skip-tests
 13. 报告完成情况和交付物摘要
 ```
@@ -405,9 +428,10 @@ PRD 路径：`.claude/specs/{feature_name}/01-product-requirements.md`
 所有输出保存到 `.claude/specs/{feature_name}/`：
 ```
 00-repo-scan.md             # 仓库扫描摘要（扫描后自动保存）
-01-product-requirements.md    # PO 的 PRD（批准后）
-02-system-architecture.md     # Architect 的技术设计（批准后）
-03-sprint-plan.md             # SM 的 Sprint 计划（批准后；如果 --direct-dev 则跳过）
+01-product-requirements.md  # PO 的 PRD（批准后）
+02-system-architecture.md   # Architect 的技术设计（批准后）
+03-sprint-plan.md           # SM 的 Sprint 计划（批准后；如果 --direct-dev 则跳过）
+04-dev-reviewed.md          # Review 代理的代码审查报告（Dev 阶段后）
 ```
 
 ## 关键工作流特性
@@ -416,7 +440,7 @@ PRD 路径：`.claude/specs/{feature_name}/01-product-requirements.md`
 - **上下文驱动**：所有阶段感知现有代码库
 - **模式一致性**：遵循既定约定
 - **集成专注**：与现有代码无缝集成
- - **扫描缓存**：仓库扫描摘要缓存到 00-repo-scan.md，供各阶段一致引用
+- **扫描缓存**：仓库扫描摘要缓存到 00-repo-scan.md，供各阶段一致引用
 
 ### UltraThink 集成
 - **深度分析**：每个阶段的系统化思考
@@ -441,7 +465,7 @@ PRD 路径：`.claude/specs/{feature_name}/01-product-requirements.md`
 - **扫描摘要缓存**：功能的 00-repo-scan.md 存在
 - **需求清晰**：PRD 90+ 质量分数和用户批准
 - **架构稳固**：设计 90+ 质量分数和用户批准
-- **规划完整**：详细的 sprint 计划，所有 story 已估算
+- **规划完整**：详细的 sprint 计划，所有故事已估算
 - **实现工作**：代码完全按照架构实现 PRD 需求
 - **质量保证**：所有验收标准已验证（除非跳过）
 

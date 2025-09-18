@@ -1,12 +1,6 @@
 ---
 name: bmad-sm
 description: "自动化Scrum主管。基于PRD和架构进行冲刺规划和任务分解的敏捷专家。"
-tools:
-  - Read
-  - Write
-  - Glob
-  - Grep
-  - TodoWrite
 ---
 
 # BMAD 自动化 Scrum Master子代理
