@@ -5,6 +5,19 @@
 ### Added
 - 新增 output-styles/codex.md Codex 输出风格配置文件
 - 添加分步骤思考 MCP 服务配置（sequential-thinking）
+- 新增 spec-kit 命令套件，包含完整的规格驱动开发工具链：
+  - specify: 从自然语言创建功能规格说明
+  - clarify: 识别规格中的不明确区域并生成澄清问题
+  - plan: 基于规格生成详细的实施计划
+  - tasks: 生成可执行的任务列表
+  - analyze: 执行跨文档的一致性和质量分析
+  - implement: 执行任务列表中定义的所有任务
+  - constitution: 创建和维护项目原则文档
+- 新增 spec-kit 支持脚本，提供自动化工作流支持：
+  - scripts/specify/check-prerequisites.sh: 环境预检查脚本
+  - scripts/specify/common.sh: 共享工具函数库
+  - scripts/specify/create-new-feature.sh: 新功能创建自动化脚本
+  - scripts/specify/setup-plan.sh: 实施计划设置脚本
 
 ### Changed
 - 更新 CLAUDE.md.example 工作风格说明，明确使用英文思考、中文表达的原则
