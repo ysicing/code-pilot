@@ -11,6 +11,14 @@
 
 ## 其他有趣玩法
 
+### 分步骤思考
+
+```
+claude mcp add-json sequential-thinking '{"type":"stdio","command":"npx","args":["-y","@modelcontextprotocol/server-sequential-thinking"]}'
+```
+
+服务会强制Claude Code把复杂问题拆解成多个步骤，避免跳步
+
 ### Codex 为主，调用 Claude Code
 
 如果你的主 AI 编程工具是 Codex，可以在 **~/.codex/config.toml** 配置文件中配置一个 Claude Code MCP 服务

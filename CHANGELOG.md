@@ -1,11 +1,14 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+## [2025-09-23]
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+### Added
+- 新增 output-styles/codex.md Codex 输出风格配置文件
+- 添加分步骤思考 MCP 服务配置（sequential-thinking）
 
-## [Unreleased]
+### Changed
+- 更新 CLAUDE.md.example 工作风格说明，明确使用英文思考、中文表达的原则
+- 增强 changelog 命令功能，支持暂存区变更记录和智能去重过滤
 
 ## [2025-09-18]
 
@@ -56,3 +59,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 规范化文档路径为相对格式
 - 添加上下文管理命令文档
 - 增强翻译规则说明
+
+---
+
+All notable changes to this project will be documented in this file.
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).

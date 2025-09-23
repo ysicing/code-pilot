@@ -23,18 +23,26 @@ allowed-tools: [Read, Write, Edit, Bash]
   - **重要**：如果版本已存在，将添加新的变更条目到该版本；如果不存在，创建新版本章节
 
 ### 重要约束
-- **数据源要求**：必须基于Git记录，绝不依赖会话上下文
+- **数据源要求**：基于Git记录（包括提交历史和暂存区），绝不依赖会话上下文
+  - 支持已提交的变更（git log）
+  - 支持暂存区的变更（git diff --cached）
+  - 暂存区变更会智能过滤中间状态
 - **版本范围限制**：当未指定版本号时（使用日期格式），变更日志只记录**当天的实际代码操作**
   - 不包含：昨天及之前git提交记录、之前的版本变更
   - 原则：今天的日志只反映今天的工作
+- **智能去重**：多次执行changelog时，会过滤中间状态的变更
+  - 如果某个功能先添加后删除，则不记录
+  - 只记录最终状态的有效变更
 
 ## 描述
 
 此命令将执行以下操作：
 
 1. **Git 数据收集**：首先从 Git 获取所有必要的变更信息
-   - 执行 git log、git diff、git status 命令
-   - 基于实际的代码提交和变更生成日志
+   - 执行 git log 获取提交历史
+   - 执行 git diff --cached 获取暂存区变更
+   - 执行 git status 检查工作区状态
+   - 基于实际的代码提交和暂存区变更生成日志
 2. **文件检查**：检查 CHANGELOG.md 文件是否存在
    - 如不存在，创建带有标准标头的新文件
 3. **版本管理**：
@@ -71,6 +79,24 @@ CHANGELOG 严格遵循 [Keep a Changelog](https://keepachangelog.com/) 格式规
 
 ## 使用示例
 
+### 暂存区变更示例
+```bash
+# 第一次：添加新功能到暂存区
+git add feature.js
+/changelog
+# 记录：Added - 新增 feature.js 功能模块
+
+# 第二次：删除该功能
+git rm --cached feature.js
+/changelog
+# 智能过滤：不记录任何变更（因为功能被添加后又删除）
+
+# 第三次：修改已有文件
+git add config.js
+/changelog
+# 记录：Changed - 更新配置文件设置
+```
+
 ### 基础用法
 ```bash
 # 使用今日日期创建或更新版本
@@ -105,13 +131,6 @@ CHANGELOG 严格遵循 [Keep a Changelog](https://keepachangelog.com/) 格式规
 ```markdown
 # Changelog
 
-All notable changes to this project will be documented in this file.
-
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
-## [Unreleased]
-
 ## [1.2.0] - 2025-09-01
 ### Added
 - 新的用户认证功能
@@ -128,6 +147,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.1.0] - 2025-08-15
 ### Added
 - 初始版本发布
+
+
+---
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ```
 
 ## 实现流程
@@ -148,6 +175,7 @@ fi
 # 例如：获取最近的提交或自上个版本以来的提交
 RECENT_COMMITS=$(git log --oneline -10)  # 最近10个提交
 CODE_CHANGES=$(git diff HEAD~1..HEAD --name-status)
+STAGED_CHANGES=$(git diff --cached --name-status)  # 暂存区变更
 UNSTAGED=$(git status --porcelain)
 ```
 
@@ -181,11 +209,14 @@ UNSTAGED=$(git status --porcelain)
 1. **新变更识别**（基于 Git 数据）：
    - 分析现有 CHANGELOG.md 确定上次记录的位置
    - 执行 `git log --format="%H %s"` 获取相关提交
-   - 对于日期版本：查找该日期相关的提交
+   - 执行 `git diff --cached` 获取暂存区变更
+   - 对于日期版本：查找该日期相关的提交和暂存区变更
    - 对于版本号：查找自上个版本标签以来的提交
-   - 执行 `git diff` 分析具体文件变更
-   - 执行 `git status --porcelain` 检查未提交变更
    - 从 Git 数据中提取有意义的变更描述
+   - **智能过滤中间状态**：
+     * 跟踪同一版本内的所有变更历史
+     * 如果文件/功能先添加后删除，不记录该变更
+     * 如果文件多次修改，只记录最终状态
    - **绝不使用**会话记忆或上下文推测
 
 2. **智能合并**：
@@ -213,8 +244,12 @@ UNSTAGED=$(git status --porcelain)
 ### 自动变更检测与合并
 - **数据源**：必须从 Git 获取，而非会话上下文
   - `git log` 获取相关提交记录（根据版本策略确定范围）
-  - `git diff` 分析代码变更内容
+  - `git diff --cached` 分析暂存区变更内容
   - `git status` 检查工作区状态
+- **中间状态过滤**：
+  - 维护版本内的变更历史记录
+  - 检测并过滤无效的中间状态（添加后删除）
+  - 合并多次修改为最终状态描述
 - 当使用日期版本时，智能分析相关的 Git 提交
 - 当指定版本号时，可包含相关的历史提交
 - 根据变更内容智能归类到相应的变更类型
@@ -296,6 +331,10 @@ UNSTAGED=$(git status --porcelain)
   - 版本已存在时，添加新变更而非跳过
   - 自动检测并避免重复条目
   - 无新变更时给出明确提示
+- **暂存区处理**：
+  - 支持记录暂存区的变更
+  - 智能过滤中间状态变更
+  - 多次执行会追踪变更历史，避免记录无效变更
 - **语言一致**：保持变更描述语言的一致性
 
 ## 相关链接
