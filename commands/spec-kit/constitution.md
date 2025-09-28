@@ -8,11 +8,11 @@ description: 从交互式或提供的原则输入创建或更新项目宪章，�
 
 $ARGUMENTS
 
-你正在更新位于 `.specify/memory/constitution.md` 的项目宪章。这个文件是一个模板，包含方括号中的占位符标记（例如 `[PROJECT_NAME]`、`[PRINCIPLE_1_NAME]`）。你的工作是（a）收集/推导具体值，（b）精确填充模板，以及（c）在依赖的文档中传播任何修改。
+你正在更新位于 `.claude/memory/constitution.md` 的项目宪章。这个文件是一个模板，包含方括号中的占位符标记（例如 `[PROJECT_NAME]`、`[PRINCIPLE_1_NAME]`）。你的工作是（a）收集/推导具体值，（b）精确填充模板，以及（c）在依赖的文档中传播任何修改。
 
 遵循以下执行流程：
 
-1. 加载位于 `.specify/memory/constitution.md` 的现有宪章模板。
+1. 加载位于 `~/.claude/templates/memory/constitution.md` 的现有宪章模板。
    - 识别所有形式为 `[ALL_CAPS_IDENTIFIER]` 的占位符标记。
    **重要**：用户可能需要比模板中使用的更少或更多的原则。如果指定了数字，请遵守 - 遵循通用模板。你将相应地更新文档。
 
@@ -33,10 +33,10 @@ $ARGUMENTS
    - 确保治理部分列出修订程序、版本控制策略和合规审查期望。
 
 4. 一致性传播清单（将先前的清单转换为主动验证）：
-   - 读取 `.specify/templates/plan-template.md` 并确保任何"宪章检查"或规则与更新的原则一致。
-   - 读取 `.specify/templates/spec-template.md` 以进行范围/需求对齐——如果宪章添加/删除强制性部分或约束，则更新。
-   - 读取 `.specify/templates/tasks-template.md` 并确保任务分类反映新的或删除的原则驱动的任务类型（例如，可观察性、版本控制、测试纪律）。
-   - 读取 `.specify/templates/commands/*.md` 中的每个命令文件（包括这个）以验证在需要通用指导时不保留过时的引用（仅代理特定名称如 CLAUDE）。
+   - 读取 `~/.claude/templates/specify/plan-template.md` 并确保任何"宪章检查"或规则与更新的原则一致。
+   - 读取 `~/.claude/templates/specify/spec-template.md` 以进行范围/需求对齐——如果宪章添加/删除强制性部分或约束，则更新。
+   - 读取 `~/.claude/templates/specify/tasks-template.md` 并确保任务分类反映新的或删除的原则驱动的任务类型（例如，可观察性、版本控制、测试纪律）。
+   - 读取 `~/.claude/templates/specify/commands/*.md` 中的每个命令文件（包括这个）以验证在需要通用指导时不保留过时的引用（仅代理特定名称如 CLAUDE）。
    - 读取任何运行时指导文档（例如，`README.md`、`docs/quickstart.md` 或代理特定指导文件（如果存在））。更新对已更改原则的引用。
 
 5. 生成同步影响报告（更新后作为 HTML 注释前置在宪章文件顶部）：
@@ -53,7 +53,7 @@ $ARGUMENTS
    - 日期 ISO 格式 YYYY-MM-DD。
    - 原则是声明性的、可测试的，并且没有模糊语言（"应该" → 在适当的地方用 MUST/SHOULD 理由替换）。
 
-7. 将完成的宪章写回 `.specify/memory/constitution.md`（覆盖）。
+7. 将完成的宪章写回 `.claude/memory/constitution.md`（覆盖）。
 
 8. 向用户输出最终摘要，包括：
    - 新版本和升级理由。
@@ -70,4 +70,4 @@ $ARGUMENTS
 
 如果缺少关键信息（例如，批准日期真的未知），插入 `TODO(<FIELD_NAME>): 说明` 并在同步影响报告的推迟项目下包含。
 
-不要创建新模板；始终在现有的 `.specify/memory/constitution.md` 文件上操作。
+不要创建新模板；始终在现有的 `.claude/memory/constitution.md` 文件上操作。

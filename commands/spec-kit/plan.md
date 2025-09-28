@@ -19,10 +19,10 @@ $ARGUMENTS
    - 成功标准和验收标准
    - 提到的任何技术约束或依赖
 
-3. 阅读位于 `.specify/memory/constitution.md` 的宪章以了解宪章要求。
+3. 阅读位于 `.claude/memory/constitution.md` 的宪章以了解宪章要求。
 
 4. 执行实施计划模板：
-   - 加载 `.specify/templates/plan-template.md`（已复制到 IMPL_PLAN 路径）
+   - 加载 `~/.claude/templates/specify/plan-template.md`（已复制到 IMPL_PLAN 路径）
    - 将输入路径设置为 FEATURE_SPEC
    - 运行执行流程（主要）函数步骤 1-9
    - 模板是自包含的和可执行的

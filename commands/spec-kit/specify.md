@@ -15,7 +15,7 @@ $ARGUMENTS
 1. 在仓库根目录运行脚本 `~/.claude/scripts/specify/create-new-feature.sh --json "$ARGUMENTS"` 并解析其 JSON 输出以获取 BRANCH_NAME 和 SPEC_FILE。所有文件路径必须是绝对路径。
    **重要** 你只能运行此脚本一次。JSON 在终端中作为输出提供 - 始终参考它以获取你正在寻找的实际内容。
 
-2. 加载 `.specify/templates/spec-template.md` 以了解所需的部分。
+2. 加载 `~/.claude/templates/specify/spec-template.md` 以了解所需的部分。
 
 3. 使用模板结构将规格写入 SPEC_FILE，用从功能描述（参数）派生的具体细节替换占位符，同时保留部分顺序和标题。
 

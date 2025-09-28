@@ -23,7 +23,7 @@ $ARGUMENTS
    - 基于可用内容生成任务
 
 3. 按照模板生成任务：
-   - 使用 `.specify/templates/tasks-template.md` 作为基础
+   - 使用 `~/.claude/templates/specify/tasks-template.md` 作为基础
    - 基于以下内容替换示例任务为实际任务：
      * **设置任务**：项目初始化、依赖、代码检查
      * **测试任务 [P]**：每个契约一个，每个集成场景一个
