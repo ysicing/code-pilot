@@ -1,5 +1,12 @@
 # Changelog
 
+## [2025-09-30]
+
+### Changed
+- 更新 `.gitignore` 文件，添加 `history.jsonl` 忽略规则
+- 重组模板目录结构，将 spec-kit 相关模板移至 `templates/specify/` 目录
+- 修正 spec-kit constitution 命令中的路径引用（从 `templates/specify/commands/` 更新为 `commands/spec-kit/`）
+
 ## [2025-09-23]
 
 ### Added
