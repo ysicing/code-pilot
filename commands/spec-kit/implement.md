@@ -8,7 +8,7 @@ description: 通过处理和执行 tasks.md 中定义的所有任务来执行实
 
 $ARGUMENTS
 
-1. 在仓库根目录运行 `~/.claude/scripts/specify/check-prerequisites.sh --json --require-tasks --include-tasks` 并解析 FEATURE_DIR 和 AVAILABLE_DOCS 列表。所有路径必须是绝对路径。
+1. 在仓库根目录运行 `$HOME/.claude/scripts/specify/check-prerequisites.sh --json --require-tasks --include-tasks` 并解析 FEATURE_DIR 和 AVAILABLE_DOCS 列表。所有路径必须是绝对路径。
 
 2. 加载和分析实施上下文：
    - **必需**：读取 tasks.md 获取完整的任务列表和执行计划

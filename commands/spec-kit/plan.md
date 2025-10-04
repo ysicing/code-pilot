@@ -10,7 +10,7 @@ $ARGUMENTS
 
 根据作为参数提供的实施详细信息，执行以下操作：
 
-1. 在仓库根目录运行 `~/.claude/scripts/specify/setup-plan.sh --json` 并解析 JSON 以获取 FEATURE_SPEC、IMPL_PLAN、SPECS_DIR、BRANCH。所有未来的文件路径必须是绝对路径。
+1. 在仓库根目录运行 `$HOME/.claude/scripts/specify/setup-plan.sh --json` 并解析 JSON 以获取 FEATURE_SPEC、IMPL_PLAN、SPECS_DIR、BRANCH。所有未来的文件路径必须是绝对路径。
    - 在继续之前，检查 FEATURE_SPEC 是否有包含至少一个 `Session` 子标题的 `## 澄清` 部分。如果缺失或明显存在模糊区域（模糊形容词、未解决的关键选择），暂停并指导用户首先运行 `/spec-kit:clarify` 以减少返工。仅在以下情况下继续：（a）存在澄清或（b）提供了明确的用户覆盖（例如，"不澄清继续"）。不要试图自己编造澄清。
 
 2. 阅读并分析功能规格以了解：
@@ -22,7 +22,7 @@ $ARGUMENTS
 3. 阅读位于 `.claude/memory/constitution.md` 的宪章以了解宪章要求。
 
 4. 执行实施计划模板：
-   - 加载 `~/.claude/templates/specify/plan-template.md`（已复制到 IMPL_PLAN 路径）
+   - 加载 `$HOME/.claude/templates/specify/plan-template.md`（已复制到 IMPL_PLAN 路径）
    - 将输入路径设置为 FEATURE_SPEC
    - 运行执行流程（主要）函数步骤 1-9
    - 模板是自包含的和可执行的

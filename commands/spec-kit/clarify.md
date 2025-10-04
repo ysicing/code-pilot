@@ -14,7 +14,7 @@ $ARGUMENTS
 
 执行步骤：
 
-1. 在仓库根目录运行**一次** `~/.claude/scripts/specify/check-prerequisites.sh --json --paths-only`（组合 `--json --paths-only` 模式 / `-Json -PathsOnly`）。解析最小 JSON 负载字段：
+1. 在仓库根目录运行**一次** `$HOME/.claude/scripts/specify/check-prerequisites.sh --json --paths-only`（组合 `--json --paths-only` 模式 / `-Json -PathsOnly`）。解析最小 JSON 负载字段：
    - `FEATURE_DIR`
    - `FEATURE_SPEC`
    - （可选捕获 `IMPL_PLAN`、`TASKS` 用于未来的链式流程。）

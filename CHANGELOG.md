@@ -1,5 +1,24 @@
 # Changelog
 
+## [2025-10-05]
+
+### Fixed
+- 修复 spec-kit 脚本中模板路径展开问题（将 `~` 改为 `$HOME`）
+  - 修正 `setup-plan.sh` 中 plan-template.md 路径处理
+  - 修正 `create-new-feature.sh` 中 spec-template.md 路径处理
+  - 解决生成 plan.md 文件格式为二进制而非文本的问题
+- 修复 spec-kit 所有命令文件中的模板路径引用问题
+  - 更新 `specify.md` - 修正脚本和模板路径
+  - 更新 `plan.md` - 修正脚本和模板路径
+  - 更新 `clarify.md` - 修正预检脚本路径
+  - 更新 `tasks.md` - 修正脚本和模板路径
+  - 更新 `analyze.md` - 修正预检脚本路径
+  - 更新 `implement.md` - 修正预检脚本路径
+  - 更新 `constitution.md` - 修正所有模板和命令路径引用
+
+### Added
+- 添加 config.json 配置文件
+
 ## [2025-09-30]
 
 ### Changed

@@ -8,7 +8,7 @@ description: 基于可用的设计文档为功能生成可操作的、依赖排�
 
 $ARGUMENTS
 
-1. 在仓库根目录运行 `~/.claude/scripts/specify/check-prerequisites.sh --json` 并解析 FEATURE_DIR 和 AVAILABLE_DOCS 列表。所有路径必须是绝对路径。
+1. 在仓库根目录运行 `$HOME/.claude/scripts/specify/check-prerequisites.sh --json` 并解析 FEATURE_DIR 和 AVAILABLE_DOCS 列表。所有路径必须是绝对路径。
 
 2. 加载并分析可用的设计文档：
    - 始终阅读 plan.md 以获取技术栈和库
@@ -23,7 +23,7 @@ $ARGUMENTS
    - 基于可用内容生成任务
 
 3. 按照模板生成任务：
-   - 使用 `~/.claude/templates/specify/tasks-template.md` 作为基础
+   - 使用 `$HOME/.claude/templates/specify/tasks-template.md` 作为基础
    - 基于以下内容替换示例任务为实际任务：
      * **设置任务**：项目初始化、依赖、代码检查
      * **测试任务 [P]**：每个契约一个，每个集成场景一个

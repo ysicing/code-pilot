@@ -16,7 +16,7 @@ $ARGUMENTS
 
 执行步骤：
 
-1. 在仓库根目录运行一次 `~/.claude/scripts/specify/check-prerequisites.sh --json --require-tasks --include-tasks` 并解析 JSON 以获取 FEATURE_DIR 和 AVAILABLE_DOCS。推导绝对路径：
+1. 在仓库根目录运行一次 `$HOME/.claude/scripts/specify/check-prerequisites.sh --json --require-tasks --include-tasks` 并解析 JSON 以获取 FEATURE_DIR 和 AVAILABLE_DOCS。推导绝对路径：
    - SPEC = FEATURE_DIR/spec.md
    - PLAN = FEATURE_DIR/plan.md
    - TASKS = FEATURE_DIR/tasks.md

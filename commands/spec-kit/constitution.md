@@ -12,7 +12,7 @@ $ARGUMENTS
 
 遵循以下执行流程：
 
-1. 加载位于 `~/.claude/templates/memory/constitution.md` 的现有宪章模板。
+1. 加载位于 `$HOME/.claude/templates/memory/constitution.md` 的现有宪章模板。
    - 识别所有形式为 `[ALL_CAPS_IDENTIFIER]` 的占位符标记。
    **重要**：用户可能需要比模板中使用的更少或更多的原则。如果指定了数字，请遵守 - 遵循通用模板。你将相应地更新文档。
 
@@ -33,10 +33,10 @@ $ARGUMENTS
    - 确保治理部分列出修订程序、版本控制策略和合规审查期望。
 
 4. 一致性传播清单（将先前的清单转换为主动验证）：
-   - 读取 `~/.claude/templates/specify/plan-template.md` 并确保任何"宪章检查"或规则与更新的原则一致。
-   - 读取 `~/.claude/templates/specify/spec-template.md` 以进行范围/需求对齐——如果宪章添加/删除强制性部分或约束，则更新。
-   - 读取 `~/.claude/templates/specify/tasks-template.md` 并确保任务分类反映新的或删除的原则驱动的任务类型（例如，可观察性、版本控制、测试纪律）。
-   - 读取 `~/.claude/commands/spec-kit/*.md` 中的每个命令文件（包括这个）以验证在需要通用指导时不保留过时的引用（仅代理特定名称如 CLAUDE）。
+   - 读取 `$HOME/.claude/templates/specify/plan-template.md` 并确保任何"宪章检查"或规则与更新的原则一致。
+   - 读取 `$HOME/.claude/templates/specify/spec-template.md` 以进行范围/需求对齐——如果宪章添加/删除强制性部分或约束，则更新。
+   - 读取 `$HOME/.claude/templates/specify/tasks-template.md` 并确保任务分类反映新的或删除的原则驱动的任务类型（例如，可观察性、版本控制、测试纪律）。
+   - 读取 `$HOME/.claude/commands/spec-kit/*.md` 中的每个命令文件（包括这个）以验证在需要通用指导时不保留过时的引用（仅代理特定名称如 CLAUDE）。
    - 读取任何运行时指导文档（例如，`README.md`、`docs/quickstart.md` 或代理特定指导文件（如果存在））。更新对已更改原则的引用。
 
 5. 生成同步影响报告（更新后作为 HTML 注释前置在宪章文件顶部）：
