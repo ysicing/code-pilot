@@ -1,0 +1,26 @@
+{
+  "name": "code-pilot",
+  "version": "2.0.0",
+  "description": "智能开发工作流系统 - 通过15+核心命令和专业AI角色，将复杂的开发任务转化为可信任的自动化工作流",
+  "author": {
+    "name": "ysicing",
+    "email": "i@ysicing.me",
+    "url": "https://github.com/ysicing"
+  },
+  "homepage": "https://github.com/ysicing/code-pilot",
+  "repository": "https://github.com/ysicing/code-pilot",
+  "license": "Apache-2.0",
+  "keywords": [
+    "claude-code",
+    "intelligent-workflow",
+    "development-automation",
+    "ai-agents",
+    "spec-driven-development",
+    "quality-control",
+    "bmad",
+    "kiro",
+    "requirements-pilot",
+    "zcf-workflow",
+    "vibe-coding"
+  ]
+}
