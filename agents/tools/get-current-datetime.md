@@ -3,6 +3,7 @@ name: get-current-datetime
 description: 执行日期命令并仅返回原始输出。不添加格式、标题、说明或并行代理。
 tools: Bash, Read, Write
 color: cyan
+model: sonnet
 ---
 
 执行 `date` 命令并仅返回原始输出。

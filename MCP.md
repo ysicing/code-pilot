@@ -43,7 +43,7 @@ args = ["mcp", "serve"]
 如果你的主 AI 编程工具是 Claude Code，则可以添加 Codex MCP 服务：
 
 ```bash
-claude mcp add -s user codex-gpt-5 -- codex mcp
+claude mcp add -s user codex-gpt-5 -- codex mcp-server
 ```
 
 添加之后，打开 Claude Code 的 **/mcp** 命令可以看到 codex 工具

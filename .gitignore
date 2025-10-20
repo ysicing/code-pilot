@@ -16,3 +16,6 @@ context
 !commands/context
 ccline
 history.jsonl
+debug/*.txt
+debug/latest
+file-history/
