@@ -10,6 +10,8 @@
     "CLAUDE_LANGUAGE": "zh",
   },
   "includeCoAuthoredBy": false,
+  "skipWebFetchPreflight": true,
+  "alwaysThinkingEnabled": false,
   "permissions": {
     "allow": [],
     "deny": []
@@ -19,8 +21,6 @@
     "command": "~/.claude/scripts/statusline.sh",
     "padding": 0
   },
-  "model": "opusplan",
-  "outputStyle": "znb",
   "hooks": {
     "Notification": [
       {
