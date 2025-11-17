@@ -20,7 +20,7 @@ Kiro 会引导您：
 /kiro <功能描述>    # 创建功能规范（需求 + 设计）
 
 # 注意：kiro 只创建规范文档，不实现代码
-# 实际开发请使用 requirements-pilot 或 bmad-pilot
+# 实际开发请使用 requirements-pilot
 ```
 
 ## 🎯 工作流程
@@ -85,8 +85,6 @@ Kiro 会自动引导您完成：
 ```bash
 # 使用其他工具进行实际开发
 /requirements-pilot "基于购物车规范实现代码" --test
-# 或
-/bmad-pilot "基于购物车设计实现完整功能" --test
 ```
 
 ## 🎨 使用技巧
@@ -132,8 +130,8 @@ Kiro 会自动引导您完成：
 **Q: 如何修改已有规范？**  
 A: 重新运行 `/kiro 功能名`，系统会检测现有规范并询问是否更新
 
-**Q: 规范创建后如何进行开发？**  
-A: 使用 `/requirements-pilot` 或 `/bmad-pilot` 进行实际实现
+**Q: 规范创建后如何进行开发？**
+A: 使用 `/requirements-pilot` 进行实际实现
 
 **Q: Kiro 能实现代码吗？**  
 A: 不能。Kiro 只创建规范文档，代码实现需要使用其他工具
@@ -162,4 +160,3 @@ A: 不能。Kiro 只创建规范文档，代码实现需要使用其他工具
 
 **重要提醒**: Kiro 只创建规范文档。实际代码开发请使用：
 - `/requirements-pilot` - 快速开发工作流
-- `/bmad-pilot` - AI团队协作开发

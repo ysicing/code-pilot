@@ -48,9 +48,6 @@ cp CLAUDE.md.example CLAUDE.md
 # 规范驱动 - 复杂功能的结构化设计
 /kiro "设计一个支持多租户的SaaS系统"
 
-# 企业级 - AI团队协作的完整开发流水线  
-/bmad-pilot "构建高可用的微服务架构"
-
 # 专业开发 - 六阶段精细控制
 /zcf-workflow "开发在线教育平台"
 ```
@@ -69,7 +66,6 @@ cp CLAUDE.md.example CLAUDE.md
 |------|------------|------|
 | **日常功能开发** | `/requirements-pilot` | 快速、自动化、质量门控 |
 | **复杂系统设计** | `/kiro` | 结构化、文档化、3阶段 |
-| **企业级项目** | `/bmad-pilot` | 团队协作、高质量、全流程 |
 | **专业精细开发** | `/zcf-workflow` | 六阶段、质量把关、优化环节 |
 
 ### ⚡ Requirements-Pilot 快速开发
@@ -101,21 +97,6 @@ cp CLAUDE.md.example CLAUDE.md
 - 需求明确化
 - 设计文档完整
 - 任务分解清晰
-
-### 🏢 BMAD-Pilot 企业级协作
-
-**最完整**，适合企业级项目：
-
-```bash
-/bmad-pilot "构建电商平台"
-# ↓ AI团队协作
-# 产品规划 → 架构设计 → 开发实现 → 质量保证 → 发布管理
-```
-
-**优势**：
-- AI团队协作
-- 完整质量体系
-- 企业级标准
 
 ### 🔬 ZCF-Workflow 六阶段专业开发
 
@@ -214,18 +195,17 @@ cp CLAUDE.md.example CLAUDE.md
 需求类型：
 ├── 快速功能开发 → /requirements-pilot
 ├── 复杂功能规范 → /kiro
-├── 企业级项目 → /bmad-pilot
 ├── 专业精细开发 → /zcf-workflow
 └── 技术决策分析 → /ultrathink
 ```
 
 ### 场景对比
-| 维度 | Requirements-Pilot | Kiro | BMAD-Pilot | ZCF-Workflow |
-|------|-------------------|------|------------|---------------|
-| **速度** | ⚡⚡⚡⚡⚡ | ⚡⚡⚡ | ⚡⚡ | ⚡⚡⚡ |
-| **文档** | ⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
-| **质量** | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| **复杂度** | 简单 | 中等 | 复杂 | 专业 |
+| 维度 | Requirements-Pilot | Kiro | ZCF-Workflow |
+|------|-------------------|------|---------------|
+| **速度** | ⚡⚡⚡⚡⚡ | ⚡⚡⚡ | ⚡⚡⚡ |
+| **文档** | ⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| **质量** | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| **复杂度** | 简单 | 中等 | 专业 |
 
 ## 👥 专业角色体系
 
@@ -271,9 +251,8 @@ cp CLAUDE.md.example CLAUDE.md
    # ✅ 推荐：根据需求选择合适工作流
    /requirements-pilot "功能描述"  # 日常开发
    /kiro "复杂功能"               # 需要规范
-   /bmad-pilot "企业项目"         # 团队协作
    /zcf-workflow "专业开发"       # 精细控制
-   
+
    # ❌ 避免：手动拼接命令
    /ask → /code → /review → /test
    ```
@@ -413,7 +392,6 @@ cp CLAUDE.md.example CLAUDE.md
 **A**:
 - 日常开发 → `/requirements-pilot`
 - 需要文档 → `/kiro`
-- 企业项目 → `/bmad-pilot`  
 - 精细控制 → `/zcf-workflow`
 
 ### 性能优化建议
@@ -433,5 +411,4 @@ cp CLAUDE.md.example CLAUDE.md
 
 📚 相关文档：
 - [`README.md`](./README.md) - 项目概览
-- [`BMAD-README.md`](./BMAD-README.md) - BMAD方法论指南
 - [`CLAUDE.md.example`](./CLAUDE.md.example) - 配置示例

@@ -1,5 +1,22 @@
 # Changelog
 
+## [2025-11-17]
+
+### Removed
+- 移除 BMAD 企业级工作流相关内容
+  - 删除 9 个 bmad agent 文件（bmad-analyst.md、bmad-architect.md、bmad-dev.md、bmad-orchestrator.md、bmad-po.md、bmad-qa.md、bmad-review-codex.md、bmad-review.md、bmad-sm.md）
+  - 删除 /bmad-pilot 命令文件
+  - 删除 BMAD-PILOT-GUIDE.md 和 BMAD-README.md 文档文件
+
+### Changed
+- 更新核心工作流数量，从"四大工作流"调整为"三大工作流"
+  - 移除所有文档中对 /bmad-pilot 的引用
+  - 更新 README.md、GUIDE.md、KIRO-GUIDE.md 中的工作流对比表
+  - 简化工作流决策树和最佳实践指南
+- 更新项目元数据
+  - 从 plugin.json 的 keywords 中移除 "bmad"
+  - 清理文档链接中的 BMAD-README.md 引用
+
 ## [2.0.0] - 2025-11-12
 
 ### Added
