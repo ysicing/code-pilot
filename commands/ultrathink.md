@@ -136,7 +136,7 @@ Ultrathink 最适合以下情况：
 
 以下情况请使用其他命令：
 - ❌ 简单问题或需要即时答案的情况 → 直接询问
-- ❌ 代码实现需求 → `/code` 或 `/requirements-pilot`
+- ❌ 代码实现需求 → `/code`
 - ❌ 错误修复 → `/bugfix`
 - ❌ 性能优化具体实施 → `/optimize`
 
@@ -154,7 +154,7 @@ Ultrathink 最适合以下情况：
 - 专业架构咨询 → `/ask` (专家团队模拟、实施策略)
 - 更深层次分析 → `/think-harder` (4阶段深度分析)
 - 最高复杂度问题 → `/think-ultra` (7阶段学术级分析)
-- 具体实施 → `/requirements-pilot` 或 `/code`
+- 具体实施 → `/code`
 
 ### 四工具完整对比
 

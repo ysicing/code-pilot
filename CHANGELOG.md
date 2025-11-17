@@ -7,15 +7,38 @@
   - 删除 9 个 bmad agent 文件（bmad-analyst.md、bmad-architect.md、bmad-dev.md、bmad-orchestrator.md、bmad-po.md、bmad-qa.md、bmad-review-codex.md、bmad-review.md、bmad-sm.md）
   - 删除 /bmad-pilot 命令文件
   - 删除 BMAD-PILOT-GUIDE.md 和 BMAD-README.md 文档文件
+- 移除 zcf-workflow 相关内容
+  - 删除 commands/zcf-workflow.md 命令文件
+  - 从 plugin.json 的 keywords 中移除 "zcf-workflow"
+  - 移除所有文档中对 /zcf-workflow 的引用
+- 移除 requirements-pilot 相关内容
+  - 删除 commands/requirements-pilot.md 命令文件
+  - 从 plugin.json 的 keywords 中移除 "requirements-pilot"
+  - 移除所有文档中对 /requirements-pilot 的引用
+- 移除 Kiro 工作流相关内容
+  - 删除 commands/kiro.md 命令文件
+  - 删除 KIRO-GUIDE.md 指南文档
+  - 从 plugin.json 的 keywords 中移除 "kiro"
+  - 移除所有文档中对 /kiro 和 Kiro 的引用
 
 ### Changed
-- 更新核心工作流数量，从"四大工作流"调整为"三大工作流"
-  - 移除所有文档中对 /bmad-pilot 的引用
-  - 更新 README.md、GUIDE.md、KIRO-GUIDE.md 中的工作流对比表
-  - 简化工作流决策树和最佳实践指南
+- 精简核心工作流，最终只保留 Spec-Kit 工作流
+  - 第一阶段：从"四大工作流"精简为"三大工作流"（移除 BMAD）
+  - 第二阶段：从"三大工作流"精简为"两大核心工作流"（移除 zcf-workflow 和 requirements-pilot）
+  - 第三阶段：只保留 Spec-Kit 工作流（移除 Kiro）
+- 更新所有文档以反映新的工作流结构
+  - 更新 README.md: 强调 Spec-Kit 规范驱动开发
+  - 更新 GUIDE.md:
+    - 删除工作流选择表格和对比章节
+    - 更新工作流选择指南为 Spec-Kit 使用场景说明
+    - 更新所有示例代码为 Spec-Kit 命令
+    - 更新最佳实践、进阶使用和 FAQ 部分
+  - 更新 CLAUDE.md.full: 只保留 Spec-Kit 工作流
+  - 更新 ultrathink.md、think-ultra.md 中的工作流引用
+  - 所有工作流相关引用统一为 Spec-Kit
 - 更新项目元数据
-  - 从 plugin.json 的 keywords 中移除 "bmad"
-  - 清理文档链接中的 BMAD-README.md 引用
+  - 从 plugin.json 的 keywords 中移除 "bmad"、"zcf-workflow"、"requirements-pilot"、"kiro"
+  - 清理所有过时的文档链接和引用
 
 ## [2.0.0] - 2025-11-12
 
