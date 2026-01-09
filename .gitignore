@@ -19,3 +19,8 @@ history.jsonl
 debug/*.txt
 debug/latest
 file-history/
+cache
+image-cache
+paste-cache
+transcripts
+stats-cache.json
