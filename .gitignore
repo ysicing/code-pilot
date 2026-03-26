@@ -31,3 +31,6 @@ sessions/
 backups/
 .serena/
 skills/
+
+!skills/code-pilot/
+!skills/code-pilot/**
