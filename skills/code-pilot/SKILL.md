@@ -54,11 +54,11 @@ digraph code_pilot {
 }
 ```
 
-**第一步永远是 brainstorming** — 通过多轮问题精确理解需求、约束、成功标准，在动手前达成一致。
+**Always start with brainstorming** — use multi-round questions to precisely understand requirements, constraints, and success criteria before taking any action.
 
-**Frontend** = 任何涉及 UI、组件、页面、视觉布局、设计系统或用户可见界面的任务。
+**Frontend** = any task involving UI, components, pages, visual layout, design systems, or user-visible interfaces.
 
-**Non-frontend** = 后端逻辑、API、CLI、脚本、数据库、基础设施、配置、测试 — brainstorming 后直接跳到 `superpowers:writing-plans`。
+**Non-frontend** = backend logic, APIs, CLIs, scripts, databases, infrastructure, configuration, tests — skip directly to `superpowers:writing-plans` after brainstorming.
 
 ## Hard Gates
 
@@ -75,7 +75,7 @@ GATE 2 — Frontend tasks only: Do NOT write any implementation code until:
 
 When UI/visual work is involved, offer in a **standalone message — no other content**:
 
-> "我们即将设计的界面可能用视觉方式更容易说清楚。我可以在浏览器里画线框图和 mockup 来确认布局，然后再开始写代码。要试试吗？（需要打开本地 URL）"
+> "The interface we're about to design might be easier to communicate visually. I can sketch wireframes and mockups in the browser to confirm the layout before writing any code. Want to try? (requires opening a local URL)"
 
 Wait for response before continuing.
 
