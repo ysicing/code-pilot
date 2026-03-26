@@ -24,3 +24,10 @@ image-cache
 paste-cache
 transcripts
 stats-cache.json
+security_war*.json
+telemetry/
+tasks/
+sessions/
+backups/
+.serena/
+skills/
